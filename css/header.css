@@ -1,0 +1,103 @@
+/* Header---------------- */
+header {
+    background: linear-gradient(90deg, #2c2c2c, #3f3f3f);
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    font-weight: 500;
+    padding: 10px;
+}
+
+/* LINKS */
+nav ul li {
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #00bcd4;
+}
+
+
+
+/* TEXTO USER */
+.oi {
+    color: white;
+    text-align: right;
+   
+}
+
+/* ÍCONE USER */
+.cadastro {
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* BUSCA */
+.buscar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* INPUT BUSCA */
+.buscar input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/* EFEITO INPUT */
+.buscar input:focus {
+    box-shadow: 0 0 5px #00bcd4;
+}
+
+/* LOGO CENTRAL */
+.fd-logo {
+    text-align: center;
+}
+
+
+#darkMode {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* 👉 canto superior direito */
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#darkMode:hover {
+  transform: scale(1.08);
+  background: #f0f0f0;
+}
+
+/* modo escuro */
+.dark {
+  background: #0e0e0e;
+  color: white;
+}
+
+.dark #darkMode {
+  background: #222;
+  color: white;
+}

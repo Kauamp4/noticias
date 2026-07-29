@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Inovações</title>
+  <link rel="stylesheet" href="/css/inovacao.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <button id="btnHome" onclick="voltarHome()">🏠 Home</button>
+
+    <h1>📰 Portal de Inovações</h1>
+    <input type="text" placeholder="Buscar notícias...">
+    <br>
+    <button id="darkMode"></button>
+  </header>
+
+  <nav>
+    <a href="Inovacao.html">Inovação</a>
+    <a href="Tecnologia.html">Tecnologia</a>
+    <a href="Startup.html">Startups</a>
+  </nav>
+
+  <div class="container">
+
+
+    <section class="hero">
+      <h2> O Futuro da Tecnologia Já Começou</h2>
+      <p>
+        Inteligência Artificial, Computação Quântica,
+        Robótica e tecnologias emergentes que estão transformando o mundo.
+      </p>
+    </section>
+
+
+    <section class="destaques">
+      <h2> Destaques</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn" onclick="scrollCarousel(-200)">⬅</button>
+
+
+        <div class="carousel" id="carousel">
+
+          <div class="item"> IA Autônoma</div>
+          <div class="item"> Computação Quântica</div>
+          <div class="item"> Microsoft AI</div>
+          <div class="item"> Óculos Inteligentes</div>
+          <div class="item"> Robôs Domésticos</div>
+          <div class="item"> Segurança Pós-Quântica</div>
+
+        </div>
+
+
+        <button class="carousel-btn" onclick="scrollCarousel(200)">➡</button>
+      </div>
+    </section>
+
+
+    <section class="grid">
+
+      <div>
+
+        <div class="card">
+          <span class="badge"> Destaque</span>
+
+          <h2>Inteligência Artificial mais Autônoma</h2>
+
+          <p>01/07/2026</p>
+
+          <p>
+            Novos agentes de IA são capazes de pesquisar,
+            analisar informações e executar tarefas complexas
+            de forma cada vez mais independente.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Computação Quântica Avança</h3>
+
+          <p>30/06/2026</p>
+
+          <p>
+            Empresas de tecnologia aceleram o desenvolvimento
+            de computadores quânticos capazes de resolver
+            problemas impossíveis para máquinas convencionais.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Microsoft Investe em IA Própria</h3>
+
+          <p>29/06/2026</p>
+
+          <p>
+            Novos modelos de IA e chips especializados
+            para aplicações empresariais.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Óculos Inteligentes com IA</h3>
+
+          <p>28/06/2026</p>
+
+          <p>
+            Traduzem idiomas em tempo real e reconhecem objetos
+            através de Inteligência Artificial.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Robôs Domésticos</h3>
+
+          <p>27/06/2026</p>
+
+          <p>
+            Robôs inteligentes começam a auxiliar em tarefas
+            domésticas e cuidados pessoais.
+          </p>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="card side-card">
+
+          <h3> Tecnologias em Destaque</h3>
+
+          <ul>
+            <li>Inteligência Artificial</li>
+            <li>Computação Quântica</li>
+            <li>Robótica Doméstica</li>
+            <li>Segurança Digital</li>
+            <li>Biotecnologia</li>
+            <li>Óculos Inteligentes</li>
+          </ul>
+
+        </div>
+
+        <div class="card side-card">
+
+          <h3> Tendências para 2031</h3>
+
+          <ul>
+            <li>Energia Inteligente</li>
+            <li>IA Generativa</li>
+            <li>Criptografia Quântica</li>
+            <li>Computação Distribuída</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="ia">IA</button>
+      <button class="tab-button" data-tab="quantica">Quântica</button>
+      <button class="tab-button" data-tab="robotica">Robótica</button>
+    </div>
+
+    <div id="ia" class="tab-text">
+      A Inteligência Artificial está evoluindo para agentes autônomos capazes de colaborar com pessoas e empresas.
+    </div>
+
+    <div id="quantica" class="tab-text" style="display:none;">
+      A Computação Quântica promete revolucionar áreas como medicina, segurança digital e pesquisa científica.
+    </div>
+
+    <div id="robotica" class="tab-text" style="display:none;">
+      Robôs inteligentes estão cada vez mais próximos da realidade cotidiana, auxiliando em tarefas domésticas e
+      industriais.
+    </div>
+
+
+
+    <footer class="footer">
+
+      <div class="footer-top">
+
+        <div class="footer-info">
+
+          <h2> Portal de Inovações</h2>
+
+          <div class="footer-links">
+            <a href="#">Contato</a>
+            <a href="#">Tecnologias</a>
+            <a href="#">Parceiros</a>
+          </div>
+        </div>
+
+        <div class="footer-social">
+
+          <a href="#" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="#" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="#" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" title="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <hr>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Portal de Inovações. Todos os direitos reservados.
+        </p>
+
+        <div class="footer-policy">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Cookies</a>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <script src="/javascript/inovacao.js"></script>
+</body>
+
+</html>

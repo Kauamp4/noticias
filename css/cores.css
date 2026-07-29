@@ -1,0 +1,31 @@
+:root {
+     --cor1: #021024;
+     --cor2: #052659;
+     --cor3: #548383;
+     --cor4: #7da0ca;
+     --cor5: #c1e8ff;
+}
+
+
+
+nav ul {
+    color: rgb(255, 255, 255);
+
+}
+
+.li1:hover {
+    color: #FF0000
+}
+
+.li2:hover {
+    color: #FFA500
+}
+
+.li3:hover {
+    color: #7fbb11
+}
+
+.li4:hover {
+    color: #00FFFF
+}
+

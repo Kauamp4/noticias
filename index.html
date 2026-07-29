@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News</title>
+
+    <style>
+        /* ========= RESET ========= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ========= BODY ========= */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        /* ========= DARK MODE ========= */
+        .dark {
+            background: #0d0d0d;
+        }
+
+        .dark #noticias {
+            background: #0e0e0e;
+        }
+
+        .dark .recentes1,
+        .dark .card {
+            background: #161616;
+            color: white;
+            border: 1px solid #262626;
+
+        }
+
+        /* botão dark mode */
+
+
+
+        #darkMode:hover {
+            background: #00e5ff;
+        }
+
+        /* ========= HEADER ========= */
+
+        header {
+            background: linear-gradient(135deg,
+                    #111,
+                    #1c1c1c,
+                    #292929);
+
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .25);
+        }
+
+        /* barra superior (logo + busca + login) */
+        .topo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+
+        }
+
+        .login {
+            position: absolute;
+            right: 20px;
+
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* logo */
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .logo {
+            color: #00cfff;
+            /* TECH */
+        }
+
+        .logo span {
+            color: white;
+            /* NEWS */
+        }
+
+
+        /* busca */
+        .buscar input {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        /* login */
+        .login {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ========= MENU ========= */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        /* hover com cores diferentes */
+        nav ul li:nth-child(1) a:hover {
+            background: rgb(255, 0, 0);
+            color: black;
+        }
+
+        nav ul li:nth-child(2) a:hover {
+            background: rgb(255, 174, 0);
+            color: black;
+        }
+
+        nav ul li:nth-child(3) a:hover {
+            background: rgb(32, 153, 21);
+            color: black;
+        }
+
+        nav ul li:nth-child(4) a:hover {
+            background: cyan;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ========= ÁREA DE NOTÍCIAS ========= */
+
+        #noticias {
+            max-width: 1300px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        .recentes {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 30px;
+        }
+
+        /* CARD PRINCIPAL */
+
+        .recentes1 {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+            transition: .4s;
+        }
+
+        .recentes1:hover {
+            transform: translateY(-8px);
+        }
+
+        .recentes1 img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .recentes1 h2 {
+            font-size: 32px;
+            margin: 15px 20px;
+        }
+
+        .recentes1 p {
+            margin: 10px 20px;
+        }
+
+        /* LADO DIREITO */
+
+        .recentes2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* CARDS */
+
+        .card {
+            display: flex;
+            gap: 15px;
+
+            background: white;
+            padding: 12px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateX(8px);
+        }
+
+        .card img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        /* ========= MENU HAMBURGUER ========= */
+
+
+        .topo-esquerdo {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            z-index: 9999;
+        }
+
+
+        .menu-hamburguer {
+            position: relative;
+        }
+
+
+        .buscar-topo input {
+            width: 170px;
+            height: 34px;
+
+            padding: 0 15px;
+
+            border: none;
+            border-radius: 20px;
+
+            outline: none;
+        }
+
+
+        /* Botão */
+
+        .hamburguer {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamburguer span {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #00bcd4;
+            border-radius: 10px;
+            transition: .3s ease;
+        }
+
+        .hamburguer span:nth-child(1) {
+            top: 8px;
+        }
+
+        .hamburguer span:nth-child(2) {
+            top: 18px;
+        }
+
+        .hamburguer span:nth-child(3) {
+            top: 28px;
+        }
+
+        /* X */
+
+        .hamburguer.ativo span:nth-child(1) {
+            top: 18px;
+            transform: rotate(45deg);
+        }
+
+        .hamburguer.ativo span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburguer.ativo span:nth-child(3) {
+            top: 18px;
+            transform: rotate(-45deg);
+        }
+
+        /* Menu */
+
+        .menu {
+            position: absolute;
+            top: 55px;
+            left: 0;
+
+            width: 220px;
+
+            background: #1e1e1e;
+            border-radius: 12px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .30);
+
+            overflow: hidden;
+            list-style: none;
+
+            display: none;
+        }
+
+        .menu.ativo {
+            display: block;
+        }
+
+        .menu li {
+            border-bottom: 1px solid #333;
+        }
+
+        .menu li:last-child {
+            border-bottom: none;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .menu li:hover {
+            background: #00bcd4;
+        }
+
+        .menu li:hover a {
+            color: black;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========= DARK MODE ========= */
+
+        .dark .menu {
+            background: #121212;
+            box-shadow: 0 10px 25px rgba(255, 255, 255, .08);
+        }
+
+        .dark .menu li {
+            border-bottom: 1px solid #2f2f2f;
+        }
+
+        .dark .menu li a {
+            color: #fff;
+        }
+
+        .dark .hamburguer span {
+            background: #00e5ff;
+        }
+
+        /* FOOTER */
+
+        .footer {
+
+            background: linear-gradient(90deg,
+                    #23252d,
+                    #2d313b);
+
+            color: white;
+
+            padding: 60px 80px 30px;
+
+            margin-top: 80px;
+        }
+
+        .footer-top {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+        }
+
+        .footer-info h2 {
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a,
+        .footer-policy a {
+
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .footer-links a:hover,
+        .footer-policy a:hover {
+
+            color: #00c6ff;
+        }
+
+
+        .footer-social {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .footer-social a:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Cores das redes */
+
+        .footer-social .fa-linkedin-in:hover {
+            color: #0a66c2;
+        }
+
+        .footer-social .fa-youtube:hover {
+            color: #ff0000;
+        }
+
+        .footer-social .fa-facebook-f:hover {
+            color: #1877f2;
+        }
+
+        .footer-social .fa-instagram:hover {
+            color: #e1306c;
+        }
+
+        .footer-social .fa-x-twitter:hover {
+            color: #9ca3af;
+        }
+
+
+        .footer hr {
+
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, .2);
+
+            margin: 40px 0;
+        }
+
+        .footer-bottom {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .footer-policy {
+
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Dark Mode */
+
+        .dark .footer {
+
+            background: linear-gradient(90deg,
+                    #111,
+                    #181818);
+        }
+
+        /* Responsivo */
+
+        @media(max-width:768px) {
+
+            .footer {
+
+                padding: 40px 25px;
+                text-align: center;
+            }
+
+            .footer-top,
+            .footer-bottom {
+
+                flex-direction: column;
+            }
+
+            .footer-links,
+            .footer-policy {
+
+                justify-content: center;
+            }
+        }
+    </style>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+<body>
+
+</body>
+
+</html>
+
+</head>
+
+<body>
+
+    <!-- menu hamburguer -->
+    <div class="topo-esquerdo">
+
+        <div class="menu-hamburguer">
+
+            <div class="hamburguer" onclick="menu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" id="btnDarkMenu">🌙 Modo Escuro</a></li>
+            </ul>
+
+        </div>
+
+        <div class="buscar-topo">
+            <input type="text" placeholder="Buscar">
+        </div>
+
+    </div>
+
+
+
+    <header>
+
+        <!-- MENU -->
+        <nav>
+            <ul>
+                <li><a href="/ABA_Inovacoes/Inovacao.html">Inovações</a></li>
+                <li><a href="Lancamentos/lancamentos.html">Lançamentos</a></li>
+                <li><a href="#">Tendências</a></li>
+                <li><a href="#">Eventos</a></li>
+            </ul>
+        </nav>
+
+        <!-- TOPO -->
+
+        <div class="topo">
+
+            <h1 class="logo">
+                Tech <span>News</span>
+            </h1>
+
+            <a href="login.html" class="login">
+                ENTRAR
+            </a>
+
+        </div>
+
+
+    </header>
+
+    <!-- NOTÍCIAS -->
+    <section id="noticias">
+
+        <h1>Postagens recentes do blog</h1>
+
+        <div class="recentes">
+
+            <!-- CARD GRANDE -->
+            <div class="recentes1">
+                <img src="img/notocia.1.png" alt="Notícia Principal">
+
+                <p style="color:purple;">Olivia • 1 Jan 2023</p>
+
+                <h2>Apresentações de UX</h2>
+
+                <p style="color:gray;">
+                    Como criar apresentações envolventes...
+                    <a href="#">Ler mais</a>
+                </p>
+            </div>
+
+
+            <!-- LADO DIREITO -->
+            <div class="recentes2">
+
+                <div class="card">
+                    <img src="img/cadeira-presidente.webp" alt="Cadeira">
+
+                    <div class="info">
+                        <h3 style="color:#06AA48;">
+                            Cadeira ergonômica presidente: 7 modelos que unem conforto e estilo
+                        </h3>
+
+                        <p style="color:gray;">
+                            Confira sete opções de cadeiras presidente ergonômicas com ajustes, recursos de conforto e
+                            diferentes faixas de preço para trabalhar
+                            ou estudar com mais comodidade
+                        </p>
+
+                        <a href="#">Ler mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/noticiasss.png" alt="Migrando Linear">
+
+                    <div class="info">
+                        <p style="color:purple;">Phoenix • 1 Jan</p>
+
+                        <h3>Migrando Linear</h3>
+
+                        <p style="color:gray;">
+                            Sistema de projetos moderno...
+                        </p>
+
+                        <a href="#">Ler mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/noticiadaapi.png" alt="API">
+
+                    <div class="info">
+                        <p style="color:purple;">Phoenix • 1 Jan</p>
+
+                        <h3>Nova API Tech</h3>
+
+                        <p style="color:gray;">
+                            Integrações mais rápidas...
+                        </p>
+
+                        <a href="#">Ler mais</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-info">
+
+                <h2> Portal de Inovações</h2>
+
+                <div class="footer-links">
+                    <a href="#">Contato</a>
+                    <a href="#">Tecnologias</a>
+                    <a href="#">Parceiros</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+
+                <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" title="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+        <div class="footer-bottom">
+            <p>
+                © 2026 Portal de Inovações. Todos os direitos reservados.
+            </p>
+
+            <div class="footer-policy">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Cookies</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <script>
+        /* DARK MODE */
+        const btnDark = document.getElementById("darkMode");
+
+        function atualizarBotao() {
+
+            btnDark.innerHTML =
+                document.body.classList.contains("dark")
+                    ? "☀️ Modo Claro"
+                    : "🌙 Modo Escuro";
+        }
+
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark");
+        }
+
+        atualizarBotao();
+
+        btnDark.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            document.body.classList.toggle("dark");
+
+            localStorage.setItem(
+                "darkMode",
+                document.body.classList.contains("dark")
+            );
+
+            atualizarBotao();
+        });
+
+
+        /* MENU HAMBURGUER */
+
+        function menu() {
+            const menu = document.getElementById("menu");
+            const hamburguer = document.querySelector(".hamburguer");
+
+            menu.classList.toggle("ativo");
+            hamburguer.classList.toggle("ativo");
+        }
+
+        /* Fechar ao clicar fora */
+
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("menu");
+            const hamburguer = document.querySelector(".hamburguer");
+
+            if (
+                !menu.contains(event.target) &&
+                !hamburguer.contains(event.target)
+            ) {
+                menu.classList.remove("ativo");
+                hamburguer.classList.remove("ativo");
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

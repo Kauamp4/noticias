@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Startups</title>
+  <link rel="stylesheet" href="/css/startups.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <header>
+
+    <button id="btnHome" onclick="voltarHome()">🏠 Home</button>
+
+    <h1>📰 Portal de Startups</h1>
+    <input type="text" placeholder="Buscar notícias...">
+    <br>
+    <button id="darkMode"></button>
+  </header>
+
+  <nav>
+    <a href="Inovacao.html">Inovação</a>
+    <a href="Tecnologia.html">Tecnologia</a>
+    <a href="Startup.html">Startups</a>
+  </nav>
+
+  <div class="container">
+
+
+
+
+    <section class="hero">
+      <h2> O Ecossistema de Startups em Expansão</h2>
+
+      <p>
+        Conheça as empresas inovadoras que estão transformando
+        mercados através da tecnologia, criatividade e novos
+        modelos de negócio.
+      </p>
+    </section>
+
+
+
+
+    <section class="destaques">
+      <h2> Destaques</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn" onclick="scrollCarousel(-200)">⬅</button>
+
+
+
+
+        <div class="carousel" id="carousel">
+
+          <div class="item"> Fintechs</div>
+          <div class="item"> Startups Unicorns</div>
+          <div class="item"> IA para Negócios</div>
+          <div class="item"> Investimentos</div>
+          <div class="item"> Growth Hacking</div>
+          <div class="item"> Empreendedorismo Digital</div>
+
+        </div>
+
+
+
+
+        <button class="carousel-btn" onclick="scrollCarousel(200)">➡</button>
+      </div>
+    </section>
+
+
+    <section class="grid">
+
+      <div>
+
+
+
+        <div class="card">
+          <span class="badge">Destaque</span>
+
+          <h2>Startup Brasileira Capta Investimento Milionário</h2>
+
+          <p>01/07/2026</p>
+
+          <p>
+            Empresa especializada em soluções de Inteligência Artificial
+            recebeu nova rodada de investimentos para acelerar sua expansão
+            internacional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Fintechs Ganham Espaço no Mercado</h3>
+
+          <p>30/06/2026</p>
+
+          <p>
+            Startups financeiras continuam crescendo e oferecendo
+            alternativas digitais para pagamentos, crédito e investimentos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Novos Programas de Aceleração</h3>
+
+          <p>29/06/2026</p>
+
+          <p>
+            Grandes empresas ampliam programas voltados ao desenvolvimento
+            de startups com foco em tecnologia e sustentabilidade.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Empreendedorismo Jovem em Alta</h3>
+
+          <p>28/06/2026</p>
+
+          <p>
+            Cada vez mais estudantes e profissionais investem na criação
+            de soluções inovadoras para problemas do cotidiano.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Mercado de Venture Capital Cresce</h3>
+
+          <p>27/06/2026</p>
+
+          <p>
+            Fundos de investimento ampliam aportes em startups promissoras
+            dos setores de tecnologia, saúde e educação.
+          </p>
+        </div>
+
+
+
+      </div>
+
+      <div>
+
+
+
+        <div class="card side-card">
+
+          <h3>Setores em Crescimento</h3>
+
+          <ul>
+            <li>Fintechs</li>
+            <li>Healthtechs</li>
+            <li>Edtechs</li>
+            <li>Agrotechs</li>
+            <li>Foodtechs</li>
+            <li>Legaltechs</li>
+          </ul>
+
+        </div>
+
+
+
+
+        <div class="card side-card">
+
+          <h3>Tendências para 2031</h3>
+
+          <ul>
+            <li>Negócios Baseados em IA</li>
+            <li>Automação de Serviços</li>
+            <li>Economia Sustentável</li>
+            <li>Trabalho Remoto Global</li>
+          </ul>
+
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="empreendedorismo">
+        Empreendedorismo
+      </button>
+
+      <button class="tab-button" data-tab="investimentos">
+        Investimentos
+      </button>
+
+      <button class="tab-button" data-tab="inovacao">
+        Inovação
+      </button>
+    </div>
+
+
+    <div id="empreendedorismo" class="tab-text">
+      O empreendedorismo impulsiona a criação de soluções inovadoras
+      capazes de transformar mercados e gerar novas oportunidades.
+    </div>
+
+
+    <div id="investimentos" class="tab-text" style="display:none;">
+      Investidores procuram startups com grande potencial de crescimento,
+      escalabilidade e impacto tecnológico.
+    </div>
+
+
+    <div id="inovacao" class="tab-text" style="display:none;">
+      A inovação é o principal diferencial das startups, permitindo
+      desenvolver produtos e serviços capazes de resolver problemas reais.
+    </div>
+
+
+
+    <footer class="footer">
+
+      <div class="footer-top">
+
+        <div class="footer-info">
+
+          <h2> Portal de Startup</h2>
+
+          <div class="footer-links">
+            <a href="#">Contato</a>
+            <a href="#">Tecnologias</a>
+            <a href="#">Parceiros</a>
+          </div>
+        </div>
+
+
+        <div class="footer-social">
+          <a href="#" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="#" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="#" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" title="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer-bottom">
+        <p>
+          © 2026 Portal de Startup. Todos os direitos reservados.
+        </p>
+
+        <div class="footer-policy">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="/javascript/startups.js"></script>
+</body>
+
+</html>

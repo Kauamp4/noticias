@@ -1,0 +1,84 @@
+/* section de noticias numero 1 */
+
+#noticias{
+  width: 1440px;
+  margin:  auto;
+}
+/* informação geral */
+.recentes{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+
+}
+
+
+#noticias h1{
+margin-left: 9px;
+}
+ 
+.recentes1{
+ 
+  padding: 9px;
+}
+.informacao_recentes1{
+  font-size: 20px;
+}
+
+
+
+.recentes2{
+ display: grid;
+  padding: 9px;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+.noticia_da_ia{
+  width: 670px;
+  height: 285px;
+}
+/* ------------------------------------------------------------------------------ */
+
+
+
+/* Seção de noticia 1.0 */
+.noticias1 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* CARD */
+.noticia11 {
+  display: flex; /* 🔥 isso resolve */
+  align-items: center;
+  gap: 20px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* IMAGEM */
+.noticia_img {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.informacaonoticia1 {
+  width: 50%;
+}
+
+/* DATA */
+.data {
+  color: purple;
+  font-size: 14px;  
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------- */

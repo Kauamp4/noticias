@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #1f1f1f, #3a3a3a);
+    color: white;
+    padding: 10px;
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* LOGO + BUSCA */
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* BUSCA */
+.buscar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.buscar input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/* CADASTRO */
+
+
+/* SECTION */
+section {
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* LAYOUT PRINCIPAL */
+.recentes {
+    display: flex;
+    gap: 25px;
+}
+
+/* CARD PRINCIPAL */
+.recentes1 {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    align-self: flex-start;
+
+    flex: none;
+    max-width: 700px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.recentes1:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEM PRINCIPAL */
+.recentes1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* LADO DIREITO */
+.recentes2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* MINI NOTÍCIAS */
+.noticia_ia {
+    display: inline-block;
+}
+
+.noticia_da_ia {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CARD pequeno */
+.informações {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.informações:hover {
+    transform: scale(1.02);
+}
+
+/* TEXTO */
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* MENU HAMBURGUER */
+.menu-hamburguer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.hamburguer span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 4px 0;
+}
+
+/* MENU DROPDOWN */
+.menu {
+    background: white;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
