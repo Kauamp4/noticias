@@ -1,13 +1,21 @@
+/* ======================
+   RESET
+====================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* ======================
+   BODY
+====================== */
+
 body{
     font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#020817,#06152d,#0a1633);
-    color:white;
+    background:#ffffff;
+    color:#0f172a;
 }
 
 .container{
@@ -16,12 +24,14 @@ body{
     padding:0 20px;
 }
 
-/* HEADER */
+/* ======================
+   HEADER
+====================== */
 
 header{
-    background:rgba(4,9,30,.95);
+    background:rgba(255,255,255,.95);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(0,212,255,.2);
+    border-bottom:1px solid #e2e8f0;
     position:sticky;
     top:0;
     z-index:999;
@@ -35,8 +45,8 @@ header{
 }
 
 .logo{
-    color:#00d4ff;
-    font-size:32px;
+    color:#2563eb;
+    font-size:67px;
     font-weight:800;
     letter-spacing:2px;
 }
@@ -47,29 +57,45 @@ header{
 }
 
 .menu a{
-    color:white;
+    color:#0f172a;
     text-decoration:none;
     transition:.3s;
+    font-weight:500;
 }
 
 .menu a:hover{
-    color:#00d4ff;
+    color:#2563eb;
 }
 
 .btn-home{
-    background:linear-gradient(135deg,#00d4ff,#2563eb);
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
     color:white;
     text-decoration:none;
-    padding:12px 20px;
+
+    padding:12px 22px;
+
     border-radius:30px;
+
     font-weight:700;
+
+    transition:.3s;
 }
 
 .btn-home:hover{
-    box-shadow:0 0 25px rgba(0,212,255,.5);
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
 }
 
-/* HERO */
+/* ======================
+   HERO
+====================== */
 
 .hero{
     margin-top:30px;
@@ -79,6 +105,9 @@ header{
     overflow:hidden;
     border-radius:25px;
     position:relative;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
 }
 
 .hero-card img{
@@ -90,19 +119,31 @@ header{
 .overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(to top,rgba(0,0,0,.95),transparent);
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.25),
+    transparent);
+
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
+
     padding:50px;
 }
 
 .overlay span{
     width:max-content;
-    background:#00d4ff;
-    color:#000;
+
+    background:#2563eb;
+    color:white;
+
     padding:8px 15px;
+
     border-radius:30px;
+
     font-weight:700;
 }
 
@@ -110,14 +151,18 @@ header{
     margin-top:15px;
     font-size:3rem;
     max-width:700px;
+    color:white;
 }
 
 .overlay p{
     margin-top:15px;
     max-width:700px;
+    color:#e2e8f0;
 }
 
-/* LAYOUT */
+/* ======================
+   LAYOUT
+====================== */
 
 .main-layout{
     display:grid;
@@ -128,29 +173,54 @@ header{
 
 .section-title{
     margin:50px 0 20px;
+
     padding-left:15px;
-    border-left:5px solid #00d4ff;
+
+    border-left:5px solid #2563eb;
+
+    color:#0f172a;
+    font-weight:800;
 }
 
-/* CARDS */
+/* ======================
+   GRID
+====================== */
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
     gap:25px;
 }
 
+/* ======================
+   CARDS
+====================== */
+
 .card{
-    background:#0f172a;
-    border:1px solid rgba(0,212,255,.15);
+    background:white;
+
+    border:1px solid #e2e8f0;
+
     border-radius:18px;
+
     overflow:hidden;
-    transition:.3s;
+
+    transition:.35s;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.04);
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(0,212,255,.15);
+
+    border-color:#2563eb;
+
+    box-shadow:
+    0 15px 40px rgba(37,99,235,.12);
 }
 
 .card img{
@@ -164,106 +234,146 @@ header{
 }
 
 .category{
-    color:#00d4ff;
+    color:#2563eb;
+
     font-weight:bold;
+
     margin-bottom:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
 }
 
 .content h3{
     margin-bottom:10px;
+    color:#0f172a;
 }
 
 .content p{
-    color:#b8c4e0;
-    line-height:1.6;
+    color:#64748b;
+    line-height:1.7;
 }
 
-/* SIDEBAR */
+/* ======================
+   SIDEBAR
+====================== */
 
 .sidebar{
-    background:#0f172a;
-    border:1px solid rgba(0,212,255,.15);
+    background:white;
+
+    border:1px solid #e2e8f0;
+
     border-radius:20px;
+
     padding:25px;
+
     height:max-content;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
 }
 
 .sidebar h3{
     margin-bottom:20px;
+    color:#2563eb;
 }
 
 .quick-news{
-    border-bottom:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid #e2e8f0;
+
     padding-bottom:15px;
     margin-bottom:15px;
 }
 
+.quick-news:last-child{
+    border-bottom:none;
+}
+
 .quick-news a{
-    color:#dbeafe;
+    color:#334155;
+
     text-decoration:none;
+
+    transition:.3s;
 }
 
 .quick-news a:hover{
-    color:#00d4ff;
+    color:#2563eb;
 }
 
-/* FOOTER */
+/* ======================
+   FOOTER
+====================== */
 
 footer{
-    background:#020817;
-    border-top:1px solid rgba(0,212,255,.2);
+    background:#0f172a;
     margin-top:80px;
 }
 
 .footer-content{
     max-width:1200px;
+
     margin:auto;
+
     padding:60px 20px;
+
     text-align:center;
 }
 
 .footer-content h2{
-    color:#00d4ff;
+    color:#60a5fa;
     margin-bottom:15px;
+}
+
+.footer-content p{
+    color:#cbd5e1;
 }
 
 .social{
     margin:25px 0;
+
     display:flex;
+
     justify-content:center;
+
     gap:20px;
 }
 
 .social a{
     text-decoration:none;
     color:white;
+
     transition:.3s;
 }
 
 .social a:hover{
-    color:#00d4ff;
+    color:#60a5fa;
 }
 
 .copy{
     color:#94a3b8;
 }
 
+/* ======================
+   RESPONSIVO
+====================== */
+
 @media(max-width:900px){
 
-.main-layout{
-    grid-template-columns:1fr;
-}
+    .main-layout{
+        grid-template-columns:1fr;
+    }
 
-.menu{
-    display:none;
-}
+    .menu{
+        display:none;
+    }
 
-.overlay h1{
-    font-size:2rem;
-}
+    .overlay h1{
+        font-size:2rem;
+    }
 
-.hero-card img{
-    height:400px;
-}
-
+    .hero-card img{
+        height:400px;
+    }
 }
