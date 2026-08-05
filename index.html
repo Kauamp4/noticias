@@ -20,7 +20,7 @@
         /* ========= BODY ========= */
         body {
             font-family: Arial, sans-serif;
-            background: #f5f7fa;
+            background: #ffffff;
         }
 
         /* ========= DARK MODE ========= */
@@ -165,8 +165,11 @@
         }
 
         .recentes {
+
             display: grid;
-            grid-template-columns: 1.8fr 1fr;
+
+            grid-template-columns: 2fr 1fr;
+
             gap: 30px;
         }
 
@@ -178,11 +181,10 @@
         }
 
         .post {
-            background: white;
+
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-            transition: .3s;
+
         }
 
         .post:hover {
@@ -202,16 +204,40 @@
         /* CARD PRINCIPAL */
 
         .recentes1 {
-            background: white;
+
             border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
-            transition: .4s;
+
         }
 
-        .recentes1:hover {
-            transform: translateY(-8px);
+        .miniicons {
+            display: flex;
+            justify-content: baseline;
+
+            list-style: none;
+            align-items: center;
+            list-style-type: none;
+            text-align: center;
         }
+
+        .miniicons p {
+
+
+            background: rgb(255, 255, 255);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+            transition: .4s;
+            width: 120px;
+            height: 0px;
+            padding: 17px;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            align-items: center;
+            list-style-type: none;
+            text-align: center;
+        }
+
 
         .recentes1 img {
             width: 100%;
@@ -240,35 +266,28 @@
 
         .card {
             display: flex;
-            gap: 15px;
 
-            background: white;
-            padding: 12px;
+            gap: 20px;
 
-            border-radius: 20px;
-
-            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-
-            transition: .3s;
+            align-items: flex-start;
         }
 
-        .card:hover {
-            transform: translateX(8px);
-        }
+
 
         .card img {
-            width: 180px;
-            height: 120px;
+            width: 250px;
+            height: 150px;
+
             object-fit: cover;
-            border-radius: 15px;
         }
 
         .card .info {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
 
+            flex-direction: column;
+
+            justify-content: flex-start;
+        }
 
         /* ========= MENU HAMBURGUER ========= */
 
@@ -662,101 +681,87 @@
                 <h2>Apresentações de UX</h2>
 
                 <p style="color:gray;">
-                    Como criar apresentações envolventes...
-                    <a href="#">Ler mais</a>
+                    Como você cria apresentações envolventes que impressionam seus colegas e deixam seus gerentes
+                    impressionados?
+                    <!-- <a href="#">Ler mais</a> -->
                 </p>
+                <div class="miniicons">
+                    <p style="color: purple;">Design</p>
+                    <p style="color: rgb(57, 57, 185);"> Pesquisa </p>
+                    <p style="color: rgb(175, 35, 58);"> Apresentação </p>
+                </div>
             </div>
 
 
             <!-- LADO DIREITO -->
-            <div class="recentes2">
 
-                <div class="card">
-                    <img src="img/cadeira-presidente.webp" alt="Cadeira">
+            <div class="card">
+                <img src="img/noticiasss.png" alt="Migrando Linear">
 
-                    <div class="info">
-                        <h3 style="color:#06AA48;">
-                            Cadeira ergonômica presidente: 7 modelos que unem conforto e estilo
-                        </h3>
+                <div class="info">
+                    <p style="color:purple;">Phoenix • 1 Jan</p>
 
-                        <p style="color:gray;">
-                            Confira sete opções de cadeiras presidente ergonômicas com ajustes, recursos de conforto e
-                            diferentes faixas de preço para trabalhar
-                            ou estudar com mais comodidade
-                        </p>
+                    <h3>Migrando Linear</h3>
 
-                        <a href="#">Ler mais</a>
-                    </div>
+                    <p style="color:gray;">
+                        O Linear ajuda a simplificar projetos de software, sprints, tarefas e rastreamento de bugs. Aqui
+                        está como começar...
+                    </p>
                 </div>
-
-                <div class="card">
-                    <img src="img/noticiasss.png" alt="Migrando Linear">
-
-                    <div class="info">
-                        <p style="color:purple;">Phoenix • 1 Jan</p>
-
-                        <h3>Migrando Linear</h3>
-
-                        <p style="color:gray;">
-                            Sistema de projetos moderno...
-                        </p>
-
-                        <a href="#">Ler mais</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="img/noticiadaapi.png" alt="API">
-
-                    <div class="info">
-                        <p style="color:purple;">Phoenix • 1 Jan</p>
-
-                        <h3>Nova API Tech</h3>
-
-                        <p style="color:gray;">
-                            Integrações mais rápidas...
-                        </p>
-
-                        <a href="#">Ler mais</a>
-                    </div>
-                </div>
-
             </div>
 
-            <section class="posts">
-                <div class="post">
-                    <img src="img/noticiasss.png" alt="Migrando Linear">
-                    <div class="conteudo">
-                        <h3>Nova tecnologia de IA</h3>
-                        <p>Confira as novidades...</p>
-                        <a href="#">Ler mais</a>
-                    </div>
+            <div class="card">
+                <img src="img/noticiadaapi.png" alt="API">
+
+                <div class="info">
+                    <p style="color:purple;">Lana Steiner • 1 Jan 2023</p>
+
+                    <h3>Construindo sua pilha de API</h3>
+
+                    <p style="color:gray;">
+                        O aumento das APIs RESTful foi acompanhado por um aumento nas ferramentas para criar, testar e
+                        gerenciar...
+                    </p>
+
                 </div>
+            </div>
 
-
-                <div class="post">
-                    <img src="img/noticiasss.png" alt="Migrando Linear">
-                    <div class="conteudo">
-                        <h3>Nova tecnologia de IA</h3>
-                        <p>Confira as novidades...</p>
-                        <a href="#">Ler mais</a>
-                    </div>
-                </div>
-
-
-                <div class="post">
-                    <img src="img/noticiasss.png" alt="Migrando Linear">
-                    <div class="conteudo">
-                        <h3>Nova tecnologia de IA</h3>
-                        <p>Confira as novidades...</p>
-                        <a href="#">Ler mais</a>
-                    </div>
-                </div>
         </div>
 
-    </section>
+        <section class="posts">
+            <div class="post">
+                <img src="img/noticiasss.png" alt="Migrando Linear">
+                <div class="conteudo">
+                    <h3>Nova tecnologia de IA</h3>
+                    <p>Confira as novidades...</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
 
-    </div>
+
+            <div class="post">
+                <img src="img/noticiasss.png" alt="Migrando Linear">
+                <div class="conteudo">
+                    <h3>Nova tecnologia de IA</h3>
+                    <p>Confira as novidades...</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+
+
+            <div class="post">
+                <img src="img/noticiasss.png" alt="Migrando Linear">
+                <div class="conteudo">
+                    <h3>Nova tecnologia de IA</h3>
+                    <p>Confira as novidades...</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        </div>
 
     </section>
 
