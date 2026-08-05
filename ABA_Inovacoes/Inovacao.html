@@ -1,248 +1,485 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Inovações</title>
-  <link rel="stylesheet" href="/css/inovacao.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>TechVision News | Inovação & Tecnologia</title>
 
+/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, sans-serif;
+    background:#f5f7fa;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0a2540,#1464f4);
+    color:white;
+    padding:25px 8%;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#41d1ff;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    padding:70px 8%;
+    background:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#555;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#1464f4;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+}
+
+.section-title{
+    text-align:center;
+    margin:70px 0 40px;
+    font-size:2.2rem;
+}
+
+.news-grid{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content span{
+    color:#1464f4;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.card-content h3{
+    margin:10px 0;
+}
+
+.card-content p{
+    color:#666;
+    line-height:1.6;
+}
+
+.stats{
+    margin:80px auto;
+    width:90%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:#1464f4;
+    color:white;
+    text-align:center;
+    padding:35px;
+    border-radius:16px;
+}
+
+.stat h2{
+    font-size:2rem;
+}
+
+.trends{
+    width:90%;
+    max-width:1200px;
+    margin:70px auto;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.trends ul{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+.trends li{
+    margin:15px 0;
+    font-size:17px;
+}
+
+footer{
+    background:#0a2540;
+    color:white;
+    padding:50px;
+    margin-top:80px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.social{
+    display:flex;
+    gap:20px;
+}
+
+.social a{
+    color:white;
+    font-size:24px;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#41d1ff;
+}
+
+.copy{
+    text-align:center;
+    margin-top:25px;
+}
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.stats{
+    grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <button id="btnHome" onclick="voltarHome()">🏠 Home</button>
+<div class="header-top">
+<div class="logo">TechVision <span>News</span></div>
 
-    <h1>📰 Portal de Inovações</h1>
-    <input type="text" placeholder="Buscar notícias...">
-    <br>
-    <button id="darkMode"></button>
-  </header>
+<i class="fa-solid fa-microchip fa-2x"></i>
+</div>
 
-  <nav>
-    <a href="Inovacao.html">Inovação</a>
-    <a href="Tecnologia.html">Tecnologia</a>
-    <a href="Startup.html">Startups</a>
-  </nav>
+<nav>
+<ul>
+<li>#Inovação</a></li>
+<li>#IA</a></li>
+<li>#Cloud</a></li>
+<li>#Segurança</a></li>
+<li>#</li>
+</ul>
+</nav>
 
-  <div class="container">
+</header>
 
+<section class="hero">
 
-    <section class="hero">
-      <h2> O Futuro da Tecnologia Já Começou</h2>
-      <p>
-        Inteligência Artificial, Computação Quântica,
-        Robótica e tecnologias emergentes que estão transformando o mundo.
-      </p>
-    </section>
+<div>
 
+<h1>O Futuro da Tecnologia Está Sendo Construído Agora</h1>
 
-    <section class="destaques">
-      <h2> Destaques</h2>
+<p>
+Acompanhe as principais notícias sobre Inteligência Artificial,
+Computação em Nuvem, Cibersegurança, Inovação Digital,
+Automação e Transformação Tecnológica.
+</p>
 
-      <div class="carousel-container">
-        <button class="carousel-btn" onclick="scrollCarousel(-200)">⬅</button>
+<a
+</div>
 
+7442136019-21780ecad995?w=1200"
+alt="Tecnologia">
 
-        <div class="carousel" id="carousel">
+</section>
 
-          <div class="item"> IA Autônoma</div>
-          <div class="item"> Computação Quântica</div>
-          <div class="item"> Microsoft AI</div>
-          <div class="item"> Óculos Inteligentes</div>
-          <div class="item"> Robôs Domésticos</div>
-          <div class="item"> Segurança Pós-Quântica</div>
+<h2 class="section-title">Últimas Notícias</h2>
 
-        </div>
+<section class="news-grid">
 
+<div class="card">
+1677442135703-1787eea5ce01?w=1200">
 
-        <button class="carousel-btn" onclick="scrollCarousel(200)">➡</button>
-      </div>
-    </section>
+<div class="card-content">
 
+<span>INTELIGÊNCIA ARTIFICIAL</span>
 
-    <section class="grid">
+<h3>Agentes de IA Ganham Mais Autonomia</h3>
 
-      <div>
+<p>
+Novas soluções são capazes de analisar dados,
+executar tarefas e fornecer respostas complexas
+sem intervenção humana constante.
+</p>
 
-        <div class="card">
-          <span class="badge"> Destaque</span>
+</div>
+</div>
 
-          <h2>Inteligência Artificial mais Autônoma</h2>
+<div class="card">
 
-          <p>01/07/2026</p>
+1318423-f06f85e504b3?w=1200">
 
-          <p>
-            Novos agentes de IA são capazes de pesquisar,
-            analisar informações e executar tarefas complexas
-            de forma cada vez mais independente.
-          </p>
-        </div>
+<div class="card-content">
 
-        <div class="card">
-          <h3> Computação Quântica Avança</h3>
+<span>BIG DATA</span>
 
-          <p>30/06/2026</p>
+<h3>Empresas Investem em Análise Avançada</h3>
 
-          <p>
-            Empresas de tecnologia aceleram o desenvolvimento
-            de computadores quânticos capazes de resolver
-            problemas impossíveis para máquinas convencionais.
-          </p>
-        </div>
+<p>
+O uso estratégico de dados continua sendo um
+dos principais diferenciais competitivos.
+</p>
 
-        <div class="card">
-          <h3> Microsoft Investe em IA Própria</h3>
+</div>
+</div>
 
-          <p>29/06/2026</p>
+<div class="card">
 
-          <p>
-            Novos modelos de IA e chips especializados
-            para aplicações empresariais.
-          </p>
-        </div>
+5827404703-89b55fcc595e?w=1200">
 
-        <div class="card">
-          <h3> Óculos Inteligentes com IA</h3>
+<div class="card-content">
 
-          <p>28/06/2026</p>
+<span>ROBÓTICA</span>
 
-          <p>
-            Traduzem idiomas em tempo real e reconhecem objetos
-            através de Inteligência Artificial.
-          </p>
-        </div>
+<h3>Automação Inteligente Cresce em 2026</h3>
 
-        <div class="card">
-          <h3> Robôs Domésticos</h3>
+<p>
+Indústrias adotam robôs avançados para aumentar
+produtividade e reduzir custos operacionais.
+</p>
 
-          <p>27/06/2026</p>
+</div>
+</div>
 
-          <p>
-            Robôs inteligentes começam a auxiliar em tarefas
-            domésticas e cuidados pessoais.
-          </p>
-        </div>
+<div class="card">
 
-      </div>
+://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
 
-      <div>
+<div class="card-content">
 
-        <div class="card side-card">
+<span>CLOUD</span>
 
-          <h3> Tecnologias em Destaque</h3>
+<h3>Computação em Nuvem Continua Expansão</h3>
 
-          <ul>
-            <li>Inteligência Artificial</li>
-            <li>Computação Quântica</li>
-            <li>Robótica Doméstica</li>
-            <li>Segurança Digital</li>
-            <li>Biotecnologia</li>
-            <li>Óculos Inteligentes</li>
-          </ul>
+<p>
+Infraestruturas cloud se tornam essenciais
+para negócios digitais modernos.
+</p>
 
-        </div>
+</div>
+</div>
 
-        <div class="card side-card">
+<div class="card">
 
-          <h3> Tendências para 2031</h3>
+<img src="https://images.unsplash.com/photo-1550751827-4bdw=1200
 
-          <ul>
-            <li>Energia Inteligente</li>
-            <li>IA Generativa</li>
-            <li>Criptografia Quântica</li>
-            <li>Computação Distribuída</li>
-          </ul>
+<div class="card-content">
 
-        </div>
+<span>SEGURANÇA</span>
 
-      </div>
+<h3>Novos Desafios em Cibersegurança</h3>
 
-    </section>
+<p>
+A proteção de dados torna-se prioridade para
+organizações de todos os tamanhos.
+</p>
 
+</div>
+</div>
 
+<div class="card">
 
-    <div class="tabs">
-      <button class="tab-button active" data-tab="ia">IA</button>
-      <button class="tab-button" data-tab="quantica">Quântica</button>
-      <button class="tab-button" data-tab="robotica">Robótica</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538ddiv class="card-content">
 
-    <div id="ia" class="tab-text">
-      A Inteligência Artificial está evoluindo para agentes autônomos capazes de colaborar com pessoas e empresas.
-    </div>
+<span>STARTUPS</span>
 
-    <div id="quantica" class="tab-text" style="display:none;">
-      A Computação Quântica promete revolucionar áreas como medicina, segurança digital e pesquisa científica.
-    </div>
+<h3>Ecossistema de Inovação Cresce no Mundo</h3>
 
-    <div id="robotica" class="tab-text" style="display:none;">
-      Robôs inteligentes estão cada vez mais próximos da realidade cotidiana, auxiliando em tarefas domésticas e
-      industriais.
-    </div>
+<p>
+Novas empresas tecnológicas impulsionam soluções
+disruptivas para diversos mercados.
+</p>
 
+</div>
+</div>
 
+</section>
 
-    <footer class="footer">
+<section class="stats">
 
-      <div class="footer-top">
+<div class="stat">
+<h2>520+</h2>
+<p>Notícias Publicadas</p>
+</div>
 
-        <div class="footer-info">
+<div class="stat">
+<h2>120K</h2>
+<p>Leitores Mensais</p>
+</div>
 
-          <h2> Portal de Inovações</h2>
+<div class="stat">
+<h2>35</h2>
+<p>Parceiros Tecnológicos</p>
+</div>
 
-          <div class="footer-links">
-            <a href="#">Contato</a>
-            <a href="#">Tecnologias</a>
-            <a href="#">Parceiros</a>
-          </div>
-        </div>
+<div class="stat">
+<h2>98%</h2>
+<p>Satisfação dos Usuários</p>
+</div>
 
-        <div class="footer-social">
+</section>
 
-          <a href="#" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
+<section class="trends">
 
-          <a href="#" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+<h2>Tendências Tecnológicas</h2>
 
-          <a href="#" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
+<ul>
+<li>Inteligência Artificial Generativa</li>
+<li>Computação Quântica</li>
+<li>Segurança Pós-Quântica</li>
+<li>Cloud Computing</li>
+<li>Edge Computing</li>
+<li>Automação Inteligente</li>
+<li>Internet das Coisas (IoT)</li>
+<li>Digital Twins</li>
+</ul>
 
-          <a href="#" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
+</section>
 
-          <a href="#" title="X">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-        </div>
-      </div>
+<footer>
 
-      <hr>
-      <div class="footer-bottom">
-        <p>
-          © 2026 Portal de Inovações. Todos os direitos reservados.
-        </p>
+<div class="footer-content">
 
-        <div class="footer-policy">
-          <a href="#">Termos de Uso</a>
-          <a href="#">Privacidade</a>
-          <a href="#">Cookies</a>
-        </div>
+<div>
+<h2>TechVision News</h2>
+<p>Portal Profissional de Tecnologia e Inovação</p>
+</div>
 
-      </div>
+<div class="social">
 
-    </footer>
+#
 
-    <script src="/javascript/inovacao.js"></script>
+#
+<i class="fab fa-instagram"></i>
+</a>
+
+#
+<i class="fab fa-youtube"></i>
+</a>
+
+#
+<i class="fab fa-x-twitter"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 TechVision News • Todos os direitos reservados
+</div>
+
+</footer>
+
 </body>
-
 </html>
