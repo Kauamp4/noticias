@@ -169,8 +169,8 @@
             display: grid;
 
             grid-template-columns: 2fr 1fr;
-
-            gap: 30px;
+            
+            gap: 2px;
         }
 
         .posts {
@@ -204,7 +204,7 @@
         /* CARD PRINCIPAL */
 
         .recentes1 {
-
+            width: 790px;
             border-radius: 25px;
 
         }
@@ -222,10 +222,10 @@
         .miniicons p {
 
 
-            background: rgb(255, 255, 255);
+            background: rgb(236, 243, 243);
             border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+           
             transition: .4s;
             width: 120px;
             height: 0px;
@@ -268,15 +268,17 @@
             display: flex;
 
             gap: 20px;
-
+            padding: 0px 20x;
             align-items: flex-start;
+
+       
         }
 
 
 
         .card img {
-            width: 250px;
-            height: 150px;
+            width: 60%;
+            
 
             object-fit: cover;
         }
@@ -287,6 +289,12 @@
             flex-direction: column;
 
             justify-content: flex-start;
+        }
+
+        .ladodireito{
+            display: grid;
+            gap: 5px;
+            width: 430px;
         }
 
         /* ========= MENU HAMBURGUER ========= */
@@ -694,38 +702,40 @@
 
 
             <!-- LADO DIREITO -->
+            <div class="ladodireito">
+                <div class="card">
+                    <img src="img/noticiasss.png" alt="Migrando Linear">
 
-            <div class="card">
-                <img src="img/noticiasss.png" alt="Migrando Linear">
+                    <div class="info">
+                        <p style="color:purple;">Phoenix • 1 Jan</p>
 
-                <div class="info">
-                    <p style="color:purple;">Phoenix • 1 Jan</p>
+                        <h3>Migrando Linear</h3>
 
-                    <h3>Migrando Linear</h3>
+                        <p style="color:gray;">
+                            O Linear ajuda a simplificar projetos de software, sprints, tarefas e rastreamento de bugs.
+                            Aqui
+                            está como começar...
+                        </p>
+                    </div>
+                </div>
 
-                    <p style="color:gray;">
-                        O Linear ajuda a simplificar projetos de software, sprints, tarefas e rastreamento de bugs. Aqui
-                        está como começar...
-                    </p>
+                <div class="card">
+                    <img src="img/noticiadaapi.png" alt="API">
+
+                    <div class="info">
+                        <p style="color:purple;">Lana Steiner • 1 Jan 2023</p>
+
+                        <h3>Construindo sua pilha de API</h3>
+
+                        <p style="color:gray;">
+                            O aumento das APIs RESTful foi acompanhado por um aumento nas ferramentas para criar, testar
+                            e
+                            gerenciar...
+                        </p>
+
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="img/noticiadaapi.png" alt="API">
-
-                <div class="info">
-                    <p style="color:purple;">Lana Steiner • 1 Jan 2023</p>
-
-                    <h3>Construindo sua pilha de API</h3>
-
-                    <p style="color:gray;">
-                        O aumento das APIs RESTful foi acompanhado por um aumento nas ferramentas para criar, testar e
-                        gerenciar...
-                    </p>
-
-                </div>
-            </div>
-
         </div>
 
         <section class="posts">
