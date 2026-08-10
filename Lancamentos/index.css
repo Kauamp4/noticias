@@ -377,3 +377,24 @@ footer{
         height:400px;
     }
 }
+
+.processador{
+    height: 50%;
+    width: 98%;
+
+}
+
+.ryzen{
+      background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.04);
+}
