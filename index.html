@@ -100,6 +100,17 @@
             opacity: .7;
         }
 
+        /* ========= DARK MODE - BARRA DE CATEGORIAS ========= */
+
+        .dark .barra-categorias {
+            background: #111111;
+            border-bottom: 1px solid #333333;
+        }
+
+        .dark .barra-categorias a {
+            color: inherit;
+        }
+
         /* ========= HEADER ========= */
 
         header {
@@ -224,6 +235,10 @@
             gap: 2px;
         }
 
+        /* =========================
+   POSTS INFERIORES
+   ========================= */
+
         .posts {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -232,121 +247,273 @@
         }
 
         .post {
-
+            position: relative;
+            height: 230px;
             border-radius: 15px;
             overflow: hidden;
-
+            cursor: pointer;
+            background: #222;
+            transition: .3s;
         }
 
         .post:hover {
             transform: translateY(-5px);
         }
 
+        /* Imagem */
         .post img {
             width: 100%;
-            height: 180px;
+            height: 100%;
             object-fit: cover;
+            display: block;
         }
 
+        /* Degradê escuro na parte inferior */
+        .post::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, .90),
+                    rgba(0, 0, 0, .35) 50%,
+                    rgba(0, 0, 0, 0));
+
+            z-index: 1;
+        }
+
+        /* Texto sobre a imagem */
         .post .conteudo {
-            padding: 15px;
+            position: absolute;
+
+            left: 18px;
+            right: 18px;
+            bottom: 15px;
+
+            z-index: 2;
+
+            padding: 0;
+        }
+
+        /* Título */
+        .post .conteudo h3 {
+            color: white;
+            font-size: 21px;
+            line-height: 1.15;
+            margin: 0 0 5px;
+        }
+
+        /* Descrição */
+        .post .conteudo p {
+            color: #e5e5e5;
+            font-size: 14px;
+            margin: 0 0 5px;
+        }
+
+        /* Link */
+        .post .conteudo a {
+            color: #00cfff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .post .conteudo a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+   DARK MODE
+   ========================= */
+
+        .dark .post {
+            background: #161616;
+        }
+
+
+        /* =========================
+   RESPONSIVO
+   ========================= */
+
+        @media (max-width: 900px) {
+
+            .posts {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .posts {
+                grid-template-columns: 1fr;
+            }
+
+            .post {
+                height: 250px;
+            }
+
+        }
+
+        /* =========================
+         CARDS COM TEXTO NA IMAGEM
+        ========================= */
+
+        .recentes {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
         }
 
         /* CARD PRINCIPAL */
-
         .recentes1 {
-            width: 790px;
-            border-radius: 25px;
-
-        }
-
-        .miniicons {
-            display: flex;
-            justify-content: baseline;
-
-            list-style: none;
-            align-items: center;
-            list-style-type: none;
-            text-align: center;
-        }
-
-        .miniicons p {
-
-
-            background: rgb(236, 243, 243);
-            border-radius: 25px;
+            position: relative;
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
             overflow: hidden;
-
-            transition: .4s;
-            width: 120px;
-            height: 0px;
-            padding: 17px;
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            align-items: center;
-            list-style-type: none;
-            text-align: center;
+            color: white;
+            background: #222;
         }
-
 
         .recentes1 img {
             width: 100%;
-            height: 350px;
+            height: 100%;
             object-fit: cover;
+            display: block;
+        }
+
+        /* Degradê sobre a imagem */
+        .recentes1::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, .85),
+                    rgba(0, 0, 0, .35) 45%,
+                    rgba(0, 0, 0, 0));
+        }
+
+        /* Conteúdo por cima da imagem */
+        .recentes1 .texto-imagem {
+            position: absolute;
+            z-index: 2;
+            left: 25px;
+            right: 25px;
+            bottom: 20px;
+        }
+
+        .recentes1 .autor {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 8px;
         }
 
         .recentes1 h2 {
+            color: white;
             font-size: 32px;
-            margin: 15px 20px;
+            line-height: 1.1;
+            margin: 0;
         }
 
-        .recentes1 p {
-            margin: 10px 20px;
-        }
-
-        /* LADO DIREITO */
-
-        .recentes2 {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* CARDS */
-
-        .card {
-            display: flex;
-
-            gap: 20px;
-            padding: 0px 20x;
-            align-items: flex-start;
-
-
+        .recentes1 .descricao {
+            color: #eee;
+            font-size: 15px;
+            margin-top: 10px;
         }
 
 
-
-        .card img {
-            width: 60%;
-
-
-            object-fit: cover;
-        }
-
-        .card .info {
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: flex-start;
-        }
+        /* =========================
+   CARDS MENORES
+   ========================= */
 
         .ladodireito {
             display: grid;
-            gap: 5px;
-            width: 430px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
+
+        .card {
+            position: relative;
+            height: 165px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #222;
+            color: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Degradê */
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, .9),
+                    rgba(0, 0, 0, .25) 70%,
+                    transparent);
+        }
+
+        /* Texto sobre a imagem */
+        .card .info {
+            position: absolute;
+            z-index: 2;
+            left: 18px;
+            right: 18px;
+            bottom: 15px;
+        }
+
+        .card .info p {
+            color: #ddd !important;
+            font-size: 12px;
+            margin: 0 0 5px;
+        }
+
+        .card .info h3 {
+            color: white;
+            font-size: 20px;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .card:hover,
+        .recentes1:hover {
+            transform: translateY(-4px);
+            transition: .3s;
+        }
+
+
+        /* =========================
+   RESPONSIVO
+   ========================= */
+
+        @media (max-width: 768px) {
+
+            .recentes {
+                grid-template-columns: 1fr;
+            }
+
+            .recentes1 {
+                height: 300px;
+            }
+
+            .recentes1 h2 {
+                font-size: 25px;
+            }
+
+            .ladodireito {
+                grid-template-columns: 1fr;
+            }
+        }
+
 
         /* ========= MENU HAMBURGUER ========= */
         .topo-esquerdo {
@@ -737,100 +904,137 @@
 
         <div class="recentes">
 
-            <!-- CARD GRANDE -->
+            <!-- NOTÍCIA PRINCIPAL -->
             <div class="recentes1">
-                <img src="img/notocia.1.png" alt="Notícia Principal">
 
-                <p style="color:purple;">Olivia • 1 Jan 2023</p>
+                <img src="https://img.odcdn.com.br/wp-content/uploads/2026/08/ia_dinheiro-695x500.jpg"
+                    alt="Notícia Principal">
 
-                <h2>Apresentações de UX</h2>
+                <div class="texto-imagem">
 
-                <p style="color:gray;">
-                    Como você cria apresentações envolventes que impressionam seus colegas e deixam seus gerentes
-                    impressionados?
-                    <!-- <a href="#">Ler mais</a> -->
-                </p>
-                <div class="miniicons">
-                    <p style="color: purple;">Design</p>
-                    <p style="color: rgb(57, 57, 185);"> Pesquisa </p>
-                    <p style="color: rgb(175, 35, 58);"> Apresentação </p>
+                    <p class="autor">
+                        Redação UOL • 13 de agosto de 2026
+                    </p>
+
+                    <h2>
+                        IA pode adicionar quase R$ 1 trilhão ao PIB brasileiro até 2030, diz estudo
+                    </h2>
+
+                    <p class="descricao">
+                        Estudo estima que a inteligência artificial poderá acrescentar cerca de R$ 986,7 bilhões ao PIB
+                        brasileiro entre 2027 e 2030, principalmente por ganhos de produtividade em diferentes setores
+                        da economia.
+                    </p>
+
                 </div>
+
             </div>
 
 
-            <!-- LADO DIREITO -->
+            <!-- NOTÍCIAS MENORES -->
             <div class="ladodireito">
+
                 <div class="card">
+
                     <img src="img/noticiasss.png" alt="Migrando Linear">
 
                     <div class="info">
-                        <p style="color:purple;">Phoenix • 1 Jan</p>
 
-                        <h3>Migrando Linear</h3>
-
-                        <p style="color:gray;">
-                            O Linear ajuda a simplificar projetos de software, sprints, tarefas e rastreamento de bugs.
-                            Aqui
-                            está como começar...
+                        <p>
+                            Phoenix • 1 Jan
                         </p>
+
+                        <h3>
+                            Migrando Linear: veja como começar
+                        </h3>
+
                     </div>
+
                 </div>
+
 
                 <div class="card">
-                    <img src="img/noticiadaapi.png" alt="API">
+
+                    <img src="img/noticiadaapi.png" alt="Construindo sua pilha de API">
 
                     <div class="info">
-                        <p style="color:purple;">Lana Steiner • 1 Jan 2023</p>
 
-                        <h3>Construindo sua pilha de API</h3>
-
-                        <p style="color:gray;">
-                            O aumento das APIs RESTful foi acompanhado por um aumento nas ferramentas para criar, testar
-                            e
-                            gerenciar...
+                        <p>
+                            Lana Steiner • 1 Jan 2023
                         </p>
 
+                        <h3>
+                            Construindo sua pilha de API
+                        </h3>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
+
+        <!-- OUTRAS POSTAGENS -->
+
         <section class="posts">
+
             <div class="post">
-                <img src="img/noticiasss.png" alt="Migrando Linear">
+
+                <img src="img/noticiasss.png" alt="Nova tecnologia de IA">
+
                 <div class="conteudo">
+
                     <h3>Nova tecnologia de IA</h3>
+
                     <p>Confira as novidades...</p>
+
                     <a href="#">Ler mais</a>
+
                 </div>
+
             </div>
 
 
             <div class="post">
-                <img src="img/noticiasss.png" alt="Migrando Linear">
+
+                <img src="img/noticiasss.png" alt="Nova tecnologia de IA">
+
                 <div class="conteudo">
+
                     <h3>Nova tecnologia de IA</h3>
+
                     <p>Confira as novidades...</p>
+
                     <a href="#">Ler mais</a>
+
                 </div>
+
             </div>
 
 
             <div class="post">
-                <img src="img/noticiasss.png" alt="Migrando Linear">
+
+                <img src="img/noticiasss.png" alt="Nova tecnologia de IA">
+
                 <div class="conteudo">
+
                     <h3>Nova tecnologia de IA</h3>
+
                     <p>Confira as novidades...</p>
+
                     <a href="#">Ler mais</a>
+
                 </div>
-            </div>
+
             </div>
 
         </section>
 
-        </div>
-
     </section>
+
+
 
     <footer class="footer">
 
