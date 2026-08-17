@@ -1378,18 +1378,21 @@
 
         .inovacao-destaque .imagem {
             min-height: 330px;
-            background: radial-gradient(circle at center, rgba(0, 217, 255, .35), transparent 45%), linear-gradient(135deg, #06131b, #142c38);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden
+            overflow: hidden;
+            background: #071018;
         }
 
-        .inovacao-destaque .imagem i {
-            font-size: clamp(90px, 12vw, 160px);
-            color: var(--primary);
-            filter: drop-shadow(0 0 30px rgba(0, 217, 255, .4));
-            transition: transform .5s ease
+        .inovacao-destaque .imagem img {
+            width: 100%;
+            height: 100%;
+            min-height: 330px;
+            object-fit: cover;
+            display: block;
+            transition: transform .6s ease;
+        }
+
+        .inovacao-destaque:hover .imagem img {
+            transform: scale(1.05);
         }
 
         .inovacao-destaque:hover .imagem i {
@@ -1952,7 +1955,6 @@
             <li><a href="/Lancamentos/lancamentos.html">Lançamentos</a></li>
             <li><a href="/Tendencias/Tendencias.html">Tendências</a></li>
             <li><a href="/Games/games.html">Games</a></li>
-            <li><a href="/Eventos/eventos.html">Eventos</a></li>
         </ul>
     </nav>
 
@@ -2206,243 +2208,394 @@
         <section class="secao" id="inovacoes">
             <div class="secao-header">
                 <h2>Grandes inovações</h2>
-                <a href="#" class="ver-todas">Explorar inovação <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="ver-todas">
+                    Explorar inovação <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
-            <article class="inovacao-destaque" data-category="inovacao hardware"
-                data-search="computação quântica inovação tecnologia futuro quantum">
-                <div class="imagem"><i class="fa-solid fa-atom"></i></div>
+            <article class="inovacao-destaque" data-category="inovacao ia robotica"
+                data-search="Google Gemini Robotics inteligência artificial robôs inovação">
+
+                <div class="imagem">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=90"
+                        alt="Robô humanoide representando o avanço da inteligência artificial e da robótica"
+                        loading="lazy">
+                </div>
+
                 <div class="inovacao-conteudo">
-                    <span class="tag">O futuro da computação</span>
-                    <h3>Computação quântica entra em uma nova fase de desenvolvimento</h3>
-                    <p>Empresas e governos estão acelerando investimentos em processadores quânticos, redes quânticas e
-                        serviços de computação acessíveis pela nuvem.</p>
+                    <span class="tag">Robótica + Inteligência Artificial</span>
+
+                    <h3>
+                        A IA começa a sair das telas e ganhar espaço no mundo físico
+                    </h3>
+
+                    <p>
+                        Novas gerações de inteligência artificial estão sendo usadas para
+                        dar aos robôs maior capacidade de compreender ambientes, executar
+                        tarefas e reagir a situações do mundo real.
+                    </p>
                 </div>
             </article>
 
             <div class="grid-noticias">
-                <article class="card-noticia" data-category="inovacao ia"
-                    data-search="agentes IA inteligência artificial automação">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=85"
-                            alt="Robô representando inteligência artificial" loading="lazy">
-                        <span class="card-tag">IA</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Especial • 2026</p>
-                        <h3>Agentes de IA começam a mudar a forma como tarefas digitais são executadas</h3>
-                        <p class="resumo">Sistemas capazes de planejar e executar sequências de tarefas estão ganhando
-                            espaço.</p>
-                    </div>
-                </article>
 
-                <article class="card-noticia" data-category="inovacao hardware"
-                    data-search="robôs humanoides indústria automação">
+                <article class="card-noticia" data-category="inovacao ia"
+                    data-search="Google Gemini Robotics robôs inteligência artificial">
+
                     <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
-                            alt="Robô humanoide" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=85"
+                            alt="Robô humanoide utilizando inteligência artificial" loading="lazy">
                         <span class="card-tag">Robótica</span>
                     </div>
+
                     <div class="card-corpo">
-                        <p class="card-meta">Futuro • 2026</p>
-                        <h3>Robôs humanoides avançam para fábricas e ambientes de trabalho</h3>
-                        <p class="resumo">A combinação de sensores, IA e novos atuadores está ampliando as
-                            possibilidades da robótica.</p>
+                        <p class="card-meta">Inovação • 2026</p>
+
+                        <h3>
+                            Robôs começam a combinar visão, linguagem e ação para executar tarefas
+                        </h3>
+
+                        <p class="resumo">
+                            Sistemas de IA estão permitindo que máquinas compreendam melhor
+                            ambientes reais e executem tarefas com maior autonomia.
+                        </p>
                     </div>
                 </article>
 
                 <article class="card-noticia" data-category="inovacao hardware"
-                    data-search="energia bateria tecnologia carros elétricos">
+                    data-search="computação quântica processador quântico tecnologia">
+
                     <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=85"
-                            alt="Carro elétrico e tecnologia de baterias" loading="lazy">
-                        <span class="card-tag">Energia</span>
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=85"
+                            alt="Representação de computador quântico" loading="lazy">
+                        <span class="card-tag">Computação quântica</span>
                     </div>
+
                     <div class="card-corpo">
-                        <p class="card-meta">Tecnologia verde • 2026</p>
-                        <h3>Novas tecnologias de baterias prometem transformar armazenamento de energia</h3>
-                        <p class="resumo">Baterias mais eficientes e novas químicas estão sendo estudadas para veículos
-                            e redes elétricas.</p>
+                        <p class="card-meta">Tecnologia • 2026</p>
+
+                        <h3>
+                            Computação quântica entra na disputa por aplicações comerciais
+                        </h3>
+
+                        <p class="resumo">
+                            Processadores quânticos e serviços de computação pela nuvem
+                            avançam enquanto empresas buscam aplicações práticas.
+                        </p>
                     </div>
                 </article>
 
-                <article class="card-noticia" data-category="inovacao tech"
-                    data-search="espaço lua satélite tecnologia inovação">
+                <article class="card-noticia" data-category="inovacao energia"
+                    data-search="energia nuclear fusão energia limpa tecnologia">
+
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=85"
+                            alt="Infraestrutura de energia representando novas tecnologias energéticas" loading="lazy">
+                        <span class="card-tag">Energia</span>
+                    </div>
+
+                    <div class="card-corpo">
+                        <p class="card-meta">Energia • 2026</p>
+
+                        <h3>
+                            Novas tecnologias de energia entram no radar da próxima década
+                        </h3>
+
+                        <p class="resumo">
+                            Reatores modulares, fusão e novas fontes renováveis aparecem
+                            entre as apostas para transformar a matriz energética.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="inovacao espaco"
+                    data-search="lua espaço satélite tecnologia inteligência artificial">
+
                     <div class="card-imagem">
                         <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
                             alt="Terra vista do espaço" loading="lazy">
                         <span class="card-tag">Espaço</span>
                     </div>
+
                     <div class="card-corpo">
-                        <p class="card-meta">Ciência e tecnologia • 2026</p>
-                        <h3>Nova corrida tecnológica leva inteligência artificial e computação para o espaço</h3>
-                        <p class="resumo">Satélites, sistemas autônomos e novas missões estão ampliando o uso de
-                            tecnologia fora da Terra.</p>
+                        <p class="card-meta">Espaço • 2026</p>
+
+                        <h3>
+                            IA e novas tecnologias aceleram a corrida espacial
+                        </h3>
+
+                        <p class="resumo">
+                            Sistemas autônomos, satélites inteligentes e novas missões
+                            estão ampliando o uso de tecnologia fora da Terra.
+                        </p>
                     </div>
                 </article>
+
             </div>
         </section>
-
         <section class="secao" id="ia">
             <div class="secao-header">
                 <h2>Inteligência Artificial</h2>
-                <a href="#" class="ver-todas">Mais sobre IA <i class="fa-solid fa-arrow-right"></i></a>
+
+                <a href="#" class="ver-todas">
+                    Mais sobre IA <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
             <div class="grid-noticias">
-                <article class="card-noticia" data-category="ia" data-search="inteligência artificial agentes empresas">
+
+                <article class="card-noticia" data-category="ia"
+                    data-search="Google Gemini inteligência artificial usuários agentes">
+
                     <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=85"
-                            alt="Inteligência artificial" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=90"
+                            alt="Inteligência artificial representada por uma rede digital" loading="lazy">
+
                         <span class="card-tag">IA</span>
                     </div>
+
                     <div class="card-corpo">
-                        <p class="card-meta">IA • 2026</p>
-                        <h3>Agentes inteligentes podem representar a próxima grande etapa da IA</h3>
-                        <p class="resumo">A indústria está deixando de focar apenas em chatbots para criar sistemas
-                            capazes de agir.</p>
+                        <p class="card-meta">Inteligência Artificial • 11 ago. 2026</p>
+
+                        <h3>
+                            Gemini ultrapassa 1 bilhão de usuários mensais
+                        </h3>
+
+                        <p class="resumo">
+                            O crescimento dos assistentes de IA mostra como ferramentas
+                            generativas estão se tornando parte da rotina digital.
+                        </p>
                     </div>
                 </article>
+
 
                 <article class="card-noticia" data-category="ia hardware"
-                    data-search="supercomputadores IA chips data center">
+                    data-search="Brasil supercomputadores inteligência artificial chips data center">
+
                     <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85"
-                            alt="Data center" loading="lazy">
-                        <span class="card-tag">Data centers</span>
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=90"
+                            alt="Data center com servidores de alta capacidade" loading="lazy">
+
+                        <span class="card-tag">Supercomputadores</span>
                     </div>
+
                     <div class="card-corpo">
                         <p class="card-meta">Infraestrutura • 2026</p>
-                        <h3>Supercomputadores e data centers se tornam peças centrais da corrida pela IA</h3>
-                        <p class="resumo">A expansão dos modelos de IA aumenta a demanda por chips, energia e
-                            infraestrutura.</p>
+
+                        <h3>
+                            Brasil planeja ampliar infraestrutura nacional para inteligência artificial
+                        </h3>
+
+                        <p class="resumo">
+                            Novos supercomputadores devem ampliar a capacidade brasileira
+                            de pesquisa, desenvolvimento e treinamento de modelos de IA.
+                        </p>
                     </div>
                 </article>
+
+
+                <article class="card-noticia" data-category="ia robotica"
+                    data-search="Gemini Robotics robôs IA inteligência artificial">
+
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=90"
+                            alt="Robô humanoide em ambiente tecnológico" loading="lazy">
+
+                        <span class="card-tag">IA física</span>
+                    </div>
+
+                    <div class="card-corpo">
+                        <p class="card-meta">Robótica • 2026</p>
+
+                        <h3>
+                            Inteligência artificial começa a controlar robôs em ambientes reais
+                        </h3>
+
+                        <p class="resumo">
+                            Modelos capazes de interpretar imagens, comandos e ambientes
+                            estão aproximando a IA do mundo físico.
+                        </p>
+                    </div>
+                </article>
+
 
                 <article class="card-noticia" data-category="ia security"
-                    data-search="segurança inteligência artificial hackers cibersegurança">
+                    data-search="IA segurança cibernética golpes hackers inteligência artificial">
+
                     <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=85"
-                            alt="Segurança cibernética" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=90"
+                            alt="Segurança cibernética e proteção de dados" loading="lazy">
+
                         <span class="card-tag">Segurança</span>
                     </div>
+
                     <div class="card-corpo">
                         <p class="card-meta">CyberSecurity • 2026</p>
-                        <h3>IA também está mudando a batalha contra ataques cibernéticos</h3>
-                        <p class="resumo">Ferramentas automatizadas podem ajudar equipes a detectar ameaças com maior
-                            velocidade.</p>
+
+                        <h3>
+                            IA aumenta a velocidade da batalha contra ataques cibernéticos
+                        </h3>
+
+                        <p class="resumo">
+                            Empresas estão utilizando inteligência artificial para detectar
+                            ameaças, analisar comportamentos e responder a ataques.
+                        </p>
                     </div>
                 </article>
 
-                <article class="card-noticia" data-category="ia" data-search="código programação IA software">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85"
-                            alt="Código de programação" loading="lazy">
-                        <span class="card-tag">Software</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Desenvolvimento • 2026</p>
-                        <h3>Programação assistida por IA muda a forma de criar aplicativos</h3>
-                        <p class="resumo">Ferramentas generativas ajudam desenvolvedores a escrever, testar e revisar
-                            código.</p>
-                    </div>
-                </article>
             </div>
         </section>
-
         <section class="secao" id="todas">
+
             <div class="secao-header">
                 <h2>Últimas notícias</h2>
             </div>
 
             <div class="duas-colunas">
+
                 <div class="lista-noticias">
+
                     <article class="noticia-horizontal" data-category="mobile"
-                        data-search="celular smartphone mobile tecnologia">
-                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85"
+                        data-search="Google Pixel 11 smartphone celular IA mobile">
+
+                        <img src="https://th.bing.com/th/id/OIP.gLQaF8_RFm-5SSkPwki4igHaEc?w=307&h=184&c=7&r=0&o=7&pid=1.7&rm=3"
                             alt="Smartphone moderno" loading="lazy">
+
                         <div>
-                            <p class="meta">Mobile • 2026</p>
-                            <h3>Smartphones estão ganhando mais recursos de IA diretamente no aparelho</h3>
-                            <p>O processamento local permite respostas rápidas e pode reduzir a dependência da nuvem.
+                            <p class="meta">Mobile • Agosto de 2026</p>
+
+                            <h3>
+                                Nova geração de smartphones aposta ainda mais em inteligência artificial
+                            </h3>
+
+                            <p>
+                                Fabricantes estão ampliando o uso de IA diretamente no aparelho,
+                                trazendo novos recursos para câmeras, produtividade e assistentes.
                             </p>
                         </div>
                     </article>
+
+
+                    <article class="noticia-horizontal" data-category="ia"
+                        data-search="China Kimi K3 inteligência artificial IA modelos abertos">
+
+                        <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=700&q=90"
+                            alt="Representação de inteligência artificial" loading="lazy">
+
+                        <div>
+                            <p class="meta">Inteligência Artificial • 15 ago. 2026</p>
+
+                            <h3>
+                                Novos modelos de IA chineses aumentam a competição global
+                            </h3>
+
+                            <p>
+                                Modelos de código aberto e baixo custo estão ampliando a disputa
+                                internacional pelo desenvolvimento da próxima geração de IA.
+                            </p>
+                        </div>
+                    </article>
+
 
                     <article class="noticia-horizontal" data-category="games"
-                        data-search="games videogame jogos tecnologia">
-                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=85"
+                        data-search="games videogames IA gráficos inteligência artificial jogos">
+
+                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=90"
                             alt="Controle de videogame" loading="lazy">
+
                         <div>
                             <p class="meta">Games • 2026</p>
-                            <h3>IA e gráficos em tempo real prometem mudar os próximos jogos</h3>
-                            <p>Desenvolvedoras estão explorando novas formas de criar mundos e personagens mais
-                                dinâmicos.</p>
-                        </div>
-                    </article>
 
-                    <article class="noticia-horizontal" data-category="security"
-                        data-search="phishing segurança golpes internet">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=700&q=85"
-                            alt="Segurança digital" loading="lazy">
-                        <div>
-                            <p class="meta">CyberSecurity • 2026</p>
-                            <h3>Golpes digitais usam IA para criar mensagens cada vez mais convincentes</h3>
-                            <p>Especialistas recomendam atenção redobrada com links, mensagens e solicitações de dados.
+                            <h3>
+                                Inteligência artificial começa a transformar criação de jogos
+                            </h3>
+
+                            <p>
+                                Ferramentas generativas estão sendo utilizadas para auxiliar
+                                na criação de personagens, ambientes e experiências interativas.
                             </p>
                         </div>
                     </article>
 
+
                     <article class="noticia-horizontal" data-category="hardware"
-                        data-search="chips processadores hardware computadores">
-                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=85"
-                            alt="Hardware de computador" loading="lazy">
+                        data-search="chips Nvidia processadores IA hardware data centers">
+
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=90"
+                            alt="Componentes e chips de computador" loading="lazy">
+
                         <div>
-                            <p class="meta">Hardware • 2026</p>
-                            <h3>A corrida pelos chips mais eficientes ganha força com a expansão da IA</h3>
-                            <p>Fabricantes buscam mais desempenho por watt para atender computadores e data centers.</p>
+                            <p class="meta">Hardware • Agosto de 2026</p>
+
+                            <h3>
+                                Corrida por chips de IA aumenta a pressão sobre data centers
+                            </h3>
+
+                            <p>
+                                A expansão dos modelos de inteligência artificial exige
+                                processadores mais rápidos, eficientes e especializados.
+                            </p>
                         </div>
                     </article>
+
                 </div>
 
+
                 <aside class="sidebar">
-                    <h3><i class="fa-solid fa-fire"></i>Em alta</h3>
+
+                    <h3>
+                        <i class="fa-solid fa-fire"></i>
+                        Em alta
+                    </h3>
+
                     <div class="ranking">
+
                         <div class="ranking-item">
                             <div class="numero">01</div>
                             <div>
-                                <h4>Computação quântica chega mais perto da nuvem</h4><span>Inovação</span>
+                                <h4>Gemini ultrapassa 1 bilhão de usuários mensais</h4>
+                                <span>IA</span>
                             </div>
                         </div>
+
                         <div class="ranking-item">
                             <div class="numero">02</div>
                             <div>
-                                <h4>A nova geração de agentes de inteligência artificial</h4><span>IA</span>
+                                <h4>Brasil amplia investimentos em supercomputadores de IA</h4>
+                                <span>Infraestrutura</span>
                             </div>
                         </div>
+
                         <div class="ranking-item">
                             <div class="numero">03</div>
                             <div>
-                                <h4>Robôs humanoides avançam na indústria</h4><span>Robótica</span>
+                                <h4>Robôs ganham novas capacidades com inteligência artificial</h4>
+                                <span>Robótica</span>
                             </div>
                         </div>
+
                         <div class="ranking-item">
                             <div class="numero">04</div>
                             <div>
-                                <h4>Como proteger seus dados contra novos golpes</h4><span>Segurança</span>
+                                <h4>Novos modelos chineses aumentam a competição na IA</h4>
+                                <span>Inteligência Artificial</span>
                             </div>
                         </div>
+
                         <div class="ranking-item">
                             <div class="numero">05</div>
                             <div>
-                                <h4>Chips especializados dominam a corrida da IA</h4><span>Hardware</span>
+                                <h4>Novos smartphones levam mais IA para o dispositivo</h4>
+                                <span>Mobile</span>
                             </div>
                         </div>
+
                     </div>
+
                 </aside>
+
             </div>
         </section>
-
         <section class="newsletter">
             <div>
                 <h2>Receba as principais novidades</h2>
