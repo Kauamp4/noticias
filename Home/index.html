@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description"
+        content="Tech News — notícias, novidades e grandes inovações em tecnologia, inteligência artificial, hardware, games, mobile e segurança.">
+    <meta name="theme-color" content="#071018">
+    <title>Tech News — Tecnologia, Inovação e Futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="0.567 0.433 0 0 0 0.558 0.442 0 0 0 0 0.242 0.758 0 0 0 0 0 1 0" />
+            </filter>
+            <filter id="deuteranopia" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="0.625 0.375 0 0 0 0.700 0.300 0 0 0 0 0.300 0.700 0 0 0 0 0 1 0" />
+            </filter>
+            <filter id="tritanopia" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="0.950 0.050 0 0 0 0 0.433 0.567 0 0 0 0.475 0.525 0 0 0 0 0 1 0" />
+            </filter>
+        </defs>
+    </svg>
+
+    <nav class="barra-categorias" aria-label="Navegação principal">
+        <ul>
+            <li><a href="/ABA_Inovacoes/Inovacao.html">Inovações</a></li>
+            <li><a href="/Lancamentos/lancamentos.html">Lançamentos</a></li>
+            <li><a href="/Tendencias/Tendencias.html">Tendências</a></li>
+            <li><a href="/Games/games.html">Games</a></li>
+            <li><a href="/Eventos/eventos.html">Eventos</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="topo">
+            <div class="topo-esquerdo">
+                <div class="menu-hamburguer">
+                    <button class="hamburguer" id="btnMenu" type="button" aria-label="Abrir menu de acessibilidade"
+                        aria-expanded="false" aria-controls="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="menu" id="menu" aria-hidden="true">
+                        <li class="menu-titulo">
+                            <i class="fa-solid fa-universal-access"></i>
+                            <span>Acessibilidade</span>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnDarkMenu" type="button">
+                                <i class="fa-solid fa-moon"></i>
+                                <span>Modo Escuro</span>
+                                <span class="status" id="statusDark">OFF</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnAumentarTexto" type="button">
+                                <i class="fa-solid fa-font"></i>
+                                <span>Aumentar texto</span>
+                                <span class="status">A+</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnDiminuirTexto" type="button">
+                                <i class="fa-solid fa-font"></i>
+                                <span>Diminuir texto</span>
+                                <span class="status">A−</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnDestacarLinks" type="button">
+                                <i class="fa-solid fa-link"></i>
+                                <span>Destacar links</span>
+                                <span class="status" id="statusLinks">OFF</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnModoLeitura" type="button">
+                                <i class="fa-solid fa-book-open"></i>
+                                <span>Modo de leitura</span>
+                                <span class="status" id="statusLeitura">OFF</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnAtalhos" type="button">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <span>Atalhos de teclado</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-opcao" id="btnDaltonismo" type="button" aria-expanded="false"
+                                aria-controls="submenuDaltonismo">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>Daltonismo</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <div class="submenu-acessibilidade" id="submenuDaltonismo">
+                                <button type="button" data-daltonismo="normal">Normal</button>
+                                <button type="button" data-daltonismo="protanopia">Protanopia</button>
+                                <button type="button" data-daltonismo="deuteranopia">Deuteranopia</button>
+                                <button type="button" data-daltonismo="tritanopia">Tritanopia</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-separador"></div>
+                        </li>
+                        <li>
+                            <button class="menu-opcao menu-restaurar" id="btnRestaurar" type="button">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <span>Restaurar configurações</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="buscar-topo">
+                    <label class="sr-only" for="campoBusca">Buscar notícias</label>
+                    <input id="campoBusca" type="search" placeholder="Buscar notícias..." autocomplete="off">
+                    <button class="limpar-busca" id="limparBusca" type="button" aria-label="Limpar busca">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <a href="index.html" class="logo" aria-label="TechNews - Ir para a página inicial">Tech<span>News</span></a>
+            <a href="login.html" class="login">
+                <i class="fa-solid fa-user"></i>
+                <span>ENTRAR</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="modal-overlay" id="modalAtalhos" role="dialog" aria-modal="true" aria-labelledby="tituloAtalhos">
+        <div class="modal-atalhos">
+            <div class="modal-cabecalho">
+                <h2 id="tituloAtalhos">
+                    <i class="fa-solid fa-keyboard"></i>
+                    Atalhos de teclado
+                </h2>
+                <button class="fechar-modal" id="fecharModal" type="button" aria-label="Fechar atalhos">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="atalhos-lista">
+                <div class="atalho-item"><span>Ir para a Home</span><kbd>Alt + H</kbd></div>
+                <div class="atalho-item"><span>Focar na busca</span><kbd>Alt + B</kbd></div>
+                <div class="atalho-item"><span>Abrir/fechar menu</span><kbd>Alt + M</kbd></div>
+                <div class="atalho-item"><span>Aumentar texto</span><kbd>Alt + +</kbd></div>
+                <div class="atalho-item"><span>Diminuir texto</span><kbd>Alt + −</kbd></div>
+                <div class="atalho-item"><span>Modo de leitura</span><kbd>Alt + R</kbd></div>
+                <div class="atalho-item"><span>Fechar menu/modal</span><kbd>Esc</kbd></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="noticias">
+        <h2 class="titulo-secao">Destaques de tecnologia<small>As principais notícias e inovações</small></h2>
+        <div class="resultado-busca" id="resultadoBusca" role="status" aria-live="polite"></div>
+
+        <section class="manchete" aria-label="Principais notícias">
+            <article class="noticia-principal" data-category="tech ia"
+                data-search="Trump tecnologia inteligência artificial IA Estados Unidos política">
+                <img src="https://conteudo.imguol.com.br/c/noticias/be/2026/08/05/05ago26---o-presidente-dos-eua-donald-trump-em-pronunciamento-no-red-rock-casino-resort-spa-em-las-vegas-nevada-eua-1785976258413_v2_615x300.png"
+                    alt="Donald Trump durante pronunciamento nos Estados Unidos" loading="lazy">
+                <div class="conteudo">
+                    <span class="etiqueta">Tecnologia</span>
+                    <p class="meta">Courtney Rozen e Alexandra Alper • 06 de agosto de 2026</p>
+                    <h2>Ligação de Trump com setor de tecnologia é alvo de críticas bipartidárias após descontrole de IA
+                    </h2>
+                    <p class="descricao">A expansão da inteligência artificial continua provocando debates sobre
+                        regulação, investimentos e os impactos da tecnologia.</p>
+                </div>
+            </article>
+
+            <div class="destaques-laterais">
+                <article class="destaque-card" data-category="ia"
+                    data-search="IA inteligência artificial empresas investimento">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
+                        alt="Inteligência artificial representada por uma rede digital" loading="lazy">
+                    <div class="info">
+                        <p>Inteligência Artificial • 2026</p>
+                        <h3>A nova corrida da IA: agentes começam a executar tarefas cada vez mais complexas</h3>
+                    </div>
+                </article>
+
+                <article class="destaque-card" data-category="inovacao hardware"
+                    data-search="computador quântico computação quântica Oracle Quantinuum inovação">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=85"
+                        alt="Representação de computação quântica" loading="lazy">
+                    <div class="info">
+                        <p>Computação quântica • 11 de agosto de 2026</p>
+                        <h3>Computação quântica começa a ganhar espaço em serviços de nuvem</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="ultimas-barra">
+            <div class="ultimas-label">Últimas notícias</div>
+            <div class="ultimas-texto">Novas tecnologias de IA, computação quântica, robótica, chips e supercomputadores
+                movimentam o setor em 2026.</div>
+        </div>
+
+        <section class="secao">
+            <div class="secao-header">
+                <h2>Mais lidas</h2>
+                <a href="#todas" class="ver-todas">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid-noticias">
+                <article class="card-noticia" data-category="ia"
+                    data-search="Citigroup IA inteligência artificial investimento empresas">
+                    <div class="card-imagem">
+                        <img src="https://th.bing.com/th/id/OIP.bv4btk5w4uw_Gg6BLnX32AEsCo?w=900&h=500&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3"
+                            alt="Empresas de inteligência artificial" loading="lazy">
+                        <span class="card-tag">IA</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Kanchana Chakravarty • 10 mar. 2026</p>
+                        <h3>Citigroup aumenta previsão de investimento e receita de empresas com IA</h3>
+                        <p class="resumo">O avanço da inteligência artificial continua atraindo investimentos em
+                            diferentes setores.</p>
+                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="security"
+                    data-search="hackers segurança Philips Shell dados cibersegurança">
+                    <div class="card-imagem">
+                        <img src="https://s2-g1.glbimg.com/b82zUHbExmKCMvkjaBc5U5Bpl1I=/1080x608/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/D/9Q8nk1RuGrll5s7uldEg/kevin-horvat-pyjp2zmxulk-unsplash.jpg"
+                            alt="Segurança digital" loading="lazy">
+                        <span class="card-tag">Segurança</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Reuters • 13 ago. 2026</p>
+                        <h3>Grupo de hackers diz ter roubado dados de quase 50 empresas</h3>
+                        <p class="resumo">O caso chama atenção para os riscos crescentes envolvendo dados corporativos.
+                        </p>
+                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="hardware"
+                    data-search="IBM computador quântico quantum hardware">
+                    <div class="card-imagem">
+                        <img src="https://www.tekrati.com/wp-content/uploads/2021/11/Quantum-Computer-scaled.jpg"
+                            alt="Computador quântico" loading="lazy">
+                        <span class="card-tag">Hardware</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Tecnologia • 2026</p>
+                        <h3>IBM investirá bilhões em computador quântico de grande escala</h3>
+                        <p class="resumo">A computação quântica é uma das áreas mais disputadas da próxima geração da
+                            tecnologia.</p>
+                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="tech"
+                    data-search="Neuralink implante cerebral cérebro visão tecnologia">
+                    <div class="card-imagem">
+                        <img src="https://www.infomoney.com.br/wp-content/uploads/2023/05/2023-05-26T000532Z_1_LYNXMPEJ4P003_RTROPTP_4_NEURALINK-MUSK-RESEARCH-CONFLICTS.jpg?w=1000&quality=70&strip=all"
+                            alt="Tecnologia de interface cérebro computador" loading="lazy">
+                        <span class="card-tag">Inovação</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Tecnologia • 2026</p>
+                        <h3>Neuralink desenvolve implante cerebral que promete restaurar a visão</h3>
+                        <p class="resumo">Interfaces cérebro-computador estão entre as tecnologias que podem transformar
+                            a medicina.</p>
+                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao" id="inovacoes">
+            <div class="secao-header">
+                <h2>Grandes inovações</h2>
+                <a href="#" class="ver-todas">Explorar inovação <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <article class="inovacao-destaque" data-category="inovacao hardware"
+                data-search="computação quântica inovação tecnologia futuro quantum">
+                <div class="imagem"><i class="fa-solid fa-atom"></i></div>
+                <div class="inovacao-conteudo">
+                    <span class="tag">O futuro da computação</span>
+                    <h3>Computação quântica entra em uma nova fase de desenvolvimento</h3>
+                    <p>Empresas e governos estão acelerando investimentos em processadores quânticos, redes quânticas e
+                        serviços de computação acessíveis pela nuvem.</p>
+                </div>
+            </article>
+
+            <div class="grid-noticias">
+                <article class="card-noticia" data-category="inovacao ia"
+                    data-search="agentes IA inteligência artificial automação">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=85"
+                            alt="Robô representando inteligência artificial" loading="lazy">
+                        <span class="card-tag">IA</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Especial • 2026</p>
+                        <h3>Agentes de IA começam a mudar a forma como tarefas digitais são executadas</h3>
+                        <p class="resumo">Sistemas capazes de planejar e executar sequências de tarefas estão ganhando
+                            espaço.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="inovacao hardware"
+                    data-search="robôs humanoides indústria automação">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
+                            alt="Robô humanoide" loading="lazy">
+                        <span class="card-tag">Robótica</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Futuro • 2026</p>
+                        <h3>Robôs humanoides avançam para fábricas e ambientes de trabalho</h3>
+                        <p class="resumo">A combinação de sensores, IA e novos atuadores está ampliando as
+                            possibilidades da robótica.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="inovacao hardware"
+                    data-search="energia bateria tecnologia carros elétricos">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=85"
+                            alt="Carro elétrico e tecnologia de baterias" loading="lazy">
+                        <span class="card-tag">Energia</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Tecnologia verde • 2026</p>
+                        <h3>Novas tecnologias de baterias prometem transformar armazenamento de energia</h3>
+                        <p class="resumo">Baterias mais eficientes e novas químicas estão sendo estudadas para veículos
+                            e redes elétricas.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="inovacao tech"
+                    data-search="espaço lua satélite tecnologia inovação">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
+                            alt="Terra vista do espaço" loading="lazy">
+                        <span class="card-tag">Espaço</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Ciência e tecnologia • 2026</p>
+                        <h3>Nova corrida tecnológica leva inteligência artificial e computação para o espaço</h3>
+                        <p class="resumo">Satélites, sistemas autônomos e novas missões estão ampliando o uso de
+                            tecnologia fora da Terra.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao" id="ia">
+            <div class="secao-header">
+                <h2>Inteligência Artificial</h2>
+                <a href="#" class="ver-todas">Mais sobre IA <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid-noticias">
+                <article class="card-noticia" data-category="ia" data-search="inteligência artificial agentes empresas">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=85"
+                            alt="Inteligência artificial" loading="lazy">
+                        <span class="card-tag">IA</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">IA • 2026</p>
+                        <h3>Agentes inteligentes podem representar a próxima grande etapa da IA</h3>
+                        <p class="resumo">A indústria está deixando de focar apenas em chatbots para criar sistemas
+                            capazes de agir.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="ia hardware"
+                    data-search="supercomputadores IA chips data center">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85"
+                            alt="Data center" loading="lazy">
+                        <span class="card-tag">Data centers</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Infraestrutura • 2026</p>
+                        <h3>Supercomputadores e data centers se tornam peças centrais da corrida pela IA</h3>
+                        <p class="resumo">A expansão dos modelos de IA aumenta a demanda por chips, energia e
+                            infraestrutura.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="ia security"
+                    data-search="segurança inteligência artificial hackers cibersegurança">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=85"
+                            alt="Segurança cibernética" loading="lazy">
+                        <span class="card-tag">Segurança</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">CyberSecurity • 2026</p>
+                        <h3>IA também está mudando a batalha contra ataques cibernéticos</h3>
+                        <p class="resumo">Ferramentas automatizadas podem ajudar equipes a detectar ameaças com maior
+                            velocidade.</p>
+                    </div>
+                </article>
+
+                <article class="card-noticia" data-category="ia" data-search="código programação IA software">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85"
+                            alt="Código de programação" loading="lazy">
+                        <span class="card-tag">Software</span>
+                    </div>
+                    <div class="card-corpo">
+                        <p class="card-meta">Desenvolvimento • 2026</p>
+                        <h3>Programação assistida por IA muda a forma de criar aplicativos</h3>
+                        <p class="resumo">Ferramentas generativas ajudam desenvolvedores a escrever, testar e revisar
+                            código.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao" id="todas">
+            <div class="secao-header">
+                <h2>Últimas notícias</h2>
+            </div>
+
+            <div class="duas-colunas">
+                <div class="lista-noticias">
+                    <article class="noticia-horizontal" data-category="mobile"
+                        data-search="celular smartphone mobile tecnologia">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85"
+                            alt="Smartphone moderno" loading="lazy">
+                        <div>
+                            <p class="meta">Mobile • 2026</p>
+                            <h3>Smartphones estão ganhando mais recursos de IA diretamente no aparelho</h3>
+                            <p>O processamento local permite respostas rápidas e pode reduzir a dependência da nuvem.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-horizontal" data-category="games"
+                        data-search="games videogame jogos tecnologia">
+                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=85"
+                            alt="Controle de videogame" loading="lazy">
+                        <div>
+                            <p class="meta">Games • 2026</p>
+                            <h3>IA e gráficos em tempo real prometem mudar os próximos jogos</h3>
+                            <p>Desenvolvedoras estão explorando novas formas de criar mundos e personagens mais
+                                dinâmicos.</p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-horizontal" data-category="security"
+                        data-search="phishing segurança golpes internet">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=700&q=85"
+                            alt="Segurança digital" loading="lazy">
+                        <div>
+                            <p class="meta">CyberSecurity • 2026</p>
+                            <h3>Golpes digitais usam IA para criar mensagens cada vez mais convincentes</h3>
+                            <p>Especialistas recomendam atenção redobrada com links, mensagens e solicitações de dados.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-horizontal" data-category="hardware"
+                        data-search="chips processadores hardware computadores">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=85"
+                            alt="Hardware de computador" loading="lazy">
+                        <div>
+                            <p class="meta">Hardware • 2026</p>
+                            <h3>A corrida pelos chips mais eficientes ganha força com a expansão da IA</h3>
+                            <p>Fabricantes buscam mais desempenho por watt para atender computadores e data centers.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="sidebar">
+                    <h3><i class="fa-solid fa-fire"></i>Em alta</h3>
+                    <div class="ranking">
+                        <div class="ranking-item">
+                            <div class="numero">01</div>
+                            <div>
+                                <h4>Computação quântica chega mais perto da nuvem</h4><span>Inovação</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="numero">02</div>
+                            <div>
+                                <h4>A nova geração de agentes de inteligência artificial</h4><span>IA</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="numero">03</div>
+                            <div>
+                                <h4>Robôs humanoides avançam na indústria</h4><span>Robótica</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="numero">04</div>
+                            <div>
+                                <h4>Como proteger seus dados contra novos golpes</h4><span>Segurança</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="numero">05</div>
+                            <div>
+                                <h4>Chips especializados dominam a corrida da IA</h4><span>Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div>
+                <h2>Receba as principais novidades</h2>
+                <p>Notícias de tecnologia, inovação, IA, games e segurança direto no seu e-mail.</p>
+            </div>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail">
+                <button type="submit">Assinar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>
+                    <h2>TechNews</h2>
+                    <p>Tecnologia, inovação e futuro em um só lugar. Notícias e conteúdos para quem quer entender o
+                        mundo digital.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Categorias</h3>
+                    <div class="footer-links">
+                        <a href="#ia">Inteligência Artificial</a>
+                        <a href="#inovacoes">Inovação</a>
+                        <a href="/Games/games.html">Games</a>
+                        <a href="#">Hardware</a>
+                        <a href="#">Mobile</a>
+                        <a href="#">CyberSecurity</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>TechNews</h3>
+                    <div class="footer-links">
+                        <a href="#">Sobre nós</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Parceiros</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Privacidade</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 TechNews. Todos os direitos reservados.</p>
+                <div class="footer-policy">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Termos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
