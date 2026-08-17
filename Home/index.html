@@ -3,600 +3,2544 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description"
-        content="Tech News — notícias, novidades e grandes inovações em tecnologia, inteligência artificial, hardware, games, mobile e segurança.">
-    <meta name="theme-color" content="#071018">
-    <title>Tech News — Tecnologia, Inovação e Futuro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="TechNews - Notícias, análises, inteligência artificial, celulares, computação, games e segurança digital.">
+
+    <meta name="theme-color" content="#111111">
+
+    <title>TechNews | Notícias de Tecnologia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/Lancamentos/index.css">
+
+
+
+
+
 </head>
 
+
 <body>
-    <svg aria-hidden="true" width="0" height="0" style="position:absolute">
-        <defs>
-            <filter id="protanopia" color-interpolation-filters="sRGB">
-                <feColorMatrix type="matrix" values="0.567 0.433 0 0 0 0.558 0.442 0 0 0 0 0.242 0.758 0 0 0 0 0 1 0" />
-            </filter>
-            <filter id="deuteranopia" color-interpolation-filters="sRGB">
-                <feColorMatrix type="matrix" values="0.625 0.375 0 0 0 0.700 0.300 0 0 0 0 0.300 0.700 0 0 0 0 0 1 0" />
-            </filter>
-            <filter id="tritanopia" color-interpolation-filters="sRGB">
-                <feColorMatrix type="matrix" values="0.950 0.050 0 0 0 0 0.433 0.567 0 0 0 0.475 0.525 0 0 0 0 0 1 0" />
-            </filter>
-        </defs>
-    </svg>
 
-    <nav class="barra-categorias" aria-label="Navegação principal">
-        <ul>
-            <li><a href="/ABA_Inovacoes/Inovacao.html">Inovações</a></li>
-            <li><a href="/Lancamentos/lancamentos.html">Lançamentos</a></li>
-            <li><a href="/Tendencias/Tendencias.html">Tendências</a></li>
-            <li><a href="/Games/games.html">Games</a></li>
-            <li><a href="/Eventos/eventos.html">Eventos</a></li>
-        </ul>
-    </nav>
 
-    <header>
-        <div class="topo">
-            <div class="topo-esquerdo">
-                <div class="menu-hamburguer">
-                    <button class="hamburguer" id="btnMenu" type="button" aria-label="Abrir menu de acessibilidade"
-                        aria-expanded="false" aria-controls="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+    <!-- =========================================================
+         BARRA SUPERIOR
+    ========================================================== -->
 
-                    <ul class="menu" id="menu" aria-hidden="true">
-                        <li class="menu-titulo">
-                            <i class="fa-solid fa-universal-access"></i>
-                            <span>Acessibilidade</span>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDarkMenu" type="button">
-                                <i class="fa-solid fa-moon"></i>
-                                <span>Modo Escuro</span>
-                                <span class="status" id="statusDark">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnAumentarTexto" type="button">
-                                <i class="fa-solid fa-font"></i>
-                                <span>Aumentar texto</span>
-                                <span class="status">A+</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDiminuirTexto" type="button">
-                                <i class="fa-solid fa-font"></i>
-                                <span>Diminuir texto</span>
-                                <span class="status">A−</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDestacarLinks" type="button">
-                                <i class="fa-solid fa-link"></i>
-                                <span>Destacar links</span>
-                                <span class="status" id="statusLinks">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnModoLeitura" type="button">
-                                <i class="fa-solid fa-book-open"></i>
-                                <span>Modo de leitura</span>
-                                <span class="status" id="statusLeitura">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnAtalhos" type="button">
-                                <i class="fa-solid fa-keyboard"></i>
-                                <span>Atalhos de teclado</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDaltonismo" type="button" aria-expanded="false"
-                                aria-controls="submenuDaltonismo">
-                                <i class="fa-solid fa-palette"></i>
-                                <span>Daltonismo</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <div class="submenu-acessibilidade" id="submenuDaltonismo">
-                                <button type="button" data-daltonismo="normal">Normal</button>
-                                <button type="button" data-daltonismo="protanopia">Protanopia</button>
-                                <button type="button" data-daltonismo="deuteranopia">Deuteranopia</button>
-                                <button type="button" data-daltonismo="tritanopia">Tritanopia</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="menu-separador"></div>
-                        </li>
-                        <li>
-                            <button class="menu-opcao menu-restaurar" id="btnRestaurar" type="button">
-                                <i class="fa-solid fa-rotate-left"></i>
-                                <span>Restaurar configurações</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+    <div class="topbar">
 
-                <div class="buscar-topo">
-                    <label class="sr-only" for="campoBusca">Buscar notícias</label>
-                    <input id="campoBusca" type="search" placeholder="Buscar notícias..." autocomplete="off">
-                    <button class="limpar-busca" id="limparBusca" type="button" aria-label="Limpar busca">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
+        <div class="container topbar-inner">
+
+            <span>
+                Informação para quem vive conectado
+            </span>
+
+            <div class="topbar-links">
+
+                <a href="#reviews">
+                    Reviews
+                </a>
+
+                <a href="#newsletter">
+                    Newsletter
+                </a>
+
             </div>
 
-            <a href="index.html" class="logo" aria-label="TechNews - Ir para a página inicial">Tech<span>News</span></a>
-            <a href="login.html" class="login">
-                <i class="fa-solid fa-user"></i>
-                <span>ENTRAR</span>
-            </a>
         </div>
-    </header>
 
-    <div class="modal-overlay" id="modalAtalhos" role="dialog" aria-modal="true" aria-labelledby="tituloAtalhos">
-        <div class="modal-atalhos">
-            <div class="modal-cabecalho">
-                <h2 id="tituloAtalhos">
-                    <i class="fa-solid fa-keyboard"></i>
-                    Atalhos de teclado
-                </h2>
-                <button class="fechar-modal" id="fecharModal" type="button" aria-label="Fechar atalhos">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="atalhos-lista">
-                <div class="atalho-item"><span>Ir para a Home</span><kbd>Alt + H</kbd></div>
-                <div class="atalho-item"><span>Focar na busca</span><kbd>Alt + B</kbd></div>
-                <div class="atalho-item"><span>Abrir/fechar menu</span><kbd>Alt + M</kbd></div>
-                <div class="atalho-item"><span>Aumentar texto</span><kbd>Alt + +</kbd></div>
-                <div class="atalho-item"><span>Diminuir texto</span><kbd>Alt + −</kbd></div>
-                <div class="atalho-item"><span>Modo de leitura</span><kbd>Alt + R</kbd></div>
-                <div class="atalho-item"><span>Fechar menu/modal</span><kbd>Esc</kbd></div>
-            </div>
-        </div>
     </div>
 
-    <main id="noticias">
-        <h2 class="titulo-secao">Destaques de tecnologia<small>As principais notícias e inovações</small></h2>
-        <div class="resultado-busca" id="resultadoBusca" role="status" aria-live="polite"></div>
 
-        <section class="manchete" aria-label="Principais notícias">
-            <article class="noticia-principal" data-category="tech ia"
-                data-search="Trump tecnologia inteligência artificial IA Estados Unidos política">
-                <img src="https://conteudo.imguol.com.br/c/noticias/be/2026/08/05/05ago26---o-presidente-dos-eua-donald-trump-em-pronunciamento-no-red-rock-casino-resort-spa-em-las-vegas-nevada-eua-1785976258413_v2_615x300.png"
-                    alt="Donald Trump durante pronunciamento nos Estados Unidos" loading="lazy">
-                <div class="conteudo">
-                    <span class="etiqueta">Tecnologia</span>
-                    <p class="meta">Courtney Rozen e Alexandra Alper • 06 de agosto de 2026</p>
-                    <h2>Ligação de Trump com setor de tecnologia é alvo de críticas bipartidárias após descontrole de IA
-                    </h2>
-                    <p class="descricao">A expansão da inteligência artificial continua provocando debates sobre
-                        regulação, investimentos e os impactos da tecnologia.</p>
-                </div>
-            </article>
+    <!-- =========================================================
+         CABEÇALHO
+    ========================================================== -->
 
-            <div class="destaques-laterais">
-                <article class="destaque-card" data-category="ia"
-                    data-search="IA inteligência artificial empresas investimento">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
-                        alt="Inteligência artificial representada por uma rede digital" loading="lazy">
-                    <div class="info">
-                        <p>Inteligência Artificial • 2026</p>
-                        <h3>A nova corrida da IA: agentes começam a executar tarefas cada vez mais complexas</h3>
-                    </div>
-                </article>
+    <header class="main-header">
 
-                <article class="destaque-card" data-category="inovacao hardware"
-                    data-search="computador quântico computação quântica Oracle Quantinuum inovação">
-                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=85"
-                        alt="Representação de computação quântica" loading="lazy">
-                    <div class="info">
-                        <p>Computação quântica • 11 de agosto de 2026</p>
-                        <h3>Computação quântica começa a ganhar espaço em serviços de nuvem</h3>
-                    </div>
-                </article>
+        <div class="container header-inner">
+
+            <a
+                class="logo"
+                href="#inicio"
+                aria-label="Página inicial TechNews"
+            >
+
+                <span class="logo-symbol">
+
+                    <img
+                        src="/img/logosite.png"
+                        alt="Logo TechNews"
+                    >
+
+                </span>
+
+                <span>
+                    Tech<strong>News</strong>
+                </span>
+
+            </a>
+
+
+            <nav
+                class="desktop-nav"
+                aria-label="Navegação principal"
+            >
+
+                <ul>
+
+                    <li>
+                        <a
+                            class="active"
+                            href="#ultimas"
+                        >
+                            Últimas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#celulares">
+                            Celulares
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#computacao">
+                            Computação
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ia">
+                            Inteligência Artificial
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#games">
+                            Games
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#reviews">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#guias">
+                            Guias
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <!-- MODO ESCURO -->
+
+                <button
+                    class="icon-button theme-button"
+                    id="themeButton"
+                    type="button"
+                    aria-label="Alternar tema"
+                    title="Alternar tema"
+                >
+
+                    <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.42 1.42"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+
+                    </svg>
+
+                </button>
+
+
+                <!-- BUSCA -->
+
+                <button
+                    class="icon-button"
+                    id="searchButton"
+                    type="button"
+                    aria-label="Abrir busca"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        ></circle>
+
+                        <path d="m21 21-4.35-4.35"></path>
+
+                    </svg>
+
+                </button>
+
+
+                <!-- MENU MOBILE -->
+
+                <button
+                    class="icon-button menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <path d="M4 6h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 18h16"></path>
+
+                    </svg>
+
+                </button>
+
             </div>
-        </section>
 
-        <div class="ultimas-barra">
-            <div class="ultimas-label">Últimas notícias</div>
-            <div class="ultimas-texto">Novas tecnologias de IA, computação quântica, robótica, chips e supercomputadores
-                movimentam o setor em 2026.</div>
         </div>
 
-        <section class="secao">
-            <div class="secao-header">
-                <h2>Mais lidas</h2>
-                <a href="#todas" class="ver-todas">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+    </header>
 
-            <div class="grid-noticias">
-                <article class="card-noticia" data-category="ia"
-                    data-search="Citigroup IA inteligência artificial investimento empresas">
-                    <div class="card-imagem">
-                        <img src="https://th.bing.com/th/id/OIP.bv4btk5w4uw_Gg6BLnX32AEsCo?w=900&h=500&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3"
-                            alt="Empresas de inteligência artificial" loading="lazy">
-                        <span class="card-tag">IA</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Kanchana Chakravarty • 10 mar. 2026</p>
-                        <h3>Citigroup aumenta previsão de investimento e receita de empresas com IA</h3>
-                        <p class="resumo">O avanço da inteligência artificial continua atraindo investimentos em
-                            diferentes setores.</p>
-                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
 
-                <article class="card-noticia" data-category="security"
-                    data-search="hackers segurança Philips Shell dados cibersegurança">
-                    <div class="card-imagem">
-                        <img src="https://s2-g1.glbimg.com/b82zUHbExmKCMvkjaBc5U5Bpl1I=/1080x608/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/D/9Q8nk1RuGrll5s7uldEg/kevin-horvat-pyjp2zmxulk-unsplash.jpg"
-                            alt="Segurança digital" loading="lazy">
-                        <span class="card-tag">Segurança</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Reuters • 13 ago. 2026</p>
-                        <h3>Grupo de hackers diz ter roubado dados de quase 50 empresas</h3>
-                        <p class="resumo">O caso chama atenção para os riscos crescentes envolvendo dados corporativos.
-                        </p>
-                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+    <!-- =========================================================
+         BUSCA
+    ========================================================== -->
 
-                <article class="card-noticia" data-category="hardware"
-                    data-search="IBM computador quântico quantum hardware">
-                    <div class="card-imagem">
-                        <img src="https://www.tekrati.com/wp-content/uploads/2021/11/Quantum-Computer-scaled.jpg"
-                            alt="Computador quântico" loading="lazy">
-                        <span class="card-tag">Hardware</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Tecnologia • 2026</p>
-                        <h3>IBM investirá bilhões em computador quântico de grande escala</h3>
-                        <p class="resumo">A computação quântica é uma das áreas mais disputadas da próxima geração da
-                            tecnologia.</p>
-                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+    <div
+        class="search-panel"
+        id="searchPanel"
+    >
 
-                <article class="card-noticia" data-category="tech"
-                    data-search="Neuralink implante cerebral cérebro visão tecnologia">
-                    <div class="card-imagem">
-                        <img src="https://www.infomoney.com.br/wp-content/uploads/2023/05/2023-05-26T000532Z_1_LYNXMPEJ4P003_RTROPTP_4_NEURALINK-MUSK-RESEARCH-CONFLICTS.jpg?w=1000&quality=70&strip=all"
-                            alt="Tecnologia de interface cérebro computador" loading="lazy">
-                        <span class="card-tag">Inovação</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Tecnologia • 2026</p>
-                        <h3>Neuralink desenvolve implante cerebral que promete restaurar a visão</h3>
-                        <p class="resumo">Interfaces cérebro-computador estão entre as tecnologias que podem transformar
-                            a medicina.</p>
-                        <a href="#" class="ler-mais">Ler mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <div class="container">
 
-        <section class="secao" id="inovacoes">
-            <div class="secao-header">
-                <h2>Grandes inovações</h2>
-                <a href="#" class="ver-todas">Explorar inovação <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+            <form
+                class="search-form"
+                id="searchForm"
+            >
 
-            <article class="inovacao-destaque" data-category="inovacao hardware"
-                data-search="computação quântica inovação tecnologia futuro quantum">
-                <div class="imagem"><i class="fa-solid fa-atom"></i></div>
-                <div class="inovacao-conteudo">
-                    <span class="tag">O futuro da computação</span>
-                    <h3>Computação quântica entra em uma nova fase de desenvolvimento</h3>
-                    <p>Empresas e governos estão acelerando investimentos em processadores quânticos, redes quânticas e
-                        serviços de computação acessíveis pela nuvem.</p>
-                </div>
-            </article>
+                <label
+                    class="sr-only"
+                    for="searchInput"
+                >
+                    Pesquisar notícias
+                </label>
 
-            <div class="grid-noticias">
-                <article class="card-noticia" data-category="inovacao ia"
-                    data-search="agentes IA inteligência artificial automação">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=85"
-                            alt="Robô representando inteligência artificial" loading="lazy">
-                        <span class="card-tag">IA</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Especial • 2026</p>
-                        <h3>Agentes de IA começam a mudar a forma como tarefas digitais são executadas</h3>
-                        <p class="resumo">Sistemas capazes de planejar e executar sequências de tarefas estão ganhando
-                            espaço.</p>
-                    </div>
-                </article>
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Busque por IA, celulares, jogos, segurança..."
+                    autocomplete="off"
+                >
 
-                <article class="card-noticia" data-category="inovacao hardware"
-                    data-search="robôs humanoides indústria automação">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
-                            alt="Robô humanoide" loading="lazy">
-                        <span class="card-tag">Robótica</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Futuro • 2026</p>
-                        <h3>Robôs humanoides avançam para fábricas e ambientes de trabalho</h3>
-                        <p class="resumo">A combinação de sensores, IA e novos atuadores está ampliando as
-                            possibilidades da robótica.</p>
-                    </div>
-                </article>
+                <button
+                    class="button"
+                    type="submit"
+                >
+                    Pesquisar
+                </button>
 
-                <article class="card-noticia" data-category="inovacao hardware"
-                    data-search="energia bateria tecnologia carros elétricos">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=85"
-                            alt="Carro elétrico e tecnologia de baterias" loading="lazy">
-                        <span class="card-tag">Energia</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Tecnologia verde • 2026</p>
-                        <h3>Novas tecnologias de baterias prometem transformar armazenamento de energia</h3>
-                        <p class="resumo">Baterias mais eficientes e novas químicas estão sendo estudadas para veículos
-                            e redes elétricas.</p>
-                    </div>
-                </article>
-
-                <article class="card-noticia" data-category="inovacao tech"
-                    data-search="espaço lua satélite tecnologia inovação">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
-                            alt="Terra vista do espaço" loading="lazy">
-                        <span class="card-tag">Espaço</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Ciência e tecnologia • 2026</p>
-                        <h3>Nova corrida tecnológica leva inteligência artificial e computação para o espaço</h3>
-                        <p class="resumo">Satélites, sistemas autônomos e novas missões estão ampliando o uso de
-                            tecnologia fora da Terra.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="secao" id="ia">
-            <div class="secao-header">
-                <h2>Inteligência Artificial</h2>
-                <a href="#" class="ver-todas">Mais sobre IA <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="grid-noticias">
-                <article class="card-noticia" data-category="ia" data-search="inteligência artificial agentes empresas">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=85"
-                            alt="Inteligência artificial" loading="lazy">
-                        <span class="card-tag">IA</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">IA • 2026</p>
-                        <h3>Agentes inteligentes podem representar a próxima grande etapa da IA</h3>
-                        <p class="resumo">A indústria está deixando de focar apenas em chatbots para criar sistemas
-                            capazes de agir.</p>
-                    </div>
-                </article>
-
-                <article class="card-noticia" data-category="ia hardware"
-                    data-search="supercomputadores IA chips data center">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85"
-                            alt="Data center" loading="lazy">
-                        <span class="card-tag">Data centers</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Infraestrutura • 2026</p>
-                        <h3>Supercomputadores e data centers se tornam peças centrais da corrida pela IA</h3>
-                        <p class="resumo">A expansão dos modelos de IA aumenta a demanda por chips, energia e
-                            infraestrutura.</p>
-                    </div>
-                </article>
-
-                <article class="card-noticia" data-category="ia security"
-                    data-search="segurança inteligência artificial hackers cibersegurança">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=85"
-                            alt="Segurança cibernética" loading="lazy">
-                        <span class="card-tag">Segurança</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">CyberSecurity • 2026</p>
-                        <h3>IA também está mudando a batalha contra ataques cibernéticos</h3>
-                        <p class="resumo">Ferramentas automatizadas podem ajudar equipes a detectar ameaças com maior
-                            velocidade.</p>
-                    </div>
-                </article>
-
-                <article class="card-noticia" data-category="ia" data-search="código programação IA software">
-                    <div class="card-imagem">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85"
-                            alt="Código de programação" loading="lazy">
-                        <span class="card-tag">Software</span>
-                    </div>
-                    <div class="card-corpo">
-                        <p class="card-meta">Desenvolvimento • 2026</p>
-                        <h3>Programação assistida por IA muda a forma de criar aplicativos</h3>
-                        <p class="resumo">Ferramentas generativas ajudam desenvolvedores a escrever, testar e revisar
-                            código.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="secao" id="todas">
-            <div class="secao-header">
-                <h2>Últimas notícias</h2>
-            </div>
-
-            <div class="duas-colunas">
-                <div class="lista-noticias">
-                    <article class="noticia-horizontal" data-category="mobile"
-                        data-search="celular smartphone mobile tecnologia">
-                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85"
-                            alt="Smartphone moderno" loading="lazy">
-                        <div>
-                            <p class="meta">Mobile • 2026</p>
-                            <h3>Smartphones estão ganhando mais recursos de IA diretamente no aparelho</h3>
-                            <p>O processamento local permite respostas rápidas e pode reduzir a dependência da nuvem.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-horizontal" data-category="games"
-                        data-search="games videogame jogos tecnologia">
-                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=85"
-                            alt="Controle de videogame" loading="lazy">
-                        <div>
-                            <p class="meta">Games • 2026</p>
-                            <h3>IA e gráficos em tempo real prometem mudar os próximos jogos</h3>
-                            <p>Desenvolvedoras estão explorando novas formas de criar mundos e personagens mais
-                                dinâmicos.</p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-horizontal" data-category="security"
-                        data-search="phishing segurança golpes internet">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=700&q=85"
-                            alt="Segurança digital" loading="lazy">
-                        <div>
-                            <p class="meta">CyberSecurity • 2026</p>
-                            <h3>Golpes digitais usam IA para criar mensagens cada vez mais convincentes</h3>
-                            <p>Especialistas recomendam atenção redobrada com links, mensagens e solicitações de dados.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-horizontal" data-category="hardware"
-                        data-search="chips processadores hardware computadores">
-                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=85"
-                            alt="Hardware de computador" loading="lazy">
-                        <div>
-                            <p class="meta">Hardware • 2026</p>
-                            <h3>A corrida pelos chips mais eficientes ganha força com a expansão da IA</h3>
-                            <p>Fabricantes buscam mais desempenho por watt para atender computadores e data centers.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <aside class="sidebar">
-                    <h3><i class="fa-solid fa-fire"></i>Em alta</h3>
-                    <div class="ranking">
-                        <div class="ranking-item">
-                            <div class="numero">01</div>
-                            <div>
-                                <h4>Computação quântica chega mais perto da nuvem</h4><span>Inovação</span>
-                            </div>
-                        </div>
-                        <div class="ranking-item">
-                            <div class="numero">02</div>
-                            <div>
-                                <h4>A nova geração de agentes de inteligência artificial</h4><span>IA</span>
-                            </div>
-                        </div>
-                        <div class="ranking-item">
-                            <div class="numero">03</div>
-                            <div>
-                                <h4>Robôs humanoides avançam na indústria</h4><span>Robótica</span>
-                            </div>
-                        </div>
-                        <div class="ranking-item">
-                            <div class="numero">04</div>
-                            <div>
-                                <h4>Como proteger seus dados contra novos golpes</h4><span>Segurança</span>
-                            </div>
-                        </div>
-                        <div class="ranking-item">
-                            <div class="numero">05</div>
-                            <div>
-                                <h4>Chips especializados dominam a corrida da IA</h4><span>Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <section class="newsletter">
-            <div>
-                <h2>Receba as principais novidades</h2>
-                <p>Notícias de tecnologia, inovação, IA, games e segurança direto no seu e-mail.</p>
-            </div>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail">
-                <button type="submit">Assinar</button>
             </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MENU MOBILE
+    ========================================================== -->
+
+    <button
+        class="menu-overlay"
+        id="menuOverlay"
+        type="button"
+        aria-label="Fechar menu"
+    ></button>
+
+
+    <aside
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-header">
+
+            <strong>
+                Navegação
+            </strong>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Fechar menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <nav aria-label="Navegação móvel">
+
+            <a href="#ultimas">
+                Últimas notícias
+            </a>
+
+            <a href="#celulares">
+                Celulares
+            </a>
+
+            <a href="#computacao">
+                Computação
+            </a>
+
+            <a href="#ia">
+                Inteligência artificial
+            </a>
+
+            <a href="#games">
+                Games
+            </a>
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+            <a href="#guias">
+                Guias e tutoriais
+            </a>
+
+            <a href="#newsletter">
+                Newsletter
+            </a>
+
+        </nav>
+
+
+        <button
+            class="button outline"
+            id="mobileThemeButton"
+            type="button"
+        >
+            Alternar tema
+        </button>
+
+    </aside>
+
+
+    <!-- =========================================================
+         ASSUNTOS EM ALTA
+    ========================================================== -->
+
+    <div class="trending">
+
+        <div class="container trending-inner">
+
+            <span class="trending-label">
+                Em alta
+            </span>
+
+            <a href="#ia">
+                Inteligência artificial
+            </a>
+
+            <a href="#celulares">
+                Smartphones
+            </a>
+
+            <a href="#computacao">
+                Chips de IA
+            </a>
+
+            <a href="#games">
+                Games
+            </a>
+
+            <a href="#seguranca">
+                Segurança digital
+            </a>
+
+            <a href="#reviews">
+                Melhores produtos
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+    ========================================================== -->
+
+    <main id="inicio">
+
+
+        <!-- =====================================================
+             DESTAQUES
+        ====================================================== -->
+
+        <section
+            class="hero"
+            aria-label="Notícias em destaque"
+        >
+
+            <div class="container hero-grid">
+
+
+                <article class="hero-main">
+
+                    <img
+                        src="/img/noticiasdeIA.jpg"
+                        alt="Representação visual de inteligência artificial"
+                    >
+
+                    <div class="hero-content">
+
+                        <span class="tag orange">
+                            Inteligência artificial
+                        </span>
+
+                        <h1>
+                            A nova fase da inteligência artificial coloca agentes e assistentes no centro da tecnologia
+                        </h1>
+
+                        <p>
+                            Empresas de tecnologia estão ampliando o uso de sistemas capazes de executar tarefas,
+                            criar conteúdo e trabalhar de forma mais integrada aos aplicativos.
+                        </p>
+
+                        <div class="meta">
+
+                            <span>
+                                Por Redação
+                            </span>
+
+                            <span>
+                                Hoje
+                            </span>
+
+                            <span>
+                                6 min de leitura
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <div class="hero-side">
+
+
+                    <article class="side-highlight">
+
+                        <img
+                            src="/img/noticiadocelular.png"
+                            alt="Smartphone moderno"
+                        >
+
+                        <div class="side-highlight-content">
+
+                            <span class="tag">
+                                Celulares
+                            </span>
+
+                            <h2>
+                                O que observar antes de trocar de smartphone
+                            </h2>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="side-highlight">
+
+                        <img
+                            src="/img/gta6.png"
+                            alt="Controle de videogame"
+                        >
+
+                        <div class="side-highlight-content">
+
+                            <span class="tag green">
+                                Games
+                            </span>
+
+                            <h2>
+                                Os lançamentos mais esperados pelos jogadores
+                            </h2>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+
+        <!-- =====================================================
+             IA EM DESTAQUE
+        ====================================================== -->
+
+        <section
+            class="ia-destaques"
+            id="ia"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Inteligência artificial em destaque
+                    </h2>
+
+                    <a href="#ultimas">
+                        Ver notícias
+                    </a>
+
+                </div>
+
+
+                <div class="ia-grid">
+
+
+                    <article class="ia-card">
+
+                        <img
+                            src="/img/noticia-agentes-ia.jpg"
+                            alt="Agentes de inteligência artificial"
+                            loading="lazy"
+                        >
+
+                        <div class="ia-card-conteudo">
+
+                            <span class="tag purple">
+                                Agentes de IA
+                            </span>
+
+                            <h3>
+                                Testes mostram novos desafios para controlar agentes de inteligência artificial
+                            </h3>
+
+                            <p>
+                                Sistemas mais autônomos aumentam a necessidade de testes de segurança e supervisão.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="ia-card">
+
+                        <img
+                            src="/img/noticia-watermark-ia.jpg"
+                            alt="Conteúdo digital criado por inteligência artificial"
+                            loading="lazy"
+                        >
+
+                        <div class="ia-card-conteudo">
+
+                            <span class="tag blue">
+                                IA generativa
+                            </span>
+
+                            <h3>
+                                Empresas ampliam recursos para identificar conteúdo criado por IA
+                            </h3>
+
+                            <p>
+                                Marcas digitais e metadados estão ganhando espaço na identificação de textos e imagens.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="ia-card">
+
+                        <img
+                            src="/img/noticia-chip-ia.jpg"
+                            alt="Processador para inteligência artificial"
+                            loading="lazy"
+                        >
+
+                        <div class="ia-card-conteudo">
+
+                            <span class="tag orange">
+                                Hardware
+                            </span>
+
+                            <h3>
+                                Chips especializados se tornam peça central na corrida pela inteligência artificial
+                            </h3>
+
+                            <p>
+                                A disputa por capacidade computacional aumenta a importância de processadores dedicados.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ÚLTIMAS NOTÍCIAS
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="ultimas"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Últimas notícias
+                    </h2>
+
+                    <a href="#ultimas">
+                        Ver todas
+                    </a>
+
+                </div>
+
+
+                <div class="content-layout">
+
+
+                    <div>
+
+                        <div
+                            class="lista-noticias"
+                            id="newsList"
+                        >
+
+
+                            <!-- NOTÍCIA 01 -->
+
+                            <article
+                                class="cartao-noticia"
+                                id="celulares"
+                                data-search="celular smartphone bateria tela câmera android iphone pixel google"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/recursoscelular.jpg"
+                                        alt="Pessoa usando smartphone"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag">
+                                        Celulares
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Cinco recursos que fazem diferença em um celular novo
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Bateria, tela, câmera, inteligência artificial e tempo de atualizações
+                                        estão entre os pontos importantes na escolha de um aparelho.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 18 minutos
+                                        </span>
+
+                                        <span>
+                                            5 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 02 -->
+
+                            <article
+                                class="cartao-noticia"
+                                id="computacao"
+                                data-search="notebook computador processador memória trabalho estudo windows macos"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/notebookMelhores.png"
+                                        alt="Notebook sobre uma mesa"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag blue">
+                                        Computação
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Notebook para trabalho: como escolher sem gastar demais
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Entenda quanto de memória, armazenamento e desempenho você realmente precisa
+                                        para trabalhar, estudar e navegar.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 41 minutos
+                                        </span>
+
+                                        <span>
+                                            7 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 03 -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="inteligência artificial ia imagens vídeos produtividade criatividade modelos generativos"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/Ferramentasia.jpg"
+                                        alt="Representação de inteligência artificial"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag orange">
+                                        IA
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Ferramentas de IA ganham novos controles para imagens e vídeos
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Novos recursos buscam melhorar precisão, consistência visual e controle
+                                        para profissionais criativos.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 1 hora
+                                        </span>
+
+                                        <span>
+                                            4 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 04 -->
+
+                            <article
+                                class="cartao-noticia"
+                                id="games"
+                                data-search="games jogos console controle desempenho gráficos jogadores pc playstation xbox"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/COnfigPCnoticia.jpg"
+                                        alt="Computador para jogos"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag green">
+                                        Games
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Configurações simples podem melhorar o desempenho nos jogos
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Ajustes em resolução, taxa de quadros e conexão ajudam a tornar a experiência
+                                        mais estável.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 2 horas
+                                        </span>
+
+                                        <span>
+                                            6 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 05 -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="wifi internet roteador conexão rede casa sinal velocidade wi-fi"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/PRoblemaWifinoticia.jpg"
+                                        alt="Roteador de internet"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag blue">
+                                        Internet
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Wi-Fi lento? Veja os erros que prejudicam sua conexão
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Posição do roteador, interferências e equipamentos antigos podem reduzir
+                                        bastante a velocidade da rede.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 3 horas
+                                        </span>
+
+                                        <span>
+                                            5 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 06 -->
+
+                            <article
+                                class="cartao-noticia"
+                                id="seguranca"
+                                data-search="segurança privacidade senha golpes aplicativos celular autenticação"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/Protecaodedados.png"
+                                        alt="Cadeado representando segurança digital"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag orange">
+                                        Segurança
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Hábitos importantes para proteger suas contas de golpes
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Senhas exclusivas, autenticação em duas etapas e atenção a links suspeitos
+                                        aumentam sua proteção.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Há 4 horas
+                                        </span>
+
+                                        <span>
+                                            8 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 07 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="anthropic ia inteligência artificial watermark marca d'água texto imagem c2pa"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-anthropic-watermark.jpg"
+                                        alt="Inteligência artificial e marcação de conteúdo digital"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag purple">
+                                        IA
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Sistemas de IA avançam na identificação de textos e imagens gerados por modelos
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        A indústria de inteligência artificial está adotando mecanismos de identificação
+                                        e procedência para facilitar a distinção entre conteúdo humano e sintético.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            Hoje
+                                        </span>
+
+                                        <span>
+                                            6 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 08 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="microsoft copilot inteligência artificial aplicativo assistente produtividade"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-microsoft-copilot.jpg"
+                                        alt="Computador representando assistente de inteligência artificial"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag blue">
+                                        Microsoft
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Microsoft reorganiza experiências do Copilot para concentrar recursos de IA
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        A empresa vem unificando diferentes experiências do assistente para tornar
+                                        as ferramentas de inteligência artificial mais integradas.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            13 de agosto
+                                        </span>
+
+                                        <span>
+                                            5 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 09 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="carro caminhão autônomo inteligência artificial veículos tecnologia transporte"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-caminhao-autonomo.jpg"
+                                        alt="Caminhão autônomo em uma rodovia"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag green">
+                                        Mobilidade
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Caminhões autônomos avançam para testes em rodovias públicas
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Empresas de tecnologia e transporte ampliam testes de veículos autônomos
+                                        em vias públicas.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            14 de agosto
+                                        </span>
+
+                                        <span>
+                                            6 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 10 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="google pixel 11 smartphone inteligência artificial câmera celular tecnologia"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-pixel-11.jpg"
+                                        alt="Smartphone moderno"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag">
+                                        Smartphones
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Nova geração de smartphones aposta ainda mais em recursos de IA e câmera
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        A nova geração de aparelhos coloca inteligência artificial, fotografia
+                                        computacional e recursos para criação de conteúdo no centro da experiência.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            12 de agosto
+                                        </span>
+
+                                        <span>
+                                            7 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 11 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="chip ia processador inteligência artificial microsoft maia hardware datacenter"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-processador-ia.jpg"
+                                        alt="Processador de inteligência artificial"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag red">
+                                        Hardware
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Chips próprios ganham importância na corrida por infraestrutura de IA
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        Grandes empresas estão investindo em processadores especializados para
+                                        reduzir custos e aumentar a capacidade de processamento de modelos de IA.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            10 de agosto
+                                        </span>
+
+                                        <span>
+                                            7 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- NOTÍCIA 12 - NOVA -->
+
+                            <article
+                                class="cartao-noticia"
+                                data-search="chatgpt gemini inteligência artificial usuários tecnologia google openai"
+                            >
+
+                                <div class="imagem-noticia">
+
+                                    <img
+                                        src="/img/noticia-chatgpt-gemini.jpg"
+                                        alt="Aplicativos de inteligência artificial"
+                                        loading="lazy"
+                                    >
+
+                                    <span class="tag orange">
+                                        IA
+                                    </span>
+
+                                </div>
+
+
+                                <div class="corpo-noticia">
+
+                                    <h3>
+                                        <a href="#">
+                                            Chatbots de IA ampliam presença no cotidiano de usuários
+                                        </a>
+                                    </h3>
+
+                                    <p>
+                                        As principais plataformas de inteligência artificial continuam expandindo
+                                        seus recursos para estudo, trabalho, criação e produtividade.
+                                    </p>
+
+                                    <div class="meta">
+
+                                        <span>
+                                            6 de agosto
+                                        </span>
+
+                                        <span>
+                                            5 min
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+
+                        <div
+                            class="empty-result"
+                            id="emptyResult"
+                        >
+                            Nenhuma notícia encontrada para essa pesquisa.
+                        </div>
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:center;
+                                margin-top:24px;
+                            "
+                        >
+
+                            <button
+                                class="button outline"
+                                id="loadMoreButton"
+                                type="button"
+                            >
+                                Carregar mais notícias
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BARRA LATERAL
+                    ================================================== -->
+
+                    <aside
+                        class="barra-lateral"
+                        aria-label="Conteúdo complementar"
+                    >
+
+
+                        <!-- MAIS LIDAS -->
+
+                        <section class="caixa-lateral">
+
+                            <h2 class="titulo-lateral">
+                                Mais lidas
+                            </h2>
+
+                            <ol class="ranking-list">
+
+                                <li class="ranking-item">
+
+                                    <a href="#">
+                                        Como liberar espaço no celular sem apagar fotos
+                                    </a>
+
+                                </li>
+
+                                <li class="ranking-item">
+
+                                    <a href="#">
+                                        O que muda com os novos recursos de inteligência artificial
+                                    </a>
+
+                                </li>
+
+                                <li class="ranking-item">
+
+                                    <a href="#">
+                                        Vale a pena trocar um notebook antigo por um novo?
+                                    </a>
+
+                                </li>
+
+                                <li class="ranking-item">
+
+                                    <a href="#">
+                                        Guia rápido para deixar sua conta mais segura
+                                    </a>
+
+                                </li>
+
+                                <li class="ranking-item">
+
+                                    <a href="#">
+                                        Como identificar golpes criados com inteligência artificial
+                                    </a>
+
+                                </li>
+
+                            </ol>
+
+                        </section>
+
+
+                        <!-- NEWSLETTER -->
+
+                        <section
+                            class="caixa-lateral newsletter-box"
+                            id="newsletter"
+                        >
+
+                            <h2 class="titulo-lateral">
+                                Newsletter TechNews
+                            </h2>
+
+                            <p>
+                                Receba as principais notícias de tecnologia,
+                                IA, celulares e segurança diretamente no seu e-mail.
+                            </p>
+
+                            <form
+                                class="newsletter-form"
+                                id="newsletterForm"
+                            >
+
+                                <input
+                                    id="emailNewsletter"
+                                    type="email"
+                                    placeholder="Seu melhor e-mail"
+                                    required
+                                >
+
+                                <button type="submit">
+                                    Quero receber
+                                </button>
+
+                            </form>
+
+                            <p
+                                class="newsletter-message"
+                                id="newsletterMessage"
+                            ></p>
+
+                        </section>
+
+
+                        <!-- CATEGORIAS -->
+
+                        <section class="caixa-lateral">
+
+                            <h2 class="titulo-lateral">
+                                Explore por assunto
+                            </h2>
+
+                            <div class="categories-cloud">
+
+                                <a href="#ia">
+                                    Inteligência artificial
+                                </a>
+
+                                <a href="#celulares">
+                                    Android
+                                </a>
+
+                                <a href="#celulares">
+                                    iPhone
+                                </a>
+
+                                <a href="#computacao">
+                                    Windows
+                                </a>
+
+                                <a href="#games">
+                                    Games
+                                </a>
+
+                                <a href="#computacao">
+                                    Hardware
+                                </a>
+
+                                <a href="#seguranca">
+                                    Segurança
+                                </a>
+
+                                <a href="#computacao">
+                                    Notebooks
+                                </a>
+
+                                <a href="#ia">
+                                    Robótica
+                                </a>
+
+                                <a href="#reviews">
+                                    Áudio
+                                </a>
+
+                            </div>
+
+                        </section>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             REVIEWS
+        ====================================================== -->
+
+        <section
+            class="reviews-section"
+            id="reviews"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Reviews e análises
+                    </h2>
+
+                    <a href="#reviews">
+                        Mais avaliações
+                    </a>
+
+                </div>
+
+
+                <div class="reviews-grid">
+
+
+                    <article class="review-card">
+
+                        <div class="review-card-image">
+
+                            <img
+                                src="/img/noticiadosmarthphone.jpg"
+                                alt="Smartphone em destaque"
+                                loading="lazy"
+                            >
+
+                            <span class="score">
+                                8,8
+                            </span>
+
+                        </div>
+
+                        <div class="review-card-body">
+
+                            <span class="tag">
+                                Review
+                            </span>
+
+                            <h3>
+                                Smartphone premium equilibra câmera e desempenho
+                            </h3>
+
+                            <p>
+                                Modelo entrega boa tela, acabamento refinado e bateria
+                                suficiente para um dia intenso.
+                            </p>
+
+                            <div class="meta">
+
+                                <span>
+                                    9 min de leitura
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-card">
+
+                        <div class="review-card-image">
+
+                            <img
+                                src="/img/noticiadoteclado.png"
+                                alt="Teclado mecânico iluminado"
+                                loading="lazy"
+                            >
+
+                            <span class="score">
+                                8,4
+                            </span>
+
+                        </div>
+
+                        <div class="review-card-body">
+
+                            <span class="tag green">
+                                Periféricos
+                            </span>
+
+                            <h3>
+                                Teclado mecânico compacto agrada no trabalho e nos jogos
+                            </h3>
+
+                            <p>
+                                Construção sólida, boa digitação e iluminação configurável
+                                são os principais destaques.
+                            </p>
+
+                            <div class="meta">
+
+                                <span>
+                                    7 min de leitura
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-card">
+
+                        <div class="review-card-image">
+
+                            <img
+                                src="/img/review-notebook.jpg"
+                                alt="Notebook para trabalho"
+                                loading="lazy"
+                            >
+
+                            <span class="score">
+                                9,0
+                            </span>
+
+                        </div>
+
+                        <div class="review-card-body">
+
+                            <span class="tag blue">
+                                Notebook
+                            </span>
+
+                            <h3>
+                                Notebook equilibrado entrega desempenho para trabalho e estudo
+                            </h3>
+
+                            <p>
+                                Boa combinação entre desempenho, autonomia e portabilidade
+                                para quem precisa trabalhar em movimento.
+                            </p>
+
+                            <div class="meta">
+
+                                <span>
+                                    8 min de leitura
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GUIAS
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="guias"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Guias e tutoriais
+                    </h2>
+
+                    <a href="#guias">
+                        Ver todos
+                    </a>
+
+                </div>
+
+
+                <div class="guides-grid">
+
+
+                    <article class="guide-card">
+
+                        <img
+                            src="/img/guia-computador.jpg"
+                            alt="Computador exibindo código"
+                            loading="lazy"
+                        >
+
+                        <div class="guide-card-content">
+
+                            <span class="tag blue">
+                                Computação
+                            </span>
+
+                            <h3>
+                                Como escolher um computador para estudar e trabalhar
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guide-card">
+
+                        <img
+                            src="/img/guia-seguranca.jpg"
+                            alt="Segurança digital"
+                            loading="lazy"
+                        >
+
+                        <div class="guide-card-content">
+
+                            <span class="tag orange">
+                                Segurança
+                            </span>
+
+                            <h3>
+                                10 configurações para melhorar sua segurança digital
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guide-card">
+
+                        <img
+                            src="/img/guia-ia.jpg"
+                            alt="Inteligência artificial"
+                            loading="lazy"
+                        >
+
+                        <div class="guide-card-content">
+
+                            <span class="tag purple">
+                                Inteligência artificial
+                            </span>
+
+                            <h3>
+                                Como usar IA para organizar tarefas do dia a dia
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guide-card">
+
+                        <img
+                            src="/img/guia-celular.jpg"
+                            alt="Smartphone moderno"
+                            loading="lazy"
+                        >
+
+                        <div class="guide-card-content">
+
+                            <span class="tag">
+                                Celulares
+                            </span>
+
+                            <h3>
+                                Como configurar um celular novo corretamente
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BANNER
+        ====================================================== -->
+
+        <section class="promo">
+
+            <div class="container">
+
+                <div class="promo-inner">
+
+                    <div>
+
+                        <h2>
+                            Tecnologia sem complicação.
+                        </h2>
+
+                        <p>
+                            Notícias, análises e explicações para você entender
+                            o que realmente importa no mundo da tecnologia.
+                        </p>
+
+                    </div>
+
+                    <a
+                        class="button"
+                        href="#newsletter"
+                    >
+                        Receber novidades
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- =========================================================
+         RODAPÉ
+    ========================================================== -->
+
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <div>
-                    <h2>TechNews</h2>
-                    <p>Tecnologia, inovação e futuro em um só lugar. Notícias e conteúdos para quem quer entender o
-                        mundo digital.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                    </div>
+
+        <div class="container footer-main">
+
+
+            <div class="footer-about">
+
+                <a
+                    class="logo"
+                    href="#inicio"
+                >
+
+                    <span class="logo-symbol">
+
+                        <img
+                            src="/img/logosite.png"
+                            alt="Logo TechNews"
+                        >
+
+                    </span>
+
+                    <span>
+                        Tech<strong>News</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Portal independente de tecnologia com notícias,
+                    análises, inteligência artificial, celulares,
+                    computação, games e segurança digital.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        IG
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                    >
+                        YT
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                    >
+                        X
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        FB
+                    </a>
+
                 </div>
 
-                <div class="footer-col">
-                    <h3>Categorias</h3>
-                    <div class="footer-links">
-                        <a href="#ia">Inteligência Artificial</a>
-                        <a href="#inovacoes">Inovação</a>
-                        <a href="/Games/games.html">Games</a>
-                        <a href="#">Hardware</a>
-                        <a href="#">Mobile</a>
-                        <a href="#">CyberSecurity</a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>TechNews</h3>
-                    <div class="footer-links">
-                        <a href="#">Sobre nós</a>
-                        <a href="#">Contato</a>
-                        <a href="#">Parceiros</a>
-                        <a href="#">Termos de Uso</a>
-                        <a href="#">Privacidade</a>
-                    </div>
-                </div>
             </div>
 
-            <hr>
 
-            <div class="footer-bottom">
-                <p>© 2026 TechNews. Todos os direitos reservados.</p>
-                <div class="footer-policy">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Cookies</a>
-                    <a href="#">Termos</a>
-                </div>
+            <div class="footer-column">
+
+                <h3>
+                    Tecnologia
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#ia">
+                            Inteligência artificial
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#computacao">
+                            Computação
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#celulares">
+                            Celulares
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#reviews">
+                            Reviews
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Conteúdo
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#ultimas">
+                            Últimas notícias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#games">
+                            Games
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#guias">
+                            Guias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#newsletter">
+                            Newsletter
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Ajuda
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contato
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Política de privacidade
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Termos de uso
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
+
+
+        <div class="container footer-bottom">
+
+            <span>
+                © 2026 TechNews. Todos os direitos reservados.
+            </span>
+
+            <span>
+                Feito para quem gosta de tecnologia.
+            </span>
+
+        </div>
+
     </footer>
 
-    <script src="index.js"></script>
+
+    <!-- =========================================================
+         BOTÃO VOLTAR AO TOPO
+    ========================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo"
+    >
+        ↑
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =========================================================
+           TEMA ESCURO
+        ========================================================= */
+
+        const themeButton =
+            document.getElementById("themeButton");
+
+        const mobileThemeButton =
+            document.getElementById("mobileThemeButton");
+
+
+        function alternarTema() {
+
+            document.body.classList.toggle("dark");
+
+            const temaEscuro =
+                document.body.classList.contains("dark");
+
+            localStorage.setItem(
+                "darkMode",
+                temaEscuro
+            );
+
+        }
+
+
+        themeButton.addEventListener(
+            "click",
+            alternarTema
+        );
+
+
+        mobileThemeButton.addEventListener(
+            "click",
+            alternarTema
+        );
+
+
+        if (
+            localStorage.getItem("darkMode") === "true"
+        ) {
+
+            document.body.classList.add("dark");
+
+        }
+
+
+        /* =========================================================
+           BUSCA
+        ========================================================== */
+
+        const searchButton =
+            document.getElementById("searchButton");
+
+        const searchPanel =
+            document.getElementById("searchPanel");
+
+        const searchForm =
+            document.getElementById("searchForm");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const noticias =
+            document.querySelectorAll(".cartao-noticia");
+
+        const emptyResult =
+            document.getElementById("emptyResult");
+
+
+        searchButton.addEventListener(
+            "click",
+            () => {
+
+                searchPanel.classList.toggle("open");
+
+                const aberto =
+                    searchPanel.classList.contains("open");
+
+                searchButton.setAttribute(
+                    "aria-expanded",
+                    aberto
+                );
+
+                if (aberto) {
+
+                    setTimeout(
+                        () => searchInput.focus(),
+                        200
+                    );
+
+                }
+
+            }
+        );
+
+
+        searchForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+                const termo =
+                    searchInput.value
+                        .toLowerCase()
+                        .trim();
+
+                let encontrou = false;
+
+
+                noticias.forEach(
+                    (noticia) => {
+
+                        const texto =
+                            (
+                                noticia.innerText +
+                                " " +
+                                noticia.dataset.search
+                            )
+                            .toLowerCase();
+
+                        const corresponde =
+                            termo === "" ||
+                            texto.includes(termo);
+
+
+                        if (corresponde) {
+
+                            noticia.classList.remove(
+                                "oculto-pela-busca"
+                            );
+
+                            encontrou = true;
+
+                        } else {
+
+                            noticia.classList.add(
+                                "oculto-pela-busca"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                if (
+                    !encontrou &&
+                    termo !== ""
+                ) {
+
+                    emptyResult.classList.add(
+                        "visible"
+                    );
+
+                } else {
+
+                    emptyResult.classList.remove(
+                        "visible"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           MENU MOBILE
+        ========================================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        const menuOverlay =
+            document.getElementById("menuOverlay");
+
+        const mobileClose =
+            document.getElementById("mobileClose");
+
+
+        function abrirMenu() {
+
+            mobileMenu.classList.add("open");
+
+            menuOverlay.classList.add("visible");
+
+            document.body.classList.add("no-scroll");
+
+            mobileMenu.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        }
+
+
+        function fecharMenu() {
+
+            mobileMenu.classList.remove("open");
+
+            menuOverlay.classList.remove("visible");
+
+            document.body.classList.remove("no-scroll");
+
+            mobileMenu.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+
+        menuButton.addEventListener(
+            "click",
+            abrirMenu
+        );
+
+
+        mobileClose.addEventListener(
+            "click",
+            fecharMenu
+        );
+
+
+        menuOverlay.addEventListener(
+            "click",
+            fecharMenu
+        );
+
+
+        document
+            .querySelectorAll(".mobile-menu a")
+            .forEach(
+                (link) => {
+
+                    link.addEventListener(
+                        "click",
+                        fecharMenu
+                    );
+
+                }
+            );
+
+
+        /* =========================================================
+           NEWSLETTER
+        ========================================================== */
+
+        const newsletterForm =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+        const newsletterMessage =
+            document.getElementById(
+                "newsletterMessage"
+            );
+
+
+        newsletterForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+                const email =
+                    document
+                        .getElementById(
+                            "emailNewsletter"
+                        )
+                        .value
+                        .trim();
+
+
+                if (!email) {
+
+                    newsletterMessage.textContent =
+                        "Digite um e-mail válido.";
+
+                    return;
+
+                }
+
+
+                newsletterMessage.textContent =
+                    "Cadastro realizado com sucesso!";
+
+
+                newsletterForm.reset();
+
+            }
+        );
+
+
+        /* =========================================================
+           CARREGAR MAIS NOTÍCIAS
+        ========================================================== */
+
+        const loadMoreButton =
+            document.getElementById(
+                "loadMoreButton"
+            );
+
+
+        let noticiasVisiveis = 6;
+
+
+        function atualizarNoticias() {
+
+            noticias.forEach(
+                (noticia, indice) => {
+
+                    if (
+                        indice < noticiasVisiveis
+                    ) {
+
+                        noticia.style.display =
+                            "";
+
+                    } else {
+
+                        noticia.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            if (
+                noticiasVisiveis >=
+                noticias.length
+            ) {
+
+                loadMoreButton.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+        atualizarNoticias();
+
+
+        loadMoreButton.addEventListener(
+            "click",
+            () => {
+
+                noticiasVisiveis += 3;
+
+                atualizarNoticias();
+
+            }
+        );
+
+
+        /* =========================================================
+           VOLTAR AO TOPO
+        ========================================================== */
+
+        const backToTop =
+            document.getElementById(
+                "backToTop"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (window.scrollY > 500) {
+
+                    backToTop.classList.add(
+                        "visible"
+                    );
+
+                } else {
+
+                    backToTop.classList.remove(
+                        "visible"
+                    );
+
+                }
+
+            }
+        );
+
+
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        /* =========================================================
+           ESC FECHA MENU
+        ========================================================== */
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    fecharMenu();
+
+                    searchPanel.classList.remove(
+                        "open"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           NAVEGAÇÃO ATIVA
+        ========================================================== */
+
+        const linksNavegacao =
+            document.querySelectorAll(
+                ".desktop-nav a"
+            );
+
+
+        linksNavegacao.forEach(
+            (link) => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        linksNavegacao.forEach(
+                            (item) => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
 
 </body>
 
