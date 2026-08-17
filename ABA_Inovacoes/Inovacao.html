@@ -1,485 +1,3598 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TechVision News | Inovação & Tecnologia</title>
+    <meta name="description"
+        content="TechNews Inovações — descubra as tecnologias que estão transformando o presente e construindo o futuro.">
 
-/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#071018">
 
-<style>
+    <title>Inovações — TechNews</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-body{
-    font-family:Segoe UI, sans-serif;
-    background:#f5f7fa;
-    color:#222;
-}
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet">
 
-header{
-    background:linear-gradient(135deg,#0a2540,#1464f4);
-    color:white;
-    padding:25px 8%;
-}
+    <style>
 
-.header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+        :root {
+            --primary: #00d9ff;
+            --primary-dark: #009fc5;
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-}
+            --background: #f4f6f8;
+            --surface: #ffffff;
+            --surface-2: #eef1f4;
 
-.logo span{
-    color:#41d1ff;
-}
+            --text: #14171a;
+            --text-secondary: #626a73;
 
-nav{
-    margin-top:20px;
-}
+            --border: #e2e6ea;
 
-nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
-}
+            --header-1: #05080c;
+            --header-2: #111a23;
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-}
+            --footer-1: #071018;
+            --footer-2: #101923;
 
-.hero{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-    padding:70px 8%;
-    background:white;
-}
+            --red: #e53935;
+            --green: #00a86b;
+            --orange: #ff7900;
+            --purple: #8e44ad;
+            --blue: #1976d2;
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:20px;
-}
+            --shadow: 0 10px 35px rgba(0, 0, 0, .08);
+            --shadow-hover: 0 18px 45px rgba(0, 0, 0, .15);
 
-.hero p{
-    color:#555;
-    font-size:18px;
-    line-height:1.7;
-}
+            --radius: 16px;
+            --transition: .25s ease;
+        }
 
-.hero img{
-    width:100%;
-    height:450px;
-    object-fit:cover;
-    border-radius:20px;
-}
+        body.dark {
+            --background: #0b0f13;
+            --surface: #12181e;
+            --surface-2: #182027;
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#1464f4;
-    color:white;
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:10px;
-}
+            --text: #f5f7fa;
+            --text-secondary: #aeb7c1;
 
-.section-title{
-    text-align:center;
-    margin:70px 0 40px;
-    font-size:2.2rem;
-}
+            --border: #28323b;
 
-.news-grid{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
-}
+            --header-1: #030507;
+            --header-2: #0c141b;
 
-.card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
+            --footer-1: #030507;
+            --footer-2: #0c141b;
 
-.card:hover{
-    transform:translateY(-8px);
-}
+            --shadow: 0 12px 40px rgba(0, 0, 0, .35);
+            --shadow-hover: 0 20px 50px rgba(0, 0, 0, .5);
+        }
 
-.card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.card-content{
-    padding:25px;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.card-content span{
-    color:#1464f4;
-    font-size:14px;
-    font-weight:bold;
-}
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.5;
+            transition: background var(--transition), color var(--transition);
+        }
 
-.card-content h3{
-    margin:10px 0;
-}
+        img {
+            max-width: 100%;
+        }
 
-.card-content p{
-    color:#666;
-    line-height:1.6;
-}
+        button,
+        input {
+            font: inherit;
+        }
 
-.stats{
-    margin:80px auto;
-    width:90%;
-    max-width:1200px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
+        button {
+            border: 0;
+        }
 
-.stat{
-    background:#1464f4;
-    color:white;
-    text-align:center;
-    padding:35px;
-    border-radius:16px;
-}
+        a {
+            color: inherit;
+        }
 
-.stat h2{
-    font-size:2rem;
-}
+        :focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+        }
 
-.trends{
-    width:90%;
-    max-width:1200px;
-    margin:70px auto;
-    background:white;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
 
-.trends ul{
-    margin-top:20px;
-    padding-left:20px;
-}
 
-.trends li{
-    margin:15px 0;
-    font-size:17px;
-}
+        /* =========================================================
+           NAVEGAÇÃO
+        ========================================================= */
 
-footer{
-    background:#0a2540;
-    color:white;
-    padding:50px;
-    margin-top:80px;
-}
+        .barra-categorias {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, .04);
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
 
-.footer-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
+        .barra-categorias ul {
+            max-width: 1400px;
+            min-width: max-content;
+            margin: auto;
+            padding: 0 20px;
 
-.social{
-    display:flex;
-    gap:20px;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-.social a{
-    color:white;
-    font-size:24px;
-    transition:.3s;
-}
+            gap: 40px;
+            list-style: none;
+        }
 
-.social a:hover{
-    color:#41d1ff;
-}
+        .barra-categorias a {
+            position: relative;
+            display: block;
 
-.copy{
-    text-align:center;
-    margin-top:25px;
-}
+            padding: 15px 2px;
 
-@media(max-width:900px){
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 800;
 
-.hero{
-    grid-template-columns:1fr;
-}
+            text-decoration: none;
+            white-space: nowrap;
 
-.hero h1{
-    font-size:2.2rem;
-}
+            transition: color var(--transition);
+        }
 
-.stats{
-    grid-template-columns:1fr 1fr;
-}
+        .barra-categorias a::after {
+            content: "";
 
-}
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 7px;
 
-@media(max-width:600px){
+            height: 3px;
 
-.stats{
-    grid-template-columns:1fr;
-}
+            border-radius: 10px;
 
-}
+            background: var(--primary);
 
-</style>
+            transform: scaleX(0);
+
+            transition: transform var(--transition);
+        }
+
+        .barra-categorias a:hover {
+            color: transparent;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #00d9ff,
+                    #8e44ad,
+                    #ff0080,
+                    #00d9ff
+                );
+
+            background-size: 300% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: gradienteLink 2.5s linear infinite;
+        }
+
+        .barra-categorias a:hover::after {
+            transform: scaleX(1);
+        }
+
+        @keyframes gradienteLink {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 300% 50%;
+            }
+
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: relative;
+            z-index: 400;
+
+            background:
+                radial-gradient(
+                    circle at 50% -150px,
+                    rgba(0, 217, 255, .18),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--header-1),
+                    var(--header-2)
+                );
+
+            border-bottom: 1px solid rgba(0, 217, 255, .18);
+
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
+        }
+
+        header::after {
+            content: "";
+
+            position: absolute;
+
+            left: 15%;
+            right: 15%;
+            bottom: -1px;
+
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--primary),
+                    transparent
+                );
+
+            box-shadow: 0 0 15px rgba(0, 217, 255, .5);
+        }
+
+        .topo {
+            position: relative;
+
+            max-width: 1400px;
+            min-height: 88px;
+
+            margin: auto;
+            padding: 0 25px;
+
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+
+            align-items: center;
+        }
+
+        .topo-esquerdo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .menu-hamburguer {
+            position: relative;
+        }
+
+        .hamburguer {
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 5px;
+
+            cursor: pointer;
+
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 13px;
+
+            background: rgba(255, 255, 255, .06);
+
+            backdrop-filter: blur(12px);
+
+            transition: .25s ease;
+        }
+
+        .hamburguer:hover {
+            background: rgba(0, 217, 255, .12);
+            border-color: rgba(0, 217, 255, .5);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 20px rgba(0, 217, 255, .15);
+        }
+
+        .hamburguer span {
+            width: 23px;
+            height: 2px;
+
+            border-radius: 20px;
+
+            background: var(--primary);
+
+            transition: .25s ease;
+        }
+
+        .hamburguer.ativo span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburguer.ativo span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburguer.ativo span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+
+        /* MENU */
+
+        .menu {
+            position: absolute;
+
+            top: 57px;
+            left: 0;
+
+            width: 250px;
+
+            padding: 8px;
+
+            list-style: none;
+
+            background: rgba(13, 19, 25, .97);
+
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 16px;
+
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .5);
+
+            backdrop-filter: blur(20px);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateY(-10px) scale(.97);
+
+            transition: .2s ease;
+        }
+
+        .menu.ativo {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translateY(0) scale(1);
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 13px 14px;
+            margin: 2px 0;
+
+            border-radius: 10px;
+
+            color: #e9eef3;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: .2s ease;
+        }
+
+        .menu a i {
+            width: 20px;
+
+            color: var(--primary);
+
+            text-align: center;
+        }
+
+        .menu a:hover {
+            background: rgba(0, 217, 255, .12);
+            color: #fff;
+
+            transform: translateX(3px);
+        }
+
+
+        /* BUSCA */
+
+        .buscar-topo {
+            position: relative;
+        }
+
+        .buscar-topo input {
+            width: 210px;
+            height: 42px;
+
+            padding: 0 42px 0 17px;
+
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 24px;
+
+            outline: none;
+
+            color: #fff;
+
+            background: rgba(255, 255, 255, .07);
+
+            backdrop-filter: blur(10px);
+
+            transition: .3s ease;
+        }
+
+        .buscar-topo input::placeholder {
+            color: #aeb7c1;
+        }
+
+        .buscar-topo input:focus {
+            width: 270px;
+
+            border-color: rgba(0, 217, 255, .7);
+
+            background: rgba(255, 255, 255, .11);
+
+            box-shadow:
+                0 0 0 3px rgba(0, 217, 255, .12);
+        }
+
+        .limpar-busca {
+            position: absolute;
+
+            right: 9px;
+            top: 50%;
+
+            width: 27px;
+            height: 27px;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            transform: translateY(-50%);
+
+            border-radius: 50%;
+
+            background: transparent;
+
+            color: #adb6bf;
+
+            cursor: pointer;
+        }
+
+        .limpar-busca.visivel {
+            display: flex;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            position: relative;
+
+            color: #00ddff;
+
+            font-size: clamp(31px, 4vw, 47px);
+
+            font-weight: 950;
+
+            letter-spacing: 2px;
+
+            line-height: 1;
+
+            text-transform: uppercase;
+
+            user-select: none;
+
+            text-shadow:
+                0 0 22px rgba(0, 217, 255, .22);
+
+            transition: .25s ease;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        .logo::after {
+            content: "";
+
+            position: absolute;
+
+            left: 2px;
+            bottom: -11px;
+
+            width: 38px;
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    transparent
+                );
+        }
+
+
+        /* LOGIN */
+
+        .login {
+            justify-self: end;
+
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            min-height: 42px;
+
+            padding: 0 18px;
+
+            border: 1px solid rgba(0, 217, 255, .35);
+            border-radius: 23px;
+
+            background: rgba(0, 217, 255, .08);
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: .7px;
+
+            transition: .25s ease;
+        }
+
+        .login i {
+            color: var(--primary);
+        }
+
+        .login:hover {
+            color: #061016;
+
+            background: var(--primary);
+
+            border-color: var(--primary);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 25px rgba(0, 217, 255, .3);
+        }
+
+        .login:hover i {
+            color: #061016;
+        }
+
+
+        /* =========================================================
+           CONTEÚDO DA ABA INOVAÇÕES
+        ========================================================= */
+
+        main {
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 45px 25px 70px;
+        }
+
+
+        /* HERO */
+
+        .hero-inovacao {
+            position: relative;
+
+            min-height: 480px;
+
+            overflow: hidden;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr .9fr;
+
+            align-items: center;
+
+            border-radius: 24px;
+
+            background:
+                radial-gradient(
+                    circle at 75% 35%,
+                    rgba(0, 217, 255, .22),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050a0f,
+                    #0c202a,
+                    #071018
+                );
+
+            color: #fff;
+
+            box-shadow: var(--shadow);
+
+            margin-bottom: 50px;
+        }
+
+        .hero-inovacao::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .3),
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+        .hero-conteudo {
+            position: relative;
+            z-index: 2;
+
+            padding: 55px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 7px 12px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid rgba(0, 217, 255, .3);
+
+            border-radius: 7px;
+
+            background: rgba(0, 217, 255, .08);
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .hero-conteudo h1 {
+            max-width: 720px;
+
+            margin-bottom: 18px;
+
+            font-size: clamp(38px, 5vw, 68px);
+
+            line-height: 1.02;
+
+            letter-spacing: -1px;
+        }
+
+        .hero-conteudo h1 span {
+            color: var(--primary);
+        }
+
+        .hero-conteudo p {
+            max-width: 650px;
+
+            color: #c5d0d7;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            margin-bottom: 28px;
+        }
+
+        .hero-botoes {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .botao-principal {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 13px 19px;
+
+            border-radius: 9px;
+
+            background: var(--primary);
+
+            color: #061016;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            transition: .25s ease;
+        }
+
+        .botao-principal:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 217, 255, .25);
+        }
+
+        .botao-secundario {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 13px 19px;
+
+            border: 1px solid rgba(255, 255, 255, .15);
+
+            border-radius: 9px;
+
+            background: rgba(255, 255, 255, .06);
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: .25s ease;
+        }
+
+        .botao-secundario:hover {
+            background: rgba(255, 255, 255, .12);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* VISUAL HERO */
+
+        .hero-visual {
+            position: relative;
+
+            height: 100%;
+
+            min-height: 480px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .orbita {
+            position: relative;
+
+            width: 320px;
+            height: 320px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(0, 217, 255, .25);
+
+            box-shadow:
+                0 0 80px rgba(0, 217, 255, .12),
+                inset 0 0 60px rgba(0, 217, 255, .06);
+
+            animation: flutuar 6s ease-in-out infinite;
+        }
+
+        .orbita::before,
+        .orbita::after {
+            content: "";
+
+            position: absolute;
+
+            border: 1px solid rgba(0, 217, 255, .2);
+
+            border-radius: 50%;
+        }
+
+        .orbita::before {
+            width: 410px;
+            height: 150px;
+
+            transform: rotate(35deg);
+        }
+
+        .orbita::after {
+            width: 150px;
+            height: 410px;
+
+            transform: rotate(35deg);
+        }
+
+        .nucleo {
+            width: 125px;
+            height: 125px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #8ff5ff,
+                    #00d9ff 40%,
+                    #006e83 75%,
+                    #061016
+                );
+
+            color: #061016;
+
+            font-size: 55px;
+
+            box-shadow:
+                0 0 40px rgba(0, 217, 255, .7),
+                0 0 100px rgba(0, 217, 255, .25);
+        }
+
+        .particula {
+            position: absolute;
+
+            width: 11px;
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            box-shadow:
+                0 0 15px var(--primary);
+        }
+
+        .particula:nth-child(1) {
+            top: 12%;
+            left: 25%;
+        }
+
+        .particula:nth-child(2) {
+            right: 8%;
+            top: 42%;
+        }
+
+        .particula:nth-child(3) {
+            bottom: 16%;
+            left: 20%;
+        }
+
+        @keyframes flutuar {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+
+        }
+
+
+        /* TÍTULOS */
+
+        .titulo-secao {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+            font-size: clamp(26px, 3vw, 35px);
+
+            line-height: 1.1;
+        }
+
+        .titulo-secao::before {
+            content: "";
+
+            width: 5px;
+            height: 34px;
+
+            border-radius: 10px;
+
+            background: var(--primary);
+        }
+
+        .subtitulo {
+            max-width: 700px;
+
+            margin-top: -13px;
+
+            margin-bottom: 28px;
+
+            color: var(--text-secondary);
+
+            font-size: 14px;
+        }
+
+
+        /* CATEGORIAS */
+
+        .categorias-inovacao {
+            display: grid;
+
+            grid-template-columns:
+                repeat(6, minmax(0, 1fr));
+
+            gap: 14px;
+
+            margin-bottom: 55px;
+        }
+
+        .categoria {
+            padding: 22px 15px;
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: var(--surface);
+
+            box-shadow: var(--shadow);
+
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+        .categoria:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(0, 217, 255, .4);
+
+            box-shadow: var(--shadow-hover);
+        }
+
+        .categoria i {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: var(--primary);
+
+            font-size: 28px;
+        }
+
+        .categoria span {
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+
+        /* DESTAQUE */
+
+        .inovacao-principal {
+            display: grid;
+
+            grid-template-columns: 1.15fr .85fr;
+
+            min-height: 390px;
+
+            overflow: hidden;
+
+            margin-bottom: 45px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071018,
+                    #10242e
+                );
+
+            color: #fff;
+
+            box-shadow: var(--shadow);
+        }
+
+        .inovacao-principal-imagem {
+            position: relative;
+
+            min-height: 390px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 217, 255, .2),
+                    transparent
+                );
+        }
+
+        .inovacao-principal-imagem img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform .6s ease;
+        }
+
+        .inovacao-principal:hover img {
+            transform: scale(1.04);
+        }
+
+        .inovacao-principal-imagem::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent 60%,
+                    rgba(7, 16, 24, .9)
+                );
+        }
+
+        .inovacao-principal-conteudo {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 45px;
+        }
+
+        .tag {
+            width: fit-content;
+
+            margin-bottom: 15px;
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .inovacao-principal h2 {
+            margin-bottom: 15px;
+
+            font-size: clamp(27px, 3vw, 42px);
+
+            line-height: 1.08;
+        }
+
+        .inovacao-principal p {
+            color: #bdc9d0;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            color: #91a1aa;
+
+            font-size: 11px;
+        }
+
+
+        /* CARDS */
+
+        .grid-inovacoes {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+
+            margin-bottom: 55px;
+        }
+
+        .card-inovacao {
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            background: var(--surface);
+
+            box-shadow: var(--shadow);
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition),
+                border-color var(--transition);
+        }
+
+        .card-inovacao:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(0, 217, 255, .3);
+
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-imagem {
+            position: relative;
+
+            height: 220px;
+
+            overflow: hidden;
+
+            background: #17212a;
+        }
+
+        .card-imagem img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform .5s ease;
+        }
+
+        .card-inovacao:hover .card-imagem img {
+            transform: scale(1.06);
+        }
+
+        .card-tag {
+            position: absolute;
+
+            left: 13px;
+            top: 13px;
+
+            z-index: 2;
+
+            padding: 6px 9px;
+
+            border-radius: 5px;
+
+            background: rgba(0, 0, 0, .75);
+
+            color: #fff;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+        .card-corpo {
+            padding: 18px;
+        }
+
+        .card-corpo .meta {
+            margin-bottom: 7px;
+
+            color: var(--text-secondary);
+        }
+
+        .card-corpo h3 {
+            margin-bottom: 9px;
+
+            font-size: 19px;
+
+            line-height: 1.2;
+        }
+
+        .card-corpo p {
+            color: var(--text-secondary);
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        .ler-mais {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            margin-top: 14px;
+
+            color: var(--primary-dark);
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            text-decoration: none;
+        }
+
+        body.dark .ler-mais {
+            color: var(--primary);
+        }
+
+        .ler-mais:hover {
+            gap: 10px;
+        }
+
+
+        /* NÚMEROS */
+
+        .numeros {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-bottom: 55px;
+        }
+
+        .numero-card {
+            padding: 28px 20px;
+
+            text-align: center;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071018,
+                    #10242d
+                );
+
+            color: #fff;
+
+            box-shadow: var(--shadow);
+        }
+
+        .numero-card i {
+            margin-bottom: 10px;
+
+            color: var(--primary);
+
+            font-size: 23px;
+        }
+
+        .numero-card strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 29px;
+
+            line-height: 1;
+
+            margin-bottom: 7px;
+        }
+
+        .numero-card span {
+            color: #aebbc3;
+
+            font-size: 11px;
+        }
+
+
+        /* LISTA DE INOVAÇÕES */
+
+        .duas-colunas {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr;
+
+            gap: 25px;
+
+            align-items: start;
+
+            margin-bottom: 55px;
+        }
+
+        .lista-inovacoes {
+            display: grid;
+
+            gap: 14px;
+        }
+
+        .noticia-horizontal {
+            display: grid;
+
+            grid-template-columns: 210px 1fr;
+
+            gap: 17px;
+
+            padding: 12px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: var(--surface);
+
+            transition: .25s ease;
+        }
+
+        .noticia-horizontal:hover {
+            transform: translateY(-3px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .noticia-horizontal img {
+            width: 210px;
+            height: 135px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+        .noticia-horizontal h3 {
+            margin: 4px 0 7px;
+
+            font-size: 18px;
+
+            line-height: 1.2;
+        }
+
+        .noticia-horizontal p {
+            color: var(--text-secondary);
+
+            font-size: 13px;
+        }
+
+
+        /* SIDEBAR */
+
+        .sidebar {
+            padding: 20px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            background: var(--surface);
+
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar h3 {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding-bottom: 14px;
+
+            margin-bottom: 10px;
+
+            border-bottom: 1px solid var(--border);
+
+            font-size: 19px;
+        }
+
+        .sidebar h3 i {
+            color: var(--primary);
+        }
+
+        .ranking-item {
+            display: grid;
+
+            grid-template-columns: 35px 1fr;
+
+            gap: 10px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ranking-item:last-child {
+            border-bottom: 0;
+        }
+
+        .ranking-numero {
+            color: var(--primary);
+
+            font-size: 23px;
+
+            font-weight: 900;
+        }
+
+        .ranking-item h4 {
+            font-size: 13px;
+
+            line-height: 1.3;
+        }
+
+        .ranking-item span {
+            display: block;
+
+            margin-top: 4px;
+
+            color: var(--text-secondary);
+
+            font-size: 10px;
+        }
+
+
+        /* NEWSLETTER */
+
+        .newsletter {
+            margin-top: 10px;
+
+            padding: 35px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 1fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071018,
+                    #0d2732
+                );
+
+            color: #fff;
+
+            box-shadow: var(--shadow);
+        }
+
+        .newsletter h2 {
+            margin-bottom: 7px;
+
+            font-size: clamp(24px, 3vw, 34px);
+        }
+
+        .newsletter p {
+            color: #b9c6ce;
+
+            font-size: 14px;
+        }
+
+        .newsletter-form {
+            display: flex;
+
+            gap: 8px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+
+            min-width: 0;
+
+            height: 45px;
+
+            padding: 0 15px;
+
+            border: 1px solid rgba(255, 255, 255, .12);
+
+            border-radius: 8px;
+
+            outline: none;
+
+            background: rgba(255, 255, 255, .08);
+
+            color: #fff;
+        }
+
+        .newsletter-form button {
+            height: 45px;
+
+            padding: 0 17px;
+
+            border-radius: 8px;
+
+            background: var(--primary);
+
+            color: #061016;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: .2s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #63edff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            padding: 55px 25px 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--footer-1),
+                    var(--footer-2)
+                );
+
+            color: #fff;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+
+            margin: auto;
+        }
+
+        .footer-top {
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer h2 {
+            color: var(--primary);
+
+            font-size: 28px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            color: #aeb8c0;
+
+            font-size: 13px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 13px;
+
+            font-size: 15px;
+        }
+
+        .footer-links {
+            display: grid;
+
+            gap: 8px;
+        }
+
+        .footer a {
+            color: #c8d0d6;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: color var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--primary);
+        }
+
+        .footer-social {
+            display: flex;
+
+            gap: 14px;
+
+            align-items: center;
+
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #fff;
+
+            font-size: 20px;
+
+            background: rgba(255, 255, 255, .06);
+
+            border: 1px solid rgba(255, 255, 255, .12);
+
+            transition: .25s ease;
+        }
+
+        .footer-social a:hover {
+            color: #fff;
+
+            background: var(--primary);
+
+            border-color: var(--primary);
+
+            box-shadow:
+                0 0 20px rgba(0, 217, 255, .4);
+
+            transform: translateY(-5px);
+        }
+
+        .footer hr {
+            margin: 35px 0 20px;
+
+            border: 0;
+
+            border-top:
+                1px solid rgba(255, 255, 255, .1);
+        }
+
+        .footer-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-policy {
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE
+        ========================================================= */
+
+        @media(max-width:1100px) {
+
+            .categorias-inovacao {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .grid-inovacoes {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .hero-inovacao {
+                grid-template-columns: 1fr .8fr;
+            }
+
+        }
+
+
+        @media(max-width:900px) {
+
+            .buscar-topo input {
+                width: 160px;
+            }
+
+            .buscar-topo input:focus {
+                width: 200px;
+            }
+
+            .hero-inovacao {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 300px;
+            }
+
+            .hero-conteudo {
+                padding: 45px 35px 20px;
+            }
+
+            .inovacao-principal {
+                grid-template-columns: 1fr;
+            }
+
+            .inovacao-principal-imagem {
+                min-height: 280px;
+            }
+
+            .duas-colunas {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media(max-width:650px) {
+
+            .barra-categorias ul {
+                justify-content: flex-start;
+
+                gap: 23px;
+            }
+
+            .barra-categorias a {
+                font-size: 13px;
+            }
+
+            .topo {
+                min-height: 70px;
+
+                padding: 0 12px;
+            }
+
+            .buscar-topo {
+                display: none;
+            }
+
+            .logo {
+                font-size: 25px;
+
+                letter-spacing: 1px;
+            }
+
+            .login {
+                min-height: 36px;
+
+                padding: 0 10px;
+
+                font-size: 10px;
+            }
+
+            .login span {
+                display: none;
+            }
+
+            .hero-inovacao {
+                min-height: auto;
+
+                border-radius: 16px;
+            }
+
+            .hero-conteudo {
+                padding: 35px 22px 20px;
+            }
+
+            .hero-conteudo h1 {
+                font-size: 38px;
+            }
+
+            .hero-visual {
+                min-height: 280px;
+            }
+
+            .orbita {
+                width: 220px;
+                height: 220px;
+            }
+
+            .orbita::before {
+                width: 280px;
+                height: 100px;
+            }
+
+            .orbita::after {
+                width: 100px;
+                height: 280px;
+            }
+
+            .nucleo {
+                width: 90px;
+                height: 90px;
+
+                font-size: 38px;
+            }
+
+            .categorias-inovacao {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .grid-inovacoes {
+                grid-template-columns: 1fr;
+            }
+
+            .numeros {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .inovacao-principal-conteudo {
+                padding: 30px 22px;
+            }
+
+            .noticia-horizontal {
+                grid-template-columns: 115px 1fr;
+
+                gap: 12px;
+            }
+
+            .noticia-horizontal img {
+                width: 115px;
+                height: 105px;
+            }
+
+            .noticia-horizontal p:not(.meta) {
+                display: none;
+            }
+
+            .noticia-horizontal h3 {
+                font-size: 15px;
+            }
+
+            .newsletter {
+                padding: 25px 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer-social,
+            .footer-policy {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+            }
+
+        }
+
+
+        @media(prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
 
-<div class="header-top">
-<div class="logo">TechVision <span>News</span></div>
+    <!-- =========================================================
+         NAVEGAÇÃO
+    ========================================================= -->
 
-<i class="fa-solid fa-microchip fa-2x"></i>
-</div>
+    <nav class="barra-categorias" aria-label="Navegação principal">
 
-<nav>
-<ul>
-<li>#Inovação</a></li>
-<li>#IA</a></li>
-<li>#Cloud</a></li>
-<li>#Segurança</a></li>
-<li>#</li>
-</ul>
-</nav>
+        <ul>
 
-</header>
+            <li>
+                <a href="/ABA_Inovacoes/Inovacao.html">
+                    Inovações
+                </a>
+            </li>
 
-<section class="hero">
+            <li>
+                <a href="/Lancamentos/lancamentos.html">
+                    Lançamentos
+                </a>
+            </li>
 
-<div>
+            <li>
+                <a href="/Tendencias/Tendencias.html">
+                    Tendências
+                </a>
+            </li>
 
-<h1>O Futuro da Tecnologia Está Sendo Construído Agora</h1>
+            <li>
+                <a href="/Games/games.html">
+                    Games
+                </a>
+            </li>
 
-<p>
-Acompanhe as principais notícias sobre Inteligência Artificial,
-Computação em Nuvem, Cibersegurança, Inovação Digital,
-Automação e Transformação Tecnológica.
-</p>
+            <li>
+                <a href="/Eventos/eventos.html">
+                    Eventos
+                </a>
+            </li>
 
-<a
-</div>
+        </ul>
 
-7442136019-21780ecad995?w=1200"
-alt="Tecnologia">
+    </nav>
 
-</section>
 
-<h2 class="section-title">Últimas Notícias</h2>
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
 
-<section class="news-grid">
+    <header>
 
-<div class="card">
-1677442135703-1787eea5ce01?w=1200">
+        <div class="topo">
 
-<div class="card-content">
+            <div class="topo-esquerdo">
 
-<span>INTELIGÊNCIA ARTIFICIAL</span>
+                <div class="menu-hamburguer">
 
-<h3>Agentes de IA Ganham Mais Autonomia</h3>
+                    <button
+                        class="hamburguer"
+                        id="btnMenu"
+                        type="button"
+                        aria-label="Abrir menu de acessibilidade"
+                        aria-expanded="false"
+                        aria-controls="menu">
 
-<p>
-Novas soluções são capazes de analisar dados,
-executar tarefas e fornecer respostas complexas
-sem intervenção humana constante.
-</p>
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-</div>
-</div>
+                    </button>
 
-<div class="card">
 
-1318423-f06f85e504b3?w=1200">
+                    <ul
+                        class="menu"
+                        id="menu"
+                        aria-hidden="true">
 
-<div class="card-content">
+                        <li>
 
-<span>BIG DATA</span>
+                            <a href="#" id="btnDarkMenu">
 
-<h3>Empresas Investem em Análise Avançada</h3>
+                                <i class="fa-solid fa-moon"></i>
 
-<p>
-O uso estratégico de dados continua sendo um
-dos principais diferenciais competitivos.
-</p>
+                                <span>
+                                    Modo Escuro
+                                </span>
 
-</div>
-</div>
+                            </a>
 
-<div class="card">
+                        </li>
 
-5827404703-89b55fcc595e?w=1200">
+                    </ul>
 
-<div class="card-content">
+                </div>
 
-<span>ROBÓTICA</span>
 
-<h3>Automação Inteligente Cresce em 2026</h3>
+                <div class="buscar-topo">
 
-<p>
-Indústrias adotam robôs avançados para aumentar
-produtividade e reduzir custos operacionais.
-</p>
+                    <label
+                        class="sr-only"
+                        for="campoBusca">
 
-</div>
-</div>
+                        Buscar inovações
 
-<div class="card">
+                    </label>
 
-://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
+                    <input
+                        id="campoBusca"
+                        type="search"
+                        placeholder="Buscar inovações..."
+                        autocomplete="off">
 
-<div class="card-content">
+                    <button
+                        class="limpar-busca"
+                        id="limparBusca"
+                        type="button"
+                        aria-label="Limpar busca">
 
-<span>CLOUD</span>
+                        <i class="fa-solid fa-xmark"></i>
 
-<h3>Computação em Nuvem Continua Expansão</h3>
+                    </button>
 
-<p>
-Infraestruturas cloud se tornam essenciais
-para negócios digitais modernos.
-</p>
+                </div>
 
-</div>
-</div>
+            </div>
 
-<div class="card">
 
-<img src="https://images.unsplash.com/photo-1550751827-4bdw=1200
+            <h1 class="logo">
+                Tech<span>News</span>
+            </h1>
 
-<div class="card-content">
 
-<span>SEGURANÇA</span>
+            <a
+                href="/login.html"
+                class="login">
 
-<h3>Novos Desafios em Cibersegurança</h3>
+                <i class="fa-solid fa-user"></i>
 
-<p>
-A proteção de dados torna-se prioridade para
-organizações de todos os tamanhos.
-</p>
+                <span>
+                    ENTRAR
+                </span>
 
-</div>
-</div>
+            </a>
 
-<div class="card">
+        </div>
 
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538ddiv class="card-content">
+    </header>
 
-<span>STARTUPS</span>
 
-<h3>Ecossistema de Inovação Cresce no Mundo</h3>
+    <!-- =========================================================
+         CONTEÚDO
+    ========================================================= -->
 
-<p>
-Novas empresas tecnológicas impulsionam soluções
-disruptivas para diversos mercados.
-</p>
+    <main id="inovacoes">
 
-</div>
-</div>
 
-</section>
+        <!-- HERO -->
 
-<section class="stats">
+        <section class="hero-inovacao">
 
-<div class="stat">
-<h2>520+</h2>
-<p>Notícias Publicadas</p>
-</div>
+            <div class="hero-conteudo">
 
-<div class="stat">
-<h2>120K</h2>
-<p>Leitores Mensais</p>
-</div>
+                <span class="hero-tag">
+                    <i class="fa-solid fa-atom"></i>
+                    Especial Inovações
+                </span>
 
-<div class="stat">
-<h2>35</h2>
-<p>Parceiros Tecnológicos</p>
-</div>
+                <h1>
+                    O futuro está sendo
+                    <span>construído agora.</span>
+                </h1>
 
-<div class="stat">
-<h2>98%</h2>
-<p>Satisfação dos Usuários</p>
-</div>
+                <p>
+                    Explore as tecnologias que estão mudando a maneira
+                    como trabalhamos, vivemos e enxergamos o futuro.
+                    Inteligência artificial, robótica, computação
+                    quântica, energia, espaço e muito mais.
+                </p>
 
-</section>
+                <div class="hero-botoes">
 
-<section class="trends">
+                    <a
+                        href="#destaques"
+                        class="botao-principal">
 
-<h2>Tendências Tecnológicas</h2>
+                        Explorar inovações
 
-<ul>
-<li>Inteligência Artificial Generativa</li>
-<li>Computação Quântica</li>
-<li>Segurança Pós-Quântica</li>
-<li>Cloud Computing</li>
-<li>Edge Computing</li>
-<li>Automação Inteligente</li>
-<li>Internet das Coisas (IoT)</li>
-<li>Digital Twins</li>
-</ul>
+                        <i class="fa-solid fa-arrow-down"></i>
 
-</section>
+                    </a>
 
-<footer>
+                    <a
+                        href="#categorias"
+                        class="botao-secundario">
 
-<div class="footer-content">
+                        Ver categorias
 
-<div>
-<h2>TechVision News</h2>
-<p>Portal Profissional de Tecnologia e Inovação</p>
-</div>
+                    </a>
 
-<div class="social">
+                </div>
 
-#
+            </div>
 
-#
-<i class="fab fa-instagram"></i>
-</a>
 
-#
-<i class="fab fa-youtube"></i>
-</a>
+            <div class="hero-visual">
 
-#
-<i class="fab fa-x-twitter"></i>
-</a>
+                <div class="orbita">
 
-</div>
+                    <div class="particula"></div>
+                    <div class="particula"></div>
+                    <div class="particula"></div>
 
-</div>
+                    <div class="nucleo">
 
-<div class="copy">
-© 2026 TechVision News • Todos os direitos reservados
-</div>
+                        <i class="fa-solid fa-microchip"></i>
 
-</footer>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CATEGORIAS -->
+
+        <section id="categorias">
+
+            <h2 class="titulo-secao">
+                Áreas de inovação
+            </h2>
+
+            <p class="subtitulo">
+                Conheça as principais áreas tecnológicas que estão
+                impulsionando a próxima geração de produtos,
+                serviços e descobertas.
+            </p>
+
+
+            <div class="categorias-inovacao">
+
+                <a href="#ia" class="categoria">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <span>
+                        Inteligência Artificial
+                    </span>
+
+                </a>
+
+
+                <a href="#robotica" class="categoria">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <span>
+                        Robótica
+                    </span>
+
+                </a>
+
+
+                <a href="#quantica" class="categoria">
+
+                    <i class="fa-solid fa-atom"></i>
+
+                    <span>
+                        Computação Quântica
+                    </span>
+
+                </a>
+
+
+                <a href="#energia" class="categoria">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <span>
+                        Energia
+                    </span>
+
+                </a>
+
+
+                <a href="#espaco" class="categoria">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    <span>
+                        Espaço
+                    </span>
+
+                </a>
+
+
+                <a href="#biotech" class="categoria">
+
+                    <i class="fa-solid fa-dna"></i>
+
+                    <span>
+                        Biotecnologia
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DESTAQUE -->
+
+        <section id="destaques">
+
+            <h2 class="titulo-secao">
+                Inovação em destaque
+            </h2>
+
+            <p class="subtitulo">
+                As tecnologias que merecem atenção e podem definir
+                os próximos anos.
+            </p>
+
+
+            <article
+                class="inovacao-principal"
+                id="quantica">
+
+                <div class="inovacao-principal-imagem">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=85"
+                        alt="Representação de computação quântica"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="inovacao-principal-conteudo">
+
+                    <span class="tag">
+                        COMPUTAÇÃO QUÂNTICA
+                    </span>
+
+                    <h2>
+                        A próxima geração da computação
+                        está sendo construída
+                    </h2>
+
+                    <p>
+                        Processadores quânticos, novos algoritmos
+                        e serviços de computação pela nuvem estão
+                        abrindo novas possibilidades para problemas
+                        que desafiam os computadores tradicionais.
+                    </p>
+
+                    <span class="meta">
+                        Especial TechNews • Inovação • 2026
+                    </span>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- NÚMEROS -->
+
+        <section>
+
+            <div class="numeros">
+
+                <div class="numero-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <strong>IA</strong>
+
+                    <span>
+                        Sistemas inteligentes
+                    </span>
+
+                </div>
+
+
+                <div class="numero-card">
+
+                    <i class="fa-solid fa-atom"></i>
+
+                    <strong>Q</strong>
+
+                    <span>
+                        Computação quântica
+                    </span>
+
+                </div>
+
+
+                <div class="numero-card">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <strong>BOT</strong>
+
+                    <span>
+                        Robótica avançada
+                    </span>
+
+                </div>
+
+
+                <div class="numero-card">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    <strong>∞</strong>
+
+                    <span>
+                        Novas fronteiras
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CARDS -->
+
+        <section>
+
+            <h2 class="titulo-secao">
+                Tecnologias para acompanhar
+            </h2>
+
+
+            <div class="grid-inovacoes">
+
+
+                <article
+                    class="card-inovacao"
+                    id="ia">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
+                            alt="Inteligência artificial"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            IA
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Inteligência Artificial • 2026
+                        </p>
+
+                        <h3>
+                            Agentes de IA começam a executar
+                            tarefas cada vez mais complexas
+                        </h3>
+
+                        <p>
+                            Sistemas capazes de planejar,
+                            decidir e executar sequências de
+                            tarefas estão ganhando espaço.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="card-inovacao"
+                    id="robotica">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
+                            alt="Robô humanoide"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            ROBÓTICA
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Robótica • 2026
+                        </p>
+
+                        <h3>
+                            Robôs humanoides avançam
+                            para ambientes de trabalho
+                        </h3>
+
+                        <p>
+                            Sensores, inteligência artificial
+                            e novos atuadores estão ampliando
+                            as possibilidades dos robôs.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="card-inovacao"
+                    id="energia">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=85"
+                            alt="Carro elétrico e energia"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            ENERGIA
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Energia • 2026
+                        </p>
+
+                        <h3>
+                            Novas baterias prometem transformar
+                            o armazenamento de energia
+                        </h3>
+
+                        <p>
+                            Novas químicas e materiais podem
+                            aumentar eficiência, autonomia e
+                            capacidade de armazenamento.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="card-inovacao"
+                    id="espaco">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
+                            alt="Terra vista do espaço"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            ESPAÇO
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Espaço • 2026
+                        </p>
+
+                        <h3>
+                            Inteligência artificial começa
+                            a ganhar novas funções no espaço
+                        </h3>
+
+                        <p>
+                            Satélites autônomos e sistemas
+                            inteligentes podem transformar
+                            futuras missões espaciais.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="card-inovacao"
+                    id="biotech">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=85"
+                            alt="Pesquisa de biotecnologia"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            BIOTECH
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Biotecnologia • 2026
+                        </p>
+
+                        <h3>
+                            Tecnologia e biologia caminham
+                            cada vez mais próximas
+                        </h3>
+
+                        <p>
+                            Ferramentas computacionais estão
+                            acelerando pesquisas em genética,
+                            medicamentos e biologia.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card-inovacao">
+
+                    <div class="card-imagem">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85"
+                            alt="Data center"
+                            loading="lazy">
+
+                        <span class="card-tag">
+                            INFRAESTRUTURA
+                        </span>
+
+                    </div>
+
+                    <div class="card-corpo">
+
+                        <p class="meta">
+                            Hardware • 2026
+                        </p>
+
+                        <h3>
+                            Data centers se tornam essenciais
+                            para a nova geração de tecnologia
+                        </h3>
+
+                        <p>
+                            Chips especializados, energia e
+                            resfriamento são fundamentais para
+                            sustentar a expansão da IA.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Explorar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ÚLTIMAS INOVAÇÕES -->
+
+        <section>
+
+            <h2 class="titulo-secao">
+                Últimas novidades em inovação
+            </h2>
+
+
+            <div class="duas-colunas">
+
+                <div class="lista-inovacoes">
+
+
+                    <article class="noticia-horizontal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=700&q=85"
+                            alt="Robô e inteligência artificial"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="meta">
+                                Inteligência Artificial • 2026
+                            </p>
+
+                            <h3>
+                                Agentes inteligentes começam
+                                a transformar tarefas digitais
+                            </h3>
+
+                            <p>
+                                Sistemas autônomos estão
+                                evoluindo de simples assistentes
+                                para ferramentas capazes de
+                                realizar processos completos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="noticia-horizontal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=85"
+                            alt="Placa eletrônica e tecnologia"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="meta">
+                                Hardware • 2026
+                            </p>
+
+                            <h3>
+                                Chips especializados ganham
+                                importância na era da IA
+                            </h3>
+
+                            <p>
+                                Novas arquiteturas buscam
+                                aumentar o desempenho e reduzir
+                                o consumo energético.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="noticia-horizontal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=85"
+                            alt="Tecnologia industrial"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="meta">
+                                Indústria • 2026
+                            </p>
+
+                            <h3>
+                                Automação inteligente muda
+                                processos industriais
+                            </h3>
+
+                            <p>
+                                Robótica e sistemas de análise
+                                estão sendo utilizados para
+                                aumentar eficiência e precisão.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="noticia-horizontal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=700&q=85"
+                            alt="Robô tecnológico"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="meta">
+                                Robótica • 2026
+                            </p>
+
+                            <h3>
+                                A nova geração de robôs combina
+                                visão computacional e IA
+                            </h3>
+
+                            <p>
+                                Sensores mais avançados permitem
+                                que máquinas compreendam melhor
+                                seus ambientes.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="sidebar">
+
+                    <h3>
+
+                        <i class="fa-solid fa-fire"></i>
+
+                        Em alta nas inovações
+
+                    </h3>
+
+
+                    <div class="ranking-item">
+
+                        <div class="ranking-numero">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Computação quântica
+                                e o futuro da nuvem
+                            </h4>
+
+                            <span>
+                                Computação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ranking-item">
+
+                        <div class="ranking-numero">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Agentes de inteligência
+                                artificial
+                            </h4>
+
+                            <span>
+                                IA
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ranking-item">
+
+                        <div class="ranking-numero">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Robôs humanoides
+                                no ambiente industrial
+                            </h4>
+
+                            <span>
+                                Robótica
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ranking-item">
+
+                        <div class="ranking-numero">
+                            04
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Baterias e novas
+                                tecnologias de energia
+                            </h4>
+
+                            <span>
+                                Energia
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ranking-item">
+
+                        <div class="ranking-numero">
+                            05
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                IA aplicada à exploração
+                                espacial
+                            </h4>
+
+                            <span>
+                                Espaço
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NEWSLETTER -->
+
+        <section class="newsletter">
+
+            <div>
+
+                <h2>
+                    Acompanhe o futuro
+                </h2>
+
+                <p>
+                    Receba as principais novidades sobre
+                    tecnologia, ciência e inovação diretamente
+                    no seu e-mail.
+                </p>
+
+            </div>
+
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Seu melhor e-mail"
+                    required
+                    aria-label="Seu e-mail">
+
+                <button type="submit">
+                    Assinar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+
+                <div>
+
+                    <h2>
+                        TechNews
+                    </h2>
+
+                    <p>
+                        Tecnologia, inovação e futuro em um só lugar.
+                        Notícias e conteúdos para quem quer entender
+                        o mundo digital.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.youtube.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        Categorias
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="#ia">
+                            Inteligência Artificial
+                        </a>
+
+                        <a href="#robotica">
+                            Robótica
+                        </a>
+
+                        <a href="#quantica">
+                            Computação Quântica
+                        </a>
+
+                        <a href="#energia">
+                            Energia
+                        </a>
+
+                        <a href="#espaco">
+                            Espaço
+                        </a>
+
+                        <a href="#biotech">
+                            Biotecnologia
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h3>
+                        TechNews
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="#">
+                            Sobre nós
+                        </a>
+
+                        <a href="#">
+                            Contato
+                        </a>
+
+                        <a href="#">
+                            Parceiros
+                        </a>
+
+                        <a href="#">
+                            Termos de Uso
+                        </a>
+
+                        <a href="#">
+                            Privacidade
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 TechNews. Todos os direitos reservados.
+                </p>
+
+
+                <div class="footer-policy">
+
+                    <a href="#">
+                        Privacidade
+                    </a>
+
+                    <a href="#">
+                        Cookies
+                    </a>
+
+                    <a href="#">
+                        Termos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        "use strict";
+
+
+        const body =
+            document.body;
+
+        const btnMenu =
+            document.getElementById("btnMenu");
+
+        const menu =
+            document.getElementById("menu");
+
+        const btnDarkMenu =
+            document.getElementById("btnDarkMenu");
+
+        const campoBusca =
+            document.getElementById("campoBusca");
+
+        const limparBusca =
+            document.getElementById("limparBusca");
+
+        const newsletterForm =
+            document.getElementById("newsletterForm");
+
+
+        const cards =
+            Array.from(
+                document.querySelectorAll(
+                    ".card-inovacao, .noticia-horizontal, .inovacao-principal"
+                )
+            );
+
+
+        /* =====================================================
+           NORMALIZAR TEXTO
+        ===================================================== */
+
+        function normalizarTexto(texto) {
+
+            return String(texto || "")
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .trim();
+
+        }
+
+
+        /* =====================================================
+           MODO ESCURO
+        ===================================================== */
+
+        function atualizarModoEscuro() {
+
+            const escuro =
+                body.classList.contains("dark");
+
+
+            try {
+
+                localStorage.setItem(
+                    "darkMode",
+                    String(escuro)
+                );
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível salvar o tema.",
+                    erro
+                );
+
+            }
+
+
+            btnDarkMenu.innerHTML = escuro
+
+                ? `
+                    <i class="fa-solid fa-sun"></i>
+                    <span>Modo Claro</span>
+                  `
+
+                : `
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Modo Escuro</span>
+                  `;
+
+        }
+
+
+        function carregarModoEscuro() {
+
+            try {
+
+                if (
+                    localStorage.getItem("darkMode")
+                    === "true"
+                ) {
+
+                    body.classList.add("dark");
+
+                }
+
+            } catch (erro) {
+
+                console.warn(
+                    "LocalStorage indisponível.",
+                    erro
+                );
+
+            }
+
+
+            atualizarModoEscuro();
+
+        }
+
+
+        /* =====================================================
+           MENU
+        ===================================================== */
+
+        function abrirMenu() {
+
+            const aberto =
+                !menu.classList.contains("ativo");
+
+
+            menu.classList.toggle(
+                "ativo",
+                aberto
+            );
+
+            btnMenu.classList.toggle(
+                "ativo",
+                aberto
+            );
+
+
+            btnMenu.setAttribute(
+                "aria-expanded",
+                String(aberto)
+            );
+
+
+            btnMenu.setAttribute(
+                "aria-label",
+
+                aberto
+                    ? "Fechar menu de acessibilidade"
+                    : "Abrir menu de acessibilidade"
+            );
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                String(!aberto)
+            );
+
+        }
+
+
+        function fecharMenu() {
+
+            menu.classList.remove("ativo");
+
+            btnMenu.classList.remove("ativo");
+
+            btnMenu.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            btnMenu.setAttribute(
+                "aria-label",
+                "Abrir menu de acessibilidade"
+            );
+
+            menu.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+        }
+
+
+        btnMenu.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                abrirMenu();
+
+            }
+        );
+
+
+        menu.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    !menu.contains(event.target)
+                    &&
+                    !btnMenu.contains(event.target)
+                ) {
+
+                    fecharMenu();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    fecharMenu();
+
+                    campoBusca.blur();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           TEMA
+        ===================================================== */
+
+        btnDarkMenu.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                body.classList.toggle("dark");
+
+                atualizarModoEscuro();
+
+                fecharMenu();
+
+            }
+        );
+
+
+        /* =====================================================
+           BUSCA
+        ===================================================== */
+
+        function realizarBusca() {
+
+            const termo =
+                normalizarTexto(
+                    campoBusca.value
+                );
+
+
+            limparBusca.classList.toggle(
+                "visivel",
+                termo.length > 0
+            );
+
+
+            cards.forEach(
+                function(card) {
+
+                    const texto =
+                        normalizarTexto(
+                            card.innerText
+                        );
+
+
+                    const corresponde =
+                        termo === ""
+                        ||
+                        texto.includes(termo);
+
+
+                    card.style.display =
+                        corresponde
+                            ? ""
+                            : "none";
+
+                }
+            );
+
+        }
+
+
+        campoBusca.addEventListener(
+            "input",
+            realizarBusca
+        );
+
+
+        limparBusca.addEventListener(
+            "click",
+            function() {
+
+                campoBusca.value = "";
+
+                realizarBusca();
+
+                campoBusca.focus();
+
+            }
+        );
+
+
+        /* =====================================================
+           NEWSLETTER
+        ===================================================== */
+
+        newsletterForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    newsletterForm
+                        .querySelector("input")
+                        .value
+                        .trim();
+
+
+                if (!email) {
+                    return;
+                }
+
+
+                alert(
+                    "Cadastro realizado com sucesso!"
+                );
+
+
+                newsletterForm.reset();
+
+            }
+        );
+
+
+        /* =====================================================
+           LINKS DOS CARDS
+        ===================================================== */
+
+        document
+            .querySelectorAll(".ler-mais")
+            .forEach(
+                function(link) {
+
+                    link.addEventListener(
+                        "click",
+                        function(event) {
+
+                            event.preventDefault();
+
+                            alert(
+                                "A página completa desta notícia será adicionada em breve."
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =====================================================
+           INICIALIZAÇÃO
+        ===================================================== */
+
+        carregarModoEscuro();
+
+        realizarBusca();
+
+    </script>
+
 
 </body>
+
 </html>
