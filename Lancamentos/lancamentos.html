@@ -16,13 +16,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
 
     <style>
-
         /* =========================================================
            01. VARIÁVEIS
         ========================================================= */
@@ -191,10 +189,8 @@
         ========================================================= */
 
         .container {
-            width: min(
-                calc(100% - 32px),
-                var(--container)
-            );
+            width: min(calc(100% - 32px),
+                    var(--container));
 
             margin-inline: auto;
         }
@@ -473,12 +469,10 @@
 
         .main-header {
             background:
-                linear-gradient(
-                    135deg,
+                linear-gradient(135deg,
                     #111111,
                     #1c1c1c,
-                    #292929
-                );
+                    #292929);
 
             padding: 20px;
 
@@ -490,9 +484,7 @@
             display: grid;
 
             grid-template-columns:
-                auto
-                1fr
-                auto;
+                auto 1fr auto;
 
             min-height: 88px;
 
@@ -863,8 +855,7 @@
             display: grid;
 
             grid-template-columns:
-                minmax(0, 1.6fr)
-                minmax(290px, 0.8fr);
+                minmax(0, 1.6fr) minmax(290px, 0.8fr);
 
             gap: 20px;
         }
@@ -901,12 +892,10 @@
             inset: 0;
 
             background:
-                linear-gradient(
-                    to top,
+                linear-gradient(to top,
                     rgba(5, 8, 16, 0.94) 5%,
                     rgba(5, 8, 16, 0.48) 52%,
-                    rgba(5, 8, 16, 0.05) 100%
-                );
+                    rgba(5, 8, 16, 0.05) 100%);
 
             content: "";
         }
@@ -991,11 +980,9 @@
             inset: 0;
 
             background:
-                linear-gradient(
-                    to top,
+                linear-gradient(to top,
                     rgba(5, 8, 16, 0.92),
-                    rgba(5, 8, 16, 0.04)
-                );
+                    rgba(5, 8, 16, 0.04));
 
             content: "";
         }
@@ -1031,12 +1018,10 @@
             padding: 30px 0;
 
             background:
-                linear-gradient(
-                    135deg,
+                linear-gradient(135deg,
                     #07131b,
                     #111827,
-                    #101020
-                );
+                    #101020);
 
             color: #ffffff;
         }
@@ -1090,11 +1075,9 @@
             inset: 0;
 
             background:
-                linear-gradient(
-                    to top,
+                linear-gradient(to top,
                     rgba(0, 0, 0, .95),
-                    rgba(0, 0, 0, .12)
-                );
+                    rgba(0, 0, 0, .12));
 
             content: "";
         }
@@ -1122,7 +1105,7 @@
         .ia-card-conteudo p {
             margin-bottom: 0;
 
-            color: rgba(255,255,255,.72);
+            color: rgba(255, 255, 255, .72);
 
             font-size: .82rem;
         }
@@ -1136,8 +1119,7 @@
             display: grid;
 
             grid-template-columns:
-                minmax(0, 1fr)
-                330px;
+                minmax(0, 1fr) 330px;
 
             gap: 34px;
 
@@ -1154,8 +1136,7 @@
             display: grid;
 
             grid-template-columns:
-                250px
-                minmax(0, 1fr);
+                250px minmax(0, 1fr);
 
             min-height: 175px;
 
@@ -1200,8 +1181,7 @@
             transition: transform 400ms ease;
         }
 
-        .cartao-noticia:hover
-        .imagem-noticia img {
+        .cartao-noticia:hover .imagem-noticia img {
             transform: scale(1.04);
         }
 
@@ -1315,10 +1295,8 @@
             color: var(--primary);
 
             content:
-                counter(
-                    ranking,
-                    decimal-leading-zero
-                );
+                counter(ranking,
+                    decimal-leading-zero);
 
             font-size: 1.25rem;
 
@@ -1346,11 +1324,9 @@
             overflow: hidden;
 
             background:
-                linear-gradient(
-                    145deg,
+                linear-gradient(145deg,
                     #0e7490,
-                    #111827
-                );
+                    #111827);
 
             color: #ffffff;
         }
@@ -1372,8 +1348,7 @@
 
             padding: 0 14px;
 
-            border: 1px solid
-                rgba(255, 255, 255, 0.24);
+            border: 1px solid rgba(255, 255, 255, 0.24);
 
             border-radius: var(--radius-sm);
 
@@ -1523,8 +1498,7 @@
 
             place-items: center;
 
-            border: 3px solid
-                rgba(255, 255, 255, 0.6);
+            border: 3px solid rgba(255, 255, 255, 0.6);
 
             border-radius: 50%;
 
@@ -1603,11 +1577,9 @@
             inset: 0;
 
             background:
-                linear-gradient(
-                    to top,
+                linear-gradient(to top,
                     rgba(6, 8, 15, 0.94),
-                    rgba(6, 8, 15, 0.05)
-                );
+                    rgba(6, 8, 15, 0.05));
 
             content: "";
         }
@@ -1659,16 +1631,12 @@
             border-radius: var(--radius-lg);
 
             background:
-                radial-gradient(
-                    circle at 85% 20%,
+                radial-gradient(circle at 85% 20%,
                     rgba(251, 146, 60, 0.42),
-                    transparent 30%
-                ),
-                linear-gradient(
-                    130deg,
+                    transparent 30%),
+                linear-gradient(130deg,
                     #1e093a,
-                    #169fb7
-                );
+                    #169fb7);
 
             color: #ffffff;
 
@@ -1716,8 +1684,7 @@
             display: grid;
 
             grid-template-columns:
-                1.35fr
-                repeat(3, 1fr);
+                1.35fr repeat(3, 1fr);
 
             gap: 44px;
 
@@ -1749,8 +1716,7 @@
 
             place-items: center;
 
-            border: 1px solid
-                rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.14);
 
             border-radius: 50%;
 
@@ -1774,7 +1740,7 @@
             font-size: 0.95rem;
         }
 
-        .footer-column li + li {
+        .footer-column li+li {
             margin-top: 10px;
         }
 
@@ -1801,8 +1767,7 @@
             gap: 20px;
 
             border-top:
-                1px solid
-                rgba(255, 255, 255, 0.1);
+                1px solid rgba(255, 255, 255, 0.1);
 
             color:
                 rgba(255, 255, 255, 0.48);
@@ -1914,16 +1879,14 @@
 
             .content-layout {
                 grid-template-columns:
-                    minmax(0, 1fr)
-                    290px;
+                    minmax(0, 1fr) 290px;
 
                 gap: 24px;
             }
 
             .cartao-noticia {
                 grid-template-columns:
-                    210px
-                    minmax(0, 1fr);
+                    210px minmax(0, 1fr);
             }
 
             .guides-grid {
@@ -2003,10 +1966,8 @@
         @media (max-width: 620px) {
 
             .container {
-                width: min(
-                    calc(100% - 22px),
-                    var(--container)
-                );
+                width: min(calc(100% - 22px),
+                        var(--container));
             }
 
             .logo {
@@ -2122,7 +2083,6 @@
                 animation-iteration-count: 1 !important;
             }
         }
-
     </style>
 
 </head>
@@ -2168,18 +2128,11 @@
 
         <div class="container header-inner">
 
-            <a
-                class="logo"
-                href="#inicio"
-                aria-label="Página inicial TechNews"
-            >
+            <a class="logo" href="#inicio" aria-label="Página inicial TechNews">
 
                 <span class="logo-symbol">
 
-                    <img
-                        src="/img/logosite.png"
-                        alt="Logo TechNews"
-                    >
+                    <img src="/img/logosite.png" alt="Logo TechNews">
 
                 </span>
 
@@ -2190,18 +2143,12 @@
             </a>
 
 
-            <nav
-                class="desktop-nav"
-                aria-label="Navegação principal"
-            >
+            <nav class="desktop-nav" aria-label="Navegação principal">
 
                 <ul>
 
                     <li>
-                        <a
-                            class="active"
-                            href="#ultimas"
-                        >
+                        <a class="active" href="#ultimas">
                             Últimas
                         </a>
                     </li>
@@ -2251,25 +2198,12 @@
 
                 <!-- MODO ESCURO -->
 
-                <button
-                    class="icon-button theme-button"
-                    id="themeButton"
-                    type="button"
-                    aria-label="Alternar tema"
-                    title="Alternar tema"
-                >
+                <button class="icon-button theme-button" id="themeButton" type="button" aria-label="Alternar tema"
+                    title="Alternar tema">
 
-                    <svg
-                        class="icon"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
 
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                        ></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
 
                         <path d="M12 2v2"></path>
                         <path d="M12 20v2"></path>
@@ -2287,25 +2221,12 @@
 
                 <!-- BUSCA -->
 
-                <button
-                    class="icon-button"
-                    id="searchButton"
-                    type="button"
-                    aria-label="Abrir busca"
-                    aria-expanded="false"
-                >
+                <button class="icon-button" id="searchButton" type="button" aria-label="Abrir busca"
+                    aria-expanded="false">
 
-                    <svg
-                        class="icon"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
 
-                        <circle
-                            cx="11"
-                            cy="11"
-                            r="8"
-                        ></circle>
+                        <circle cx="11" cy="11" r="8"></circle>
 
                         <path d="m21 21-4.35-4.35"></path>
 
@@ -2316,19 +2237,10 @@
 
                 <!-- MENU MOBILE -->
 
-                <button
-                    class="icon-button menu-button"
-                    id="menuButton"
-                    type="button"
-                    aria-label="Abrir menu"
-                    aria-expanded="false"
-                >
+                <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Abrir menu"
+                    aria-expanded="false">
 
-                    <svg
-                        class="icon"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
 
                         <path d="M4 6h16"></path>
                         <path d="M4 12h16"></path>
@@ -2349,36 +2261,20 @@
          BUSCA
     ========================================================== -->
 
-    <div
-        class="search-panel"
-        id="searchPanel"
-    >
+    <div class="search-panel" id="searchPanel">
 
         <div class="container">
 
-            <form
-                class="search-form"
-                id="searchForm"
-            >
+            <form class="search-form" id="searchForm">
 
-                <label
-                    class="sr-only"
-                    for="searchInput"
-                >
+                <label class="sr-only" for="searchInput">
                     Pesquisar notícias
                 </label>
 
-                <input
-                    id="searchInput"
-                    type="search"
-                    placeholder="Busque por IA, celulares, jogos, segurança..."
-                    autocomplete="off"
-                >
+                <input id="searchInput" type="search" placeholder="Busque por IA, celulares, jogos, segurança..."
+                    autocomplete="off">
 
-                <button
-                    class="button"
-                    type="submit"
-                >
+                <button class="button" type="submit">
                     Pesquisar
                 </button>
 
@@ -2393,19 +2289,10 @@
          MENU MOBILE
     ========================================================== -->
 
-    <button
-        class="menu-overlay"
-        id="menuOverlay"
-        type="button"
-        aria-label="Fechar menu"
-    ></button>
+    <button class="menu-overlay" id="menuOverlay" type="button" aria-label="Fechar menu"></button>
 
 
-    <aside
-        class="mobile-menu"
-        id="mobileMenu"
-        aria-hidden="true"
-    >
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
 
         <div class="mobile-menu-header">
 
@@ -2413,12 +2300,7 @@
                 Navegação
             </strong>
 
-            <button
-                class="mobile-close"
-                id="mobileClose"
-                type="button"
-                aria-label="Fechar menu"
-            >
+            <button class="mobile-close" id="mobileClose" type="button" aria-label="Fechar menu">
                 ×
             </button>
 
@@ -2462,11 +2344,7 @@
         </nav>
 
 
-        <button
-            class="button outline"
-            id="mobileThemeButton"
-            type="button"
-        >
+        <button class="button outline" id="mobileThemeButton" type="button">
             Alternar tema
         </button>
 
@@ -2525,20 +2403,14 @@
              DESTAQUES
         ====================================================== -->
 
-        <section
-            class="hero"
-            aria-label="Notícias em destaque"
-        >
+        <section class="hero" aria-label="Notícias em destaque">
 
             <div class="container hero-grid">
 
 
                 <article class="hero-main">
 
-                    <img
-                        src="/img/noticiasdeIA.jpg"
-                        alt="Representação visual de inteligência artificial"
-                    >
+                    <img src="/img/noticiasdeIA.jpg" alt="Representação visual de inteligência artificial">
 
                     <div class="hero-content">
 
@@ -2581,10 +2453,7 @@
 
                     <article class="side-highlight">
 
-                        <img
-                            src="/img/noticiadocelular.png"
-                            alt="Smartphone moderno"
-                        >
+                        <img src="/img/noticiadocelular.png" alt="Smartphone moderno">
 
                         <div class="side-highlight-content">
 
@@ -2603,10 +2472,7 @@
 
                     <article class="side-highlight">
 
-                        <img
-                            src="/img/gta6.png"
-                            alt="Controle de videogame"
-                        >
+                        <img src="/img/gta6.png" alt="Controle de videogame">
 
                         <div class="side-highlight-content">
 
@@ -2633,10 +2499,7 @@
              IA EM DESTAQUE
         ====================================================== -->
 
-        <section
-            class="ia-destaques"
-            id="ia"
-        >
+        <section class="ia-destaques" id="ia">
 
             <div class="container">
 
@@ -2658,11 +2521,7 @@
 
                     <article class="ia-card">
 
-                        <img
-                            src="/img/noticia-agentes-ia.jpg"
-                            alt="Agentes de inteligência artificial"
-                            loading="lazy"
-                        >
+                        <img src="/img/noticia-agentes-ia.jpg" alt="Agentes de inteligência artificial" loading="lazy">
 
                         <div class="ia-card-conteudo">
 
@@ -2685,11 +2544,8 @@
 
                     <article class="ia-card">
 
-                        <img
-                            src="/img/noticia-watermark-ia.jpg"
-                            alt="Conteúdo digital criado por inteligência artificial"
-                            loading="lazy"
-                        >
+                        <img src="/img/noticia-watermark-ia.jpg"
+                            alt="Conteúdo digital criado por inteligência artificial" loading="lazy">
 
                         <div class="ia-card-conteudo">
 
@@ -2712,11 +2568,8 @@
 
                     <article class="ia-card">
 
-                        <img
-                            src="/img/noticia-chip-ia.jpg"
-                            alt="Processador para inteligência artificial"
-                            loading="lazy"
-                        >
+                        <img src="/img/noticia-chip-ia.jpg" alt="Processador para inteligência artificial"
+                            loading="lazy">
 
                         <div class="ia-card-conteudo">
 
@@ -2747,10 +2600,7 @@
              ÚLTIMAS NOTÍCIAS
         ====================================================== -->
 
-        <section
-            class="section"
-            id="ultimas"
-        >
+        <section class="section" id="ultimas">
 
             <div class="container">
 
@@ -2772,27 +2622,17 @@
 
                     <div>
 
-                        <div
-                            class="lista-noticias"
-                            id="newsList"
-                        >
+                        <div class="lista-noticias" id="newsList">
 
 
                             <!-- NOTÍCIA 01 -->
 
-                            <article
-                                class="cartao-noticia"
-                                id="celulares"
-                                data-search="celular smartphone bateria tela câmera android iphone pixel google"
-                            >
+                            <article class="cartao-noticia" id="celulares"
+                                data-search="celular smartphone bateria tela câmera android iphone pixel google">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/recursoscelular.jpg"
-                                        alt="Pessoa usando smartphone"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/recursoscelular.jpg" alt="Pessoa usando smartphone" loading="lazy">
 
                                     <span class="tag">
                                         Celulares
@@ -2833,19 +2673,12 @@
 
                             <!-- NOTÍCIA 02 -->
 
-                            <article
-                                class="cartao-noticia"
-                                id="computacao"
-                                data-search="notebook computador processador memória trabalho estudo windows macos"
-                            >
+                            <article class="cartao-noticia" id="computacao"
+                                data-search="notebook computador processador memória trabalho estudo windows macos">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/notebookMelhores.png"
-                                        alt="Notebook sobre uma mesa"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/notebookMelhores.png" alt="Notebook sobre uma mesa" loading="lazy">
 
                                     <span class="tag blue">
                                         Computação
@@ -2886,18 +2719,13 @@
 
                             <!-- NOTÍCIA 03 -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="inteligência artificial ia imagens vídeos produtividade criatividade modelos generativos"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="inteligência artificial ia imagens vídeos produtividade criatividade modelos generativos">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/Ferramentasia.jpg"
-                                        alt="Representação de inteligência artificial"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/Ferramentasia.jpg" alt="Representação de inteligência artificial"
+                                        loading="lazy">
 
                                     <span class="tag orange">
                                         IA
@@ -2938,19 +2766,12 @@
 
                             <!-- NOTÍCIA 04 -->
 
-                            <article
-                                class="cartao-noticia"
-                                id="games"
-                                data-search="games jogos console controle desempenho gráficos jogadores pc playstation xbox"
-                            >
+                            <article class="cartao-noticia" id="games"
+                                data-search="games jogos console controle desempenho gráficos jogadores pc playstation xbox">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/COnfigPCnoticia.jpg"
-                                        alt="Computador para jogos"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/COnfigPCnoticia.jpg" alt="Computador para jogos" loading="lazy">
 
                                     <span class="tag green">
                                         Games
@@ -2991,18 +2812,12 @@
 
                             <!-- NOTÍCIA 05 -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="wifi internet roteador conexão rede casa sinal velocidade wi-fi"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="wifi internet roteador conexão rede casa sinal velocidade wi-fi">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/PRoblemaWifinoticia.jpg"
-                                        alt="Roteador de internet"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/PRoblemaWifinoticia.jpg" alt="Roteador de internet" loading="lazy">
 
                                     <span class="tag blue">
                                         Internet
@@ -3043,19 +2858,13 @@
 
                             <!-- NOTÍCIA 06 -->
 
-                            <article
-                                class="cartao-noticia"
-                                id="seguranca"
-                                data-search="segurança privacidade senha golpes aplicativos celular autenticação"
-                            >
+                            <article class="cartao-noticia" id="seguranca"
+                                data-search="segurança privacidade senha golpes aplicativos celular autenticação">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/Protecaodedados.png"
-                                        alt="Cadeado representando segurança digital"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/Protecaodedados.png" alt="Cadeado representando segurança digital"
+                                        loading="lazy">
 
                                     <span class="tag orange">
                                         Segurança
@@ -3096,18 +2905,13 @@
 
                             <!-- NOTÍCIA 07 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="anthropic ia inteligência artificial watermark marca d'água texto imagem c2pa"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="anthropic ia inteligência artificial watermark marca d'água texto imagem c2pa">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-anthropic-watermark.jpg"
-                                        alt="Inteligência artificial e marcação de conteúdo digital"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/noticia-anthropic-watermark.jpg"
+                                        alt="Inteligência artificial e marcação de conteúdo digital" loading="lazy">
 
                                     <span class="tag purple">
                                         IA
@@ -3120,7 +2924,8 @@
 
                                     <h3>
                                         <a href="#">
-                                            Sistemas de IA avançam na identificação de textos e imagens gerados por modelos
+                                            Sistemas de IA avançam na identificação de textos e imagens gerados por
+                                            modelos
                                         </a>
                                     </h3>
 
@@ -3148,18 +2953,14 @@
 
                             <!-- NOTÍCIA 08 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="microsoft copilot inteligência artificial aplicativo assistente produtividade"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="microsoft copilot inteligência artificial aplicativo assistente produtividade">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-microsoft-copilot.jpg"
+                                    <img src="/img/noticia-microsoft-copilot.jpg"
                                         alt="Computador representando assistente de inteligência artificial"
-                                        loading="lazy"
-                                    >
+                                        loading="lazy">
 
                                     <span class="tag blue">
                                         Microsoft
@@ -3200,18 +3001,13 @@
 
                             <!-- NOTÍCIA 09 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="carro caminhão autônomo inteligência artificial veículos tecnologia transporte"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="carro caminhão autônomo inteligência artificial veículos tecnologia transporte">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-caminhao-autonomo.jpg"
-                                        alt="Caminhão autônomo em uma rodovia"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/noticia-caminhao-autonomo.jpg" alt="Caminhão autônomo em uma rodovia"
+                                        loading="lazy">
 
                                     <span class="tag green">
                                         Mobilidade
@@ -3252,18 +3048,12 @@
 
                             <!-- NOTÍCIA 10 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="google pixel 11 smartphone inteligência artificial câmera celular tecnologia"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="google pixel 11 smartphone inteligência artificial câmera celular tecnologia">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-pixel-11.jpg"
-                                        alt="Smartphone moderno"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/noticia-pixel-11.jpg" alt="Smartphone moderno" loading="lazy">
 
                                     <span class="tag">
                                         Smartphones
@@ -3304,18 +3094,13 @@
 
                             <!-- NOTÍCIA 11 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="chip ia processador inteligência artificial microsoft maia hardware datacenter"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="chip ia processador inteligência artificial microsoft maia hardware datacenter">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-processador-ia.jpg"
-                                        alt="Processador de inteligência artificial"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/noticia-processador-ia.jpg"
+                                        alt="Processador de inteligência artificial" loading="lazy">
 
                                     <span class="tag red">
                                         Hardware
@@ -3356,18 +3141,13 @@
 
                             <!-- NOTÍCIA 12 - NOVA -->
 
-                            <article
-                                class="cartao-noticia"
-                                data-search="chatgpt gemini inteligência artificial usuários tecnologia google openai"
-                            >
+                            <article class="cartao-noticia"
+                                data-search="chatgpt gemini inteligência artificial usuários tecnologia google openai">
 
                                 <div class="imagem-noticia">
 
-                                    <img
-                                        src="/img/noticia-chatgpt-gemini.jpg"
-                                        alt="Aplicativos de inteligência artificial"
-                                        loading="lazy"
-                                    >
+                                    <img src="/img/noticia-chatgpt-gemini.jpg"
+                                        alt="Aplicativos de inteligência artificial" loading="lazy">
 
                                     <span class="tag orange">
                                         IA
@@ -3409,27 +3189,18 @@
                         </div>
 
 
-                        <div
-                            class="empty-result"
-                            id="emptyResult"
-                        >
+                        <div class="empty-result" id="emptyResult">
                             Nenhuma notícia encontrada para essa pesquisa.
                         </div>
 
 
-                        <div
-                            style="
+                        <div style="
                                 display:flex;
                                 justify-content:center;
                                 margin-top:24px;
-                            "
-                        >
+                            ">
 
-                            <button
-                                class="button outline"
-                                id="loadMoreButton"
-                                type="button"
-                            >
+                            <button class="button outline" id="loadMoreButton" type="button">
                                 Carregar mais notícias
                             </button>
 
@@ -3442,10 +3213,7 @@
                          BARRA LATERAL
                     ================================================== -->
 
-                    <aside
-                        class="barra-lateral"
-                        aria-label="Conteúdo complementar"
-                    >
+                    <aside class="barra-lateral" aria-label="Conteúdo complementar">
 
 
                         <!-- MAIS LIDAS -->
@@ -3505,10 +3273,7 @@
 
                         <!-- NEWSLETTER -->
 
-                        <section
-                            class="caixa-lateral newsletter-box"
-                            id="newsletter"
-                        >
+                        <section class="caixa-lateral newsletter-box" id="newsletter">
 
                             <h2 class="titulo-lateral">
                                 Newsletter TechNews
@@ -3519,17 +3284,9 @@
                                 IA, celulares e segurança diretamente no seu e-mail.
                             </p>
 
-                            <form
-                                class="newsletter-form"
-                                id="newsletterForm"
-                            >
+                            <form class="newsletter-form" id="newsletterForm">
 
-                                <input
-                                    id="emailNewsletter"
-                                    type="email"
-                                    placeholder="Seu melhor e-mail"
-                                    required
-                                >
+                                <input id="emailNewsletter" type="email" placeholder="Seu melhor e-mail" required>
 
                                 <button type="submit">
                                     Quero receber
@@ -3537,10 +3294,7 @@
 
                             </form>
 
-                            <p
-                                class="newsletter-message"
-                                id="newsletterMessage"
-                            ></p>
+                            <p class="newsletter-message" id="newsletterMessage"></p>
 
                         </section>
 
@@ -3612,10 +3366,7 @@
              REVIEWS
         ====================================================== -->
 
-        <section
-            class="reviews-section"
-            id="reviews"
-        >
+        <section class="reviews-section" id="reviews">
 
             <div class="container">
 
@@ -3639,11 +3390,7 @@
 
                         <div class="review-card-image">
 
-                            <img
-                                src="/img/noticiadosmarthphone.jpg"
-                                alt="Smartphone em destaque"
-                                loading="lazy"
-                            >
+                            <img src="/img/noticiadosmarthphone.jpg" alt="Smartphone em destaque" loading="lazy">
 
                             <span class="score">
                                 8,8
@@ -3683,11 +3430,7 @@
 
                         <div class="review-card-image">
 
-                            <img
-                                src="/img/noticiadoteclado.png"
-                                alt="Teclado mecânico iluminado"
-                                loading="lazy"
-                            >
+                            <img src="/img/noticiadoteclado.png" alt="Teclado mecânico iluminado" loading="lazy">
 
                             <span class="score">
                                 8,4
@@ -3727,11 +3470,7 @@
 
                         <div class="review-card-image">
 
-                            <img
-                                src="/img/review-notebook.jpg"
-                                alt="Notebook para trabalho"
-                                loading="lazy"
-                            >
+                            <img src="/img/review-notebook.jpg" alt="Notebook para trabalho" loading="lazy">
 
                             <span class="score">
                                 9,0
@@ -3777,10 +3516,7 @@
              GUIAS
         ====================================================== -->
 
-        <section
-            class="section"
-            id="guias"
-        >
+        <section class="section" id="guias">
 
             <div class="container">
 
@@ -3802,11 +3538,7 @@
 
                     <article class="guide-card">
 
-                        <img
-                            src="/img/guia-computador.jpg"
-                            alt="Computador exibindo código"
-                            loading="lazy"
-                        >
+                        <img src="/img/guia-computador.jpg" alt="Computador exibindo código" loading="lazy">
 
                         <div class="guide-card-content">
 
@@ -3825,11 +3557,7 @@
 
                     <article class="guide-card">
 
-                        <img
-                            src="/img/guia-seguranca.jpg"
-                            alt="Segurança digital"
-                            loading="lazy"
-                        >
+                        <img src="/img/guia-seguranca.jpg" alt="Segurança digital" loading="lazy">
 
                         <div class="guide-card-content">
 
@@ -3848,11 +3576,7 @@
 
                     <article class="guide-card">
 
-                        <img
-                            src="/img/guia-ia.jpg"
-                            alt="Inteligência artificial"
-                            loading="lazy"
-                        >
+                        <img src="/img/guia-ia.jpg" alt="Inteligência artificial" loading="lazy">
 
                         <div class="guide-card-content">
 
@@ -3871,11 +3595,7 @@
 
                     <article class="guide-card">
 
-                        <img
-                            src="/img/guia-celular.jpg"
-                            alt="Smartphone moderno"
-                            loading="lazy"
-                        >
+                        <img src="/img/guia-celular.jpg" alt="Smartphone moderno" loading="lazy">
 
                         <div class="guide-card-content">
 
@@ -3921,10 +3641,7 @@
 
                     </div>
 
-                    <a
-                        class="button"
-                        href="#newsletter"
-                    >
+                    <a class="button" href="#newsletter">
                         Receber novidades
                     </a>
 
@@ -3948,17 +3665,11 @@
 
             <div class="footer-about">
 
-                <a
-                    class="logo"
-                    href="#inicio"
-                >
+                <a class="logo" href="#inicio">
 
                     <span class="logo-symbol">
 
-                        <img
-                            src="/img/logosite.png"
-                            alt="Logo TechNews"
-                        >
+                        <img src="/img/logosite.png" alt="Logo TechNews">
 
                     </span>
 
@@ -3977,31 +3688,19 @@
 
                 <div class="social-links">
 
-                    <a
-                        href="#"
-                        aria-label="Instagram"
-                    >
+                    <a href="#" aria-label="Instagram">
                         IG
                     </a>
 
-                    <a
-                        href="#"
-                        aria-label="YouTube"
-                    >
+                    <a href="#" aria-label="YouTube">
                         YT
                     </a>
 
-                    <a
-                        href="#"
-                        aria-label="X"
-                    >
+                    <a href="#" aria-label="X">
                         X
                     </a>
 
-                    <a
-                        href="#"
-                        aria-label="Facebook"
-                    >
+                    <a href="#" aria-label="Facebook">
                         FB
                     </a>
 
@@ -4142,13 +3841,7 @@
          BOTÃO VOLTAR AO TOPO
     ========================================================== -->
 
-    <button
-        class="back-to-top"
-        id="backToTop"
-        type="button"
-        aria-label="Voltar ao topo"
-        title="Voltar ao topo"
-    >
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">
         ↑
     </button>
 
@@ -4279,7 +3972,7 @@
                                 " " +
                                 noticia.dataset.search
                             )
-                            .toLowerCase();
+                                .toLowerCase();
 
                         const corresponde =
                             termo === "" ||
