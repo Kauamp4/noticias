@@ -21,7 +21,7 @@
             --surface-soft: #f2f3f8;
             --surface-hover: #eceef5;
 
-            --text: #20232b;
+            --text: #1f2023;
             --text-soft: #555b68;
             --text-muted: #858999;
 
@@ -1006,19 +1006,11 @@
         .ia-destaques {
             padding: 30px 0;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #07131b,
-                    #111827,
-                    #101020
-                );
-
-            color: #ffffff;
+           
         }
 
         .ia-destaques .section-heading h2 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .ia-destaques .section-heading h2::before {
@@ -1043,7 +1035,7 @@
 
             border-radius: var(--radius-md);
 
-            background: #111827;
+            background: #0b5535;
 
             box-shadow: var(--shadow-md);
         }
@@ -1068,8 +1060,8 @@
             background:
                 linear-gradient(
                     to top,
-                    rgba(0, 0, 0, .95),
-                    rgba(0, 0, 0, .12)
+                    rgba(231, 231, 231, 0.201),
+                    rgba(40, 40, 40, 0)
                 );
 
             content: "";
@@ -1098,7 +1090,7 @@
         .ia-card-conteudo p {
             margin-bottom: 0;
 
-            color: rgba(255,255,255,.72);
+            color: rgb(255, 255, 255);
 
             font-size: .82rem;
         }
