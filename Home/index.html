@@ -111,20 +111,18 @@
             display: none !important
         }
 
-        /* CORREÇÃO DOS MODOS DE DALTONISMO */
-        body.daltonismo-protanopia> :not(svg) {
+        body.daltonismo-protanopia>:not(svg) {
             filter: url("#protanopia")
         }
 
-        body.daltonismo-deuteranopia> :not(svg) {
+        body.daltonismo-deuteranopia>:not(svg) {
             filter: url("#deuteranopia")
         }
 
-        body.daltonismo-tritanopia> :not(svg) {
+        body.daltonismo-tritanopia>:not(svg) {
             filter: url("#tritanopia")
         }
 
-        /* Indicador visual do modo de daltonismo */
         .submenu-acessibilidade button.ativo {
             background: rgba(0, 217, 255, .28);
             color: #fff;
@@ -1379,7 +1377,7 @@
         .inovacao-destaque .imagem {
             min-height: 330px;
             overflow: hidden;
-            background: #071018;
+            background: #071018
         }
 
         .inovacao-destaque .imagem img {
@@ -1388,11 +1386,11 @@
             min-height: 330px;
             object-fit: cover;
             display: block;
-            transition: transform .6s ease;
+            transition: transform .6s ease
         }
 
         .inovacao-destaque:hover .imagem img {
-            transform: scale(1.05);
+            transform: scale(1.05)
         }
 
         .inovacao-destaque:hover .imagem i {
@@ -1964,66 +1962,33 @@
                 <div class="menu-hamburguer">
                     <button class="hamburguer" id="btnMenu" type="button" aria-label="Abrir menu de acessibilidade"
                         aria-expanded="false" aria-controls="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span></span><span></span><span></span>
                     </button>
-
                     <ul class="menu" id="menu" aria-hidden="true">
-                        <li class="menu-titulo">
-                            <i class="fa-solid fa-universal-access"></i>
-                            <span>Acessibilidade</span>
+                        <li class="menu-titulo"><i class="fa-solid fa-universal-access"></i><span>Acessibilidade</span>
                         </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDarkMenu" type="button">
-                                <i class="fa-solid fa-moon"></i>
-                                <span>Modo Escuro</span>
-                                <span class="status" id="statusDark">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnAumentarTexto" type="button">
-                                <i class="fa-solid fa-font"></i>
-                                <span>Aumentar texto</span>
-                                <span class="status">A+</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDiminuirTexto" type="button">
-                                <i class="fa-solid fa-font"></i>
-                                <span>Diminuir texto</span>
-                                <span class="status">A−</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDestacarLinks" type="button">
-                                <i class="fa-solid fa-link"></i>
-                                <span>Destacar links</span>
-                                <span class="status" id="statusLinks">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnModoLeitura" type="button">
-                                <i class="fa-solid fa-book-open"></i>
-                                <span>Modo de leitura</span>
-                                <span class="status" id="statusLeitura">OFF</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnAtalhos" type="button">
-                                <i class="fa-solid fa-keyboard"></i>
-                                <span>Atalhos de teclado</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-opcao" id="btnDaltonismo" type="button" aria-expanded="false"
-                                aria-controls="submenuDaltonismo">
-                                <i class="fa-solid fa-palette"></i>
-                                <span>Daltonismo</span>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </li>
+                        <li><button class="menu-opcao" id="btnDarkMenu" type="button"><i
+                                    class="fa-solid fa-moon"></i><span>Modo Escuro</span><span class="status"
+                                    id="statusDark">OFF</span></button></li>
+                        <li><button class="menu-opcao" id="btnAumentarTexto" type="button"><i
+                                    class="fa-solid fa-font"></i><span>Aumentar texto</span><span
+                                    class="status">A+</span></button></li>
+                        <li><button class="menu-opcao" id="btnDiminuirTexto" type="button"><i
+                                    class="fa-solid fa-font"></i><span>Diminuir texto</span><span
+                                    class="status">A−</span></button></li>
+                        <li><button class="menu-opcao" id="btnDestacarLinks" type="button"><i
+                                    class="fa-solid fa-link"></i><span>Destacar links</span><span class="status"
+                                    id="statusLinks">OFF</span></button></li>
+                        <li><button class="menu-opcao" id="btnModoLeitura" type="button"><i
+                                    class="fa-solid fa-book-open"></i><span>Modo de leitura</span><span class="status"
+                                    id="statusLeitura">OFF</span></button></li>
+                        <li><button class="menu-opcao" id="btnAtalhos" type="button"><i
+                                    class="fa-solid fa-keyboard"></i><span>Atalhos de teclado</span><i
+                                    class="fa-solid fa-chevron-right"></i></button></li>
+                        <li><button class="menu-opcao" id="btnDaltonismo" type="button" aria-expanded="false"
+                                aria-controls="submenuDaltonismo"><i
+                                    class="fa-solid fa-palette"></i><span>Daltonismo</span><i
+                                    class="fa-solid fa-chevron-right"></i></button></li>
                         <li>
                             <div class="submenu-acessibilidade" id="submenuDaltonismo">
                                 <button type="button" data-daltonismo="normal">Normal</button>
@@ -2035,11 +2000,8 @@
                         <li>
                             <div class="menu-separador"></div>
                         </li>
-                        <li>
-                            <button class="menu-opcao menu-restaurar" id="btnRestaurar" type="button">
-                                <i class="fa-solid fa-rotate-left"></i>
-                                <span>Restaurar configurações</span>
-                            </button>
+                        <li><button class="menu-opcao menu-restaurar" id="btnRestaurar" type="button"><i
+                                    class="fa-solid fa-rotate-left"></i><span>Restaurar configurações</span></button>
                         </li>
                     </ul>
                 </div>
@@ -2047,30 +2009,22 @@
                 <div class="buscar-topo">
                     <label class="sr-only" for="campoBusca">Buscar notícias</label>
                     <input id="campoBusca" type="search" placeholder="Buscar notícias..." autocomplete="off">
-                    <button class="limpar-busca" id="limparBusca" type="button" aria-label="Limpar busca">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
+                    <button class="limpar-busca" id="limparBusca" type="button" aria-label="Limpar busca"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
             <a href="index.html" class="logo" aria-label="TechNews - Ir para a página inicial">Tech<span>News</span></a>
-            <a href="/login.html" class="login">
-                <i class="fa-solid fa-user"></i>
-                <span>ENTRAR</span>
-            </a>
+            <a href="/login.html" class="login"><i class="fa-solid fa-user"></i><span>ENTRAR</span></a>
         </div>
     </header>
 
     <div class="modal-overlay" id="modalAtalhos" role="dialog" aria-modal="true" aria-labelledby="tituloAtalhos">
         <div class="modal-atalhos">
             <div class="modal-cabecalho">
-                <h2 id="tituloAtalhos">
-                    <i class="fa-solid fa-keyboard"></i>
-                    Atalhos de teclado
-                </h2>
-                <button class="fechar-modal" id="fecharModal" type="button" aria-label="Fechar atalhos">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+                <h2 id="tituloAtalhos"><i class="fa-solid fa-keyboard"></i>Atalhos de teclado</h2>
+                <button class="fechar-modal" id="fecharModal" type="button" aria-label="Fechar atalhos"><i
+                        class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="atalhos-lista">
                 <div class="atalho-item"><span>Ir para a Home</span><kbd>Alt + H</kbd></div>
@@ -2208,358 +2162,226 @@
         <section class="secao" id="inovacoes">
             <div class="secao-header">
                 <h2>Grandes inovações</h2>
-                <a href="#" class="ver-todas">
-                    Explorar inovação <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <a href="#" class="ver-todas">Explorar inovação <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
             <article class="inovacao-destaque" data-category="inovacao ia robotica"
                 data-search="Google Gemini Robotics inteligência artificial robôs inovação">
-
                 <div class="imagem">
                     <img src="https://techcrunch.com/wp-content/uploads/2026/07/gritt-machine-3.jpg?resize=1097,617"
                         alt="Robô humanoide representando o avanço da inteligência artificial e da robótica"
                         loading="lazy">
                 </div>
-
                 <div class="inovacao-conteudo">
                     <span class="tag">Tim Fernholz 21 de julho de 2026</span>
-
-                    <h3>
-                        Robôs passam a ser usados para construir usinas solares
-                    </h3>
-
-                    <p>
-                        A startup Gritt desenvolve robôs capazes de ajudar na construção de instalações solares. A
+                    <h3>Robôs passam a ser usados para construir usinas solares</h3>
+                    <p>A startup Gritt desenvolve robôs capazes de ajudar na construção de instalações solares. A
                         tecnologia utiliza avanços recentes de IA para permitir que máquinas trabalhem em ambientes
-                        menos estruturados, onde robôs industriais tradicionais têm dificuldades.
-                    </p>
+                        menos estruturados, onde robôs industriais tradicionais têm dificuldades.</p>
                 </div>
             </article>
 
             <div class="grid-noticias">
-
                 <article class="card-noticia" data-category="inovacao ia"
                     data-search="Google Gemini Robotics robôs inteligência artificial">
-
                     <div class="card-imagem">
                         <img src="https://www.reuters.com/resizer/v2/WZOWPMVYVBKS7NCFFEJIMAI6UI.jpg?auth=df537fd6747851fa4c05861cf5c5da2f2bfe6e7c666e93efcb6a04808855ec73&width=640&quality=80"
                             alt="Robô humanoide utilizando inteligência artificial" loading="lazy">
                         <span class="card-tag">Energia</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Kyu-Seok Shim • 12 de agosto de 2026</p>
-
-                        <h3>
-                            Coreia do Sul cria plano para tecnologias do futuro
-                        </h3>
-
-                        <p class="resumo">
-                            A Coreia do Sul anunciou sete áreas estratégicas, incluindo reatores nucleares modulares,
-                            energia de fusão e etc...
-                        </p>
+                        <h3>Coreia do Sul cria plano para tecnologias do futuro</h3>
+                        <p class="resumo">A Coreia do Sul anunciou sete áreas estratégicas, incluindo reatores nucleares
+                            modulares, energia de fusão e etc...</p>
                     </div>
                 </article>
 
                 <article class="card-noticia" data-category="inovacao hardware"
                     data-search="computação quântica processador quântico tecnologia">
-
                     <div class="card-imagem">
                         <img src="https://www.reuters.com/resizer/v2/QMUII4EWGJO5HFQFJQCHQKHN2M.jpg?auth=892e8ca773725695d3f3fb1a5d44ce3d646b3e2e021cbd9d4d2ac3044a267392&width=640&quality=80"
                             alt="Representação de computador quântico" loading="lazy">
                         <span class="card-tag">Hardware</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Reuters • 10 de agosto de 2026</p>
-
-                        <h3>
-                            Microsoft prepara novo chip especializado em IA
-                        </h3>
-
-                        <p class="resumo">
-                            A Microsoft planeja apresentar o Maia 300, sua próxima geração de chips próprios para
-                            inteligência artificial.
-                        </p>
+                        <h3>Microsoft prepara novo chip especializado em IA</h3>
+                        <p class="resumo">A Microsoft planeja apresentar o Maia 300, sua próxima geração de chips
+                            próprios para inteligência artificial.</p>
                     </div>
                 </article>
 
                 <article class="card-noticia" data-category="inovacao energia"
                     data-search="energia nuclear fusão energia limpa tecnologia">
-
                     <div class="card-imagem">
                         <img src="https://content-media.investing.com/news/moved_LYNXMPEL660HL_L.jpg"
                             alt="Infraestrutura de energia representando novas tecnologias energéticas" loading="lazy">
                         <span class="card-tag">Infraestrutura de IA</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Reuters • 11 de agosto de 2026</p>
-
-                        <h3>
-                            CoreWeave aumenta investimentos em infraestrutura de IA
-                        </h3>
-
-                        <p class="resumo">
-                            O crescimento da procura por computação para IA levou a CoreWeave a aumentar sua previsão de
-                            investimentos para 2026.
-                        </p>
+                        <h3>CoreWeave aumenta investimentos em infraestrutura de IA</h3>
+                        <p class="resumo">O crescimento da procura por computação para IA levou a CoreWeave a aumentar
+                            sua previsão de investimentos para 2026.</p>
                     </div>
                 </article>
 
                 <article class="card-noticia" data-category="inovacao espaco"
                     data-search="lua espaço satélite tecnologia inteligência artificial">
-
                     <div class="card-imagem">
                         <img src="https://s2-valor.glbimg.com/hDeo6diCEKWrrgvpvD5xEDk5S6k=/0x0:3780x2256/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2026/U/E/sR9JnQSly9PuYkdwRvfQ/1157cf292d275015f90e6a706700eb2cjpg.jpg"
                             alt="Terra vista do espaço" loading="lazy">
                         <span class="card-tag">Computação quântica</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Reuters • 11 de agosto de 2026</p>
-
-                        <h3>
-                            Computação quântica chega à nuvem da Oracle
-                        </h3>
-
-                        <p class="resumo">
-                            Oracle e Quantinuum fecharam uma parceria para disponibilizar computação quântica através da
-                            infraestrutura Oracle Cloud.
-                        </p>
+                        <h3>Computação quântica chega à nuvem da Oracle</h3>
+                        <p class="resumo">Oracle e Quantinuum fecharam uma parceria para disponibilizar computação
+                            quântica através da infraestrutura Oracle Cloud.</p>
                     </div>
                 </article>
-
             </div>
         </section>
+
         <section class="secao" id="ia">
             <div class="secao-header">
                 <h2>Inteligência Artificial</h2>
-
-                <a href="#" class="ver-todas">
-                    Mais sobre IA <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <a href="#" class="ver-todas">Mais sobre IA <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
             <div class="grid-noticias">
-
                 <article class="card-noticia" data-category="ia"
                     data-search="Google Gemini inteligência artificial usuários agentes">
-
                     <div class="card-imagem">
                         <img src="https://www.reuters.com/resizer/v2/C5I5IXWCIBICDJ3W6HQSD5PPWE.jpg?auth=342cdb33ed5e7f062d986960884efa77a9628d23de9d404930835c9fb2565e5f&width=640&quality=80"
                             alt="Inteligência artificial representada por uma rede digital" loading="lazy">
-
                         <span class="card-tag">generativa e tecnologia empresarial</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Reuters • 17 de agosto de 2026</p>
-
-                        <h3>
-                            Anthropic supera US$ 65 bilhões em receita anualizada
-                        </h3>
-
-                        <p class="resumo">
-                            A receita anualizada da Anthropic teria ultrapassado US$ 65 bilhões no final de julho. O
-                            crescimento do criador do Claude mostra a forte expansão...
-                        </p>
+                        <h3>Anthropic supera US$ 65 bilhões em receita anualizada</h3>
+                        <p class="resumo">A receita anualizada da Anthropic teria ultrapassado US$ 65 bilhões no final
+                            de julho. O crescimento do criador do Claude mostra a forte expansão...</p>
                     </div>
                 </article>
-
 
                 <article class="card-noticia" data-category="ia hardware"
                     data-search="Brasil supercomputadores inteligência artificial chips data center">
-
                     <div class="card-imagem">
                         <img src="https://i0.wp.com/tapipocando.com.br/wp-content/uploads/2026/08/Wispr-levanta-US280-milhoes-e-mira-alem-da-ditacao-featured.jpg?resize=696%2C416&ssl=1"
                             alt="Data center com servidores de alta capacidade" loading="lazy">
-
                         <span class="card-tag">(IA) de voz e reconhecimento de fala.</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Ivan Mehta • 17 de agosto de 2026</p>
-
-                        <h3>
-                            Wispr levanta US$ 280 milhões para expandir sua IA de voz </h3>
-
-                        <p class="resumo">
-                            A startup Wispr, especializada em ditado por IA, levantou US$ 280 milhões e alcançou
-                            avaliação de US$ 2 bilhões.
-                        </p>
+                        <h3>Wispr levanta US$ 280 milhões para expandir sua IA de voz</h3>
+                        <p class="resumo">A startup Wispr, especializada em ditado por IA, levantou US$ 280 milhões e
+                            alcançou avaliação de US$ 2 bilhões.</p>
                     </div>
                 </article>
-
 
                 <article class="card-noticia" data-category="ia robotica"
                     data-search="Gemini Robotics robôs IA inteligência artificial">
-
                     <div class="card-imagem">
                         <img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2024/04/openai-gpt-5-logo-on-smartphone-screen.jpg"
                             alt="Robô humanoide em ambiente tecnológico" loading="lazy">
-
                         <span class="card-tag">IA generativa</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">OpenAI • 9 de Julho de 2026</p>
-
-                        <h3>
-                            GPT-5.6: inteligência de fronteira que acompanha a sua ambição
-                        </h3>
-
-                        <p class="resumo">
-                            A OpenAI lançou a família GPT-5.6, formada pelos modelos Sol, Terra e Luna. A nova geração
-                            foi desenvolvida para melhorar tarefas...
-                        </p>
+                        <h3>GPT-5.6: inteligência de fronteira que acompanha a sua ambição</h3>
+                        <p class="resumo">A OpenAI lançou a família GPT-5.6, formada pelos modelos Sol, Terra e Luna. A
+                            nova geração foi desenvolvida para melhorar tarefas...</p>
                     </div>
                 </article>
-
 
                 <article class="card-noticia" data-category="ia security"
                     data-search="IA segurança cibernética golpes hackers inteligência artificial">
-
                     <div class="card-imagem">
                         <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=90"
                             alt="Segurança cibernética e proteção de dados" loading="lazy">
-
                         <span class="card-tag">Cibersegurança</span>
                     </div>
-
                     <div class="card-corpo">
                         <p class="card-meta">Financial Times • 18 de Agosto de 2026</p>
-
-                        <h3>
-                            Agentes de IA e cibersegurança </h3>
-
-                        <p class="resumo">
-                            Empresas estão utilizando inteligência artificial para detectar
-                            ameaças, analisar comportamentos e responder a ataques.
-                        </p>
+                        <h3>Agentes de IA e cibersegurança</h3>
+                        <p class="resumo">Empresas estão utilizando inteligência artificial para detectar ameaças,
+                            analisar comportamentos e responder a ataques.</p>
                     </div>
                 </article>
-
             </div>
         </section>
-        <section class="secao" id="todas">
 
+        <section class="secao" id="todas">
             <div class="secao-header">
                 <h2>Últimas notícias</h2>
             </div>
 
             <div class="duas-colunas">
-
                 <div class="lista-noticias">
-
                     <article class="noticia-horizontal" data-category="mobile"
                         data-search="Google Pixel 11 smartphone celular IA mobile">
-
                         <img src="https://carroemotos.com.br/wp-content/uploads/2025/11/cao-robo-768x575.jpg"
                             alt="Smartphone moderno" loading="lazy">
-
                         <div>
                             <p class="meta">Reuters • 18 de Agosto de 2026</p>
-
-                            <h3>
-                                Cães-robôs
-                            </h3>
-
-                            <p>
-                                Uma investigação da Reuters mostra como pesquisas financiadas pelo governo dos Estados
+                            <h3>Cães-robôs</h3>
+                            <p>Uma investigação da Reuters mostra como pesquisas financiadas pelo governo dos Estados
                                 Unidos contribuíram para tecnologias utilizadas posteriormente pela empresa chinesa
-                                Unitree em seus robôs quadrúpedes.
-                            </p>
+                                Unitree em seus robôs quadrúpedes.</p>
                         </div>
                     </article>
-
 
                     <article class="noticia-horizontal" data-category="ia"
                         data-search="China Kimi K3 inteligência artificial IA modelos abertos">
-
                         <img src="https://cdn.mos.cms.futurecdn.net/oKL6AAKzCE6tNmSqKv7ZoM-650-80.jpg.webp"
                             alt="Representação de inteligência artificial" loading="lazy">
-
                         <div>
                             <p class="meta">TechRadar • 16 de Agosto de 2026</p>
-
-                            <h3>
-                                Pele eletrônica para robôs
-                            </h3>
-
-                            <p>
-                                A empresa Touchlab está desenvolvendo uma espécie de “pele eletrônica” para robôs. A
+                            <h3>Pele eletrônica para robôs</h3>
+                            <p>A empresa Touchlab está desenvolvendo uma espécie de “pele eletrônica” para robôs. A
                                 tecnologia utiliza sensores capazes de detectar pressão, força e deslizamento,
                                 permitindo que robôs manipulem objetos com mais precisão. A solução pode ser aplicada em
-                                robôs industriais, domésticos e da área da saúde.
-                            </p>
+                                robôs industriais, domésticos e da área da saúde.</p>
                         </div>
                     </article>
-
 
                     <article class="noticia-horizontal" data-category="games"
                         data-search="games videogames IA gráficos inteligência artificial jogos">
-
                         <img src="https://www.reuters.com/resizer/v2/NPPBMK4LURK3TOHTWWCZAFJHQ4.jpg?auth=6b8617dee83051a91de1d7d9214546b8ce13288dc7e2243308701d15cde14730&width=640&quality=80"
                             alt="Controle de videogame" loading="lazy">
-
                         <div>
                             <p class="meta">Reuters • 18 de agosto de 2026</p>
-
-                            <h3>
-                                Xiaomi aposta em carros elétricos para crescer
-                            </h3>
-
-                            <p>
-                                A Xiaomi informou que a pressão sobre seu negócio de smartphones deve diminuir, enquanto
+                            <h3>Xiaomi aposta em carros elétricos para crescer</h3>
+                            <p>A Xiaomi informou que a pressão sobre seu negócio de smartphones deve diminuir, enquanto
                                 sua divisão de carros elétricos ganha importância e passa a representar uma parcela
-                                maior das receitas da empresa.
-                            </p>
+                                maior das receitas da empresa.</p>
                         </div>
                     </article>
-
 
                     <article class="noticia-horizontal" data-category="hardware"
                         data-search="chips Nvidia processadores IA hardware data centers">
-
                         <img src="https://www.reuters.com/resizer/v2/JXEPMUA5RVPY7BGDIUL5FVGFCI.jpg?auth=ad725e19951cc73aa7684e3088102cc6e233a45463c7aefadd8b1b37f82beaba&width=960&quality=80"
                             alt="Componentes e chips de computador" loading="lazy">
-
                         <div>
                             <p class="meta">Reuters • 18 de agosto de 2026</p>
-
-                            <h3>
-                                ChatGPT para adolescentes
-                            </h3>
-
-                            <p>
-                                A iniciativa busca tornar o uso de ferramentas de IA mais adequado e seguro para
-                                usuários mais jovens.
-                            </p>
+                            <h3>ChatGPT para adolescentes</h3>
+                            <p>A iniciativa busca tornar o uso de ferramentas de IA mais adequado e seguro para usuários
+                                mais jovens.</p>
                         </div>
                     </article>
-
                 </div>
 
-
                 <aside class="sidebar">
-
-                    <h3>
-                        <i class="fa-solid fa-fire"></i>
-                        Em alta
-                    </h3>
-
+                    <h3><i class="fa-solid fa-fire"></i>Em alta</h3>
                     <div class="ranking">
-
                         <div class="ranking-item">
                             <div class="numero">01</div>
                             <div>
-                                <h4>Gemini ultrapassa 1 bilhão de usuários mensais</h4>
-                                <span>IA</span>
+                                <h4>Gemini ultrapassa 1 bilhão de usuários mensais</h4><span>IA</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">02</div>
                             <div>
@@ -2567,31 +2389,25 @@
                                 <span>Infraestrutura</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">03</div>
                             <div>
-                                <h4>Robôs ganham novas capacidades com inteligência artificial</h4>
-                                <span>Robótica</span>
+                                <h4>Robôs ganham novas capacidades com inteligência artificial</h4><span>Robótica</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">04</div>
                             <div>
-                                <h4>Novos modelos chineses aumentam a competição na IA</h4>
-                                <span>Inteligência Artificial</span>
+                                <h4>Novos modelos chineses aumentam a competição na IA</h4><span>Inteligência
+                                    Artificial</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">05</div>
                             <div>
-                                <h4>Novos smartphones levam mais IA para o dispositivo</h4>
-                                <span>Mobile</span>
+                                <h4>Novos smartphones levam mais IA para o dispositivo</h4><span>Mobile</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">06</div>
                             <div>
@@ -2599,15 +2415,13 @@
                                 <span>Hardware</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">07</div>
                             <div>
-                                <h4>Computação quântica avança com novos processadores</h4>
-                                <span>Computação quântica</span>
+                                <h4>Computação quântica avança com novos processadores</h4><span>Computação
+                                    quântica</span>
                             </div>
                         </div>
-
                         <div class="ranking-item">
                             <div class="numero">08</div>
                             <div>
@@ -2615,14 +2429,10 @@
                                 <span>Mobilidade</span>
                             </div>
                         </div>
-
                     </div>
-
                 </aside>
-
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -2705,28 +2515,13 @@
         const cards = Array.from(document.querySelectorAll("[data-category]"));
         const newsletterForm = document.getElementById("newsletterForm");
 
-        const CLASSES_DALTONISMO = [
-            "daltonismo-protanopia",
-            "daltonismo-deuteranopia",
-            "daltonismo-tritanopia"
-        ];
-
-        const TIPOS_DALTONISMO = [
-            "normal",
-            "protanopia",
-            "deuteranopia",
-            "tritanopia"
-        ];
-
+        const CLASSES_DALTONISMO = ["daltonismo-protanopia", "daltonismo-deuteranopia", "daltonismo-tritanopia"];
+        const TIPOS_DALTONISMO = ["normal", "protanopia", "deuteranopia", "tritanopia"];
         const NIVEIS_TEXTO = [85, 100, 120, 140, 160];
         let nivelTexto = 100;
 
         function normalizarTexto(texto) {
-            return String(texto || "")
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .trim();
+            return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
         }
 
         function classeTexto() {
@@ -2735,8 +2530,7 @@
 
         function aplicarNivelTexto(nivel) {
             nivel = Math.max(85, Math.min(160, nivel));
-            nivel = NIVEIS_TEXTO.reduce((maisProximo, valor) =>
-                Math.abs(valor - nivel) < Math.abs(maisProximo - nivel) ? valor : maisProximo, 100);
+            nivel = NIVEIS_TEXTO.reduce((maisProximo, valor) => Math.abs(valor - nivel) < Math.abs(maisProximo - nivel) ? valor : maisProximo, 100);
             nivelTexto = nivel;
             body.classList.remove("texto-85", "texto-100", "texto-120", "texto-140", "texto-160");
             body.classList.add(classeTexto());
@@ -2781,15 +2575,11 @@
         }
 
         function aplicarDaltonismo(tipo, salvar = true) {
-            if (!TIPOS_DALTONISMO.includes(tipo)) {
-                tipo = "normal";
-            }
+            if (!TIPOS_DALTONISMO.includes(tipo)) tipo = "normal";
 
             body.classList.remove(...CLASSES_DALTONISMO);
 
-            if (tipo !== "normal") {
-                body.classList.add(`daltonismo-${tipo}`);
-            }
+            if (tipo !== "normal") body.classList.add(`daltonismo-${tipo}`);
 
             submenuDaltonismo.querySelectorAll("button").forEach(botao => {
                 const ativo = botao.dataset.daltonismo === tipo;
@@ -2797,14 +2587,13 @@
                 botao.setAttribute("aria-pressed", String(ativo));
             });
 
-            if (salvar) {
-                salvarConfiguracoes();
-            }
+            if (salvar) salvarConfiguracoes();
         }
 
         function carregarConfiguracoes() {
             try {
                 const armazenamento = localStorage.getItem("techNewsAcessibilidade");
+
                 if (!armazenamento) {
                     aplicarNivelTexto(100);
                     aplicarDaltonismo("normal", false);
@@ -2832,10 +2621,8 @@
 
         function abrirMenu() {
             const aberto = !menu.classList.contains("ativo");
-
             menu.classList.toggle("ativo", aberto);
             btnMenu.classList.toggle("ativo", aberto);
-
             btnMenu.setAttribute("aria-expanded", String(aberto));
             btnMenu.setAttribute("aria-label", aberto ? "Fechar menu de acessibilidade" : "Abrir menu de acessibilidade");
             menu.setAttribute("aria-hidden", String(!aberto));
@@ -2854,27 +2641,17 @@
             let encontrados = 0;
 
             cards.forEach(card => {
-                const texto = normalizarTexto([
-                    card.innerText,
-                    card.dataset.search,
-                    card.dataset.category
-                ].join(" "));
-
+                const texto = normalizarTexto([card.innerText, card.dataset.search, card.dataset.category].join(" "));
                 const corresponde = termo === "" || texto.includes(termo);
                 card.classList.toggle("oculto", !corresponde);
-
-                if (corresponde) {
-                    encontrados++;
-                }
+                if (corresponde) encontrados++;
             });
 
             limparBusca.classList.toggle("visivel", termo.length > 0);
 
             if (termo !== "") {
                 resultadoBusca.classList.add("visivel");
-                resultadoBusca.innerHTML = encontrados === 0
-                    ? `<strong>Nenhuma notícia encontrada.</strong><br>Tente buscar por <strong>IA</strong>, <strong>hardware</strong>, <strong>games</strong>, <strong>mobile</strong> ou <strong>segurança</strong>.`
-                    : `${encontrados} conteúdo(s) encontrado(s) para "${campoBusca.value}".`;
+                resultadoBusca.innerHTML = encontrados === 0 ? `<strong>Nenhuma notícia encontrada.</strong><br>Tente buscar por <strong>IA</strong>, <strong>hardware</strong>, <strong>games</strong>, <strong>mobile</strong> ou <strong>segurança</strong>.` : `${encontrados} conteúdo(s) encontrado(s) para "${campoBusca.value}".`;
             } else {
                 resultadoBusca.classList.remove("visivel");
                 resultadoBusca.textContent = "";
@@ -2883,18 +2660,14 @@
 
         function aumentarTexto() {
             const indice = NIVEIS_TEXTO.indexOf(nivelTexto);
-            if (indice < NIVEIS_TEXTO.length - 1) {
-                aplicarNivelTexto(NIVEIS_TEXTO[indice + 1]);
-            }
+            if (indice < NIVEIS_TEXTO.length - 1) aplicarNivelTexto(NIVEIS_TEXTO[indice + 1]);
             atualizarStatus();
             salvarConfiguracoes();
         }
 
         function diminuirTexto() {
             const indice = NIVEIS_TEXTO.indexOf(nivelTexto);
-            if (indice > 0) {
-                aplicarNivelTexto(NIVEIS_TEXTO[indice - 1]);
-            }
+            if (indice > 0) aplicarNivelTexto(NIVEIS_TEXTO[indice - 1]);
             atualizarStatus();
             salvarConfiguracoes();
         }
@@ -2928,9 +2701,7 @@
         menu.addEventListener("click", event => event.stopPropagation());
 
         document.addEventListener("click", event => {
-            if (!menu.contains(event.target) && !btnMenu.contains(event.target)) {
-                fecharMenu();
-            }
+            if (!menu.contains(event.target) && !btnMenu.contains(event.target)) fecharMenu();
         });
 
         btnDarkMenu.addEventListener("click", () => {
@@ -2972,18 +2743,13 @@
         fecharModal.addEventListener("click", fecharAtalhos);
 
         modalAtalhos.addEventListener("click", event => {
-            if (event.target === modalAtalhos) {
-                fecharAtalhos();
-            }
+            if (event.target === modalAtalhos) fecharAtalhos();
         });
 
         document.addEventListener("keydown", event => {
             if (event.key === "Escape") {
                 fecharMenu();
-
-                if (modalAtalhos.classList.contains("ativo")) {
-                    fecharAtalhos();
-                }
+                if (modalAtalhos.classList.contains("ativo")) fecharAtalhos();
             }
 
             if (event.altKey && !event.ctrlKey && !event.shiftKey) {
@@ -3038,18 +2804,15 @@
             });
         });
 
-        newsletterForm.addEventListener("submit", event => {
-            event.preventDefault();
-
-            const email = newsletterForm.querySelector("input").value.trim();
-
-            if (!email) {
-                return;
-            }
-
-            alert("Cadastro realizado com sucesso!");
-            newsletterForm.reset();
-        });
+        if (newsletterForm) {
+            newsletterForm.addEventListener("submit", event => {
+                event.preventDefault();
+                const email = newsletterForm.querySelector("input").value.trim();
+                if (!email) return;
+                alert("Cadastro realizado com sucesso!");
+                newsletterForm.reset();
+            });
+        }
 
         carregarConfiguracoes();
         realizarBusca();
