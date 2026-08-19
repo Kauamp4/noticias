@@ -4,116 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="/css/cadastrar.css">
     <title>TechNews - Cadastro</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
     <div class="login">
-        <form id="formCadastro">
+        <div class="card">
+
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
             <h1>Crie sua conta</h1>
 
-            <div class="input-box">
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
-            </div>
+            <p class="subtitle">
+                Preencha os campos abaixo para se cadastrar
+            </p>
 
-            <div class="input-box">
-                <input type="email" id="email" placeholder="Digite seu email" required>
-            </div>
 
-            <div class="input-box">
-                <input type="password" id="senha" placeholder="Digite sua senha" minlength="8" maxlength="12" required>
-            </div>
+            <form id="formCadastro">
 
-            <div class="input-box">
-                <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" minlength="8" maxlength="12"
-                    required>
-            </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
 
-            <div class="lembrar-senha">
-                <label>
-                    <input type="checkbox" id="lembrar">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Digite sua senha" minlength="8" maxlength="12"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" minlength="8"
+                        maxlength="12" required>
+
+
+                </div>
+
+                <div class="remember">
+
+                    <input type="checkbox" id="remember">
+                    <label for="remember"></label>
                     Lembre-me
-                </label>
-            </div>
+                    </label>
+                </div>
 
-            <div>
-                <button class="btn" type="submit" id="btnCadastrar">Cadastrar</button>
-            </div>
+                <div>
+                    <button class="btn" type="submit" id="btnCadastrar">Cadastrar
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
 
-            <div class="registrar">
-                <a href="login.html">Fazer login</a>
-            </div>
-        </form>
-    </div>
+                <div class="divider">
+                    <span></span>
+                    <p>ou</p>
+                    <span></span>
+                </div>
 
-    <script>
-        document.getElementById("formCadastro").addEventListener("submit", async function (event) {
-            event.preventDefault(); // Impede o recarregamento padrão da página
+                <a href="login.html" class="login-link">Fazer login</a>
 
-            const nome = document.getElementById("nome").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const senha = document.getElementById("senha").value;
-            const confirmarSenha = document.getElementById("confirmarSenha").value;
-            const btn = document.getElementById("btnCadastrar");
+            </form>
+        </div>
 
-            // Expressão regular para validação forte de senha
-            const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#+])[A-Za-z\d@$!%*?&#+]{8,12}$/;
+        <script>
+            document.getElementById("formCadastro").addEventListener("submit", async function (event) {
+                event.preventDefault(); // Impede o recarregamento padrão da página
 
-            // 1. Validação do formato da senha
-            if (!regexSenha.test(senha)) {
-                alert(
-                    "A senha deve conter:\n\n" +
-                    "• Entre 8 e 12 caracteres\n" +
-                    "• Pelo menos 1 letra maiúscula (A-Z)\n" +
-                    "• Pelo menos 1 letra minúscula (a-z)\n" +
-                    "• Pelo menos 1 número (0-9)\n" +
-                    "• Pelo menos 1 caractere especial (@#$!%*?&+)"
-                );
-                return;
-            }
+                const nome = document.getElementById("nome").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const senha = document.getElementById("senha").value;
+                const confirmarSenha = document.getElementById("confirmarSenha").value;
+                const btn = document.getElementById("btnCadastrar");
 
-            // 2. Confirmação de senha
-            if (senha !== confirmarSenha) {
-                alert("As senhas não coincidem.");
-                return;
-            }
+                // Expressão regular para validação forte de senha
+                const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#+])[A-Za-z\d@$!%*?&#+]{8,12}$/;
 
-            try {
-                // Desabilita o botão para evitar múltiplos cliques
-                btn.disabled = true;
-                btn.innerText = "Cadastrando...";
-
-                const response = await fetch("http://localhost:3000/cadastrar", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ nome, email, senha })
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.message || "Erro ao efetuar o cadastro.");
+                // 1. Validação do formato da senha
+                if (!regexSenha.test(senha)) {
+                    alert(
+                        "A senha deve conter:\n\n" +
+                        "• Entre 8 e 12 caracteres\n" +
+                        "• Pelo menos 1 letra maiúscula (A-Z)\n" +
+                        "• Pelo menos 1 letra minúscula (a-z)\n" +
+                        "• Pelo menos 1 número (0-9)\n" +
+                        "• Pelo menos 1 caractere especial (@#$!%*?&+)"
+                    );
+                    return;
                 }
 
-                alert("Usuário cadastrado com sucesso!");
+                // 2. Confirmação de senha
+                if (senha !== confirmarSenha) {
+                    alert("As senhas não coincidem.");
+                    return;
+                }
 
-                // Reseta o formulário
-                document.getElementById("formCadastro").reset();
+                try {
+                    // Desabilita o botão para evitar múltiplos cliques
+                    btn.disabled = true;
+                    btn.innerText = "Cadastrando...";
 
-            } catch (error) {
-                console.error("Erro na requisição:", error);
-                alert(error.message || "Não foi possível conectar ao servidor.");
-            } finally {
-                // Reativa o botão independentemente do resultado
-                btn.disabled = false;
-                btn.innerText = "Cadastrar";
-            }
-        });
-    </script>
+                    const response = await fetch("http://localhost:3000/cadastrar", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ nome, email, senha })
+                    });
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(data.message || "Erro ao efetuar o cadastro.");
+                    }
+
+                    alert("Usuário cadastrado com sucesso!");
+
+                    // Reseta o formulário
+                    document.getElementById("formCadastro").reset();
+
+                } catch (error) {
+                    console.error("Erro na requisição:", error);
+                    alert(error.message || "Não foi possível conectar ao servidor.");
+                } finally {
+                    // Reativa o botão independentemente do resultado
+                    btn.disabled = false;
+                    btn.innerText = "Cadastrar";
+                }
+            });
+        </script>
 </body>
 
 </html>

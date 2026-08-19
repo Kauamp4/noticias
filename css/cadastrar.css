@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -8,115 +6,312 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-color: #9b9b9b
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg,
+            #405de6,
+            #5851db,
+            #833ab4,
+            #c13584);
 }
 
-.login {
 
-    width: 420px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid rgba(177, 176, 176, 0.2);
-    border-radius: 10px;
-    color: #fff;
-    padding: 30px 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
 }
 
-.login h1 {
-    font-size: 36px;
+
+/* CARD */
+
+.card {
+    width: 450px;
+
+    background: #ffffff;
+
+    padding: 45px 45px 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+
     text-align: center;
 }
 
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
 
-}
+/* AVATAR */
 
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 40px;
-    border: 2px solid;
-    outline: none;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
-}
+.avatar {
+    width: 80px;
+    height: 80px;
 
-.input-box input::placeholder {
-    color: #c5c5c5;
-}
+    margin: 0 auto 20px;
 
-.input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-
-}
-
-.lembrar-senha {
     display: flex;
-    justify-content: space-between;
-    margin: -15px 0 15px;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,
+            #833ab4,
+            #405de6);
+
+    color: white;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 10px 25px rgba(83, 60, 180, 0.3);
 }
 
-.lembrar-senha label input {
-    accent-color: #fff;
-    margin-right: 5px;
+
+/* TÍTULO */
+
+h1 {
+    font-size: 32px;
+
+    color: #17183b;
+
+    margin-bottom: 8px;
 }
 
-.lembrar-senha a {
-    text-decoration: none;
-    color: #fff;
 
+/* SUBTÍTULO */
+
+.subtitle {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
 }
 
 
-.lembrar-senha a:hover {
-    text-decoration: underline;
+/* INPUT */
 
+.input-group {
+    width: 100%;
+
+    height: 58px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 14px;
+
+    padding: 0 18px;
+
+    transition: 0.3s;
 }
+
+
+/* ÍCONE */
+
+.input-group>i:first-child {
+    color: #7448e8;
+
+    font-size: 17px;
+
+    margin-right: 14px;
+}
+
+
+/* CAMPO */
+
+.input-group input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #333;
+
+    background: transparent;
+}
+
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+
+/* EFEITO AO CLICAR */
+
+.input-group:focus-within {
+    border-color: #7448e8;
+
+    box-shadow:
+        0 0 0 3px rgba(116, 72, 232, 0.10);
+}
+
+
+/* OLHO DA SENHA */
+
+.password-eye {
+    cursor: pointer;
+
+    color: #555 !important;
+
+    margin-right: 0 !important;
+}
+
+
+/* LEMBRE-ME */
+
+.remember {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 5px 0 25px;
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+
+.remember input {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+}
+
+
+/* BOTÃO */
 
 .btn {
     width: 100%;
-    height: 50px;
-    background-color: #fff;
+
+    height: 58px;
+
     border: none;
-    border-radius: 40px;
-    cursor: pointer;
+
+    border-radius: 30px;
+
+    background: linear-gradient(90deg,
+            #8e44e8,
+            #315fe8);
+
+    color: white;
+
     font-size: 16px;
-    color: #333;
+
     font-weight: 600;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    margin-top: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    transition: 0.3s;
 }
 
-.registrar {
-    text-align: center;
+
+.btn i {
+    font-size: 18px;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(75, 70, 220, 0.3);
+}
+
+
+/* DIVISOR */
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+
+.divider span {
+    height: 1px;
+
+    flex: 1;
+
+    background: #ddd;
+}
+
+
+.divider p {
+    color: #777;
+
     font-size: 14px;
-    margin: 20px 0 15px;
 }
 
-.registrar a {
+
+/* LINK LOGIN */
+
+.login-link {
     text-decoration: none;
-    color: #fff;
+
+    color: #7448e8;
+
     font-weight: 600;
+
     font-size: 15px;
+
+    transition: 0.3s;
 }
 
-.registrar a:hover {
-    text-decoration: underline;
 
+.login-link:hover {
+    color: #405de6;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 500px) {
+
+    .card {
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
 }
