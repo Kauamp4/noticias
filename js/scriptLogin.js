@@ -28,7 +28,7 @@ function loginUsuario() {
       alert("Login realizado com sucesso!");
 
       // redirecionar para página principal
-      window.location.href = "/Home/index.html";
+      window.location.href = "index.html";
 
     })
     .catch(error => {

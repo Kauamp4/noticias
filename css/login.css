@@ -17,30 +17,9 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(135deg,
-            #405de6,
-            #5851db,
-            #833ab4,
-            #c13584);
+    background-color: #405de6;
 
-    background-size: 400% 400%;
-    animation: gradientelink 8s ease infinite;
 }
-
-@keyframes gradientelink {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 
 /* CONTAINER */
 
