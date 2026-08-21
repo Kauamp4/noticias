@@ -25,6 +25,21 @@ async function cadastrarUsuario() {
     alert("As senhas não coincidem.");
     return;
   }
+  // Cria o objeto do usuário
+
+  let usuario = {
+    nome: nome,
+    email: email,
+    senha: senha,
+    foto: ""
+  };
+
+  // Salva o usuário
+  localStorage.setItem(
+    "usuario",
+    JSON.stringify(usuario)
+  );
+
 
   try {
     const response = await fetch("http://localhost:3000/cadastrar", {

@@ -1,40 +1,96 @@
-const API_LOGIN = 'http://localhost:3000/login'
+const API_LOGIN = "http://localhost:3000/login";
 
-// Função Login
 
 function loginUsuario() {
 
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+  const email =
+    document.getElementById("email").value;
 
-  fetch("http://localhost:3000/login", {
+  const senha =
+    document.getElementById("senha").value;
+
+
+  fetch(API_LOGIN, {
+
     method: "POST",
+
     headers: {
+
       "Content-Type": "application/json"
+
     },
+
     body: JSON.stringify({
-      email,
-      senha
+
+      email: email,
+
+      senha: senha
+
     })
+
   })
+
+
     .then(async response => {
 
-      const data = await response.json();
+      const data =
+        await response.json();
+
 
       if (!response.ok) {
-        throw new Error(data.erro || "Erro no login");
+
+        throw new Error(
+          data.message ||
+          "Erro no login"
+        );
+
       }
 
-      alert("Login realizado com sucesso!");
 
-      // redirecionar para página principal
-      window.location.href = "index.html";
+      // ==================================
+      // SALVA TOKEN
+      // ==================================
+
+      localStorage.setItem(
+        "token",
+        data.token
+      );
+
+
+      // ==================================
+      // SALVA DADOS DO USUÁRIO
+      // ==================================
+
+      localStorage.setItem(
+
+        "usuario",
+
+        JSON.stringify(data.usuario)
+
+      );
+
+
+      alert(
+        "Login realizado com sucesso!"
+      );
+
+
+
+      // VAI PARA HOME
+
+
+      window.location.href =
+        "perfil.html";
 
     })
+
+
     .catch(error => {
 
       console.error(error);
+
       alert(error.message);
 
     });
+
 }

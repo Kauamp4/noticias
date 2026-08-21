@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil - TechNews</title>
+
+    <link rel="stylesheet" href="/css/perfil.css">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <button class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Buscar notícias...">
+
+            </div>
+
+        </div>
+
+
+        <div class="logo">
+            TECH<span>NEWS</span>
+        </div>
+
+
+        <nav class="nav">
+
+            <a href="index.html">Inovações</a>
+            <a href="index.html">Lançamentos</a>
+            <a href="index.html">Tendências</a>
+            <a href="index.html">Games</a>
+
+        </nav>
+
+
+        <!-- USUÁRIO -->
+
+        <div class="user-menu">
+
+            <i class="fa-regular fa-circle-user"></i>
+
+            <span id="nomeUsuarioHeader">
+                Usuário
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main class="container">
+
+
+        <!-- TÍTULO -->
+
+        <div class="page-title">
+
+            <h1>Meu Perfil</h1>
+
+            <p>
+                Gerencie suas informações e atividades
+            </p>
+
+        </div>
+
+
+        <!-- ================= PERFIL ================= -->
+
+        <section class="profile-card">
+
+
+            <!-- FOTO -->
+
+            <div class="profile-photo">
+
+                <img id="fotoUsuario" src="https://i.pravatar.cc/300" alt="Foto do usuário">
+
+
+                <!-- Input escondido -->
+
+                <input type="file" id="inputFoto" accept="image/*" hidden>
+
+
+                <!-- Botão da câmera -->
+
+                <button class="camera-btn" id="btnFoto" type="button">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="profile-info">
+
+                <h2 id="nomeUsuario">
+                    Usuário
+                </h2>
+
+
+                <span class="member">
+                    Membro
+                </span>
+
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span id="emailUsuario">
+                        email@email.com
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    Membro desde 2026
+
+                </p>
+
+            </div>
+
+
+            <!-- SOBRE -->
+
+            <div class="about">
+
+                <h3>
+                    Sobre você
+                </h3>
+
+
+                <p>
+                    Apaixonado por tecnologia, programação e por
+                    compartilhar conhecimento através das notícias.
+                </p>
+
+
+                <button class="edit-btn" type="button">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Editar perfil
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ESTATÍSTICAS ================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-regular fa-bookmark"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        Artigos salvos
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        8
+                    </strong>
+
+                    <span>
+                        Curtidas
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-regular fa-comment"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <span>
+                        Comentários
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        6
+                    </strong>
+
+                    <span>
+                        Histórico de leitura
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PARTE INFERIOR ================= -->
+
+        <section class="bottom-content">
+
+
+            <!-- ================= ARTIGOS ================= -->
+
+            <div class="articles-card">
+
+
+                <div class="tabs">
+
+                    <button class="active">
+                        Artigos salvos
+                    </button>
+
+                    <button>
+                        Curtidas
+                    </button>
+
+                    <button>
+                        Comentários
+                    </button>
+
+                    <button>
+                        Histórico de leitura
+                    </button>
+
+                </div>
+
+
+                <!-- ARTIGO 1 -->
+
+                <article class="article">
+
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500"
+                        alt="Inteligência Artificial">
+
+
+                    <div class="article-info">
+
+                        <h3>
+                            Inteligência Artificial:
+                            o futuro já começou
+                        </h3>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                Tecnologia
+                            </span>
+
+                            <small>
+                                18 de agosto de 2026
+                            </small>
+
+                        </div>
+
+
+                        <p>
+                            Descubra como a IA está transformando
+                            o mundo e o que esperar dos próximos anos.
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-bookmark saved"></i>
+
+                    <i class="fa-solid fa-ellipsis-vertical more"></i>
+
+                </article>
+
+
+                <!-- ARTIGO 2 -->
+
+                <article class="article">
+
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Processador">
+
+
+                    <div class="article-info">
+
+                        <h3>
+                            Novos chips revolucionam o
+                            desempenho dos dispositivos
+                        </h3>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                Hardware
+                            </span>
+
+                            <small>
+                                17 de agosto de 2026
+                            </small>
+
+                        </div>
+
+
+                        <p>
+                            Os novos processadores prometem mais
+                            velocidade e eficiência energética.
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-bookmark saved"></i>
+
+                    <i class="fa-solid fa-ellipsis-vertical more"></i>
+
+                </article>
+
+
+                <!-- ARTIGO 3 -->
+
+                <article class="article">
+
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500" alt="Carro autônomo">
+
+
+                    <div class="article-info">
+
+                        <h3>
+                            Carros autônomos: onde estamos
+                            e para onde vamos?
+                        </h3>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                Inovação
+                            </span>
+
+                            <small>
+                                15 de agosto de 2026
+                            </small>
+
+                        </div>
+
+
+                        <p>
+                            Entenda os avanços dos carros autônomos
+                            e os desafios para que eles se tornem realidade.
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-bookmark saved"></i>
+
+                    <i class="fa-solid fa-ellipsis-vertical more"></i>
+
+                </article>
+
+            </div>
+
+
+            <!-- ================= CONTA ================= -->
+
+            <aside class="account-card">
+
+                <h2>
+                    Conta
+                </h2>
+
+
+                <a href="#">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    Informações pessoais
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Alterar senha
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    Notificações
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Privacidade
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                    Preferências
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <!-- LOGOUT -->
+
+                <button class="logout" id="btnLogout" type="button">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Sair da conta
+
+                </button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/js/perfil.js"></script>
+
+</body>
+
+</html>
