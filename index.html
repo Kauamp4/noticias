@@ -1591,129 +1591,6 @@
             transform: translateY(-2px)
         }
 
-        .footer {
-            padding: 55px 25px 25px;
-            background: linear-gradient(135deg, var(--footer-1), var(--footer-2));
-            color: #fff
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: auto
-        }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
-            gap: 50px
-        }
-
-        .footer h2 {
-            color: var(--primary);
-            font-size: 28px;
-            margin-bottom: 12px
-        }
-
-        .footer p {
-            color: #aeb8c0;
-            font-size: 13px
-        }
-
-        .footer-col h3 {
-            margin-bottom: 13px;
-            font-size: 15px
-        }
-
-        .footer-links {
-            display: grid;
-            gap: 8px
-        }
-
-        .footer a {
-            color: #c8d0d6;
-            text-decoration: none;
-            font-size: 13px;
-            transition: color var(--transition)
-        }
-
-        .footer a:hover {
-            color: var(--primary)
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 14px;
-            align-items: center;
-            margin-top: 20px
-        }
-
-        .footer-social a {
-            width: 46px;
-            height: 46px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 20px;
-            text-decoration: none;
-            background: rgba(255, 255, 255, .06);
-            border: 1px solid rgba(255, 255, 255, .12);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .08);
-            transition: .25s ease
-        }
-
-        .footer-social a:nth-child(1):hover {
-            background: #0a66c2;
-            border-color: #0a66c2;
-            box-shadow: 0 0 20px rgba(10, 102, 194, .45);
-            transform: translateY(-5px)
-        }
-
-        .footer-social a:nth-child(2):hover {
-            background: #ff0033;
-            border-color: #ff0033;
-            box-shadow: 0 0 20px rgba(255, 0, 51, .45);
-            transform: translateY(-5px)
-        }
-
-        .footer-social a:nth-child(3):hover {
-            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-            border-color: #e1306c;
-            box-shadow: 0 0 22px rgba(225, 48, 108, .55);
-            transform: translateY(-5px)
-        }
-
-        .footer-social a:nth-child(4):hover {
-            background: #000;
-            border-color: #555;
-            box-shadow: 0 0 20px rgba(255, 255, 255, .2);
-            transform: translateY(-5px)
-        }
-
-        .footer-social a:active {
-            transform: translateY(-2px) scale(.95)
-        }
-
-        .footer hr {
-            margin: 35px 0 20px;
-            border: 0;
-            border-top: 1px solid rgba(255, 255, 255, .1)
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap
-        }
-
-        .footer-policy {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap
-        }
 
         @media(max-width:1150px) {
             .grid-noticias {
@@ -1766,9 +1643,7 @@
                 grid-template-columns: 1fr
             }
 
-            .footer-top {
-                grid-template-columns: 1fr 1fr
-            }
+
         }
 
         @media(max-width:650px) {
@@ -1858,31 +1733,7 @@
                 display: none
             }
 
-            .newsletter {
-                padding: 25px 20px
-            }
 
-            .newsletter-form {
-                flex-direction: column
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
-                gap: 30px
-            }
-
-            .footer {
-                text-align: center
-            }
-
-            .footer-social,
-            .footer-policy {
-                justify-content: center
-            }
-
-            .footer-bottom {
-                justify-content: center
-            }
 
             .menu {
                 width: 270px;
@@ -1928,6 +1779,441 @@
                 animation: none !important;
                 transition: none !important
             }
+        }
+
+        /* =========================================
+   FOOTER
+========================================= */
+
+        .footer {
+            position: relative;
+            padding: 60px 25px 25px;
+            background:
+                radial-gradient(circle at 15% 0%,
+                    rgba(0, 217, 255, .10),
+                    transparent 30%),
+                linear-gradient(135deg,
+                    var(--footer-1, #071018),
+                    var(--footer-2, #101923));
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Linha luminosa superior */
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 12%;
+            right: 12%;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    #00d9ff,
+                    transparent);
+            box-shadow:
+                0 0 15px rgba(0, 217, 255, .5);
+        }
+
+
+        /* Container */
+
+        .footer-container {
+            position: relative;
+            z-index: 2;
+
+            max-width: 1400px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+   PARTE SUPERIOR
+========================================= */
+
+        .footer-top {
+            display: grid;
+            grid-template-columns:
+                1.4fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+
+        /* =========================================
+   MARCA
+========================================= */
+
+        .footer-brand h2 {
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            color: #00d9ff;
+
+            font-size: 30px;
+            font-weight: 950;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            text-shadow:
+                0 0 20px rgba(0, 217, 255, .20);
+        }
+
+        .footer-brand h2 span {
+            color: #fff;
+        }
+
+
+        .footer-brand p {
+            max-width: 450px;
+
+            color: #aeb8c0;
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+   COLUNAS
+========================================= */
+
+        .footer-col h3 {
+            position: relative;
+
+            margin-bottom: 17px;
+
+            color: #fff;
+
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+
+        .footer-col h3::after {
+            content: "";
+
+            display: block;
+
+            width: 35px;
+            height: 3px;
+
+            margin-top: 8px;
+
+            border-radius: 10px;
+
+            background: #00d9ff;
+
+            box-shadow:
+                0 0 10px rgba(0, 217, 255, .4);
+        }
+
+
+        /* Links */
+
+        .footer-links {
+            display: grid;
+            gap: 10px;
+        }
+
+
+        .footer a {
+            color: #c8d0d6;
+
+            font-size: 13px;
+
+            text-decoration: none;
+
+            transition:
+                color .25s ease,
+                transform .25s ease;
+        }
+
+
+        .footer-links a {
+            width: fit-content;
+        }
+
+
+        .footer-links a:hover {
+            color: #00d9ff;
+
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================
+   REDES SOCIAIS
+========================================= */
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: 24px;
+        }
+
+
+        .footer-social a {
+            position: relative;
+
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #fff;
+
+            font-size: 19px;
+
+            text-decoration: none;
+
+            background: rgba(255, 255, 255, .06);
+
+            border: 1px solid rgba(255, 255, 255, .12);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, .18),
+                inset 0 1px 0 rgba(255, 255, 255, .08);
+
+            transition:
+                transform .25s ease,
+                background .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+        }
+
+
+        /* LinkedIn */
+
+        .footer-social a:nth-child(1):hover {
+            background: #0a66c2;
+
+            border-color: #0a66c2;
+
+            box-shadow:
+                0 0 25px rgba(10, 102, 194, .5);
+
+            transform: translateY(-6px);
+        }
+
+
+        /* YouTube */
+
+        .footer-social a:nth-child(2):hover {
+            background: #ff0033;
+
+            border-color: #ff0033;
+
+            box-shadow:
+                0 0 25px rgba(255, 0, 51, .5);
+
+            transform: translateY(-6px);
+        }
+
+
+        /* Instagram */
+
+        .footer-social a:nth-child(3):hover {
+            background:
+                linear-gradient(135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045);
+
+            border-color: #e1306c;
+
+            box-shadow:
+                0 0 25px rgba(225, 48, 108, .55);
+
+            transform: translateY(-6px);
+        }
+
+
+        /* X */
+
+        .footer-social a:nth-child(4):hover {
+            background: #000;
+
+            border-color: #555;
+
+            box-shadow:
+                0 0 25px rgba(255, 255, 255, .2);
+
+            transform: translateY(-6px);
+        }
+
+
+        .footer-social a:active {
+            transform:
+                translateY(-2px) scale(.94);
+        }
+
+
+        /* =========================================
+   SEPARADOR
+========================================= */
+
+        .footer hr {
+            margin: 40px 0 22px;
+
+            border: 0;
+
+            border-top:
+                1px solid rgba(255, 255, 255, .1);
+        }
+
+
+        /* =========================================
+   PARTE INFERIOR
+========================================= */
+
+        .footer-bottom {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .footer-bottom p {
+            color: #89959e;
+
+            font-size: 12px;
+        }
+
+
+        .footer-policy {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .footer-policy a {
+            color: #89959e;
+
+            font-size: 12px;
+        }
+
+
+        .footer-policy a:hover {
+            color: #00d9ff;
+        }
+
+
+        /* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+        @media (max-width: 900px) {
+
+            .footer {
+                padding: 50px 25px 25px;
+            }
+
+            .footer-top {
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 40px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .footer {
+                padding:
+                    45px 20px 25px;
+
+                text-align: center;
+            }
+
+
+            .footer-top {
+                grid-template-columns: 1fr;
+
+                gap: 32px;
+            }
+
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+
+            .footer-brand p {
+                margin:
+                    0 auto;
+            }
+
+
+            .footer-col h3::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .footer-links {
+                justify-items: center;
+            }
+
+
+            .footer-social {
+                justify-content: center;
+            }
+
+
+            .footer-bottom {
+                justify-content: center;
+            }
+
+
+            .footer-policy {
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 380px) {
+
+            .footer-social {
+                gap: 8px;
+            }
+
+
+            .footer-social a {
+                width: 42px;
+                height: 42px;
+
+                font-size: 17px;
+            }
+
         }
     </style>
 </head>
@@ -2435,61 +2721,109 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- =========================
+     FOOTER
+========================= -->
+    <footer class="footer" id="footer">
         <div class="footer-container">
+
             <div class="footer-top">
-                <div>
-                    <h2>TechNews</h2>
-                    <p>Tecnologia, inovação e futuro em um só lugar. Notícias e conteúdos para quem quer entender o
-                        mundo digital.</p>
-                    <div class="footer-social">
+
+                <!-- Coluna 1 -->
+                <div class="footer-brand">
+                    <h2>TECH<span>NEWS</span></h2>
+
+                    <p>
+                        Informação, tecnologia, inovação e as principais
+                        notícias do mundo digital em um só lugar.
+                    </p>
+
+                    <div class="footer-social" aria-label="Redes sociais">
+
+                        <!-- LinkedIn -->
                         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <!-- YouTube -->
                         <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            aria-label="YouTube" title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <!-- Instagram -->
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><i
-                                class="fa-brands fa-x-twitter"></i></a>
+                            aria-label="Instagram" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <!-- X / Twitter -->
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
                     </div>
                 </div>
 
+
+                <!-- Coluna 2 -->
                 <div class="footer-col">
-                    <h3>Categorias</h3>
+
+                    <h3>Navegação</h3>
+
                     <div class="footer-links">
-                        <a href="#ia">Inteligência Artificial</a>
-                        <a href="#inovacoes">Inovação</a>
-                        <a href="/Games/games.html">Games</a>
-                        <a href="#">Hardware</a>
-                        <a href="#">Mobile</a>
-                        <a href="#">CyberSecurity</a>
+                        <a href="index.html">Início</a>
+                        <a href="/design_site/02-Inovações/index.html">Inovação</a>
+                        <a href="/design_site/03-Lancamentos/index.html">lançamento</a>
+                        <a href="/design_site/04-Tendencias/index.html">Tendencia</a>
+                        <a href="/design_site/05-Games/index.html">Game</a>
+
                     </div>
+
                 </div>
 
+
+                <!-- Coluna 3 -->
                 <div class="footer-col">
-                    <h3>TechNews</h3>
+
+                    <h3>Informações</h3>
+
                     <div class="footer-links">
-                        <a href="#">Sobre nós</a>
-                        <a href="#">Contato</a>
-                        <a href="#">Parceiros</a>
-                        <a href="#">Termos de Uso</a>
-                        <a href="#">Privacidade</a>
+                        <a href="#sobre">Sobre nós</a>
+                        <a href="#contato">Contato</a>
+                        <a href="#newsletter">Newsletter</a>
+                        <a href="#privacidade">Política de Privacidade</a>
+                        <a href="#termos">Termos de Uso</a>
+                        <a href="#acessibilidade">Acessibilidade</a>
                     </div>
+
                 </div>
+
             </div>
+
 
             <hr>
 
+
             <div class="footer-bottom">
-                <p>© 2026 TechNews. Todos os direitos reservados.</p>
+
+                <p>
+                    © <span id="anoAtual"></span> TECHNEWS.
+                    Todos os direitos reservados.
+                </p>
+
                 <div class="footer-policy">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Cookies</a>
-                    <a href="#">Termos</a>
+                    <a href="#privacidade">Privacidade</a>
+                    <a href="#termos">Termos</a>
+                    <a href="#cookies">Cookies</a>
                 </div>
+
             </div>
+
         </div>
     </footer>
+
 
     <script>
         const body = document.body;
@@ -2804,15 +3138,81 @@
             });
         });
 
-        if (newsletterForm) {
-            newsletterForm.addEventListener("submit", event => {
-                event.preventDefault();
-                const email = newsletterForm.querySelector("input").value.trim();
-                if (!email) return;
-                alert("Cadastro realizado com sucesso!");
-                newsletterForm.reset();
+        /* =========================================
+FOOTER - JAVASCRIPT
+========================================= */
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* -------------------------------------
+               ANO AUTOMÁTICO
+            ------------------------------------- */
+
+            const anoAtual = document.getElementById("anoAtual");
+
+            if (anoAtual) {
+                anoAtual.textContent = new Date().getFullYear();
+            }
+
+
+            /* -------------------------------------
+               LINKS INTERNOS COM SCROLL SUAVE
+            ------------------------------------- */
+
+            const linksInternos = document.querySelectorAll(
+                '.footer a[href^="#"]'
+            );
+
+            linksInternos.forEach(link => {
+
+                link.addEventListener("click", event => {
+
+                    const destino = link.getAttribute("href");
+
+                    if (!destino || destino === "#") {
+                        return;
+                    }
+
+                    const elemento = document.querySelector(destino);
+
+                    if (!elemento) {
+                        return;
+                    }
+
+                    event.preventDefault();
+
+                    elemento.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                });
+
             });
-        }
+
+
+            /* -------------------------------------
+               ANIMAÇÃO DOS ÍCONES SOCIAIS
+            ------------------------------------- */
+
+            const redesSociais = document.querySelectorAll(
+                ".footer-social a"
+            );
+
+            redesSociais.forEach(rede => {
+
+                rede.addEventListener("mouseenter", () => {
+                    rede.style.zIndex = "5";
+                });
+
+                rede.addEventListener("mouseleave", () => {
+                    rede.style.zIndex = "";
+                });
+
+            });
+
+        });
+
 
         carregarConfiguracoes();
         realizarBusca();
