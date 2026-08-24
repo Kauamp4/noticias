@@ -21,23 +21,17 @@
 </head>
 
 <style>
-    /* =====================================================
-   VARIÁVEIS
-===================================================== */
     :root {
         --primary: #00d9ff;
         --primary-dark: #00a9c7;
         --background: #f5f7fa;
-        --surface: #ffffff;
+        --surface: #fff;
         --surface-2: #eef2f5;
         --text: #111820;
         --text-secondary: #66717d;
         --border: #dfe5ea;
     }
 
-    /* =====================================================
-   RESET
-===================================================== */
     * {
         margin: 0;
         padding: 0;
@@ -62,9 +56,6 @@
         font-family: inherit;
     }
 
-    /* =====================================================
-   ACESSIBILIDADE
-===================================================== */
     .sr-only {
         position: absolute;
         width: 1px;
@@ -77,9 +68,7 @@
         border: 0;
     }
 
-    /* =====================================================
-   BARRA DE CATEGORIAS
-===================================================== */
+    /* Categorias */
     .barra-categorias {
         position: relative;
         z-index: 500;
@@ -105,7 +94,7 @@
         width: 100%;
         max-width: 1400px;
         min-width: max-content;
-        margin: 0 auto;
+        margin: auto;
         padding: 0 25px;
         display: flex;
         align-items: center;
@@ -160,26 +149,24 @@
     }
 
     @keyframes gradienteLink {
-        0% {
-            background-position: 0% 50%;
+        from {
+            background-position: 0 50%;
         }
 
-        100% {
+        to {
             background-position: 300% 50%;
         }
     }
 
-    /* =====================================================
-   HEADER
-===================================================== */
+    /* Header */
     header {
         position: relative;
         z-index: 400;
         width: 100%;
         min-height: 88px;
-        background: radial-gradient(circle at 50% -150px, rgba(0, 217, 255, .20), transparent 45%), linear-gradient(135deg, #05080c 0%, #0a1118 45%, #111a23 100%);
+        background: radial-gradient(circle at 50% -150px, rgba(0, 217, 255, .2), transparent 45%), linear-gradient(135deg, #05080c 0%, #0a1118 45%, #111a23 100%);
         border-bottom: 1px solid rgba(0, 217, 255, .25);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, .30);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
         isolation: isolate;
     }
 
@@ -204,16 +191,13 @@
         pointer-events: none;
     }
 
-    /* =====================================================
-   TOPO
-===================================================== */
     .topo {
         position: relative;
         z-index: 10;
         width: 100%;
         max-width: 1400px;
         min-height: 88px;
-        margin: 0 auto;
+        margin: auto;
         padding: 0 25px;
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -221,9 +205,6 @@
         column-gap: 25px;
     }
 
-    /* =====================================================
-   LADO ESQUERDO
-===================================================== */
     .topo-esquerdo {
         min-width: 0;
         display: flex;
@@ -231,12 +212,9 @@
         gap: 14px;
     }
 
-    /* =====================================================
-   MENU HAMBÚRGUER
-===================================================== */
+    /* Menu */
     .menu-hamburguer {
         position: relative;
-        flex-shrink: 0;
     }
 
     .hamburguer {
@@ -283,9 +261,6 @@
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* =====================================================
-   MENU
-===================================================== */
     .menu {
         position: absolute;
         top: calc(100% + 12px);
@@ -320,28 +295,22 @@
         list-style: none;
     }
 
-    /* =====================================================
-   TÍTULO MENU
-===================================================== */
     .menu-titulo {
         display: flex;
         align-items: center;
         gap: 10px;
         padding: 12px 13px 10px;
+        margin-bottom: 5px;
         color: #fff;
         font-size: 15px;
         font-weight: 900;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
-        margin-bottom: 5px;
     }
 
     .menu-titulo i {
         color: var(--primary);
     }
 
-    /* =====================================================
-   OPÇÕES MENU
-===================================================== */
     .menu a,
     .menu button.menu-opcao {
         width: 100%;
@@ -389,9 +358,6 @@
         font-weight: 800;
     }
 
-    /* =====================================================
-   SUBMENU DALTONISMO
-===================================================== */
     .submenu-acessibilidade {
         display: none;
         padding: 5px 7px 7px;
@@ -433,18 +399,12 @@
         color: var(--primary);
     }
 
-    /* =====================================================
-   SEPARADOR
-===================================================== */
     .menu-separador {
         height: 1px;
         margin: 7px 4px;
         background: rgba(255, 255, 255, .1);
     }
 
-    /* =====================================================
-   RESTAURAR
-===================================================== */
     .menu-restaurar {
         color: #ff9b9b !important;
     }
@@ -453,9 +413,7 @@
         color: #ff6b6b !important;
     }
 
-    /* =====================================================
-   BUSCA
-===================================================== */
+    /* Busca */
     .buscar-topo {
         position: relative;
         width: 210px;
@@ -513,9 +471,7 @@
         background: rgba(255, 255, 255, .12);
     }
 
-    /* =====================================================
-   LOGO
-===================================================== */
+    /* Logo e login */
     .logo {
         position: relative;
         display: inline-block;
@@ -552,9 +508,6 @@
         background: linear-gradient(90deg, var(--primary), transparent);
     }
 
-    /* =====================================================
-   LOGIN
-===================================================== */
     .login {
         justify-self: end;
         display: inline-flex;
@@ -592,9 +545,7 @@
         color: #061016;
     }
 
-    /* =====================================================
-   MODAL
-===================================================== */
+    /* Modal */
     .modal-overlay {
         position: fixed;
         inset: 0;
@@ -691,9 +642,7 @@
         font-weight: 900;
     }
 
-    /* =====================================================
-   LINKS DESTACADOS
-===================================================== */
+    /* Links */
     body.destacar-links a {
         text-decoration: underline !important;
         text-decoration-thickness: 2px !important;
@@ -707,15 +656,11 @@
         text-decoration-thickness: 3px !important;
     }
 
-    /* =====================================================
-   FOOTER
-===================================================== */
+    /* Footer */
     .footer {
         position: relative;
         padding: 60px 25px 25px;
-        background:
-            radial-gradient(circle at 15% 0%, rgba(0, 217, 255, .10), transparent 30%),
-            linear-gradient(135deg, var(--footer-1, #071018), var(--footer-2, #101923));
+        background: radial-gradient(circle at 15% 0%, rgba(0, 217, 255, .1), transparent 30%), linear-gradient(135deg, var(--footer-1, #071018), var(--footer-2, #101923));
         color: #fff;
         overflow: hidden;
     }
@@ -738,18 +683,12 @@
         margin: auto;
     }
 
-    /* =========================================
-   PARTE SUPERIOR
-========================================= */
     .footer-top {
         display: grid;
         grid-template-columns: 1.4fr 1fr 1fr;
         gap: 50px;
     }
 
-    /* =========================================
-   MARCA
-========================================= */
     .footer-brand h2 {
         display: inline-block;
         margin-bottom: 14px;
@@ -758,7 +697,7 @@
         font-weight: 950;
         letter-spacing: 1px;
         text-transform: uppercase;
-        text-shadow: 0 0 20px rgba(0, 217, 255, .20);
+        text-shadow: 0 0 20px rgba(0, 217, 255, .2);
     }
 
     .footer-brand h2 span {
@@ -772,9 +711,6 @@
         line-height: 1.7;
     }
 
-    /* =========================================
-   COLUNAS
-========================================= */
     .footer-col h3 {
         position: relative;
         margin-bottom: 17px;
@@ -815,9 +751,6 @@
         transform: translateX(5px);
     }
 
-    /* =========================================
-   REDES SOCIAIS
-========================================= */
     .footer-social {
         display: flex;
         align-items: center;
@@ -835,14 +768,12 @@
         border-radius: 50%;
         color: #fff;
         font-size: 19px;
-        text-decoration: none;
         background: rgba(255, 255, 255, .06);
         border: 1px solid rgba(255, 255, 255, .12);
         box-shadow: 0 5px 15px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .08);
         transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
     }
 
-    /* LinkedIn */
     .footer-social a:nth-child(1):hover {
         background: #0a66c2;
         border-color: #0a66c2;
@@ -850,7 +781,6 @@
         transform: translateY(-6px);
     }
 
-    /* YouTube */
     .footer-social a:nth-child(2):hover {
         background: #ff0033;
         border-color: #ff0033;
@@ -858,7 +788,6 @@
         transform: translateY(-6px);
     }
 
-    /* Instagram */
     .footer-social a:nth-child(3):hover {
         background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
         border-color: #e1306c;
@@ -866,7 +795,6 @@
         transform: translateY(-6px);
     }
 
-    /* X */
     .footer-social a:nth-child(4):hover {
         background: #000;
         border-color: #555;
@@ -878,18 +806,12 @@
         transform: translateY(-2px) scale(.94);
     }
 
-    /* =========================================
-   SEPARADOR
-========================================= */
     .footer hr {
         margin: 40px 0 22px;
         border: 0;
         border-top: 1px solid rgba(255, 255, 255, .1);
     }
 
-    /* =========================================
-   PARTE INFERIOR
-========================================= */
     .footer-bottom {
         display: flex;
         align-items: center;
@@ -898,7 +820,8 @@
         flex-wrap: wrap;
     }
 
-    .footer-bottom p {
+    .footer-bottom p,
+    .footer-policy a {
         color: #89959e;
         font-size: 12px;
     }
@@ -910,257 +833,17 @@
         flex-wrap: wrap;
     }
 
-    .footer-policy a {
-        color: #89959e;
-        font-size: 12px;
-    }
-
     .footer-policy a:hover {
         color: #00d9ff;
     }
 
-    /* =========================================
-   RESPONSIVIDADE - 1100PX
-========================================= */
-    @media (max-width: 1100px) {
-        .topo {
-            padding: 0 20px;
-            column-gap: 15px;
-        }
-
-        .buscar-topo {
-            width: 180px;
-        }
-
-        .buscar-topo input:focus {
-            width: 220px;
-        }
-
-        .barra-categorias ul {
-            gap: 32px;
-        }
-    }
-
-    /* =========================================
-   RESPONSIVIDADE - 900PX
-========================================= */
-    @media (max-width: 900px) {
-        .footer {
-            padding: 50px 25px 25px;
-        }
-
-        .footer-top {
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-brand {
-            grid-column: 1 / -1;
-        }
-    }
-
-    /* =========================================
-   RESPONSIVIDADE - 800PX
-========================================= */
-    @media (max-width: 800px) {
-        .topo {
-            grid-template-columns: 1fr auto 1fr;
-            padding: 0 15px;
-        }
-
-        .buscar-topo {
-            width: 150px;
-        }
-
-        .buscar-topo input:focus {
-            width: 190px;
-        }
-
-        .logo {
-            font-size: clamp(26px, 5vw, 36px);
-        }
-
-        .login {
-            padding: 0 14px;
-        }
-    }
-
-    /* =========================================
-   RESPONSIVIDADE - 650PX
-========================================= */
-    @media (max-width: 650px) {
-        .barra-categorias ul {
-            justify-content: flex-start;
-            gap: 25px;
-            padding: 0 18px;
-        }
-
-        .barra-categorias a {
-            padding: 13px 2px;
-            font-size: 13px;
-        }
-
-        header {
-            min-height: 70px;
-        }
-
-        .topo {
-            min-height: 70px;
-            padding: 0 12px;
-            column-gap: 10px;
-        }
-
-        .buscar-topo {
-            display: none;
-        }
-
-        .hamburguer {
-            width: 42px;
-            height: 42px;
-        }
-
-        .logo {
-            font-size: 25px;
-            letter-spacing: 1px;
-        }
-
-        .login {
-            min-height: 36px;
-            padding: 0 11px;
-            font-size: 10px;
-        }
-
-        .login span {
-            display: none;
-        }
-
-        .login i {
-            font-size: 15px;
-        }
-
-        .menu {
-            width: 270px;
-            max-width: calc(100vw - 24px);
-            max-height: calc(100vh - 90px);
-        }
-
-        .modal-atalhos {
-            padding: 20px;
-        }
-
-        .footer {
-            padding: 45px 20px 25px;
-            text-align: center;
-        }
-
-        .footer-top {
-            grid-template-columns: 1fr;
-            gap: 32px;
-        }
-
-        .footer-brand {
-            grid-column: auto;
-        }
-
-        .footer-brand p {
-            margin: 0 auto;
-        }
-
-        .footer-col h3::after {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .footer-links {
-            justify-items: center;
-        }
-
-        .footer-social {
-            justify-content: center;
-        }
-
-        .footer-bottom {
-            justify-content: center;
-        }
-
-        .footer-policy {
-            justify-content: center;
-            gap: 15px;
-        }
-    }
-
-    /* =========================================
-   RESPONSIVIDADE - 380PX
-========================================= */
-    @media (max-width: 380px) {
-        .topo {
-            padding: 0 9px;
-        }
-
-        .hamburguer {
-            width: 39px;
-            height: 39px;
-        }
-
-        .hamburguer span {
-            width: 20px;
-        }
-
-        .logo {
-            font-size: 21px;
-        }
-
-        .login {
-            min-width: 38px;
-            width: 38px;
-            padding: 0;
-        }
-
-        .barra-categorias ul {
-            gap: 20px;
-        }
-
-        .footer-social {
-            gap: 8px;
-        }
-
-        .footer-social a {
-            width: 42px;
-            height: 42px;
-            font-size: 17px;
-        }
-    }
-
-    /* =========================================
-   REDUÇÃO DE MOVIMENTO
-========================================= */
-    @media (prefers-reduced-motion: reduce) {
-
-        *,
-        *::before,
-        *::after {
-            scroll-behavior: auto !important;
-            animation-duration: .01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: .01ms !important;
-        }
-    }
-
-    /* =====================================================
-   PÁGINA - INOVAÇÕES
-===================================================== */
-
+    /* Página */
     .pagina-inovacoes {
         width: 100%;
         max-width: 1400px;
-        margin: 0 auto;
+        margin: auto;
         padding: 55px 25px 80px;
     }
-
-
-    /* =====================================================
-   INTRO
-===================================================== */
 
     .intro-inovacoes {
         position: relative;
@@ -1207,17 +890,10 @@
         height: 5px;
         margin-bottom: 10px;
         border-radius: 20px;
-        background: linear-gradient(90deg,
-                #00d9ff,
-                #00a9c7,
-                transparent);
+        background: linear-gradient(90deg, #00d9ff, #00a9c7, transparent);
     }
 
-
-    /* =====================================================
-   TÍTULOS DE SEÇÃO
-===================================================== */
-
+    /* Títulos */
     .titulo-secao {
         display: flex;
         align-items: flex-end;
@@ -1258,11 +934,7 @@
         transform: translateX(4px);
     }
 
-
-    /* =====================================================
-   DESTAQUES
-===================================================== */
-
+    /* Destaques */
     .grid-destaques {
         display: grid;
         grid-template-columns: 1.65fr 1fr;
@@ -1300,10 +972,7 @@
     .overlay-noticia {
         position: absolute;
         inset: 0;
-        background:
-            linear-gradient(180deg,
-                rgba(0, 0, 0, .03) 20%,
-                rgba(0, 0, 0, .85) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, .03) 20%, rgba(0, 0, 0, .85) 100%);
     }
 
     .categoria-card {
@@ -1328,7 +997,7 @@
         right: 25px;
         bottom: 23px;
         left: 25px;
-        color: white;
+        color: #fff;
     }
 
     .data-noticia {
@@ -1385,11 +1054,7 @@
         line-height: 1.2;
     }
 
-
-    /* =====================================================
-   FILTROS
-===================================================== */
-
+    /* Filtros */
     .filtro-inovacoes {
         display: flex;
         align-items: center;
@@ -1442,11 +1107,7 @@
         color: #071018;
     }
 
-
-    /* =====================================================
-   RECENTES
-===================================================== */
-
+    /* Notícias */
     .layout-recentes {
         display: grid;
         grid-template-columns: minmax(0, 1fr) 350px;
@@ -1551,11 +1212,7 @@
         color: #00d9ff;
     }
 
-
-    /* =====================================================
-   MAIS LIDAS
-===================================================== */
-
+    /* Mais lidas */
     .mais-lidas {
         height: fit-content;
         padding: 23px;
@@ -1623,11 +1280,7 @@
         color: #00b9d6;
     }
 
-
-    /* =====================================================
-   BANNER FUTURO
-===================================================== */
-
+    /* Banner */
     .banner-futuro {
         position: relative;
         display: flex;
@@ -1638,14 +1291,7 @@
         padding: 45px 55px;
         overflow: hidden;
         border-radius: 18px;
-        background:
-            radial-gradient(circle at 90% 50%,
-                rgba(0, 217, 255, .23),
-                transparent 30%),
-            linear-gradient(120deg,
-                #071018,
-                #0c1d27,
-                #071018);
+        background: radial-gradient(circle at 90% 50%, rgba(0, 217, 255, .23), transparent 30%), linear-gradient(120deg, #071018, #0c1d27, #071018);
     }
 
     .banner-conteudo {
@@ -1731,11 +1377,7 @@
         margin-left: 5px;
     }
 
-
-    /* =====================================================
-   ELEMENTO TECNOLÓGICO
-===================================================== */
-
+    /* Elemento tecnológico */
     .banner-elemento {
         position: absolute;
         right: 80px;
@@ -1773,7 +1415,7 @@
 
     @keyframes girarTech {
         from {
-            transform: rotate(0deg);
+            transform: rotate(0);
         }
 
         to {
@@ -1781,16 +1423,24 @@
         }
     }
 
-
-    /* =====================================================
-   DARK MODE
-   Compatível com o seu menu de acessibilidade
-===================================================== */
-
-    body.modo-escuro .pagina-inovacoes {
-        background: transparent;
+    /* Dark mode */
+    body.modo-escuro {
+        --background: #080d12;
+        --surface: #111a22;
+        --surface-2: #18232c;
+        --text: #edf3f6;
+        --text-secondary: #aeb9c2;
+        --border: #293740;
+        background: var(--background);
+        color: var(--text);
     }
 
+    body.modo-escuro .barra-categorias {
+        background: #0d151c;
+        border-color: #26333d;
+    }
+
+    body.modo-escuro .barra-categorias a,
     body.modo-escuro .intro-inovacoes h1,
     body.modo-escuro .titulo-secao h2 {
         color: #fff;
@@ -1834,13 +1484,97 @@
         border-color: #293740;
     }
 
+    /* Modo leitura */
+    body.modo-leitura {
+        background: #f4f1e8;
+        color: #292929;
+    }
 
-    /* =====================================================
-   RESPONSIVIDADE - 1000PX
-===================================================== */
+    body.modo-leitura .barra-categorias {
+        background: #f4f1e8;
+        border-color: #d8d2c4;
+        box-shadow: none;
+    }
 
-    @media (max-width: 1000px) {
+    body.modo-leitura .barra-categorias a {
+        color: #292929;
+    }
 
+    body.modo-leitura header {
+        background: #252525;
+        box-shadow: none;
+    }
+
+    body.modo-leitura .pagina-inovacoes {
+        max-width: 900px;
+    }
+
+    body.modo-leitura .intro-inovacoes h1,
+    body.modo-leitura .titulo-secao h2 {
+        color: #292929;
+    }
+
+    body.modo-leitura .intro-inovacoes p,
+    body.modo-leitura .info-noticia p {
+        color: #444;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    body.modo-leitura .noticia-horizontal,
+    body.modo-leitura .mais-lidas,
+    body.modo-leitura .filtro-inovacoes {
+        box-shadow: none;
+    }
+
+    body.modo-leitura .banner-futuro {
+        background: #292929;
+    }
+
+    body.modo-leitura .banner-elemento {
+        display: none;
+    }
+
+    /* Daltonismo */
+    body.daltonismo-protanopia {
+        filter: contrast(1.05) saturate(.75);
+    }
+
+    body.daltonismo-deuteranopia {
+        filter: contrast(1.05) saturate(.65) hue-rotate(10deg);
+    }
+
+    body.daltonismo-tritanopia {
+        filter: contrast(1.05) saturate(.75) hue-rotate(180deg);
+    }
+
+    [data-daltonismo].ativo {
+        background: rgba(0, 217, 255, .28);
+        color: #fff;
+        font-weight: 900;
+    }
+
+    /* Responsividade */
+    @media (max-width:1100px) {
+        .topo {
+            padding: 0 20px;
+            column-gap: 15px;
+        }
+
+        .buscar-topo {
+            width: 180px;
+        }
+
+        .buscar-topo input:focus {
+            width: 220px;
+        }
+
+        .barra-categorias ul {
+            gap: 32px;
+        }
+    }
+
+    @media (max-width:1000px) {
         .pagina-inovacoes {
             padding-left: 20px;
             padding-right: 20px;
@@ -1870,13 +1604,46 @@
         }
     }
 
+    @media (max-width:900px) {
+        .footer {
+            padding: 50px 25px 25px;
+        }
 
-    /* =====================================================
-   RESPONSIVIDADE - 750PX
-===================================================== */
+        .footer-top {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
 
-    @media (max-width: 750px) {
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+    }
 
+    @media (max-width:800px) {
+        .topo {
+            grid-template-columns: 1fr auto 1fr;
+            padding: 0 15px;
+            column-gap: 15px;
+        }
+
+        .buscar-topo {
+            width: 150px;
+        }
+
+        .buscar-topo input:focus {
+            width: 190px;
+        }
+
+        .logo {
+            font-size: clamp(26px, 5vw, 36px);
+        }
+
+        .login {
+            padding: 0 14px;
+        }
+    }
+
+    @media (max-width:750px) {
         .pagina-inovacoes {
             padding-top: 40px;
         }
@@ -1922,12 +1689,105 @@
         }
     }
 
+    @media (max-width:650px) {
+        .barra-categorias ul {
+            justify-content: flex-start;
+            gap: 25px;
+            padding: 0 18px;
+        }
 
-    /* =====================================================
-   RESPONSIVIDADE - 550PX
-===================================================== */
+        .barra-categorias a {
+            padding: 13px 2px;
+            font-size: 13px;
+        }
 
-    @media (max-width: 550px) {
+        header {
+            min-height: 70px;
+        }
+
+        .topo {
+            min-height: 70px;
+            padding: 0 12px;
+            column-gap: 10px;
+        }
+
+        .buscar-topo {
+            display: none;
+        }
+
+        .hamburguer {
+            width: 42px;
+            height: 42px;
+        }
+
+        .logo {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        .login {
+            min-height: 36px;
+            padding: 0 11px;
+            font-size: 10px;
+        }
+
+        .login span {
+            display: none;
+        }
+
+        .login i {
+            font-size: 15px;
+        }
+
+        .menu {
+            width: 270px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vh - 90px);
+        }
+
+        .modal-atalhos {
+            padding: 20px;
+        }
+
+        .footer {
+            padding: 45px 20px 25px;
+            text-align: center;
+        }
+
+        .footer-top {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .footer-brand {
+            grid-column: auto;
+        }
+
+        .footer-brand p {
+            margin: auto;
+        }
+
+        .footer-col h3::after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-links {
+            justify-items: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+
+        .footer-bottom {
+            justify-content: center;
+        }
+
+        .footer-policy {
+            justify-content: center;
+            gap: 15px;
+        }
 
         .pagina-inovacoes {
             padding: 32px 15px 60px;
@@ -2004,12 +1864,49 @@
         }
     }
 
+    @media (max-width:550px) {
+        .pagina-inovacoes {
+            padding: 32px 15px 60px;
+        }
+    }
 
-    /* =====================================================
-   RESPONSIVIDADE - 380PX
-===================================================== */
+    @media (max-width:380px) {
+        .topo {
+            padding: 0 9px;
+        }
 
-    @media (max-width: 380px) {
+        .hamburguer {
+            width: 39px;
+            height: 39px;
+        }
+
+        .hamburguer span {
+            width: 20px;
+        }
+
+        .logo {
+            font-size: 21px;
+        }
+
+        .login {
+            min-width: 38px;
+            width: 38px;
+            padding: 0;
+        }
+
+        .barra-categorias ul {
+            gap: 20px;
+        }
+
+        .footer-social {
+            gap: 8px;
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            font-size: 17px;
+        }
 
         .intro-inovacoes h1 {
             font-size: 38px;
@@ -2043,12 +1940,17 @@
         }
     }
 
+    /* Redução de movimento */
+    @media (prefers-reduced-motion:reduce) {
 
-    /* =====================================================
-   REDUÇÃO DE MOVIMENTO
-===================================================== */
-
-    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            animation-duration: .01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: .01ms !important;
+        }
 
         .banner-elemento *,
         .imagem-noticia img,
@@ -2058,156 +1960,6 @@
             animation: none !important;
             transition: none !important;
         }
-    }
-
-    /* =====================================================
-   MODO DE LEITURA
-===================================================== */
-
-    body.modo-leitura {
-        background: #f4f1e8;
-        color: #292929;
-    }
-
-    body.modo-leitura .barra-categorias {
-        background: #f4f1e8;
-        border-color: #d8d2c4;
-        box-shadow: none;
-    }
-
-    body.modo-leitura .barra-categorias a {
-        color: #292929;
-    }
-
-    body.modo-leitura header {
-        background: #252525;
-        box-shadow: none;
-    }
-
-    body.modo-leitura .pagina-inovacoes {
-        max-width: 900px;
-    }
-
-    body.modo-leitura .intro-inovacoes h1,
-    body.modo-leitura .titulo-secao h2 {
-        color: #292929;
-    }
-
-    body.modo-leitura .intro-inovacoes p,
-    body.modo-leitura .info-noticia p {
-        color: #444;
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-    body.modo-leitura .noticia-horizontal,
-    body.modo-leitura .mais-lidas,
-    body.modo-leitura .filtro-inovacoes {
-        box-shadow: none;
-    }
-
-    body.modo-leitura .banner-futuro {
-        background: #292929;
-    }
-
-    body.modo-leitura .banner-elemento {
-        display: none;
-    }
-
-
-    /* =====================================================
-   DALTONISMO
-===================================================== */
-
-    /* Protanopia */
-    body.daltonismo-protanopia {
-        filter: contrast(1.05) saturate(.75);
-    }
-
-    body.daltonismo-deuteranopia {
-        filter: contrast(1.05) saturate(.65) hue-rotate(10deg);
-    }
-
-    body.daltonismo-tritanopia {
-        filter: contrast(1.05) saturate(.75) hue-rotate(180deg);
-    }
-
-
-    /* =====================================================
-   INDICADOR VISUAL DALTONISMO
-===================================================== */
-
-    [data-daltonismo].ativo {
-        background: rgba(0, 217, 255, .28);
-        color: #fff;
-        font-weight: 900;
-    }
-
-
-    /* =====================================================
-   DARK MODE
-===================================================== */
-
-    body.modo-escuro {
-        --background: #080d12;
-        --surface: #111a22;
-        --surface-2: #18232c;
-        --text: #edf3f6;
-        --text-secondary: #aeb9c2;
-        --border: #293740;
-
-        background: var(--background);
-        color: var(--text);
-    }
-
-    body.modo-escuro .pagina-inovacoes {
-        background: transparent;
-    }
-
-    body.modo-escuro .barra-categorias {
-        background: #0d151c;
-        border-color: #26333d;
-    }
-
-    body.modo-escuro .barra-categorias a {
-        color: #edf3f6;
-    }
-
-    body.modo-escuro .intro-inovacoes h1,
-    body.modo-escuro .titulo-secao h2 {
-        color: #fff;
-    }
-
-    body.modo-escuro .intro-inovacoes p {
-        color: #aeb9c2;
-    }
-
-    body.modo-escuro .filtro-inovacoes,
-    body.modo-escuro .noticia-horizontal,
-    body.modo-escuro .mais-lidas {
-        background: #111a22;
-        border-color: #26333d;
-    }
-
-    body.modo-escuro .filtro-titulo,
-    body.modo-escuro .info-noticia h3,
-    body.modo-escuro .item-mais-lida h3 {
-        color: #edf3f6;
-    }
-
-    body.modo-escuro .filtro {
-        background: #18232c;
-        border-color: #2a3944;
-        color: #b9c4cb;
-    }
-
-    body.modo-escuro .info-noticia p {
-        color: #929fa8;
-    }
-
-    body.modo-escuro .mais-lidas-titulo,
-    body.modo-escuro .item-mais-lida {
-        border-color: #293740;
     }
 </style>
 
@@ -3086,8 +2838,1443 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
-    <script src="index.js"></script>
+
+    <script>
+        <!-- JAVASCRIPT -->
+        /* =========================================================
+       TECHNEWS
+       SISTEMA DE ACESSIBILIDADE + FUNCIONALIDADES DO SITE
+    
+       CONFIGURAÇÕES SALVAS:
+       - Modo escuro
+       - Tamanho do texto
+       - Destacar links
+       - Modo de leitura
+       - Daltonismo
+    
+       FUNCIONALIDADES:
+       - Menu hambúrguer
+       - Submenu de daltonismo
+       - Modal de atalhos
+       - Busca
+       - Newsletter
+       - Filtros de notícias
+       - Atalhos de teclado
+       - Ano automático do footer
+    
+       IMPORTANTE:
+       Todas as páginas devem utilizar esta mesma lógica.
+    ========================================================= */
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* =====================================================
+               1. ELEMENTOS PRINCIPAIS
+            ===================================================== */
+
+            const body = document.body;
+
+            const btnMenu = document.getElementById("btnMenu");
+            const menu = document.getElementById("menu");
+
+            const btnDarkMenu =
+                document.getElementById("btnDarkMenu");
+
+            const statusDark =
+                document.getElementById("statusDark");
+
+            const btnAumentarTexto =
+                document.getElementById("btnAumentarTexto");
+
+            const btnDiminuirTexto =
+                document.getElementById("btnDiminuirTexto");
+
+            const btnDestacarLinks =
+                document.getElementById("btnDestacarLinks");
+
+            const statusLinks =
+                document.getElementById("statusLinks");
+
+            const btnModoLeitura =
+                document.getElementById("btnModoLeitura");
+
+            const statusLeitura =
+                document.getElementById("statusLeitura");
+
+            const btnAtalhos =
+                document.getElementById("btnAtalhos");
+
+            const modalAtalhos =
+                document.getElementById("modalAtalhos");
+
+            const fecharModal =
+                document.getElementById("fecharModal");
+
+            const btnDaltonismo =
+                document.getElementById("btnDaltonismo");
+
+            const submenuDaltonismo =
+                document.getElementById("submenuDaltonismo");
+
+            const btnRestaurar =
+                document.getElementById("btnRestaurar");
+
+            const campoBusca =
+                document.getElementById("campoBusca");
+
+            const limparBusca =
+                document.getElementById("limparBusca");
+
+            const anoAtual =
+                document.getElementById("anoAtual");
+
+
+            /* =====================================================
+               2. CONFIGURAÇÕES
+            ===================================================== */
+
+            const CHAVE_CONFIGURACOES =
+                "techNewsAcessibilidade";
+
+            const CLASSES_DALTONISMO = [
+                "daltonismo-protanopia",
+                "daltonismo-deuteranopia",
+                "daltonismo-tritanopia"
+            ];
+
+            const TIPOS_DALTONISMO = [
+                "normal",
+                "protanopia",
+                "deuteranopia",
+                "tritanopia"
+            ];
+
+            const NIVEIS_TEXTO = [
+                85,
+                100,
+                120,
+                140,
+                160
+            ];
+
+            let nivelTexto = 100;
+
+
+            /* =====================================================
+               3. MENU HAMBÚRGUER
+            ===================================================== */
+
+            function abrirMenu() {
+
+                if (!btnMenu || !menu) {
+                    return;
+                }
+
+                btnMenu.classList.add("ativo");
+                menu.classList.add("ativo");
+
+                btnMenu.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                btnMenu.setAttribute(
+                    "aria-label",
+                    "Fechar menu de acessibilidade"
+                );
+
+                menu.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+            }
+
+
+            function fecharMenu() {
+
+                if (!btnMenu || !menu) {
+                    return;
+                }
+
+                btnMenu.classList.remove("ativo");
+                menu.classList.remove("ativo");
+
+                btnMenu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                btnMenu.setAttribute(
+                    "aria-label",
+                    "Abrir menu de acessibilidade"
+                );
+
+                menu.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+                /* Fecha submenu de daltonismo */
+
+                if (submenuDaltonismo) {
+
+                    submenuDaltonismo.classList.remove(
+                        "ativo"
+                    );
+                }
+
+                if (btnDaltonismo) {
+
+                    btnDaltonismo.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
+            }
+
+
+            function alternarMenu() {
+
+                if (!menu) {
+                    return;
+                }
+
+                if (
+                    menu.classList.contains("ativo")
+                ) {
+
+                    fecharMenu();
+
+                } else {
+
+                    abrirMenu();
+
+                }
+            }
+
+
+            if (btnMenu) {
+
+                btnMenu.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                        alternarMenu();
+
+                    }
+                );
+
+            }
+
+
+            if (menu) {
+
+                menu.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+               4. FECHAR MENU AO CLICAR FORA
+            ===================================================== */
+
+            document.addEventListener(
+                "click",
+                event => {
+
+                    if (!menu || !btnMenu) {
+                        return;
+                    }
+
+                    const clicouDentroMenu =
+                        menu.contains(event.target);
+
+                    const clicouBotao =
+                        btnMenu.contains(event.target);
+
+                    if (
+                        !clicouDentroMenu &&
+                        !clicouBotao
+                    ) {
+
+                        fecharMenu();
+
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+               5. CAMPO DE BUSCA
+            ===================================================== */
+
+            if (
+                campoBusca &&
+                limparBusca
+            ) {
+
+                function atualizarBotaoBusca() {
+
+                    limparBusca.classList.toggle(
+                        "visivel",
+                        campoBusca.value.trim() !== ""
+                    );
+
+                }
+
+
+                campoBusca.addEventListener(
+                    "input",
+                    atualizarBotaoBusca
+                );
+
+
+                limparBusca.addEventListener(
+                    "click",
+                    () => {
+
+                        campoBusca.value = "";
+
+                        atualizarBotaoBusca();
+
+                        campoBusca.focus();
+
+                    }
+                );
+
+
+                /* Estado inicial */
+
+                atualizarBotaoBusca();
+
+            }
+
+
+            /* =====================================================
+               6. MODO ESCURO
+            ===================================================== */
+
+            function atualizarDarkMode() {
+
+                const ativo =
+                    body.classList.contains("dark");
+
+
+                if (statusDark) {
+
+                    statusDark.textContent =
+                        ativo ? "ON" : "OFF";
+
+                }
+
+
+                if (btnDarkMenu) {
+
+                    btnDarkMenu.classList.toggle(
+                        "ativo",
+                        ativo
+                    );
+
+
+                    const icone =
+                        btnDarkMenu.querySelector("i");
+
+                    if (icone) {
+
+                        icone.className =
+                            ativo
+                                ? "fa-solid fa-sun"
+                                : "fa-solid fa-moon";
+
+                    }
+
+
+                    const texto =
+                        btnDarkMenu.querySelector("span");
+
+                    if (texto) {
+
+                        texto.textContent =
+                            ativo
+                                ? "Modo Claro"
+                                : "Modo Escuro";
+
+                    }
+
+                }
+
+            }
+
+
+            if (btnDarkMenu) {
+
+                btnDarkMenu.addEventListener(
+                    "click",
+                    () => {
+
+                        body.classList.toggle("dark");
+
+                        atualizarStatus();
+
+                        salvarConfiguracoes();
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+               7. TAMANHO DO TEXTO
+            ===================================================== */
+
+            function aplicarNivelTexto(nivel) {
+
+                /*
+                 * Garante que o nível fique
+                 * entre 85% e 160%.
+                 */
+
+                nivel = Math.max(
+                    85,
+                    Math.min(160, Number(nivel) || 100)
+                );
+
+
+                /*
+                 * Encontra o nível disponível mais próximo.
+                 */
+
+                nivel = NIVEIS_TEXTO.reduce(
+                    (maisProximo, valor) => {
+
+                        return Math.abs(valor - nivel) < Math.abs(maisProximo - nivel) ? valor : maisProximo;
+                    }, 100);
+                nivelTexto = nivel; /* * Remove classes anteriores. */ body.classList.remove("texto-85", "texto-100"
+                    , "texto-120", "texto-140", "texto-160"); /* * Adiciona classe atual. */ body.classList.add(
+                        `texto-${nivelTexto}`); /* * Seleciona elementos com texto. */ const
+                            elementos = document.querySelectorAll("body *:not(script):not(style):not(svg):not(path)");
+                elementos.forEach(elemento => {
+
+                    const possuiTextoDireto =
+                        Array.from(
+                            elemento.childNodes
+                        ).some(
+                            node =>
+                                node.nodeType === Node.TEXT_NODE &&
+                                node.textContent.trim().length > 0
+                        );
+
+
+                    if (!possuiTextoDireto) {
+                        return;
+                    }
+
+
+                    /*
+                    * Salva tamanho original
+                    * apenas uma vez.
+                    */
+
+                    if (
+                        !elemento.dataset.fontSizeOriginal
+                    ) {
+
+                        const tamanhoAtual =
+                            parseFloat(
+                                window.getComputedStyle(
+                                    elemento
+                                ).fontSize
+                            );
+
+
+                        if (
+                            !Number.isNaN(
+                                tamanhoAtual
+                            )
+                        ) {
+
+                            elemento.dataset.fontSizeOriginal =
+                                tamanhoAtual;
+
+                        }
+
+                    }
+
+
+                    const original =
+                        parseFloat(
+                            elemento.dataset.fontSizeOriginal
+                        );
+
+
+                    if (Number.isNaN(original)) {
+                        return;
+                    }
+
+
+                    const novoTamanho =
+                        original *
+                        (nivelTexto / 100);
+
+
+                    elemento.style.fontSize =
+                        `${novoTamanho}px`;
+
+                });
+
+            }
+
+
+            function aumentarTexto() {
+
+                const indice =
+                    NIVEIS_TEXTO.indexOf(
+                        nivelTexto
+                    );
+
+
+                if (
+                    indice < NIVEIS_TEXTO.length - 1) { aplicarNivelTexto(NIVEIS_TEXTO[indice + 1]); } atualizarStatus();
+                salvarConfiguracoes();
+            } function diminuirTexto() {
+                const indice = NIVEIS_TEXTO.indexOf(nivelTexto); if
+                    (indice > 0) {
+
+                    aplicarNivelTexto(
+                        NIVEIS_TEXTO[indice - 1]
+                    );
+
+                }
+
+
+                atualizarStatus();
+
+                salvarConfiguracoes();
+
+            }
+
+
+            if (btnAumentarTexto) {
+
+                btnAumentarTexto.addEventListener(
+                    "click",
+                    aumentarTexto
+                );
+
+            }
+
+
+            if (btnDiminuirTexto) {
+
+                btnDiminuirTexto.addEventListener(
+                    "click",
+                    diminuirTexto
+                );
+
+            }
+
+
+            /* =====================================================
+            8. ATUALIZAÇÃO GERAL DO STATUS
+            ===================================================== */
+
+            function atualizarStatus() {
+
+                const escuro =
+                    body.classList.contains("dark");
+
+                const links =
+                    body.classList.contains(
+                        "destacar-links"
+                    );
+
+                const leitura =
+                    body.classList.contains(
+                        "modo-leitura"
+                    );
+
+
+                if (statusDark) {
+
+                    statusDark.textContent =
+                        escuro ? "ON" : "OFF";
+
+                }
+
+
+                if (statusLinks) {
+
+                    statusLinks.textContent =
+                        links ? "ON" : "OFF";
+
+                }
+
+
+                if (statusLeitura) {
+
+                    statusLeitura.textContent =
+                        leitura ? "ON" : "OFF";
+
+                }
+
+
+                if (btnDarkMenu) {
+
+                    btnDarkMenu.classList.toggle(
+                        "ativo",
+                        escuro
+                    );
+
+                }
+
+
+                if (btnDestacarLinks) {
+
+                    btnDestacarLinks.classList.toggle(
+                        "ativo",
+                        links
+                    );
+
+                }
+
+
+                if (btnModoLeitura) {
+
+                    btnModoLeitura.classList.toggle(
+                        "ativo",
+                        leitura
+                    );
+
+                }
+
+
+                if (btnAumentarTexto) {
+
+                    const status =
+                        btnAumentarTexto.querySelector(
+                            ".status"
+                        );
+
+                    if (status) {
+
+                        status.textContent =
+                            nivelTexto >= 160
+                                ? "MAX"
+                                : "A+";
+
+                    }
+
+                }
+
+
+                if (btnDiminuirTexto) {
+
+                    const status =
+                        btnDiminuirTexto.querySelector(
+                            ".status"
+                        );
+
+                    if (status) {
+
+                        status.textContent =
+                            nivelTexto <= 85 ? "MIN" : "A−";
+                    }
+                } atualizarDarkMode();
+            }
+                /*=====================================================9. SALVAR
+                CONFIGURAÇÕES=====================================================*/ function salvarConfiguracoes() {
+                let daltonismo = "normal"; if (body.classList.contains("daltonismo-protanopia")) {
+                    daltonismo = "protanopia";
+                } else if (body.classList.contains("daltonismo-deuteranopia")) {
+                    daltonismo = "deuteranopia";
+                } else if (body.classList.contains("daltonismo-tritanopia")) {
+                    daltonismo = "tritanopia";
+                } const configuracoes = {
+                    dark: body.classList.contains("dark"), texto:
+                        nivelTexto, links: body.classList.contains("destacar-links"), leitura:
+                        body.classList.contains("modo-leitura"), daltonismo: daltonismo
+                }; try {
+                    localStorage.setItem(
+                        CHAVE_CONFIGURACOES, JSON.stringify(configuracoes));
+                } catch (erro) {
+                    console.warn("Não foi possível salvar as configurações.", erro);
+                }
+            }
+                /*=====================================================10. CARREGAR
+                CONFIGURAÇÕES=====================================================*/ function carregarConfiguracoes() {
+                try {
+                    const dadosSalvos = localStorage.getItem(CHAVE_CONFIGURACOES); if (!dadosSalvos) {
+                        body.classList.remove("dark", "destacar-links", "modo-leitura", ...CLASSES_DALTONISMO);
+                        aplicarNivelTexto(100); aplicarDaltonismo("normal"); atualizarStatus(); return;
+                    } const
+                        dados = JSON.parse(dadosSalvos); body.classList.toggle("dark", Boolean(dados.dark));
+                    body.classList.toggle("destacar-links", Boolean(dados.links)); body.classList.toggle("modo-leitura"
+                        , Boolean(dados.leitura)); aplicarNivelTexto(Number(dados.texto) || 100); aplicarDaltonismo(
+                            dados.daltonismo || "normal"); atualizarStatus();
+                } catch (erro) {
+                    console.warn("Não foi possível carregar as configurações.", erro); body.classList.remove("dark"
+                        , "destacar-links", "modo-leitura", ...CLASSES_DALTONISMO); aplicarNivelTexto(100);
+                    aplicarDaltonismo("normal"); atualizarStatus();
+                }
+            }
+                /*=====================================================11. DESTACAR
+                LINKS=====================================================*/ if (btnDestacarLinks) {
+                btnDestacarLinks.addEventListener("click", () => {
+
+                    body.classList.toggle(
+                        "destacar-links"
+                    );
+
+                    atualizarStatus();
+
+                    salvarConfiguracoes();
+
+                }
+                );
+
+            }
+
+
+            /* =====================================================
+            12. MODO DE LEITURA
+            ===================================================== */
+
+            if (btnModoLeitura) {
+
+                btnModoLeitura.addEventListener(
+                    "click",
+                    () => {
+
+                        body.classList.toggle(
+                            "modo-leitura"
+                        );
+
+                        atualizarStatus();
+
+                        salvarConfiguracoes();
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+            13. DALTONISMO
+            ===================================================== */
+
+            function aplicarDaltonismo(tipo) {
+
+                if (
+                    !TIPOS_DALTONISMO.includes(
+                        tipo
+                    )
+                ) {
+
+                    tipo = "normal";
+
+                }
+
+
+                body.classList.remove(
+                    ...CLASSES_DALTONISMO
+                );
+
+
+                if (tipo !== "normal") {
+
+                    body.classList.add(
+                        `daltonismo-${tipo}`
+                    );
+
+                }
+
+
+                if (!submenuDaltonismo) {
+                    return;
+                }
+
+
+                submenuDaltonismo
+                    .querySelectorAll(
+                        "[data-daltonismo]"
+                    )
+                    .forEach(botao => {
+
+                        const ativo =
+                            botao.dataset.daltonismo ===
+                            tipo;
+
+
+                        botao.classList.toggle(
+                            "ativo",
+                            ativo
+                        );
+
+
+                        botao.setAttribute(
+                            "aria-pressed",
+                            String(ativo)
+                        );
+
+                    });
+
+            }
+
+
+            if (
+                btnDaltonismo &&
+                submenuDaltonismo
+            ) {
+
+                btnDaltonismo.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+
+                        const aberto =
+                            submenuDaltonismo.classList.toggle(
+                                "ativo"
+                            );
+
+
+                        btnDaltonismo.setAttribute(
+                            "aria-expanded",
+                            String(aberto)
+                        );
+
+                    }
+                );
+
+            }
+
+
+            const botoesDaltonismo =
+                document.querySelectorAll(
+                    "[data-daltonismo]"
+                );
+
+
+            botoesDaltonismo.forEach(
+                botao => {
+
+                    botao.addEventListener(
+                        "click",
+                        () => {
+
+                            const tipo =
+                                botao.dataset.daltonismo;
+
+
+                            aplicarDaltonismo(
+                                tipo
+                            );
+
+
+                            salvarConfiguracoes();
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =====================================================
+            14. MODAL DE ATALHOS
+            ===================================================== */
+
+            function abrirAtalhos() {
+
+                if (!modalAtalhos) {
+                    return;
+                }
+
+
+                fecharMenu();
+
+
+                modalAtalhos.classList.add(
+                    "ativo"
+                );
+
+
+                if (fecharModal) {
+
+                    fecharModal.focus();
+
+                }
+
+            }
+
+
+            function fecharAtalhos() {
+
+                if (!modalAtalhos) {
+                    return;
+                }
+
+
+                modalAtalhos.classList.remove(
+                    "ativo"
+                );
+
+
+                if (btnMenu) {
+
+                    btnMenu.focus();
+
+                }
+
+            }
+
+
+            if (btnAtalhos) {
+
+                btnAtalhos.addEventListener(
+                    "click",
+                    abrirAtalhos
+                );
+
+            }
+
+
+            if (fecharModal) {
+
+                fecharModal.addEventListener(
+                    "click",
+                    fecharAtalhos
+                );
+
+            }
+
+
+            if (modalAtalhos) {
+
+                modalAtalhos.addEventListener(
+                    "click",
+                    event => {
+
+                        if (
+                            event.target ===
+                            modalAtalhos
+                        ) {
+
+                            fecharAtalhos();
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+            15. NEWSLETTER
+            ===================================================== */
+
+            const formNewsletter =
+                document.querySelector(
+                    ".form-newsletter"
+                );
+
+
+            if (formNewsletter) {
+
+                formNewsletter.addEventListener(
+                    "submit",
+                    event => {
+
+                        event.preventDefault();
+
+
+                        const email =
+                            document.getElementById(
+                                "emailNewsletter"
+                            );
+
+
+                        if (
+                            !email ||
+                            !email.value.trim()
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        alert(
+                            "Obrigado! Seu e-mail foi cadastrado na newsletter."
+                        );
+
+
+                        email.value = "";
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+            16. FILTROS DE NOTÍCIAS
+            ===================================================== */
+
+            const filtros =
+                document.querySelectorAll(
+                    ".filtro"
+                );
+
+
+            filtros.forEach(
+                filtro => {
+
+                    filtro.addEventListener(
+                        "click",
+                        () => {
+
+                            filtros.forEach(
+                                item => {
+
+                                    item.classList.remove(
+                                        "ativo"
+                                    );
+
+                                }
+                            );
+
+
+                            filtro.classList.add(
+                                "ativo"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =====================================================
+            17. ATALHOS DE TECLADO
+            ===================================================== */
+
+            document.addEventListener(
+                "keydown",
+                event => {
+
+                    /*
+                    * ESC
+                    */
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        fecharMenu();
+
+                        if (
+                            modalAtalhos &&
+                            modalAtalhos.classList.contains(
+                                "ativo"
+                            )
+                        ) {
+
+                            fecharAtalhos();
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * Ignora atalhos quando CTRL,
+                    * SHIFT ou META estiverem pressionados.
+                    */
+
+                    if (
+                        !event.altKey ||
+                        event.ctrlKey ||
+                        event.shiftKey ||
+                        event.metaKey
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const tecla =
+                        event.key.toLowerCase();
+
+
+                    /*
+                    * ALT + M
+                    * Menu
+                    */
+
+                    if (
+                        tecla === "m"
+                    ) {
+
+                        event.preventDefault();
+
+                        alternarMenu();
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * ALT + B
+                    * Busca
+                    */
+
+                    if (
+                        tecla === "b"
+                    ) {
+
+                        event.preventDefault();
+
+                        if (campoBusca) {
+
+                            campoBusca.focus();
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * ALT + H
+                    * Home
+                    */
+
+                    if (
+                        tecla === "h"
+                    ) {
+
+                        event.preventDefault();
+
+                        window.location.href =
+                            "index.html";
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * ALT + R
+                    * Modo de leitura
+                    */
+
+                    if (
+                        tecla === "r"
+                    ) {
+
+                        event.preventDefault();
+
+                        if (btnModoLeitura) {
+
+                            btnModoLeitura.click();
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * ALT + +
+                    * Aumentar texto
+                    */
+
+                    if (
+                        event.key === "+" ||
+                        event.key === "="
+                    ) {
+
+                        event.preventDefault();
+
+                        aumentarTexto();
+
+                        return;
+
+                    }
+
+
+                    /*
+                    * ALT + -
+                    * Diminuir texto
+                    */
+
+                    if (
+                        event.key === "-" ||
+                        event.key === "_"
+                    ) {
+
+                        event.preventDefault();
+
+                        diminuirTexto();
+
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+            18. RESTAURAR CONFIGURAÇÕES
+            ===================================================== */
+
+            if (btnRestaurar) {
+
+                btnRestaurar.addEventListener(
+                    "click",
+                    () => {
+
+                        /*
+                        * Remove modos.
+                        */
+
+                        body.classList.remove(
+                            "dark",
+                            "destacar-links",
+                            "modo-leitura",
+                            ...CLASSES_DALTONISMO
+                        );
+
+
+                        /*
+                        * Remove tamanhos personalizados.
+                        */
+
+                        document
+                            .querySelectorAll(
+                                "[data-font-size-original]"
+                            )
+                            .forEach(
+                                elemento => {
+
+                                    elemento.style.fontSize =
+                                        "";
+
+                                    delete elemento.dataset
+                                        .fontSizeOriginal;
+
+                                }
+                            );
+
+
+                        /*
+                        * Volta ao tamanho normal.
+                        */
+
+                        aplicarNivelTexto(100);
+
+
+                        /*
+                        * Daltonismo normal.
+                        */
+
+                        aplicarDaltonismo(
+                            "normal"
+                        );
+
+
+                        /*
+                        * Fecha submenu.
+                        */
+
+                        if (
+                            submenuDaltonismo
+                        ) {
+
+                            submenuDaltonismo.classList.remove(
+                                "ativo"
+                            );
+
+                        }
+
+
+                        if (
+                            btnDaltonismo
+                        ) {
+
+                            btnDaltonismo.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+
+
+                        /*
+                        * Atualiza interface.
+                        */
+
+                        atualizarStatus();
+
+
+                        /*
+                        * Salva o estado restaurado.
+                        */
+
+                        salvarConfiguracoes();
+
+
+                        /*
+                        * Fecha menu.
+                        */
+
+                        fecharMenu();
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+            19. FOOTER
+            ===================================================== */
+
+            if (anoAtual) {
+
+                anoAtual.textContent =
+                    new Date().getFullYear();
+
+            }
+
+
+            /*
+            * Links internos do footer.
+            */
+
+            const linksInternos =
+                document.querySelectorAll(
+                    '.footer a[href^="#"]'
+                );
+
+
+            linksInternos.forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        event => {
+
+                            const destino =
+                                link.getAttribute(
+                                    "href"
+                                );
+
+
+                            if (
+                                !destino ||
+                                destino === "#"
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            const elemento =
+                                document.querySelector(
+                                    destino
+                                );
+
+
+                            if (!elemento) {
+
+                                return;
+
+                            }
+
+
+                            event.preventDefault();
+
+
+                            elemento.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =====================================================
+            20. ANIMAÇÃO DOS ÍCONES SOCIAIS
+            ===================================================== */
+
+            const redesSociais =
+                document.querySelectorAll(
+                    ".footer-social a"
+                );
+
+
+            redesSociais.forEach(
+                rede => {
+
+                    rede.addEventListener(
+                        "mouseenter",
+                        () => {
+
+                            rede.style.zIndex = "5";
+
+                        }
+                    );
+
+
+                    rede.addEventListener(
+                        "mouseleave",
+                        () => {
+
+                            rede.style.zIndex = "";
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =====================================================
+            21. INICIALIZAÇÃO
+            ===================================================== */
+
+            carregarConfiguracoes();
+
+        });
+    </script>
 
 </body>
 
