@@ -690,6 +690,15 @@
             grid-template-columns: 1fr;
         }
 
+        .games-categorias img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .45s ease;
+        }
+
         body.modo-leitura .games-noticias {
             grid-template-columns: 1fr;
         }
@@ -803,15 +812,15 @@
    BARRA DE CATEGORIAS
 ===================================================== */
     .barra-categorias {
-            position: sticky;
-            top: 0;
-            z-index: 500;
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 3px 15px rgba(0, 0, 0, .04);
-            overflow-x: auto;
-            scrollbar-width: thin
-        }
+        position: sticky;
+        top: 0;
+        z-index: 500;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .04);
+        overflow-x: auto;
+        scrollbar-width: thin
+    }
 
     .barra-categorias::-webkit-scrollbar {
         height: 4px;
@@ -2217,8 +2226,7 @@
 
                     <article class="games-card-destaque">
 
-                        <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=900&q=85"
-                            alt="Setup gamer com computador">
+                        <img src="/img/PC-GAMER.jpg" alt="">
 
                         <div class="games-card-conteudo">
 
@@ -2443,8 +2451,7 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85"
-                                alt="Videogame retrô">
+                            <img src="/img/Clássicos dos videogames continuam influenciando novos desenvolvedores.png" alt="">
 
                             <span class="games-noticia-tag">
                                 Retrô
@@ -2602,6 +2609,8 @@
 
                 <div class="games-categorias">
 
+                    
+
                     <a href="#" class="games-categoria">
 
                         <div>
@@ -2611,7 +2620,7 @@
 
                     </a>
 
-
+                    
                     <a href="#" class="games-categoria">
 
                         <div>
