@@ -1146,13 +1146,1069 @@
         }
     }
 
-    /* =========================================
-   FIM DO HEADER
-========================================= */
+    /* =====================================================
+   PÁGINA - INOVAÇÕES
+===================================================== */
 
-    /* =========================================
-   FIM DO FOOTER
-========================================= */
+    .pagina-inovacoes {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 55px 25px 80px;
+    }
+
+
+    /* =====================================================
+   INTRO
+===================================================== */
+
+    .intro-inovacoes {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 42px;
+    }
+
+    .tag-secao {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        color: #00a9c7;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+    }
+
+    .tag-secao i {
+        color: #00d9ff;
+    }
+
+    .intro-inovacoes h1 {
+        color: #111820;
+        font-size: clamp(35px, 5vw, 58px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .intro-inovacoes p {
+        max-width: 600px;
+        margin-top: 14px;
+        color: #66717d;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .linha-decorativa {
+        width: 280px;
+        height: 5px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: linear-gradient(90deg,
+                #00d9ff,
+                #00a9c7,
+                transparent);
+    }
+
+
+    /* =====================================================
+   TÍTULOS DE SEÇÃO
+===================================================== */
+
+    .titulo-secao {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 25px;
+        margin-bottom: 22px;
+    }
+
+    .mini-label {
+        display: block;
+        margin-bottom: 6px;
+        color: #00a9c7;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 1.6px;
+    }
+
+    .titulo-secao h2 {
+        color: #111820;
+        font-size: 27px;
+        font-weight: 900;
+        letter-spacing: -.7px;
+    }
+
+    .link-ver-todas {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #008ca7;
+        font-size: 12px;
+        font-weight: 800;
+        text-decoration: none;
+        transition: .2s ease;
+    }
+
+    .link-ver-todas:hover {
+        color: #00d9ff;
+        transform: translateX(4px);
+    }
+
+
+    /* =====================================================
+   DESTAQUES
+===================================================== */
+
+    .grid-destaques {
+        display: grid;
+        grid-template-columns: 1.65fr 1fr;
+        grid-template-rows: 250px 250px;
+        gap: 14px;
+    }
+
+    .noticia-principal {
+        grid-row: 1 / 3;
+    }
+
+    .imagem-noticia {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 14px;
+        background: #101820;
+        text-decoration: none;
+    }
+
+    .imagem-noticia img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform .6s ease;
+    }
+
+    .imagem-noticia:hover img {
+        transform: scale(1.06);
+    }
+
+    .overlay-noticia {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(180deg,
+                rgba(0, 0, 0, .03) 20%,
+                rgba(0, 0, 0, .85) 100%);
+    }
+
+    .categoria-card {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 2;
+        padding: 6px 10px;
+        border: 1px solid rgba(0, 217, 255, .35);
+        border-radius: 5px;
+        background: rgba(0, 20, 28, .72);
+        color: #00d9ff;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: .8px;
+        backdrop-filter: blur(8px);
+    }
+
+    .conteudo-card-principal {
+        position: absolute;
+        z-index: 2;
+        right: 25px;
+        bottom: 23px;
+        left: 25px;
+        color: white;
+    }
+
+    .data-noticia {
+        display: block;
+        margin-bottom: 7px;
+        color: #c5d0d7;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .conteudo-card-principal h3 {
+        max-width: 800px;
+        color: #fff;
+        font-size: clamp(23px, 3vw, 34px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: -.8px;
+    }
+
+    .conteudo-card-principal p {
+        max-width: 680px;
+        margin-top: 10px;
+        color: #d9e0e5;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .ler-materia {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 15px;
+        color: #00d9ff;
+        font-size: 11px;
+        font-weight: 900;
+    }
+
+    .noticia-destaque {
+        min-width: 0;
+    }
+
+    .conteudo-card {
+        position: absolute;
+        z-index: 2;
+        right: 17px;
+        bottom: 17px;
+        left: 17px;
+    }
+
+    .conteudo-card h3 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+   FILTROS
+===================================================== */
+
+    .filtro-inovacoes {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin: 42px 0;
+        padding: 16px 20px;
+        border: 1px solid #dfe5ea;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(18, 32, 45, .04);
+    }
+
+    .filtro-titulo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        color: #26313a;
+        font-size: 12px;
+        font-weight: 900;
+    }
+
+    .filtro-titulo i {
+        color: #00b8d9;
+    }
+
+    .filtros {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .filtro {
+        padding: 8px 14px;
+        border: 1px solid #dfe5ea;
+        border-radius: 20px;
+        background: #f7f9fa;
+        color: #66717d;
+        cursor: pointer;
+        font-size: 11px;
+        font-weight: 700;
+        transition: .2s ease;
+    }
+
+    .filtro:hover,
+    .filtro.ativo {
+        border-color: #00c9e9;
+        background: #00d9ff;
+        color: #071018;
+    }
+
+
+    /* =====================================================
+   RECENTES
+===================================================== */
+
+    .layout-recentes {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 350px;
+        gap: 35px;
+    }
+
+    .lista-noticias {
+        display: grid;
+        gap: 15px;
+    }
+
+    .noticia-horizontal {
+        display: grid;
+        grid-template-columns: 235px minmax(0, 1fr);
+        gap: 20px;
+        min-height: 180px;
+        padding: 13px;
+        border: 1px solid #e1e6ea;
+        border-radius: 13px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(15, 29, 40, .035);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .noticia-horizontal:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(15, 29, 40, .09);
+    }
+
+    .thumb-noticia {
+        display: block;
+        height: 155px;
+        overflow: hidden;
+        border-radius: 9px;
+    }
+
+    .thumb-noticia img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform .4s ease;
+    }
+
+    .noticia-horizontal:hover .thumb-noticia img {
+        transform: scale(1.05);
+    }
+
+    .info-noticia {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 7px 5px 0;
+    }
+
+    .meta-noticia {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .meta-noticia span {
+        color: #00a9c7;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: .7px;
+    }
+
+    .meta-noticia time {
+        color: #8b969e;
+        font-size: 9px;
+    }
+
+    .info-noticia h3 {
+        color: #17212a;
+        font-size: 17px;
+        font-weight: 900;
+        line-height: 1.3;
+    }
+
+    .info-noticia p {
+        margin-top: 8px;
+        color: #727d86;
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .ler-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: auto;
+        padding-top: 10px;
+        color: #009cb9;
+        font-size: 10px;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    .ler-link:hover {
+        color: #00d9ff;
+    }
+
+
+    /* =====================================================
+   MAIS LIDAS
+===================================================== */
+
+    .mais-lidas {
+        height: fit-content;
+        padding: 23px;
+        border: 1px solid #dfe5ea;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(15, 29, 40, .04);
+    }
+
+    .mais-lidas-titulo {
+        padding-bottom: 17px;
+        border-bottom: 1px solid #e8ecef;
+    }
+
+    .mais-lidas-titulo h2 {
+        color: #17212a;
+        font-size: 23px;
+        font-weight: 900;
+    }
+
+    .item-mais-lida {
+        display: grid;
+        grid-template-columns: 38px 1fr;
+        gap: 10px;
+        padding: 19px 0;
+        border-bottom: 1px solid #e8ecef;
+    }
+
+    .item-mais-lida:last-child {
+        border-bottom: 0;
+        padding-bottom: 4px;
+    }
+
+    .numero {
+        color: #d9e1e5;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .categoria-pequena {
+        color: #00a5c2;
+        font-size: 8px;
+        font-weight: 900;
+        letter-spacing: .8px;
+    }
+
+    .item-mais-lida h3 {
+        margin-top: 5px;
+        color: #26313a;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.45;
+    }
+
+    .visualizacoes {
+        display: block;
+        margin-top: 8px;
+        color: #99a3aa;
+        font-size: 9px;
+    }
+
+    .visualizacoes i {
+        margin-right: 4px;
+        color: #00b9d6;
+    }
+
+
+    /* =====================================================
+   BANNER FUTURO
+===================================================== */
+
+    .banner-futuro {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 300px;
+        margin-top: 65px;
+        padding: 45px 55px;
+        overflow: hidden;
+        border-radius: 18px;
+        background:
+            radial-gradient(circle at 90% 50%,
+                rgba(0, 217, 255, .23),
+                transparent 30%),
+            linear-gradient(120deg,
+                #071018,
+                #0c1d27,
+                #071018);
+    }
+
+    .banner-conteudo {
+        position: relative;
+        z-index: 3;
+        max-width: 700px;
+    }
+
+    .tag-banner {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #00d9ff;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+    }
+
+    .banner-conteudo h2 {
+        margin-top: 12px;
+        color: #fff;
+        font-size: clamp(25px, 4vw, 39px);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .banner-conteudo p {
+        max-width: 600px;
+        margin-top: 12px;
+        color: #aebbc3;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .form-newsletter {
+        display: flex;
+        width: min(520px, 100%);
+        margin-top: 22px;
+    }
+
+    .form-newsletter input {
+        min-width: 0;
+        flex: 1;
+        height: 45px;
+        padding: 0 17px;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-right: 0;
+        border-radius: 8px 0 0 8px;
+        background: rgba(255, 255, 255, .07);
+        color: #fff;
+        font-size: 11px;
+    }
+
+    .form-newsletter input::placeholder {
+        color: #8999a4;
+    }
+
+    .form-newsletter input:focus {
+        border-color: #00d9ff;
+    }
+
+    .form-newsletter button {
+        height: 45px;
+        padding: 0 17px;
+        border: 1px solid #00d9ff;
+        border-radius: 0 8px 8px 0;
+        background: #00d9ff;
+        color: #061016;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 900;
+        transition: .2s ease;
+    }
+
+    .form-newsletter button:hover {
+        background: #fff;
+        border-color: #fff;
+    }
+
+    .form-newsletter button i {
+        margin-left: 5px;
+    }
+
+
+    /* =====================================================
+   ELEMENTO TECNOLÓGICO
+===================================================== */
+
+    .banner-elemento {
+        position: absolute;
+        right: 80px;
+        width: 210px;
+        height: 210px;
+    }
+
+    .circulo-tech {
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(0, 217, 255, .25);
+        border-radius: 50%;
+    }
+
+    .circulo-1 {
+        animation: girarTech 14s linear infinite;
+    }
+
+    .circulo-2 {
+        inset: 25px;
+        border-color: rgba(255, 255, 255, .12);
+        animation: girarTech 9s linear infinite reverse;
+    }
+
+    .banner-elemento i {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #00d9ff;
+        font-size: 55px;
+        text-shadow: 0 0 30px rgba(0, 217, 255, .6);
+    }
+
+    @keyframes girarTech {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    /* =====================================================
+   DARK MODE
+   Compatível com o seu menu de acessibilidade
+===================================================== */
+
+    body.modo-escuro .pagina-inovacoes {
+        background: transparent;
+    }
+
+    body.modo-escuro .intro-inovacoes h1,
+    body.modo-escuro .titulo-secao h2 {
+        color: #fff;
+    }
+
+    body.modo-escuro .intro-inovacoes p {
+        color: #aeb9c2;
+    }
+
+    body.modo-escuro .filtro-inovacoes,
+    body.modo-escuro .noticia-horizontal,
+    body.modo-escuro .mais-lidas {
+        background: #111a22;
+        border-color: #26333d;
+    }
+
+    body.modo-escuro .filtro-titulo,
+    body.modo-escuro .info-noticia h3,
+    body.modo-escuro .item-mais-lida h3 {
+        color: #edf3f6;
+    }
+
+    body.modo-escuro .filtro {
+        background: #18232c;
+        border-color: #2a3944;
+        color: #b9c4cb;
+    }
+
+    body.modo-escuro .filtro:hover,
+    body.modo-escuro .filtro.ativo {
+        background: #00d9ff;
+        color: #071018;
+    }
+
+    body.modo-escuro .info-noticia p {
+        color: #929fa8;
+    }
+
+    body.modo-escuro .mais-lidas-titulo,
+    body.modo-escuro .item-mais-lida {
+        border-color: #293740;
+    }
+
+
+    /* =====================================================
+   RESPONSIVIDADE - 1000PX
+===================================================== */
+
+    @media (max-width: 1000px) {
+
+        .pagina-inovacoes {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .layout-recentes {
+            grid-template-columns: 1fr;
+        }
+
+        .mais-lidas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 25px;
+        }
+
+        .mais-lidas-titulo {
+            grid-column: 1 / -1;
+        }
+
+        .item-mais-lida {
+            min-height: 130px;
+        }
+
+        .banner-elemento {
+            right: 30px;
+            opacity: .35;
+        }
+    }
+
+
+    /* =====================================================
+   RESPONSIVIDADE - 750PX
+===================================================== */
+
+    @media (max-width: 750px) {
+
+        .pagina-inovacoes {
+            padding-top: 40px;
+        }
+
+        .intro-inovacoes {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .linha-decorativa {
+            width: 150px;
+        }
+
+        .grid-destaques {
+            grid-template-columns: 1fr;
+            grid-template-rows: 400px 220px 220px;
+        }
+
+        .noticia-principal {
+            grid-row: auto;
+        }
+
+        .filtro-inovacoes {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .noticia-horizontal {
+            grid-template-columns: 180px 1fr;
+        }
+
+        .thumb-noticia {
+            height: 150px;
+        }
+
+        .banner-futuro {
+            padding: 35px 30px;
+        }
+
+        .banner-elemento {
+            display: none;
+        }
+    }
+
+
+    /* =====================================================
+   RESPONSIVIDADE - 550PX
+===================================================== */
+
+    @media (max-width: 550px) {
+
+        .pagina-inovacoes {
+            padding: 32px 15px 60px;
+        }
+
+        .titulo-secao {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .grid-destaques {
+            grid-template-rows: 370px 210px 210px;
+        }
+
+        .conteudo-card-principal {
+            right: 18px;
+            bottom: 18px;
+            left: 18px;
+        }
+
+        .conteudo-card-principal h3 {
+            font-size: 23px;
+        }
+
+        .conteudo-card-principal p {
+            display: none;
+        }
+
+        .noticia-horizontal {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .thumb-noticia {
+            height: 190px;
+        }
+
+        .info-noticia {
+            padding: 0 5px 7px;
+        }
+
+        .info-noticia h3 {
+            font-size: 16px;
+        }
+
+        .info-noticia p {
+            font-size: 10px;
+        }
+
+        .mais-lidas {
+            display: block;
+        }
+
+        .banner-futuro {
+            margin-top: 45px;
+            padding: 30px 22px;
+        }
+
+        .form-newsletter {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-newsletter input,
+        .form-newsletter button {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 8px;
+        }
+
+        .form-newsletter button {
+            border-color: #00d9ff;
+        }
+    }
+
+
+    /* =====================================================
+   RESPONSIVIDADE - 380PX
+===================================================== */
+
+    @media (max-width: 380px) {
+
+        .intro-inovacoes h1 {
+            font-size: 38px;
+        }
+
+        .grid-destaques {
+            grid-template-rows: 340px 190px 190px;
+        }
+
+        .categoria-card {
+            top: 11px;
+            left: 11px;
+            font-size: 8px;
+        }
+
+        .conteudo-card-principal h3 {
+            font-size: 20px;
+        }
+
+        .noticia-destaque .conteudo-card h3 {
+            font-size: 14px;
+        }
+
+        .filtros {
+            width: 100%;
+        }
+
+        .filtro {
+            font-size: 10px;
+            padding: 7px 11px;
+        }
+    }
+
+
+    /* =====================================================
+   REDUÇÃO DE MOVIMENTO
+===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .banner-elemento *,
+        .imagem-noticia img,
+        .noticia-horizontal,
+        .filtro,
+        .link-ver-todas {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
+
+    /* =====================================================
+   MODO DE LEITURA
+===================================================== */
+
+    body.modo-leitura {
+        background: #f4f1e8;
+        color: #292929;
+    }
+
+    body.modo-leitura .barra-categorias {
+        background: #f4f1e8;
+        border-color: #d8d2c4;
+        box-shadow: none;
+    }
+
+    body.modo-leitura .barra-categorias a {
+        color: #292929;
+    }
+
+    body.modo-leitura header {
+        background: #252525;
+        box-shadow: none;
+    }
+
+    body.modo-leitura .pagina-inovacoes {
+        max-width: 900px;
+    }
+
+    body.modo-leitura .intro-inovacoes h1,
+    body.modo-leitura .titulo-secao h2 {
+        color: #292929;
+    }
+
+    body.modo-leitura .intro-inovacoes p,
+    body.modo-leitura .info-noticia p {
+        color: #444;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    body.modo-leitura .noticia-horizontal,
+    body.modo-leitura .mais-lidas,
+    body.modo-leitura .filtro-inovacoes {
+        box-shadow: none;
+    }
+
+    body.modo-leitura .banner-futuro {
+        background: #292929;
+    }
+
+    body.modo-leitura .banner-elemento {
+        display: none;
+    }
+
+
+    /* =====================================================
+   DALTONISMO
+===================================================== */
+
+    /* Protanopia */
+    body.daltonismo-protanopia {
+        filter: contrast(1.05) saturate(.75);
+    }
+
+    body.daltonismo-deuteranopia {
+        filter: contrast(1.05) saturate(.65) hue-rotate(10deg);
+    }
+
+    body.daltonismo-tritanopia {
+        filter: contrast(1.05) saturate(.75) hue-rotate(180deg);
+    }
+
+
+    /* =====================================================
+   INDICADOR VISUAL DALTONISMO
+===================================================== */
+
+    [data-daltonismo].ativo {
+        background: rgba(0, 217, 255, .28);
+        color: #fff;
+        font-weight: 900;
+    }
+
+
+    /* =====================================================
+   DARK MODE
+===================================================== */
+
+    body.modo-escuro {
+        --background: #080d12;
+        --surface: #111a22;
+        --surface-2: #18232c;
+        --text: #edf3f6;
+        --text-secondary: #aeb9c2;
+        --border: #293740;
+
+        background: var(--background);
+        color: var(--text);
+    }
+
+    body.modo-escuro .pagina-inovacoes {
+        background: transparent;
+    }
+
+    body.modo-escuro .barra-categorias {
+        background: #0d151c;
+        border-color: #26333d;
+    }
+
+    body.modo-escuro .barra-categorias a {
+        color: #edf3f6;
+    }
+
+    body.modo-escuro .intro-inovacoes h1,
+    body.modo-escuro .titulo-secao h2 {
+        color: #fff;
+    }
+
+    body.modo-escuro .intro-inovacoes p {
+        color: #aeb9c2;
+    }
+
+    body.modo-escuro .filtro-inovacoes,
+    body.modo-escuro .noticia-horizontal,
+    body.modo-escuro .mais-lidas {
+        background: #111a22;
+        border-color: #26333d;
+    }
+
+    body.modo-escuro .filtro-titulo,
+    body.modo-escuro .info-noticia h3,
+    body.modo-escuro .item-mais-lida h3 {
+        color: #edf3f6;
+    }
+
+    body.modo-escuro .filtro {
+        background: #18232c;
+        border-color: #2a3944;
+        color: #b9c4cb;
+    }
+
+    body.modo-escuro .info-noticia p {
+        color: #929fa8;
+    }
+
+    body.modo-escuro .mais-lidas-titulo,
+    body.modo-escuro .item-mais-lida {
+        border-color: #293740;
+    }
 </style>
 
 <body>
@@ -1328,6 +2384,560 @@
         </div>
     </header>
 
+
+
+    <!-- =====================================================
+     CONTEÚDO - INOVAÇÕES
+===================================================== -->
+    <main class="pagina-inovacoes">
+
+        <!-- =================================================
+         CABEÇALHO DA PÁGINA
+    ================================================= -->
+        <section class="intro-inovacoes">
+            <div>
+                <span class="tag-secao">
+                    <i class="fa-solid fa-microchip"></i>
+                    TECNOLOGIA & INOVAÇÃO
+                </span>
+
+                <h1>Inovações</h1>
+
+                <p>
+                    Descubra as tecnologias que estão transformando o presente
+                    e moldando o futuro.
+                </p>
+            </div>
+
+            <div class="linha-decorativa"></div>
+        </section>
+
+
+        <!-- =================================================
+         NOTÍCIAS EM DESTAQUE
+    ================================================= -->
+        <section class="secao-noticias">
+
+            <div class="titulo-secao">
+                <div>
+                    <span class="mini-label">EM DESTAQUE</span>
+                    <h2>Principais inovações</h2>
+                </div>
+
+                <a href="#recentes" class="link-ver-todas">
+                    Ver todas
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+
+            <div class="grid-destaques">
+
+                <!-- DESTAQUE PRINCIPAL -->
+                <article class="noticia-principal">
+
+                    <a href="#" class="imagem-noticia">
+                        <img src="/design_site/imagens/inovacao-ia.jpg"
+                            alt="Inteligência artificial sendo utilizada em novas tecnologias">
+
+                        <span class="categoria-card">
+                            INTELIGÊNCIA ARTIFICIAL
+                        </span>
+
+                        <div class="overlay-noticia"></div>
+
+                        <div class="conteudo-card-principal">
+                            <span class="data-noticia">
+                                23 de agosto de 2026
+                            </span>
+
+                            <h3>
+                                Nova geração de inteligência artificial promete
+                                transformar a forma como usamos a tecnologia
+                            </h3>
+
+                            <p>
+                                Empresas estão desenvolvendo sistemas cada vez
+                                mais capazes de compreender, criar e executar
+                                tarefas complexas.
+                            </p>
+
+                            <span class="ler-materia">
+                                Ler matéria
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                </article>
+
+
+                <!-- DESTAQUE 2 -->
+                <article class="noticia-destaque">
+
+                    <a href="#" class="imagem-noticia">
+                        <img src="/design_site/imagens/robotica.jpg" alt="Robô humanoide em ambiente tecnológico">
+
+                        <span class="categoria-card">
+                            ROBÓTICA
+                        </span>
+
+                        <div class="overlay-noticia"></div>
+
+                        <div class="conteudo-card">
+                            <span class="data-noticia">
+                                22 de agosto de 2026
+                            </span>
+
+                            <h3>
+                                Robôs humanoides começam a ganhar novas funções
+                                fora dos laboratórios
+                            </h3>
+                        </div>
+                    </a>
+
+                </article>
+
+
+                <!-- DESTAQUE 3 -->
+                <article class="noticia-destaque">
+
+                    <a href="#" class="imagem-noticia">
+                        <img src="/design_site/imagens/computacao-quantica.jpg"
+                            alt="Computador quântico em laboratório">
+
+                        <span class="categoria-card">
+                            COMPUTAÇÃO
+                        </span>
+
+                        <div class="overlay-noticia"></div>
+
+                        <div class="conteudo-card">
+                            <span class="data-noticia">
+                                21 de agosto de 2026
+                            </span>
+
+                            <h3>
+                                Computação quântica avança e promete resolver
+                                problemas antes considerados impossíveis
+                            </h3>
+                        </div>
+                    </a>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+         BARRA DE CATEGORIAS
+    ================================================= -->
+        <section class="filtro-inovacoes">
+
+            <div class="filtro-titulo">
+                <i class="fa-solid fa-sliders"></i>
+                Explorar por categoria
+            </div>
+
+            <div class="filtros">
+                <button class="filtro ativo" type="button">
+                    Todas
+                </button>
+
+                <button class="filtro" type="button">
+                    Inteligência Artificial
+                </button>
+
+                <button class="filtro" type="button">
+                    Robótica
+                </button>
+
+                <button class="filtro" type="button">
+                    Ciência
+                </button>
+
+                <button class="filtro" type="button">
+                    Hardware
+                </button>
+
+                <button class="filtro" type="button">
+                    Mobilidade
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         ÚLTIMAS NOTÍCIAS
+    ================================================= -->
+        <section class="secao-recentes" id="recentes">
+
+            <div class="titulo-secao">
+                <div>
+                    <span class="mini-label">ATUALIZAÇÕES</span>
+                    <h2>Notícias recentes</h2>
+                </div>
+
+                <span class="contador-noticias">
+                    <i class="fa-solid fa-circle"></i>
+                    Atualizado hoje
+                </span>
+            </div>
+
+
+            <div class="layout-recentes">
+
+                <!-- COLUNA PRINCIPAL -->
+                <div class="lista-noticias">
+
+                    <!-- NOTÍCIA -->
+                    <article class="noticia-horizontal">
+
+                        <a href="#" class="thumb-noticia">
+                            <img src="/design_site/imagens/ia-saude.jpg"
+                                alt="Tecnologia de inteligência artificial aplicada à saúde">
+                        </a>
+
+                        <div class="info-noticia">
+
+                            <div class="meta-noticia">
+                                <span>CIÊNCIA</span>
+                                <time datetime="2026-08-23">
+                                    23 ago. 2026
+                                </time>
+                            </div>
+
+                            <h3>
+                                Inteligência artificial começa a acelerar
+                                descobertas em pesquisas científicas
+                            </h3>
+
+                            <p>
+                                Novas ferramentas estão ajudando pesquisadores
+                                a analisar grandes volumes de dados em menos tempo.
+                            </p>
+
+                            <a href="#" class="ler-link">
+                                Continuar lendo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTÍCIA -->
+                    <article class="noticia-horizontal">
+
+                        <a href="#" class="thumb-noticia">
+                            <img src="/design_site/imagens/bateria.jpg" alt="Nova tecnologia de bateria">
+                        </a>
+
+                        <div class="info-noticia">
+
+                            <div class="meta-noticia">
+                                <span>ENERGIA</span>
+                                <time datetime="2026-08-22">
+                                    22 ago. 2026
+                                </time>
+                            </div>
+
+                            <h3>
+                                Nova tecnologia de baterias pode aumentar
+                                significativamente a autonomia dos dispositivos
+                            </h3>
+
+                            <p>
+                                Pesquisadores trabalham em materiais capazes de
+                                armazenar mais energia ocupando menos espaço.
+                            </p>
+
+                            <a href="#" class="ler-link">
+                                Continuar lendo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTÍCIA -->
+                    <article class="noticia-horizontal">
+
+                        <a href="#" class="thumb-noticia">
+                            <img src="/design_site/imagens/casa-inteligente.jpg"
+                                alt="Casa inteligente com dispositivos conectados">
+                        </a>
+
+                        <div class="info-noticia">
+
+                            <div class="meta-noticia">
+                                <span>CASA INTELIGENTE</span>
+                                <time datetime="2026-08-22">
+                                    22 ago. 2026
+                                </time>
+                            </div>
+
+                            <h3>
+                                Casas inteligentes estão ficando mais autônomas
+                                com novos sistemas de automação
+                            </h3>
+
+                            <p>
+                                Sensores e inteligência artificial começam a
+                                trabalhar juntos para automatizar tarefas.
+                            </p>
+
+                            <a href="#" class="ler-link">
+                                Continuar lendo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTÍCIA -->
+                    <article class="noticia-horizontal">
+
+                        <a href="#" class="thumb-noticia">
+                            <img src="/design_site/imagens/oculos-ar.jpg" alt="Óculos de realidade aumentada">
+                        </a>
+
+                        <div class="info-noticia">
+
+                            <div class="meta-noticia">
+                                <span>REALIDADE AUMENTADA</span>
+                                <time datetime="2026-08-21">
+                                    21 ago. 2026
+                                </time>
+                            </div>
+
+                            <h3>
+                                Óculos inteligentes ganham recursos de realidade
+                                aumentada mais avançados
+                            </h3>
+
+                            <p>
+                                A nova geração de dispositivos busca tornar a
+                                realidade aumentada mais discreta e natural.
+                            </p>
+
+                            <a href="#" class="ler-link">
+                                Continuar lendo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTÍCIA -->
+                    <article class="noticia-horizontal">
+
+                        <a href="#" class="thumb-noticia">
+                            <img src="/design_site/imagens/carro-eletrico.jpg" alt="Carro elétrico moderno">
+                        </a>
+
+                        <div class="info-noticia">
+
+                            <div class="meta-noticia">
+                                <span>MOBILIDADE</span>
+                                <time datetime="2026-08-20">
+                                    20 ago. 2026
+                                </time>
+                            </div>
+
+                            <h3>
+                                Carros elétricos recebem novas tecnologias para
+                                melhorar eficiência e segurança
+                            </h3>
+
+                            <p>
+                                Fabricantes apostam em sensores, software e novos
+                                sistemas de assistência ao motorista.
+                            </p>
+
+                            <a href="#" class="ler-link">
+                                Continuar lendo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                 MAIS LIDAS
+            ================================================= -->
+                <aside class="mais-lidas">
+
+                    <div class="mais-lidas-titulo">
+                        <span class="mini-label">POPULAR</span>
+                        <h2>Mais lidas</h2>
+                    </div>
+
+
+                    <article class="item-mais-lida">
+
+                        <span class="numero">01</span>
+
+                        <div>
+                            <span class="categoria-pequena">
+                                INOVAÇÃO
+                            </span>
+
+                            <h3>
+                                Os 5 avanços tecnológicos que podem mudar
+                                nossa rotina nos próximos anos
+                            </h3>
+
+                            <span class="visualizacoes">
+                                <i class="fa-solid fa-eye"></i>
+                                18,4 mil visualizações
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="item-mais-lida">
+
+                        <span class="numero">02</span>
+
+                        <div>
+                            <span class="categoria-pequena">
+                                IA
+                            </span>
+
+                            <h3>
+                                Como a inteligência artificial está mudando
+                                o mercado de trabalho
+                            </h3>
+
+                            <span class="visualizacoes">
+                                <i class="fa-solid fa-eye"></i>
+                                15,7 mil visualizações
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="item-mais-lida">
+
+                        <span class="numero">03</span>
+
+                        <div>
+                            <span class="categoria-pequena">
+                                HARDWARE
+                            </span>
+
+                            <h3>
+                                Novos chips prometem levar computadores
+                                a outro nível de desempenho
+                            </h3>
+
+                            <span class="visualizacoes">
+                                <i class="fa-solid fa-eye"></i>
+                                12,9 mil visualizações
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="item-mais-lida">
+
+                        <span class="numero">04</span>
+
+                        <div>
+                            <span class="categoria-pequena">
+                                ROBÓTICA
+                            </span>
+
+                            <h3>
+                                Por que os robôs humanoides estão recebendo
+                                tanta atenção?
+                            </h3>
+
+                            <span class="visualizacoes">
+                                <i class="fa-solid fa-eye"></i>
+                                10,8 mil visualizações
+                            </span>
+                        </div>
+
+                    </article>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         BANNER INOVAÇÃO
+    ================================================= -->
+        <section class="banner-futuro">
+
+            <div class="banner-conteudo">
+
+                <span class="tag-banner">
+                    <i class="fa-solid fa-bolt"></i>
+                    O FUTURO COMEÇA AGORA
+                </span>
+
+                <h2>
+                    Acompanhe as tecnologias
+                    que estão mudando o mundo.
+                </h2>
+
+                <p>
+                    Receba as principais novidades sobre inteligência artificial,
+                    ciência, robótica e inovação diretamente no seu e-mail.
+                </p>
+
+                <form class="form-newsletter">
+
+                    <label class="sr-only" for="emailNewsletter">
+                        Seu e-mail
+                    </label>
+
+                    <input id="emailNewsletter" type="email" placeholder="Digite seu melhor e-mail" required>
+
+                    <button type="submit">
+                        Quero receber
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="banner-elemento">
+                <div class="circulo-tech circulo-1"></div>
+                <div class="circulo-tech circulo-2"></div>
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
     <!-- =====================================================
          MODAL DE ATALHOS
     ===================================================== -->
@@ -1477,461 +3087,7 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script>
-
-        const body = document.body;
-        const btnMenu = document.getElementById("btnMenu");
-        const menu = document.getElementById("menu");
-        const btnDarkMenu = document.getElementById("btnDarkMenu");
-        const statusDark = document.getElementById("statusDark");
-        const btnAumentarTexto = document.getElementById("btnAumentarTexto");
-        const btnDiminuirTexto = document.getElementById("btnDiminuirTexto");
-        const btnDestacarLinks = document.getElementById("btnDestacarLinks");
-        const statusLinks = document.getElementById("statusLinks");
-        const btnModoLeitura = document.getElementById("btnModoLeitura");
-        const statusLeitura = document.getElementById("statusLeitura");
-        const btnAtalhos = document.getElementById("btnAtalhos");
-        const btnDaltonismo = document.getElementById("btnDaltonismo");
-        const submenuDaltonismo = document.getElementById("submenuDaltonismo");
-        const btnRestaurar = document.getElementById("btnRestaurar");
-        const modalAtalhos = document.getElementById("modalAtalhos");
-        const fecharModal = document.getElementById("fecharModal");
-        const campoBusca = document.getElementById("campoBusca");
-        const limparBusca = document.getElementById("limparBusca");
-
-        const CLASSES_DALTONISMO = [
-            "daltonismo-protanopia",
-            "daltonismo-deuteranopia",
-            "daltonismo-tritanopia"
-        ];
-
-        const TIPOS_DALTONISMO = [
-            "normal",
-            "protanopia",
-            "deuteranopia",
-            "tritanopia"
-        ];
-
-        const NIVEIS_TEXTO = [85, 100, 120, 140, 160];
-        let nivelTexto = 100;
-
-        /* =====================================================
-           MENU
-        ===================================================== */
-        function abrirMenu() {
-            const aberto = !menu.classList.contains("ativo");
-
-            menu.classList.toggle("ativo", aberto);
-            btnMenu.classList.toggle("ativo", aberto);
-            btnMenu.setAttribute("aria-expanded", String(aberto));
-            btnMenu.setAttribute(
-                "aria-label",
-                aberto
-                    ? "Fechar menu de acessibilidade"
-                    : "Abrir menu de acessibilidade"
-            );
-            menu.setAttribute("aria-hidden", String(!aberto));
-        }
-
-        function fecharMenu() {
-            menu.classList.remove("ativo");
-            btnMenu.classList.remove("ativo");
-            btnMenu.setAttribute("aria-expanded", "false");
-            btnMenu.setAttribute("aria-label", "Abrir menu de acessibilidade");
-            menu.setAttribute("aria-hidden", "true");
-        }
-
-        btnMenu.addEventListener("click", event => {
-            event.stopPropagation();
-            abrirMenu();
-        });
-
-        menu.addEventListener("click", event => {
-            event.stopPropagation();
-        });
-
-        document.addEventListener("click", event => {
-            if (!menu.contains(event.target) && !btnMenu.contains(event.target)) {
-                fecharMenu();
-            }
-        });
-
-        /* =====================================================
-           BUSCA
-        ===================================================== */
-        campoBusca.addEventListener("input", () => {
-            limparBusca.classList.toggle(
-                "visivel",
-                campoBusca.value.length > 0
-            );
-        });
-
-        limparBusca.addEventListener("click", () => {
-            campoBusca.value = "";
-            limparBusca.classList.remove("visivel");
-            campoBusca.focus();
-        });
-
-        /* =====================================================
-           MODO ESCURO
-        ===================================================== */
-        btnDarkMenu.addEventListener("click", () => {
-            body.classList.toggle("dark");
-            atualizarStatus();
-            salvarConfiguracoes();
-        });
-
-        /* =====================================================
-           TEXTO
-        ===================================================== */
-        function aplicarNivelTexto(nivel) {
-            nivel = Math.max(85, Math.min(160, nivel));
-
-            nivel = NIVEIS_TEXTO.reduce((maisProximo, valor) => {
-                return Math.abs(valor - nivel) < Math.abs(maisProximo - nivel)
-                    ? valor
-                    : maisProximo;
-            }, 100);
-
-            nivelTexto = nivel;
-
-            body.classList.remove(
-                "texto-85",
-                "texto-100",
-                "texto-120",
-                "texto-140",
-                "texto-160"
-            );
-
-            body.classList.add(`texto-${nivelTexto}`);
-        }
-
-        function aumentarTexto() {
-            const indice = NIVEIS_TEXTO.indexOf(nivelTexto);
-
-            if (indice < NIVEIS_TEXTO.length - 1) {
-                aplicarNivelTexto(NIVEIS_TEXTO[indice + 1]);
-            }
-
-            atualizarStatus();
-            salvarConfiguracoes();
-        }
-
-        function diminuirTexto() {
-            const indice = NIVEIS_TEXTO.indexOf(nivelTexto);
-
-            if (indice > 0) {
-                aplicarNivelTexto(NIVEIS_TEXTO[indice - 1]);
-            }
-
-            atualizarStatus();
-            salvarConfiguracoes();
-        }
-
-        btnAumentarTexto.addEventListener("click", aumentarTexto);
-        btnDiminuirTexto.addEventListener("click", diminuirTexto);
-
-        /* =====================================================
-           STATUS
-        ===================================================== */
-        function atualizarStatus() {
-            const escuro = body.classList.contains("dark");
-            const links = body.classList.contains("destacar-links");
-            const leitura = body.classList.contains("modo-leitura");
-
-            statusDark.textContent = escuro ? "ON" : "OFF";
-            statusLinks.textContent = links ? "ON" : "OFF";
-            statusLeitura.textContent = leitura ? "ON" : "OFF";
-
-            btnDarkMenu.classList.toggle("ativo", escuro);
-            btnDestacarLinks.classList.toggle("ativo", links);
-            btnModoLeitura.classList.toggle("ativo", leitura);
-
-            btnDarkMenu.querySelector("i").className =
-                escuro ? "fa-solid fa-sun" : "fa-solid fa-moon";
-
-            btnDarkMenu.querySelector("span").textContent =
-                escuro ? "Modo Claro" : "Modo Escuro";
-
-            btnAumentarTexto.querySelector(".status").textContent =
-                nivelTexto >= 160 ? "MAX" : "A+";
-
-            btnDiminuirTexto.querySelector(".status").textContent =
-                nivelTexto <= 85 ? "MIN" : "A−";
-        }
-
-        /* =====================================================
-           CONFIGURAÇÕES
-        ===================================================== */
-        function salvarConfiguracoes() {
-            const configuracoes = {
-                dark: body.classList.contains("dark"),
-                texto: nivelTexto,
-                links: body.classList.contains("destacar-links"),
-                leitura: body.classList.contains("modo-leitura")
-            };
-
-            try {
-                localStorage.setItem(
-                    "techNewsAcessibilidade",
-                    JSON.stringify(configuracoes)
-                );
-            } catch (erro) {
-                console.warn(
-                    "Não foi possível salvar as configurações.",
-                    erro
-                );
-            }
-        }
-
-        function carregarConfiguracoes() {
-            try {
-                const dados = JSON.parse(
-                    localStorage.getItem("techNewsAcessibilidade")
-                );
-
-                if (!dados) {
-                    aplicarNivelTexto(100);
-                    atualizarStatus();
-                    return;
-                }
-
-                body.classList.toggle("dark", Boolean(dados.dark));
-                body.classList.toggle(
-                    "destacar-links",
-                    Boolean(dados.links)
-                );
-                body.classList.toggle(
-                    "modo-leitura",
-                    Boolean(dados.leitura)
-                );
-
-                aplicarNivelTexto(Number(dados.texto) || 100);
-                atualizarStatus();
-            } catch (erro) {
-                aplicarNivelTexto(100);
-                atualizarStatus();
-            }
-        }
-
-        /* =====================================================
-           DESTACAR LINKS
-        ===================================================== */
-        btnDestacarLinks.addEventListener("click", () => {
-            body.classList.toggle("destacar-links");
-            atualizarStatus();
-            salvarConfiguracoes();
-        });
-
-        /* =====================================================
-           MODO LEITURA
-        ===================================================== */
-        btnModoLeitura.addEventListener("click", () => {
-            body.classList.toggle("modo-leitura");
-            atualizarStatus();
-            salvarConfiguracoes();
-        });
-
-        /* =====================================================
-           DALTONISMO
-        ===================================================== */
-        function aplicarDaltonismo(tipo) {
-            if (!TIPOS_DALTONISMO.includes(tipo)) {
-                tipo = "normal";
-            }
-
-            body.classList.remove(...CLASSES_DALTONISMO);
-
-            if (tipo !== "normal") {
-                body.classList.add(`daltonismo-${tipo}`);
-            }
-
-            submenuDaltonismo.querySelectorAll("button").forEach(botao => {
-                const ativo = botao.dataset.daltonismo === tipo;
-
-                botao.classList.toggle("ativo", ativo);
-                botao.setAttribute("aria-pressed", String(ativo));
-            });
-        }
-
-        btnDaltonismo.addEventListener("click", () => {
-            const aberto = !submenuDaltonismo.classList.contains("ativo");
-
-            submenuDaltonismo.classList.toggle("ativo", aberto);
-            btnDaltonismo.setAttribute(
-                "aria-expanded",
-                String(aberto)
-            );
-        });
-
-        submenuDaltonismo.querySelectorAll("button").forEach(botao => {
-            botao.addEventListener("click", () => {
-                aplicarDaltonismo(botao.dataset.daltonismo);
-                salvarConfiguracoes();
-            });
-        });
-
-        /* =====================================================
-           RESTAURAR
-        ===================================================== */
-        btnRestaurar.addEventListener("click", () => {
-            body.classList.remove(
-                "dark",
-                "destacar-links",
-                "modo-leitura",
-                ...CLASSES_DALTONISMO
-            );
-
-            aplicarNivelTexto(100);
-            aplicarDaltonismo("normal");
-
-            submenuDaltonismo.classList.remove("ativo");
-            btnDaltonismo.setAttribute("aria-expanded", "false");
-
-            atualizarStatus();
-            salvarConfiguracoes();
-        });
-
-        /* =====================================================
-           MODAL
-        ===================================================== */
-        function abrirAtalhos() {
-            fecharMenu();
-            modalAtalhos.classList.add("ativo");
-            fecharModal.focus();
-        }
-
-        function fecharAtalhos() {
-            modalAtalhos.classList.remove("ativo");
-            btnMenu.focus();
-        }
-
-        btnAtalhos.addEventListener("click", abrirAtalhos);
-        fecharModal.addEventListener("click", fecharAtalhos);
-
-        modalAtalhos.addEventListener("click", event => {
-            if (event.target === modalAtalhos) {
-                fecharAtalhos();
-            }
-        });
-
-        /* =====================================================
-           TECLADO
-        ===================================================== */
-        document.addEventListener("keydown", event => {
-            if (event.key === "Escape") {
-                fecharMenu();
-
-                if (modalAtalhos.classList.contains("ativo")) {
-                    fecharAtalhos();
-                }
-            }
-
-            if (event.altKey && !event.ctrlKey && !event.shiftKey) {
-                const tecla = event.key.toLowerCase();
-
-                if (tecla === "h") {
-                    event.preventDefault();
-                    window.location.href = "index.html";
-                }
-
-                if (tecla === "b") {
-                    event.preventDefault();
-                    campoBusca.focus();
-                }
-
-                if (tecla === "m") {
-                    event.preventDefault();
-                    abrirMenu();
-                }
-
-                if (event.key === "+" || event.key === "=") {
-                    event.preventDefault();
-                    aumentarTexto();
-                }
-
-                if (event.key === "-" || event.key === "_") {
-                    event.preventDefault();
-                    diminuirTexto();
-                }
-
-                if (tecla === "r") {
-                    event.preventDefault();
-                    body.classList.toggle("modo-leitura");
-                    atualizarStatus();
-                    salvarConfiguracoes();
-                }
-            }
-        });
-
-        /* =====================================================
-           FOOTER - JAVASCRIPT
-        ===================================================== */
-        document.addEventListener("DOMContentLoaded", () => {
-
-            /* -------------------------------------
-               ANO AUTOMÁTICO
-            ------------------------------------- */
-            const anoAtual = document.getElementById("anoAtual");
-
-            if (anoAtual) {
-                anoAtual.textContent = new Date().getFullYear();
-            }
-
-            /* -------------------------------------
-               LINKS INTERNOS COM SCROLL SUAVE
-            ------------------------------------- */
-            const linksInternos = document.querySelectorAll(
-                '.footer a[href^="#"]'
-            );
-
-            linksInternos.forEach(link => {
-                link.addEventListener("click", event => {
-                    const destino = link.getAttribute("href");
-
-                    if (!destino || destino === "#") {
-                        return;
-                    }
-
-                    const elemento = document.querySelector(destino);
-
-                    if (!elemento) {
-                        return;
-                    }
-
-                    event.preventDefault();
-
-                    elemento.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                });
-            });
-
-            /* -------------------------------------
-               ANIMAÇÃO DOS ÍCONES SOCIAIS
-            ------------------------------------- */
-            const redesSociais = document.querySelectorAll(
-                ".footer-social a"
-            );
-
-            redesSociais.forEach(rede => {
-                rede.addEventListener("mouseenter", () => {
-                    rede.style.zIndex = "5";
-                });
-
-                rede.addEventListener("mouseleave", () => {
-                    rede.style.zIndex = "";
-                });
-            });
-        });
-
-        /* =====================================================
-           INICIALIZAÇÃO
-        ===================================================== */
-        carregarConfiguracoes();
-
-    </script>
+    <script src="index.js"></script>
 
 </body>
 
