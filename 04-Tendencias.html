@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TechNews - Notícias, novidades, lançamentos, tendências e games de tecnologia.">
-    <title>TechNews</title>
+
+    <meta name="description"
+        content="TechNews - As principais tendências de tecnologia, inteligência artificial, inovação, gadgets e futuro.">
+
+    <title>TechNews — Tendências</title>
 
     <link rel="icon" type="image/png" href="/img/LogoSiteCoruja.png">
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
@@ -27,232 +32,531 @@
     <!-- =====================================================
          BARRA DE CATEGORIAS
     ===================================================== -->
+
     <nav class="barra-categorias" aria-label="Navegação principal">
+
         <ul>
-            <li><a href="/01-Home.html">Início</a></li>
-            <li><a href="/02-Inovações.html">Inovações</a></li>
-            <li><a href="/03-Lançamentos.html">Lançamentos</a></li>
-            <li><a href="/04-Tendencias.html">Tendências</a></li>
-            <li><a href="/05-games.html">Games</a></li>
+
+            <li>
+                <a href="/01-Home.html">Início</a>
+            </li>
+
+            <li>
+                <a href="/02-Inovações.html">Inovações</a>
+            </li>
+
+            <li>
+                <a href="/03-Lançamentos.html">Lançamentos</a>
+            </li>
+
+            <li>
+                <a href="/04-Tendencias.html" class="ativo">
+                    Tendências
+                </a>
+            </li>
+
+            <li>
+                <a href="/05-games.html">Games</a>
+            </li>
+
         </ul>
+
     </nav>
+
 
     <!-- =====================================================
          HEADER
     ===================================================== -->
+
     <header>
+
         <div class="topo">
 
-            <!-- =================================================
-                 ESQUERDA
-            ================================================= -->
             <div class="topo-esquerdo">
 
                 <!-- MENU -->
+
                 <div class="menu-hamburguer">
-                    <button class="hamburguer" id="btnMenu" type="button" aria-label="Abrir menu de acessibilidade"
-                        aria-expanded="false" aria-controls="menu">
+
+                    <button
+                        class="hamburguer"
+                        id="btnMenu"
+                        type="button"
+                        aria-label="Abrir menu de acessibilidade"
+                        aria-expanded="false"
+                        aria-controls="menu">
+
                         <span></span>
                         <span></span>
                         <span></span>
+
                     </button>
 
+
                     <!-- MENU DE ACESSIBILIDADE -->
+
                     <ul class="menu" id="menu" aria-hidden="true">
 
                         <li class="menu-titulo">
+
                             <i class="fa-solid fa-universal-access"></i>
-                            <span>Acessibilidade</span>
+
+                            <span>
+                                Acessibilidade
+                            </span>
+
                         </li>
+
 
                         <!-- MODO ESCURO -->
+
                         <li>
-                            <button class="menu-opcao" id="btnDarkMenu" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnDarkMenu"
+                                type="button">
+
                                 <i class="fa-solid fa-moon"></i>
-                                <span>Modo Escuro</span>
-                                <span class="status" id="statusDark">OFF</span>
+
+                                <span>
+                                    Modo Escuro
+                                </span>
+
+                                <span
+                                    class="status"
+                                    id="statusDark">
+                                    OFF
+                                </span>
+
                             </button>
+
                         </li>
+
 
                         <!-- AUMENTAR -->
+
                         <li>
-                            <button class="menu-opcao" id="btnAumentarTexto" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnAumentarTexto"
+                                type="button">
+
                                 <i class="fa-solid fa-font"></i>
-                                <span>Aumentar texto</span>
-                                <span class="status">A+</span>
+
+                                <span>
+                                    Aumentar texto
+                                </span>
+
+                                <span class="status">
+                                    A+
+                                </span>
+
                             </button>
+
                         </li>
+
 
                         <!-- DIMINUIR -->
+
                         <li>
-                            <button class="menu-opcao" id="btnDiminuirTexto" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnDiminuirTexto"
+                                type="button">
+
                                 <i class="fa-solid fa-font"></i>
-                                <span>Diminuir texto</span>
-                                <span class="status">A−</span>
+
+                                <span>
+                                    Diminuir texto
+                                </span>
+
+                                <span class="status">
+                                    A−
+                                </span>
+
                             </button>
+
                         </li>
+
 
                         <!-- DESTACAR LINKS -->
+
                         <li>
-                            <button class="menu-opcao" id="btnDestacarLinks" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnDestacarLinks"
+                                type="button">
+
                                 <i class="fa-solid fa-link"></i>
-                                <span>Destacar links</span>
-                                <span class="status" id="statusLinks">OFF</span>
+
+                                <span>
+                                    Destacar links
+                                </span>
+
+                                <span
+                                    class="status"
+                                    id="statusLinks">
+                                    OFF
+                                </span>
+
                             </button>
+
                         </li>
+
 
                         <!-- MODO LEITURA -->
+
                         <li>
-                            <button class="menu-opcao" id="btnModoLeitura" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnModoLeitura"
+                                type="button">
+
                                 <i class="fa-solid fa-book-open"></i>
-                                <span>Modo de leitura</span>
-                                <span class="status" id="statusLeitura">OFF</span>
+
+                                <span>
+                                    Modo de leitura
+                                </span>
+
+                                <span
+                                    class="status"
+                                    id="statusLeitura">
+                                    OFF
+                                </span>
+
                             </button>
+
                         </li>
+
 
                         <!-- ATALHOS -->
+
                         <li>
-                            <button class="menu-opcao" id="btnAtalhos" type="button">
+
+                            <button
+                                class="menu-opcao"
+                                id="btnAtalhos"
+                                type="button">
+
                                 <i class="fa-solid fa-keyboard"></i>
-                                <span>Atalhos de teclado</span>
+
+                                <span>
+                                    Atalhos de teclado
+                                </span>
+
                                 <i class="fa-solid fa-chevron-right"></i>
+
                             </button>
+
                         </li>
+
 
                         <!-- DALTONISMO -->
+
                         <li>
-                            <button class="menu-opcao" id="btnDaltonismo" type="button" aria-expanded="false"
+
+                            <button
+                                class="menu-opcao"
+                                id="btnDaltonismo"
+                                type="button"
+                                aria-expanded="false"
                                 aria-controls="submenuDaltonismo">
+
                                 <i class="fa-solid fa-palette"></i>
-                                <span>Daltonismo</span>
+
+                                <span>
+                                    Daltonismo
+                                </span>
+
                                 <i class="fa-solid fa-chevron-right"></i>
+
                             </button>
+
                         </li>
+
 
                         <!-- SUBMENU -->
-                        <li>
-                            <div class="submenu-acessibilidade" id="submenuDaltonismo">
-                                <button type="button" data-daltonismo="normal">Normal</button>
-                                <button type="button" data-daltonismo="protanopia">Protanopia</button>
-                                <button type="button" data-daltonismo="deuteranopia">Deuteranopia</button>
-                                <button type="button" data-daltonismo="tritanopia">Tritanopia</button>
-                            </div>
-                        </li>
 
                         <li>
-                            <div class="menu-separador"></div>
+
+                            <div
+                                class="submenu-acessibilidade"
+                                id="submenuDaltonismo">
+
+                                <button
+                                    type="button"
+                                    data-daltonismo="normal">
+                                    Normal
+                                </button>
+
+                                <button
+                                    type="button"
+                                    data-daltonismo="protanopia">
+                                    Protanopia
+                                </button>
+
+                                <button
+                                    type="button"
+                                    data-daltonismo="deuteranopia">
+                                    Deuteranopia
+                                </button>
+
+                                <button
+                                    type="button"
+                                    data-daltonismo="tritanopia">
+                                    Tritanopia
+                                </button>
+
+                            </div>
+
                         </li>
+
+
+                        <li>
+
+                            <div class="menu-separador"></div>
+
+                        </li>
+
 
                         <!-- RESTAURAR -->
+
                         <li>
-                            <button class="menu-opcao menu-restaurar" id="btnRestaurar" type="button">
+
+                            <button
+                                class="menu-opcao menu-restaurar"
+                                id="btnRestaurar"
+                                type="button">
+
                                 <i class="fa-solid fa-rotate-left"></i>
-                                <span>Restaurar configurações</span>
+
+                                <span>
+                                    Restaurar configurações
+                                </span>
+
                             </button>
+
                         </li>
 
                     </ul>
+
                 </div>
 
-                <!-- =================================================
-                     BUSCA
-                ================================================= -->
+
+                <!-- BUSCA -->
+
                 <div class="buscar-topo">
-                    <label class="sr-only" for="campoBusca">Buscar notícias</label>
-                    <input id="campoBusca" type="search" placeholder="Buscar notícias..." autocomplete="off">
-                    <button class="limpar-busca" id="limparBusca" type="button" aria-label="Limpar busca">
+
+                    <label
+                        class="sr-only"
+                        for="campoBusca">
+                        Buscar notícias
+                    </label>
+
+                    <input
+                        id="campoBusca"
+                        type="search"
+                        placeholder="Buscar notícias..."
+                        autocomplete="off">
+
+                    <button
+                        class="limpar-busca"
+                        id="limparBusca"
+                        type="button"
+                        aria-label="Limpar busca">
+
                         <i class="fa-solid fa-xmark"></i>
+
                     </button>
+
                 </div>
 
             </div>
 
-            <!-- =================================================
-                 LOGO
-            ================================================= -->
-            <a href="/index.html" class="logo" aria-label="TechNews - Ir para a página inicial">
+
+            <!-- LOGO -->
+
+            <a
+                href="/index.html"
+                class="logo"
+                aria-label="TechNews - Ir para a página inicial">
+
                 Tech<span>News</span>
+
             </a>
 
-            <!-- =================================================
-                 LOGIN
-            ================================================= -->
-            <a href="/login.html" class="login">
+
+            <!-- LOGIN -->
+
+            <a
+                href="/login.html"
+                class="login">
+
                 <i class="fa-solid fa-user"></i>
-                <span>ENTRAR</span>
+
+                <span>
+                    ENTRAR
+                </span>
+
             </a>
 
         </div>
+
     </header>
+
 
     <!-- =====================================================
          MODAL DE ATALHOS
     ===================================================== -->
-    <div class="modal-overlay" id="modalAtalhos" role="dialog" aria-modal="true" aria-labelledby="tituloAtalhos">
+
+    <div
+        class="modal-overlay"
+        id="modalAtalhos"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloAtalhos">
+
         <div class="modal-atalhos">
 
             <div class="modal-cabecalho">
+
                 <h2 id="tituloAtalhos">
+
                     <i class="fa-solid fa-keyboard"></i>
+
                     Atalhos de teclado
+
                 </h2>
 
-                <button class="fechar-modal" id="fecharModal" type="button" aria-label="Fechar atalhos">
+                <button
+                    class="fechar-modal"
+                    id="fecharModal"
+                    type="button"
+                    aria-label="Fechar atalhos">
+
                     <i class="fa-solid fa-xmark"></i>
+
                 </button>
+
             </div>
 
+
             <div class="atalhos-lista">
-                <div class="atalho-item">
-                    <span>Ir para a Home</span>
-                    <kbd>Alt + H</kbd>
-                </div>
 
                 <div class="atalho-item">
-                    <span>Focar na busca</span>
-                    <kbd>Alt + B</kbd>
+
+                    <span>
+                        Ir para a Home
+                    </span>
+
+                    <kbd>
+                        Alt + H
+                    </kbd>
+
                 </div>
 
-                <div class="atalho-item">
-                    <span>Abrir/fechar menu</span>
-                    <kbd>Alt + M</kbd>
-                </div>
 
                 <div class="atalho-item">
-                    <span>Aumentar texto</span>
-                    <kbd>Alt + +</kbd>
+
+                    <span>
+                        Focar na busca
+                    </span>
+
+                    <kbd>
+                        Alt + B
+                    </kbd>
+
                 </div>
 
-                <div class="atalho-item">
-                    <span>Diminuir texto</span>
-                    <kbd>Alt + −</kbd>
-                </div>
 
                 <div class="atalho-item">
-                    <span>Modo de leitura</span>
-                    <kbd>Alt + R</kbd>
+
+                    <span>
+                        Abrir/fechar menu
+                    </span>
+
+                    <kbd>
+                        Alt + M
+                    </kbd>
+
                 </div>
 
+
                 <div class="atalho-item">
-                    <span>Fechar menu/modal</span>
-                    <kbd>Esc</kbd>
+
+                    <span>
+                        Aumentar texto
+                    </span>
+
+                    <kbd>
+                        Alt + +
+                    </kbd>
+
                 </div>
+
+
+                <div class="atalho-item">
+
+                    <span>
+                        Diminuir texto
+                    </span>
+
+                    <kbd>
+                        Alt + −
+                    </kbd>
+
+                </div>
+
+
+                <div class="atalho-item">
+
+                    <span>
+                        Modo de leitura
+                    </span>
+
+                    <kbd>
+                        Alt + R
+                    </kbd>
+
+                </div>
+
+
+                <div class="atalho-item">
+
+                    <span>
+                        Fechar menu/modal
+                    </span>
+
+                    <kbd>
+                        Esc
+                    </kbd>
+
+                </div>
+
             </div>
 
         </div>
+
     </div>
 
+
     <!-- =====================================================
-     PÁGINA GAMES
-===================================================== -->
+         PÁGINA TENDÊNCIAS
+    ===================================================== -->
 
     <main class="games-page">
 
         <div class="games-container">
 
+
             <!-- =================================================
-             TÍTULO
-        ================================================== -->
+                 TÍTULO
+            ================================================= -->
 
             <section class="games-heading">
 
@@ -261,36 +565,50 @@
                     <div class="games-heading-line"></div>
 
                     <div>
-                        <h1>Games <span>&</span> Esports</h1>
+
+                        <h1>
+                            Tendências
+                        </h1>
 
                         <p>
-                            Notícias, lançamentos, análises, consoles,
-                            PC, esports e tudo sobre o mundo dos games.
+                            As tecnologias, ideias e transformações que
+                            estão ganhando espaço e moldando o futuro.
                         </p>
+
                     </div>
 
                 </div>
 
-                <a href="#noticias-recentes" class="games-ver-tudo">
+
+                <a
+                    href="#noticias-recentes"
+                    class="games-ver-tudo">
+
                     Ver todas
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </section>
 
 
             <!-- =================================================
-             DESTAQUES
-        ================================================== -->
+                 DESTAQUES
+            ================================================= -->
 
-            <section class="games-destaques" aria-label="Notícias em destaque">
+            <section
+                class="games-destaques"
+                aria-label="Notícias em destaque">
+
 
                 <!-- DESTAQUE PRINCIPAL -->
 
                 <article class="games-destaque-principal">
 
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=85"
-                        alt="Pessoa jogando videogame em um computador">
+                    <img
+                        src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1400&q=85"
+                        alt="Pessoa utilizando inteligência artificial">
 
                     <div class="games-destaque-conteudo">
 
@@ -299,26 +617,33 @@
                         </span>
 
                         <h2>
-                            A nova geração dos games está mudando
-                            a forma como jogamos
+                            Inteligência artificial ganha espaço
+                            e transforma a forma como usamos a tecnologia
                         </h2>
 
                         <p>
-                            Tecnologias de inteligência artificial,
-                            gráficos mais realistas e novas experiências
-                            prometem transformar o mercado de jogos.
+                            Novas ferramentas de inteligência artificial
+                            estão mudando atividades do cotidiano,
+                            empresas e diferentes setores da economia.
                         </p>
 
                         <div class="games-meta">
 
                             <span>
+
                                 <i class="fa-regular fa-calendar"></i>
-                                23 ago. 2026
+
+                                25 ago. 2026
+
                             </span>
 
+
                             <span>
+
                                 <i class="fa-regular fa-clock"></i>
+
                                 6 min de leitura
+
                             </span>
 
                         </div>
@@ -332,26 +657,30 @@
 
                 <div class="games-destaques-laterais">
 
+
                     <article class="games-card-destaque">
 
-                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=85"
-                            alt="Controle de videogame">
+                        <img
+                            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85"
+                            alt="Equipe trabalhando com novas tecnologias">
 
                         <div class="games-card-conteudo">
 
                             <span class="games-tag">
-                                Consoles
+                                Tecnologia
                             </span>
 
                             <h3>
-                                Os consoles que devem dominar
-                                a próxima geração
+                                Novas tecnologias prometem mudar
+                                os dispositivos do dia a dia
                             </h3>
 
                             <div class="games-meta">
+
                                 <span>
-                                    22 ago. 2026
+                                    24 ago. 2026
                                 </span>
+
                             </div>
 
                         </div>
@@ -361,23 +690,27 @@
 
                     <article class="games-card-destaque">
 
-                        <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=900&q=85" alt="">
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85"
+                            alt="Placa eletrônica representando tecnologia do futuro">
 
                         <div class="games-card-conteudo">
 
                             <span class="games-tag">
-                                PC Gamer
+                                Futuro
                             </span>
 
                             <h3>
-                                Hardware gamer ganha novas
-                                tecnologias de desempenho
+                                O que esperar das principais
+                                tendências tecnológicas dos próximos anos
                             </h3>
 
                             <div class="games-meta">
+
                                 <span>
-                                    21 ago. 2026
+                                    23 ago. 2026
                                 </span>
+
                             </div>
 
                         </div>
@@ -390,8 +723,8 @@
 
 
             <!-- =================================================
-             ÚLTIMAS NOTÍCIAS
-        ================================================== -->
+                 ÚLTIMAS NOTÍCIAS
+            ================================================= -->
 
             <div class="games-breaking">
 
@@ -404,17 +737,19 @@
                 </div>
 
                 <div class="games-breaking-text">
-                    Novidades sobre consoles, PC, jogos independentes,
-                    esports, lançamentos e grandes estúdios movimentam
-                    o universo dos games.
+
+                    Inteligência artificial, gadgets, automação,
+                    inovação e novas tecnologias movimentam o
+                    mercado e apontam para o futuro da tecnologia.
+
                 </div>
 
             </div>
 
 
             <!-- =================================================
-             NOTÍCIAS RECENTES
-        ================================================== -->
+                 NOTÍCIAS RECENTES
+            ================================================= -->
 
             <section id="noticias-recentes">
 
@@ -424,9 +759,14 @@
                         Notícias recentes
                     </h2>
 
-                    <a href="#noticias-recentes" class="games-ver-tudo">
+                    <a
+                        href="#noticias-recentes"
+                        class="games-ver-tudo">
+
                         Mais notícias
+
                         <i class="fa-solid fa-arrow-right"></i>
+
                     </a>
 
                 </div>
@@ -434,17 +774,19 @@
 
                 <div class="games-noticias">
 
+
                     <!-- NOTÍCIA 1 -->
 
                     <article class="games-noticia">
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=85"
-                                alt="Computador gamer">
+                            <img
+                                src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=85"
+                                alt="Tecnologia de inteligência artificial">
 
                             <span class="games-noticia-tag">
-                                PC
+                                Inteligência Artificial
                             </span>
 
                         </div>
@@ -452,18 +794,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                23 ago. 2026
+                                25 ago. 2026
                             </span>
 
                             <h3>
-                                Novas tecnologias prometem elevar
-                                o desempenho dos PCs gamers
+                                Inteligência artificial avança e
+                                amplia presença em diferentes setores
                             </h3>
 
                             <p>
-                                Processadores, placas de vídeo e sistemas
-                                de resfriamento continuam avançando para
-                                entregar experiências mais rápidas.
+                                Empresas estão incorporando ferramentas
+                                de IA para automatizar tarefas e criar
+                                novas experiências digitais.
                             </p>
 
                         </div>
@@ -477,11 +819,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=85"
-                                alt="Pessoa jogando videogame">
+                            <img
+                                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
+                                alt="Robô representando inteligência artificial">
 
                             <span class="games-noticia-tag">
-                                Lançamentos
+                                Robótica
                             </span>
 
                         </div>
@@ -489,18 +832,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                23 ago. 2026
+                                24 ago. 2026
                             </span>
 
                             <h3>
-                                Os jogos mais aguardados que chegam
-                                aos jogadores nos próximos meses
+                                Robôs inteligentes começam a ganhar
+                                novas funções no cotidiano
                             </h3>
 
                             <p>
-                                Grandes franquias e novos projetos
-                                independentes estão preparando novidades
-                                para diferentes plataformas.
+                                A evolução dos sistemas autônomos está
+                                ampliando as possibilidades de uso da
+                                robótica em diferentes ambientes.
                             </p>
 
                         </div>
@@ -514,11 +857,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=900&q=85"
-                                alt="Setup para jogos">
+                            <img
+                                src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=85"
+                                alt="Smartphone moderno">
 
                             <span class="games-noticia-tag">
-                                Tecnologia
+                                Gadgets
                             </span>
 
                         </div>
@@ -526,17 +870,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                22 ago. 2026
+                                24 ago. 2026
                             </span>
 
                             <h3>
-                                Inteligência artificial começa a ganhar
-                                espaço no desenvolvimento de jogos
+                                Novos gadgets apostam em recursos
+                                inteligentes para facilitar o cotidiano
                             </h3>
 
                             <p>
-                                Ferramentas de IA estão sendo utilizadas
-                                em diferentes etapas da produção de títulos.
+                                Fabricantes estão investindo em dispositivos
+                                conectados com recursos cada vez mais
+                                integrados ao usuário.
                             </p>
 
                         </div>
@@ -550,11 +895,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=900&q=85"
-                                alt="Competição de videogame">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85"
+                                alt="Servidores e infraestrutura de internet">
 
                             <span class="games-noticia-tag">
-                                Esports
+                                Internet
                             </span>
 
                         </div>
@@ -562,17 +908,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                22 ago. 2026
+                                23 ago. 2026
                             </span>
 
                             <h3>
-                                Cenário competitivo prepara novas
-                                temporadas e grandes campeonatos
+                                Nova geração de conectividade promete
+                                transformar serviços digitais
                             </h3>
 
                             <p>
-                                Organizações e jogadores se preparam para
-                                uma nova fase das principais competições.
+                                Redes mais rápidas e estáveis devem abrir
+                                espaço para novos serviços conectados e
+                                experiências digitais.
                             </p>
 
                         </div>
@@ -586,10 +933,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="/img/Clássicos dos videogames continuam influenciando novos desenvolvedores.png" alt="">
+                            <img
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85"
+                                alt="Pessoa utilizando tecnologia digital">
 
                             <span class="games-noticia-tag">
-                                Retrô
+                                Cultura Digital
                             </span>
 
                         </div>
@@ -597,17 +946,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                21 ago. 2026
+                                23 ago. 2026
                             </span>
 
                             <h3>
-                                Clássicos dos videogames continuam
-                                influenciando novos desenvolvedores
+                                Tecnologia continua influenciando
+                                novos hábitos e comportamentos
                             </h3>
 
                             <p>
-                                Jogos antigos seguem servindo como referência
-                                para experiências modernas.
+                                A evolução dos produtos digitais está
+                                transformando a maneira como as pessoas
+                                trabalham, estudam e se divertem.
                             </p>
 
                         </div>
@@ -621,11 +971,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=900&q=85"
-                                alt="Jogador usando controle">
+                            <img
+                                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=85"
+                                alt="Equipe utilizando sistemas automatizados">
 
                             <span class="games-noticia-tag">
-                                Multiplayer
+                                Automação
                             </span>
 
                         </div>
@@ -633,17 +984,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                21 ago. 2026
+                                22 ago. 2026
                             </span>
 
                             <h3>
-                                Experiências multiplayer apostam cada vez
-                                mais em comunidades online
+                                Automação ganha espaço e muda
+                                processos dentro das empresas
                             </h3>
 
                             <p>
-                                Recursos sociais e sistemas de interação
-                                ganham importância dentro dos jogos atuais.
+                                Sistemas automatizados estão sendo usados
+                                para aumentar produtividade e otimizar
+                                tarefas repetitivas.
                             </p>
 
                         </div>
@@ -657,8 +1009,9 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85"
-                                alt="Controle de videogame sobre mesa">
+                            <img
+                                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+                                alt="Equipe discutindo novas oportunidades de tecnologia">
 
                             <span class="games-noticia-tag">
                                 Mercado
@@ -669,17 +1022,18 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                20 ago. 2026
+                                22 ago. 2026
                             </span>
 
                             <h3>
-                                Mercado de games amplia espaço para
-                                estúdios independentes
+                                Mercado de tecnologia acompanha
+                                novas oportunidades de inovação
                             </h3>
 
                             <p>
-                                Pequenas equipes encontram novas formas
-                                de alcançar jogadores ao redor do mundo.
+                                Startups e grandes empresas buscam novas
+                                soluções para acompanhar as mudanças no
+                                comportamento dos consumidores.
                             </p>
 
                         </div>
@@ -693,11 +1047,12 @@
 
                         <div class="games-noticia-imagem">
 
-                            <img src="https://images.unsplash.com/photo-1592840496694-26c035b52b48?auto=format&fit=crop&w=900&q=85"
-                                alt="Pessoa jogando videogame">
+                            <img
+                                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85"
+                                alt="Tecnologia e conectividade do futuro">
 
                             <span class="games-noticia-tag">
-                                Cultura Gamer
+                                Futuro
                             </span>
 
                         </div>
@@ -705,17 +1060,19 @@
                         <div class="games-noticia-conteudo">
 
                             <span class="games-noticia-data">
-                                20 ago. 2026
+                                21 ago. 2026
                             </span>
 
                             <h3>
-                                Cultura gamer ultrapassa as telas e
-                                influencia entretenimento e tecnologia
+                                Tecnologias emergentes podem definir
+                                a próxima década de inovação
                             </h3>
 
                             <p>
-                                O universo dos jogos continua expandindo
-                                sua presença para diferentes áreas.
+                                Inteligência artificial, robótica,
+                                computação avançada e conectividade
+                                estão entre as áreas que mais despertam
+                                expectativas.
                             </p>
 
                         </div>
@@ -728,15 +1085,15 @@
 
 
             <!-- =================================================
-             CATEGORIAS
-        ================================================== -->
+                 CATEGORIAS
+            ================================================= -->
 
             <section>
 
                 <div class="games-section-title">
 
                     <h2>
-                        Explore Games
+                        Explore Tendências
                     </h2>
 
                 </div>
@@ -744,43 +1101,78 @@
 
                 <div class="games-categorias">
 
-                    
 
-                    <a href="#" class="games-categoria">
-
-                        <div>
-                            <strong>PC Gamer</strong>
-                            <span>Hardware, jogos e tecnologia</span>
-                        </div>
-
-                    </a>
-
-                    
-                    <a href="#" class="games-categoria">
+                    <a
+                        href="#"
+                        class="games-categoria">
 
                         <div>
-                            <strong>PlayStation</strong>
-                            <span>Notícias e lançamentos</span>
-                        </div>
 
-                    </a>
+                            <strong>
+                                Inteligência Artificial
+                            </strong>
 
+                            <span>
+                                IA, ferramentas e inovação
+                            </span>
 
-                    <a href="#" class="games-categoria">
-
-                        <div>
-                            <strong>Xbox</strong>
-                            <span>Games, serviços e novidades</span>
                         </div>
 
                     </a>
 
 
-                    <a href="#" class="games-categoria">
+                    <a
+                        href="#"
+                        class="games-categoria">
 
                         <div>
-                            <strong>Esports</strong>
-                            <span>Competições e cenário competitivo</span>
+
+                            <strong>
+                                Gadgets
+                            </strong>
+
+                            <span>
+                                Dispositivos e tecnologia
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="games-categoria">
+
+                        <div>
+
+                            <strong>
+                                Futuro
+                            </strong>
+
+                            <span>
+                                Tecnologias emergentes
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="games-categoria">
+
+                        <div>
+
+                            <strong>
+                                Mercado
+                            </strong>
+
+                            <span>
+                                Empresas e tendências
+                            </span>
+
                         </div>
 
                     </a>
@@ -793,101 +1185,211 @@
 
     </main>
 
-    <!-- =========================
+
+    <!-- =====================================================
          FOOTER
-    ========================= -->
-    <footer class="footer" id="footer">
+    ===================================================== -->
+
+    <footer
+        class="footer"
+        id="footer">
+
         <div class="footer-container">
 
             <div class="footer-top">
 
-                <!-- Coluna 1 -->
+
+                <!-- COLUNA 1 -->
+
                 <div class="footer-brand">
-                    <h2>TECH<span>NEWS</span></h2>
+
+                    <h2>
+                        TECH<span>NEWS</span>
+                    </h2>
 
                     <p>
                         Informação, tecnologia, inovação e as principais
                         notícias do mundo digital em um só lugar.
                     </p>
 
-                    <div class="footer-social" aria-label="Redes sociais">
+
+                    <div
+                        class="footer-social"
+                        aria-label="Redes sociais">
+
 
                         <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn" title="LinkedIn">
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            title="LinkedIn">
+
                             <i class="fa-brands fa-linkedin-in"></i>
+
                         </a>
+
 
                         <!-- YouTube -->
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube" title="YouTube">
+
+                        <a
+                            href="https://www.youtube.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="YouTube"
+                            title="YouTube">
+
                             <i class="fa-brands fa-youtube"></i>
+
                         </a>
+
 
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram" title="Instagram">
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            title="Instagram">
+
                             <i class="fa-brands fa-instagram"></i>
+
                         </a>
 
-                        <!-- X / Twitter -->
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+
+                        <!-- X -->
+
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X"
+                            title="X">
+
                             <i class="fa-brands fa-x-twitter"></i>
+
                         </a>
 
                     </div>
+
                 </div>
 
-                <!-- Coluna 2 -->
+
+                <!-- COLUNA 2 -->
+
                 <div class="footer-col">
-                    <h3>Navegação</h3>
+
+                    <h3>
+                        Navegação
+                    </h3>
 
                     <div class="footer-links">
-                        <a href="/01-Home.html">Início</a>
-                        <a href="/02-Inovações.html">Inovação</a>
-                        <a href="/03-Lançamentos.html">Lançamento</a>
-                        <a href="/04-Tendencias.html">Tendência</a>
-                        <a href="/05-games.html">Game</a>
+
+                        <a href="/01-Home.html">
+                            Início
+                        </a>
+
+                        <a href="/02-Inovações.html">
+                            Inovação
+                        </a>
+
+                        <a href="/03-Lançamentos.html">
+                            Lançamento
+                        </a>
+
+                        <a href="/04-Tendencias.html">
+                            Tendência
+                        </a>
+
+                        <a href="/05-games.html">
+                            Game
+                        </a>
+
                     </div>
+
                 </div>
 
-                <!-- Coluna 3 -->
+
+                <!-- COLUNA 3 -->
+
                 <div class="footer-col">
-                    <h3>Informações</h3>
+
+                    <h3>
+                        Informações
+                    </h3>
 
                     <div class="footer-links">
-                        <a href="#sobre">Sobre nós</a>
-                        <a href="#contato">Contato</a>
-                        <a href="#privacidade">Política de Privacidade</a>
-                        <a href="#termos">Termos de Uso</a>
-                        <a href="#acessibilidade">Acessibilidade</a>
+
+                        <a href="#sobre">
+                            Sobre nós
+                        </a>
+
+                        <a href="#contato">
+                            Contato
+                        </a>
+
+                        <a href="#privacidade">
+                            Política de Privacidade
+                        </a>
+
+                        <a href="#termos">
+                            Termos de Uso
+                        </a>
+
+                        <a href="#acessibilidade">
+                            Acessibilidade
+                        </a>
+
                     </div>
+
                 </div>
 
             </div>
+
 
             <hr>
 
+
             <div class="footer-bottom">
+
                 <p>
-                    © <span id="anoAtual"></span> TECHNEWS.
+
+                    © <span id="anoAtual"></span>
+                    TECHNEWS.
                     Todos os direitos reservados.
+
                 </p>
 
+
                 <div class="footer-policy">
-                    <a href="#privacidade">Privacidade</a>
-                    <a href="#termos">Termos</a>
-                    <a href="#cookies">Cookies</a>
+
+                    <a href="#privacidade">
+                        Privacidade
+                    </a>
+
+                    <a href="#termos">
+                        Termos
+                    </a>
+
+                    <a href="#cookies">
+                        Cookies
+                    </a>
+
                 </div>
+
             </div>
 
         </div>
+
     </footer>
 
+
     <!-- JAVASCRIPT -->
+
     <script src="/design_site/04-Tendencias/index.js"></script>
-
-
 
 </body>
 
