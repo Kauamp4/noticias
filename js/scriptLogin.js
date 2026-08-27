@@ -80,7 +80,7 @@ function loginUsuario() {
 
 
       window.location.href =
-        "perfil.html";
+        "01-Home.html";
 
     })
 
